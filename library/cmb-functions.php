@@ -95,42 +95,108 @@ function naiau_before_row_if_2( $field_args, $field ) {
 	}
 }
 
-add_action( 'cmb2_init', 'naiau_register_background_image_metabox' );
+//add_action( 'cmb2_init', 'naiau_register_background_image_metabox' );
 /**
  * Hook in and add a metabox that only appears on the 'About' page
  */
-function naiau_register_background_image_metabox() {
+// function naiau_register_background_image_metabox() {
 
-	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_naiau_';
+// 	// Start with an underscore to hide fields from custom fields list
+// 	$prefix = '_naiau_';
 
-	/**
-	 * Metabox to be displayed on a single page ID
-	 */
-	$cmb_background = new_cmb2_box( array(
-		'id'           => $prefix . 'background_metabox',
-		'title'        => __( 'Background Image', 'naiau' ),
-		'object_types' => array( 'page','post','hotel','tour' ), // Post type
-		'context'      => 'normal',
-		'priority'     => 'high',
-		'show_names'   => true, // Show field names on the left
-		//'show_on'      => array( 'id' => array( 2, ) ), // Specific post IDs to display this metabox
-	) );
+// 	/**
+// 	 * Metabox to be displayed on a single page ID
+// 	 */
+// 	$cmb_background = new_cmb2_box( array(
+// 		'id'           => $prefix . 'background_metabox',
+// 		'title'        => __( 'Background Image', 'naiau' ),
+// 		'object_types' => array( 'page','post','hotel','tour' ), // Post type
+// 		'context'      => 'normal',
+// 		'priority'     => 'high',
+// 		'show_names'   => true, // Show field names on the left
+// 		//'show_on'      => array( 'id' => array( 2, ) ), // Specific post IDs to display this metabox
+// 	) );
 
-	$cmb_background->add_field( array(
-		'name' => __( 'Backgournd Image', 'naiau' ),
-		'desc' => __( 'Upload an image or enter a URL.', 'naiau' ),
-		'id'   => $prefix . 'background_image',
-		'type' => 'file',
-	) );
+// 	$cmb_background->add_field( array(
+// 		'name' => __( 'Backgournd Image', 'naiau' ),
+// 		'desc' => __( 'Upload an image or enter a URL.', 'naiau' ),
+// 		'id'   => $prefix . 'background_image',
+// 		'type' => 'file',
+// 	) );
 
-}
+// }
 
-add_action( 'cmb2_init', 'naiau_register_hotel_metabox' );
+// add_action( 'cmb2_init', 'naiau_register_hotel_metabox' );
 /**
  * Hook in and add a demo metabox. Can only happen on the 'cmb2_init' hook.
  */
-function naiau_register_hotel_metabox() {
+// function naiau_register_hotel_metabox() {
+
+// 	// Start with an underscore to hide fields from custom fields list
+// 	$prefix = '_naiau_';
+
+// 	/**
+// 	 * Sample metabox to demonstrate each field type included
+// 	 */
+// 	$cmb_demo = new_cmb2_box( array(
+// 		'id'            => $prefix . 'hotel_metabox',
+// 		'title'         => __( 'Hotel Information', 'naiau' ),
+// 		'object_types'  => array( 'hotel' ), // Post type
+// 		// 'show_on_cb' => 'naiau_show_if_front_page', // function should return a bool value
+// 		// 'context'    => 'normal',
+// 		// 'priority'   => 'high',
+// 		// 'show_names' => true, // Show field names on the left
+// 		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+// 		// 'closed'     => true, // true to keep the metabox closed by default
+// 	) );
+
+// 	$cmb_demo->add_field( array(
+// 		'name'       => __( 'Region', 'naiau' ),
+// 		'desc'       => __( 'Region input field', 'naiau' ),
+// 		'id'         => $prefix . 'hotel_region',
+// 		'type'       => 'text',
+// 		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
+// 		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+// 		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+// 		// 'on_front'        => false, // Optionally designate a field to wp-admin only
+// 		// 'repeatable'      => true,
+// 	) );
+
+// 	$cmb_demo->add_field( array(
+// 		'name' => __( 'hotel rank', 'naiau' ),
+// 		'desc' => __( 'number between 0 to 10', 'naiau' ),
+// 		'id'   => $prefix . 'hotel_rank',
+// 		'type' => 'text',
+// 		// 'repeatable' => true,
+// 	) );
+
+// 	$cmb_demo->add_field( array(
+// 		'name' => __( 'hotel degree', 'naiau' ),
+// 		'desc' => __( 'number between 1 to 7', 'naiau' ),
+// 		'id'   => $prefix . 'hotel_degree',
+// 		'type' => 'text',
+// 		// 'repeatable' => true,
+// 	) );
+
+	
+// 	$cmb_demo->add_field( array(
+// 		'name'         => __( 'Slider Images', 'naiau' ),
+// 		'desc'         => __( 'Upload or add multiple images/attachments.', 'naiau' ),
+// 		'id'           => $prefix . 'image_list',
+// 		'type'         => 'file_list',
+// 		'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
+// 	) );
+
+	
+
+// }
+/******************************************************************/
+/*--------------------Link Page-----------------------------------*/
+/******************************************************************/
+
+add_action('cmb2_init','naiau_register_link_metabox');
+// add_action('cmb2_init','naiau_register_tour_information_metabox');
+function naiau_register_link_metabox() {
 
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_naiau_';
@@ -139,9 +205,9 @@ function naiau_register_hotel_metabox() {
 	 * Sample metabox to demonstrate each field type included
 	 */
 	$cmb_demo = new_cmb2_box( array(
-		'id'            => $prefix . 'hotel_metabox',
-		'title'         => __( 'Hotel Information', 'naiau' ),
-		'object_types'  => array( 'hotel' ), // Post type
+		'id'            => $prefix . 'link_metabox',
+		'title'         => __( 'Link Information', 'naiau' ),
+		'object_types'  => array( 'link' ), // Post type
 		// 'show_on_cb' => 'naiau_show_if_front_page', // function should return a bool value
 		// 'context'    => 'normal',
 		// 'priority'   => 'high',
@@ -151,10 +217,10 @@ function naiau_register_hotel_metabox() {
 	) );
 
 	$cmb_demo->add_field( array(
-		'name'       => __( 'Region', 'naiau' ),
-		'desc'       => __( 'Region input field', 'naiau' ),
-		'id'         => $prefix . 'hotel_region',
-		'type'       => 'text',
+		'name'       => __( 'link address', 'naiau' ),
+		'desc'       => __( 'the web address of link', 'naiau' ),
+		'id'         => $prefix . 'link_url',
+		'type'       => 'text_url',
 		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
 		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
 		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
@@ -162,25 +228,44 @@ function naiau_register_hotel_metabox() {
 		// 'repeatable'      => true,
 	) );
 
-	$cmb_demo->add_field( array(
-		'name' => __( 'hotel rank', 'naiau' ),
-		'desc' => __( 'number between 0 to 10', 'naiau' ),
-		'id'   => $prefix . 'hotel_rank',
-		'type' => 'text',
-		// 'repeatable' => true,
+	
+}
+
+
+
+/******************************************************************/
+/*--------------------Gallery Page-----------------------------------*/
+/******************************************************************/
+
+
+ add_action( 'cmb2_init', 'naiau_register_gallery_metabox' );
+/**
+ * Hook in and add a demo metabox. Can only happen on the 'cmb2_init' hook.
+ */
+function naiau_register_gallery_metabox() {
+
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_naiau_';
+
+	/**
+	 * Sample metabox to demonstrate each field type included
+	 */
+	$cmb_demo = new_cmb2_box( array(
+		'id'            => $prefix . 'gallery_metabox',
+		'title'         => __( 'Gallery Images', 'naiau' ),
+		'object_types'  => array( 'gallery' ), // Post type
+		// 'show_on_cb' => 'naiau_show_if_front_page', // function should return a bool value
+		// 'context'    => 'normal',
+		// 'priority'   => 'high',
+		// 'show_names' => true, // Show field names on the left
+		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+		// 'closed'     => true, // true to keep the metabox closed by default
 	) );
 
-	$cmb_demo->add_field( array(
-		'name' => __( 'hotel degree', 'naiau' ),
-		'desc' => __( 'number between 1 to 7', 'naiau' ),
-		'id'   => $prefix . 'hotel_degree',
-		'type' => 'text',
-		// 'repeatable' => true,
-	) );
 
 	
 	$cmb_demo->add_field( array(
-		'name'         => __( 'Slider Images', 'naiau' ),
+		'name'         => __( 'Images', 'naiau' ),
 		'desc'         => __( 'Upload or add multiple images/attachments.', 'naiau' ),
 		'id'           => $prefix . 'image_list',
 		'type'         => 'file_list',
@@ -191,74 +276,30 @@ function naiau_register_hotel_metabox() {
 
 }
 
-add_action('cmb2_init','naiau_register_tour_information_metabox');
-
-function naiau_register_tour_information_metabox(){
-	$prefix2 ='_naiau_';
-	/**
-	 * Repeatable Field Groups
-	 */
-	$cmb_tour = new_cmb2_box( array(
-		'id'            => $prefix2 . 'tour_metabox',
-		'title'         => __( 'Tour Information', 'naiau' ),
-		'object_types'  => array( 'tour' ), // Post type
-		// 'show_on_cb' => 'naiau_show_if_front_page', // function should return a bool value
-		// 'context'    => 'normal',
-		// 'priority'   => 'high',
-		// 'show_names' => true, // Show field names on the left
-		// 'cmb_styles' => false, // false to disable the CMB stylesheet
-		// 'closed'     => true, // true to keep the metabox closed by default
-	) );
-
-	$cmb_tour->add_field( array(
-		'name'       => __( 'Airline', 'naiau' ),
-		'desc'       => __( 'the name of airline', 'naiau' ),
-		'id'         => $prefix2 . 'tour_airline',
-		'type'       => 'text',
-		
-	) );
-
-	$cmb_tour->add_field( array(
-		'name'       => __( 'Pickup time', 'naiau' ),
-		'desc'       => __( 'the pickup time', 'naiau' ),
-		'id'         => $prefix2 . 'pick_up_time',
-		'type'       => 'text',
-		
-	) );
-
-	$cmb_tour->add_field( array(
-		'name'       => __( 'Landing time', 'naiau' ),
-		'desc'       => __( 'the landing time', 'naiau' ),
-		'id'         => $prefix2 . 'landing_time',
-		'type'       => 'text',
-		
-	) );
-}
-
-add_action( 'cmb2_init', 'naiau_register_repeatable_tour_package_metabox' );
-/**
- * Hook in and add a metabox to demonstrate repeatable grouped fields
- */
-function naiau_register_repeatable_tour_package_metabox() {
+/******************************************************************/
+/*--------------------Tab Maker Page-------------------------------*/
+/******************************************************************/
+ add_action( 'cmb2_init', 'naiau_register_tab_maker_metabox' );
+function naiau_register_tab_maker_metabox() {
 
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_naiau_group_';
 	
 	$cmb_group = new_cmb2_box( array(
-		'id'           => $prefix . 'tour_metabox',
-		'title'        => __( 'Tour Packages', 'naiau' ),
-		'object_types' => array( 'tour', ),
+		'id'           => $prefix . 'tab_metabox',
+		'title'        => __( 'Tabs', 'naiau' ),
+		'object_types' => array( 'tab_maker', ),
 	) );
 
 	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
 	$group_field_id = $cmb_group->add_field( array(
-		'id'          => $prefix . 'tour_package',
+		'id'          => $prefix . 'tab_maker',
 		'type'        => 'group',
 		'description' => __( 'Generates reusable form entries', 'naiau' ),
 		'options'     => array(
-			'group_title'   => __( 'Hotel {#}', 'naiau' ), // {#} gets replaced by row number
-			'add_button'    => __( 'Add Another Hotel', 'naiau' ),
-			'remove_button' => __( 'Remove Hotel', 'naiau' ),
+			'group_title'   => __( 'Tab {#}', 'naiau' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Tab', 'naiau' ),
+			'remove_button' => __( 'Remove Tab', 'naiau' ),
 			'sortable'      => true, // beta
 		),
 	) );
@@ -272,109 +313,234 @@ function naiau_register_repeatable_tour_package_metabox() {
 	// WP_Query arguments
 	
 	$args = array (
-		'post_type'              => array( 'hotel' ),
-		'posts_per_page'         => '50',
+		'post_type'              => array( 'notify' ),
+		'posts_per_page'         => '20',
 	);
 
 
 	// The Query
-	$hotel_list = get_posts( $args );
+	$notify_list = get_posts( $args );
 	//var_dump($hotel_list);
 	$package_hotels = array();
-	foreach ( $hotel_list as $post ) : setup_postdata( $post );
+	foreach ( $notify_list as $post ) : setup_postdata( $post );
 			$package_hotels[$post->ID] = $post->post_title;
  	endforeach; 
  	//wp_reset_postdata();
 	
-	$cmb_group->add_group_field($group_field_id , array(
-		'name'    => __( 'Hotel Name', 'naiau' ),
-		'desc'    => __( 'choose hotel name', 'naiau' ),
-		'id'      => 'package_hotel',
-		'type'    => 'select',
-		'options' => $package_hotels,
-			
-	) );
-
-	$cmb_group->add_group_field($group_field_id , array(
-		'name'             => __( 'Hotel Service', 'naiau' ),
-		'desc'             => __( 'Hotet services', 'naiau' ),
-		'id'               => 'hotel_service',
-		'type'             => 'radio_inline',
-		'show_option_none' => true,
-		'options'          => array(
-			'u_all' => __( 'U.All', 'naiau' ),
-			'all' => __( 'All', 'naiau' ),
-			'b_b'   => __( 'B.B', 'naiau' ),
-			
-		),
-	) );
-
 	$cmb_group->add_group_field( $group_field_id, array(
-		'name'        => __( 'Two Bed Price', 'naiau' ),
-		'description' => __( 'Enter price with currency', 'naiau' ),
-		'id'          => 'two_bed',
-		'type'        => 'text',
-	) );
-
-	$cmb_group->add_group_field( $group_field_id, array(
-		'name'        => __( 'One Bed Price', 'naiau' ),
-		'description' => __( 'Enter price with currency', 'naiau' ),
-		'id'          => 'one_bed',
-		'type'        => 'text',
-	) );
-
-	$cmb_group->add_group_field( $group_field_id, array(
-		'name'        => __( 'Child With Bed Price', 'naiau' ),
-		'description' => __( 'Enter price with currency', 'naiau' ),
-		'id'          => 'child_with_bed',
-		'type'        => 'text',
-	) );
-
-	$cmb_group->add_group_field( $group_field_id, array(
-		'name'        => __( 'Child Without Bed Price', 'naiau' ),
-		'description' => __( 'Enter price with currency', 'naiau' ),
-		'id'          => 'child_without_bed',
+		'name'        => __( 'Tab Title', 'naiau' ),
+		'description' => __( 'Enter Tab Title', 'naiau' ),
+		'id'          => 'tab_title',
 		'type'        => 'text',
 	) );
 
 	
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'             => __( 'Show excerpt', 'naiau' ),
+		'desc'             => __( 'show excerpt of items or not', 'naiau' ),
+		'id'               => 'show_excerpt',
+		'type'             => 'radio_inline',
+		'show_option_none' => true,
+		'options'          => array(
+			'false' => __( 'No', 'naiau' ),
+			'true' => __( 'Yes', 'naiau' ),
+			
+			
+		),
+	) );
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Notify Category', 'naiau' ),
+		'desc'    => __( 'choose Notify Category ', 'naiau' ),
+		'id'      => 'notify_category',
+		'type'    => 'select',
+		'options' => $package_hotels,
+			
+	) );
+	
+	
 }
-add_action( 'cmb2_init', 'naiau_register_intro_page_metabox' );
-/**
- * Hook in and add a metabox that only appears on the 'About' page
- */
-function naiau_register_intro_page_metabox() {
+/******************************************************************/
+/*--------------------Section Maker-------------------------------*/
+/******************************************************************/
+
+add_action('cmb2_init','naiau_register_section_maker_metabox');
+// add_action('cmb2_init','naiau_register_tour_information_metabox');
+function naiau_register_section_maker_metabox() {
 
 	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_naiau_intro_';
+	$prefix = '_naiau_';
 
 	/**
-	 * Metabox to be displayed on a single page ID
+	 * Sample metabox to demonstrate each field type included
 	 */
-	$cmb_intro_page = new_cmb2_box( array(
-		'id'           => $prefix . 'metabox',
-		'title'        => __( 'Intro Page Links Metabox', 'naiau' ),
-		'object_types' => array( 'page', ), // Post type
-		'context'      => 'normal',
-		'priority'     => 'high',
-		'show_names'   => true, // Show field names on the left
-		//'show_on'      => 'ed_metabox_include_front_page',//array( 'key' => 'page-template', 'value' => 'template-contact.php' ),, // Specific post IDs to display this metabox
+	$cmb_demo = new_cmb2_box( array(
+		'id'            => $prefix . 'section_maker_metabox',
+		'title'         => __( 'Section Selection', 'naiau' ),
+		'object_types'  => array( 'post','page','gallery','notify','news' ), // Post type
+		// 'show_on_cb' => 'naiau_show_if_front_page', // function should return a bool value
+		// 'context'    => 'normal',
+		// 'priority'   => 'high',
+		// 'show_names' => true, // Show field names on the left
+		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+		// 'closed'     => true, // true to keep the metabox closed by default
 	) );
 
-	$cmb_intro_page->add_field( array(
-		'name' => __( 'Internal Tour', 'naiau' ),
-		'desc' => __( 'field description (optional)', 'naiau' ),
-		'id'   => $prefix . 'internal_tours',
-		'type' => 'text_url',
-	) );
-	$cmb_intro_page->add_field( array(
-		'name' => __( 'External Tour', 'naiau' ),
-		'desc' => __( 'field description (optional)', 'naiau' ),
-		'id'   => $prefix . 'external_tours',
-		'type' => 'text_url',
+	$cmb_demo->add_field( array(
+		'name'       => __( 'show news slider', 'naiau' ),
+		'desc'       => __( 'show news slider or not', 'naiau' ),
+		'id'         => $prefix . 'news_slider',
+		'type'       => 'radio_inline',
+		'show_option_none' => true,
+		'options'          => array(
+			'false' => __( 'No', 'naiau' ),
+			'true' => __( 'Yes', 'naiau' ),
+			
+			
+		),
+		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
+		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+		// 'on_front'        => false, // Optionally designate a field to wp-admin only
+		// 'repeatable'      => true,
 	) );
 
+	$cmb_demo->add_field( array(
+		'name'       => __( 'news category', 'naiau' ),
+		'desc'       => __( 'which news category to show', 'naiau' ),
+		'id'         => $prefix . 'news_category',
+		'type'       => 'select',
+		'show_option_none' => true,
+		'options'          => array(),
+			
+			
+		
+		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
+		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+		// 'on_front'        => false, // Optionally designate a field to wp-admin only
+		// 'repeatable'      => true,
+	) );
+	$cmb_demo->add_field( array(
+		'name'       => __( 'show important links', 'naiau' ),
+		'desc'       => __( 'show important links or not', 'naiau' ),
+		'id'         => $prefix . 'important_links',
+		'type'       => 'radio_inline',
+		'show_option_none' => true,
+		'options'          => array(
+			'true' => __( 'Yes', 'naiau' ),
+			'false' => __( 'No', 'naiau' ),
+			
+			
+		),
+		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
+		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+		// 'on_front'        => false, // Optionally designate a field to wp-admin only
+		// 'repeatable'      => true,
+	) );
+	$cmb_demo->add_field( array(
+		'name'       => __( 'show related links', 'naiau' ),
+		'desc'       => __( 'show related links or not', 'naiau' ),
+		'id'         => $prefix . 'related_links',
+		'type'       => 'radio_inline',
+		'show_option_none' => true,
+		'options'          => array(
+			'true' => __( 'Yes', 'naiau' ),
+			'false' => __( 'No', 'naiau' ),
+			
+			
+		),
+		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
+		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+		// 'on_front'        => false, // Optionally designate a field to wp-admin only
+		// 'repeatable'      => true,
+	) );
+
+	
 }
+
+
+// add_action('cmb2_init','naiau_register_tab_metabox');
+
+// function naiau_register_tab_metabox(){
+// 	$prefix2 ='_naiau_';
+// 	/**
+// 	 * Repeatable Field Groups
+// 	 */
+// 	$cmb_tour = new_cmb2_box( array(
+// 		'id'            => $prefix2 . 'tour_metabox',
+// 		'title'         => __( 'Tour Information', 'naiau' ),
+// 		'object_types'  => array( 'tour' ), // Post type
+// 		// 'show_on_cb' => 'naiau_show_if_front_page', // function should return a bool value
+// 		// 'context'    => 'normal',
+// 		// 'priority'   => 'high',
+// 		// 'show_names' => true, // Show field names on the left
+// 		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+// 		// 'closed'     => true, // true to keep the metabox closed by default
+// 	) );
+
+// 	$cmb_tour->add_field( array(
+// 		'name'       => __( 'Airline', 'naiau' ),
+// 		'desc'       => __( 'the name of airline', 'naiau' ),
+// 		'id'         => $prefix2 . 'tour_airline',
+// 		'type'       => 'text',
+		
+// 	) );
+
+// 	$cmb_tour->add_field( array(
+// 		'name'       => __( 'Pickup time', 'naiau' ),
+// 		'desc'       => __( 'the pickup time', 'naiau' ),
+// 		'id'         => $prefix2 . 'pick_up_time',
+// 		'type'       => 'text',
+		
+// 	) );
+
+// 	$cmb_tour->add_field( array(
+// 		'name'       => __( 'Landing time', 'naiau' ),
+// 		'desc'       => __( 'the landing time', 'naiau' ),
+// 		'id'         => $prefix2 . 'landing_time',
+// 		'type'       => 'text',
+		
+// 	) );
+// }
+
+
+ 
+// function naiau_register_intro_page_metabox() {
+
+// 	// Start with an underscore to hide fields from custom fields list
+// 	$prefix = '_naiau_intro_';
+
+// 	/**
+// 	 * Metabox to be displayed on a single page ID
+// 	 */
+// 	$cmb_intro_page = new_cmb2_box( array(
+// 		'id'           => $prefix . 'metabox',
+// 		'title'        => __( 'Intro Page Links Metabox', 'naiau' ),
+// 		'object_types' => array( 'page', ), // Post type
+// 		'context'      => 'normal',
+// 		'priority'     => 'high',
+// 		'show_names'   => true, // Show field names on the left
+// 		//'show_on'      => 'ed_metabox_include_front_page',//array( 'key' => 'page-template', 'value' => 'template-contact.php' ),, // Specific post IDs to display this metabox
+// 	) );
+
+// 	$cmb_intro_page->add_field( array(
+// 		'name' => __( 'Internal Tour', 'naiau' ),
+// 		'desc' => __( 'field description (optional)', 'naiau' ),
+// 		'id'   => $prefix . 'internal_tours',
+// 		'type' => 'text_url',
+// 	) );
+// 	$cmb_intro_page->add_field( array(
+// 		'name' => __( 'External Tour', 'naiau' ),
+// 		'desc' => __( 'field description (optional)', 'naiau' ),
+// 		'id'   => $prefix . 'external_tours',
+// 		'type' => 'text_url',
+// 	) );
+
+// }
 
 // add_action( 'cmb2_init', 'naiau_register_user_profile_metabox' );
 /**

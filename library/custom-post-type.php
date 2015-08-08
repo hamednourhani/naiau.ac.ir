@@ -144,7 +144,7 @@ function link_post_type() {
 			'capability_type' => 'post',
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', /*'editor',*/ 'author', 'thumbnail', /*'excerpt', 'trackbacks',*/ 'custom-fields', /*'comments', 'revisions',*/ 'sticky')
+			'supports' => array( 'title', 'editor',/* 'author',*/ 'thumbnail', /*'excerpt', 'trackbacks',*/ 'custom-fields', /*'comments', 'revisions',*/ 'sticky')
 		) /* end of options */
 	); /* end of register post type */
 	
@@ -199,7 +199,7 @@ function gallery_post_type() {
 }
 function tab_maker_post_type() { 
 // creating (registering) the custom type 
-	register_post_type( 'tab', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+	register_post_type( 'tab_maker', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 		// let's now add all the options for this post type
 		array( 'labels' => array(
 			'name' => __( 'Tab Maker', 'naiau' ), /* This is the Title of the Group */
@@ -332,7 +332,7 @@ function tab_maker_post_type() {
 	
 	// now let's add custom tags (these act like categories)
 	register_taxonomy( 'notify_tag', 
-		array('news'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+		array('notify'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
 		array('hierarchical' => false,    /* if this is false, it acts like tags */
 			'labels' => array(
 				'name' => __( 'Notify Tags', 'naiau' ), /* name of the custom taxonomy */
