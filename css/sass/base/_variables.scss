@@ -1,0 +1,27 @@
+/* ------------susy-------- */
+$total-columns : 12;
+$column-width : 4em;
+$gutter-width : 1em;
+$grid-padding : $gutter-width;
+$from-direction: right;
+$omega-float : left;
+
+$default-transition-delay    : 0s;
+@include border-box-sizing;
+
+$small : 30em;
+$xmedium : 34em;
+$medium : 45em;
+$larg : 75em;
+
+/*------ colors -----------*/
+$white : #fff;
+$skyblue : #179BD7;
+$glassyWhite : rgba(255, 255, 255, 0.85);
+$tinyellow : #FFD;
+$tingrey : #ddd;
+$grey : #aaa;
+$navy : rgb(0,30,69);
+$glassyBlack : rgba(44, 35, 40, 0.85);
+$glassyNavy : rgba(0,30,69,0.85);
+
