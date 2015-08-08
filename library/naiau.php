@@ -149,7 +149,7 @@ function naiau_scripts_and_styles() {
 
 		//adding scripts file in the footer
 		wp_register_script( 'naiau-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery','jssort5' ), '', true );
-		wp_register_script( 'jssort5', get_stylesheet_directory_uri() . '/js/lib/jssor.slider.min.js', array( 'jquery' ), '', true);
+		
 		// enqueue styles and scripts
 		wp_enqueue_script( 'naiau-modernizr' );
 		wp_enqueue_style( 'naiau-stylesheet' );
@@ -163,7 +163,7 @@ function naiau_scripts_and_styles() {
 		and your site will load faster.
 		*/
 		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'jssort5' );
+		
 		wp_enqueue_script( 'naiau-js' );
 		
 
@@ -225,9 +225,10 @@ function naiau_theme_support() {
 	register_nav_menus(
 		array(
 			'main-nav' => __( 'The Main Menu', 'naiau' ),   // main nav in header
-			'footer-links' => __( 'Footer Links', 'naiau' ) // secondary nav in footer
+			'top-nav' => __( 'Top Bar Menu', 'naiau' ) // secondary nav in footer
 		)
 	);
+
 } /* end naiau theme support */
 
 
