@@ -669,6 +669,68 @@ h1, h2, h3, h4, h5, h6, a {
   color: #000; }
 
 /* header style */
+/* line 2, sass/layout/_header.scss */
+.site-header, .menu-bar, .top-bar {
+  width: 100%; }
+
+/* line 5, sass/layout/_header.scss */
+.top-bar {
+  background-color: #179BD7; }
+  /* line 7, sass/layout/_header.scss */
+  .top-bar a {
+    color: #fff; }
+  /* line 10, sass/layout/_header.scss */
+  .top-bar ul.top-nav {
+    width: 74.57627%;
+    float: right;
+    margin-left: 1.69492%;
+    display: inline;
+    margin: 0; }
+    /* line 13, sass/layout/_header.scss */
+    .top-bar ul.top-nav li {
+      display: inline-block; }
+  /* line 17, sass/layout/_header.scss */
+  .top-bar .search-area {
+    width: 23.72881%;
+    float: left;
+    margin-left: 0;
+    *margin-right: -1em;
+    display: inline; }
+    /* line 20, sass/layout/_header.scss */
+    .top-bar .search-area img.search-icon {
+      float: left;
+      padding: 10px; }
+    /* line 24, sass/layout/_header.scss */
+    .top-bar .search-area input.top-search {
+      outline: none;
+      border: none;
+      float: left;
+      height: 40px;
+      display: inline-block; }
+
+/* line 33, sass/layout/_header.scss */
+.menu-bar {
+  background-color: #253B80; }
+  /* line 35, sass/layout/_header.scss */
+  .menu-bar a {
+    color: #E6E6E6; }
+  /* line 38, sass/layout/_header.scss */
+  .menu-bar .logo-wrapper {
+    width: 23.72881%;
+    float: right;
+    margin-left: 1.69492%;
+    display: inline; }
+  /* line 41, sass/layout/_header.scss */
+  .menu-bar ul.main-nav {
+    width: 74.57627%;
+    float: left;
+    margin-left: 0;
+    *margin-right: -1em;
+    display: inline; }
+    /* line 43, sass/layout/_header.scss */
+    .menu-bar ul.main-nav li {
+      display: inline-block; }
+
 /* main style */
 /* line 3, sass/layout/_main.scss */
 .layout {
@@ -684,6 +746,14 @@ h1, h2, h3, h4, h5, h6, a {
     content: "";
     display: table;
     clear: both; }
+
+/* line 6, sass/layout/_main.scss */
+body {
+  max-width: 1200px; }
+
+/* line 9, sass/layout/_main.scss */
+.body-wrapper {
+  width: 100%; }
 
 /* footer style */
 /* button style */

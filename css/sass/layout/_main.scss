@@ -3,3 +3,9 @@
 .layout{
 	@include container;
 }
+body{
+	max-width : 1200px;
+}
+.body-wrapper{
+	width : 100%;
+}
