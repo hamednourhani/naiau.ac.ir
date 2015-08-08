@@ -9,6 +9,10 @@ body,html{
 	display : block;
 	@include single-transition(all 0.4s);
 
+
+}
+body {
+	font-family : $BYekan;
 }
 
 .fa {
@@ -25,5 +29,5 @@ input,textarea,button{
 	max-width : 100%;
 }
 h1,h2,h3,h4,h5,h6,a{
-	color : $navy;
+	color : $black;
 }
