@@ -314,10 +314,11 @@ function naiau_register_tab_maker_metabox() {
 	
 	
 	$tax_terms = get_terms('notify_cat', array('hide_empty' => false));
+
 	
 	$notify_cat_list = array();
 	foreach ( $tax_terms as $term ) : setup_postdata( $term );
-			$notify_cat_list[$term->term_id] = $term->name;
+			$notify_cat_list[$term->slug] = $term->name;
  	endforeach; 
  	//wp_reset_postdata();
 	
@@ -339,7 +340,7 @@ function naiau_register_tab_maker_metabox() {
 		'options'          => array(
 			'false' => __( 'No', 'naiau' ),
 			'true' => __( 'Yes', 'naiau' ),
-			
+
 			
 			
 		),
