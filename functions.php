@@ -79,8 +79,17 @@ if ( ! isset( $content_width ) ) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'naiau-thumb-600', 600, 150, true );
-add_image_size( 'naiau-thumb-300', 300, 300, true );
+add_image_size( 'slider', 840, 540, array( 'center', 'center' ) );
+add_image_size( 'slider-thumb', 100, 80, array( 'center', 'center' ) );
+
+add_filter( 'image_size_names_choose', 'naiau_custom_sizes' );
+ 
+function naiau_custom_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        'slider' => __( 'Slider Size' ),
+        'slider-thumb' => __( 'Slider Thumb' ),
+    ) );
+}
 
 /*
 to add more sizes, simply copy a line from above

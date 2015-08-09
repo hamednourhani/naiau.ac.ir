@@ -192,7 +192,7 @@ function naiau_theme_support() {
 	add_theme_support( 'post-thumbnails' );
 
 	// default thumb size
-	set_post_thumbnail_size(300, 250, true);
+	set_post_thumbnail_size(100, 80, true);
 
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',

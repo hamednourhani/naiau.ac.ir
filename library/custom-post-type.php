@@ -240,49 +240,7 @@ function tab_maker_post_type() {
 	//register_taxonomy_for_object_type( 'post_tag', 'tour' );
 	
 }
-function slideshow_post_type() { 
-	// creating (registering) the custom type 
-	register_post_type( 'slideshow', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
-		// let's now add all the options for this post type
-		array( 'labels' => array(
-			'name' => __( 'Slideshow', 'naiau' ), /* This is the Title of the Group */
-			'singular_name' => __( 'Slideshow', 'naiau' ), /* This is the individual type */
-			'all_items' => __( 'All Slideshows', 'naiau' ), /* the all items menu item */
-			'add_new' => __( 'Add New', 'naiau' ), /* The add new menu item */
-			'add_new_item' => __( 'Add New Slideshow', 'naiau' ), /* Add New Display Title */
-			'edit' => __( 'Edit', 'naiau' ), /* Edit Dialog */
-			'edit_item' => __( 'Edit slideshow', 'naiau' ), /* Edit Display Title */
-			'new_item' => __( 'New Slideshow', 'naiau' ), /* New Display Title */
-			'view_item' => __( 'View slideshow', 'naiau' ), /* View Display Title */
-			'search_items' => __( 'Search slideshow', 'naiau' ), /* Search Custom Type Title */ 
-			'not_found' =>  __( 'Nothing found in the Database.', 'naiau' ), /* This displays if there are no entries yet */ 
-			'not_found_in_trash' => __( 'Nothing found in Trash', 'naiau' ), /* This displays if there is nothing in the trash */
-			'parent_item_colon' => ''
-			), /* end of arrays */
-			'description' => __( 'This is a slideshow', 'naiau' ), /* Custom Type Description */
-			'public' => true,
-			'show_in_nav_menus' => true,
-			'publicly_queryable' => true,
-			'exclude_from_search' => false,
-			'show_ui' => true,
-			'query_var' => true,
-			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
-			'menu_icon' => get_stylesheet_directory_uri() . '/images/notify-icon.png', /* the icon for the custom post type menu */
-			'rewrite'	=> array( 'slug' => 'slideshow', 'with_front' => false ), /* you can specify its url slug */
-			'has_archive' => 'notify', /* you can rename the slug here */
-			'capability_type' => 'post',
-			'hierarchical' => false,
-			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', /*'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks',*/ 'custom-fields', /*'comments', 'revisions',*/ 'sticky')
-		) /* end of options */
-	); /* end of register post type */
-	
-	/* this adds your post categories to your custom post type */
-	//register_taxonomy_for_object_type( 'category', 'tour' );
-	/* this adds your post tags to your custom post type */
-	//register_taxonomy_for_object_type( 'post_tag', 'tour' );
-	
-}
+
 
 	// adding the function to the Wordpress init
 	add_action( 'init', 'notify_post_type');
@@ -290,7 +248,7 @@ function slideshow_post_type() {
 	add_action( 'init', 'link_post_type');
 	add_action( 'init', 'gallery_post_type');
 	add_action( 'init', 'tab_maker_post_type');
-	add_action( 'init', 'slideshow_post_type');
+	
 
 	
 	/*
