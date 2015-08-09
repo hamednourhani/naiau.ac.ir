@@ -62,15 +62,13 @@
         			               'after' => '',                                  // after the menu
         			               'link_before' => '',                            // before each link
         			               'link_after' => '',                             // after each link
-        			               'depth' => 3,                                   // limit the depth of the nav
+        			               'depth' => 1,                                   // limit the depth of the nav
     					         'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
 
 					</nav>
 					<div class="search-area">
-						<img  class="search-icon" src="<?php echo get_template_directory_uri();?>/images/search-icon.png" />
 						<input type="search" class="top-search" placeholder="search" />
-						
 					</div>
 				</section>
 				</div>

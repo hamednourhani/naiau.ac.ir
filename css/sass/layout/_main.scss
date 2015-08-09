@@ -4,7 +4,9 @@
 	@include container;
 }
 body{
-	max-width : 1200px;
+	max-width : 1400px;
+	margin : auto;
+	background-color: $grey1;
 }
 .body-wrapper{
 	width : 100%;
