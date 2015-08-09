@@ -99,8 +99,11 @@
 				</div>
 
 			</header>
-		
+			<div class="slider-wrap">
+				<?php get_template_part('library/slider','area'); ?>
+			</div>
 
 		</div>
+		<?php get_footer();?>
 	</body>
 </html>

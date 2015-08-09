@@ -2,8 +2,8 @@
 /* fonts */
 @font-face {
   font-family: "BYekan";
-  src: url('fonts/BYekan.eot?1439049943');
-  src: url('fonts/BYekan.eot?&1439049943#iefix') format('embedded-opentype'), url('fonts/BYekan.ttf?1439049944') format('truetype'), url('fonts/BYekan.woff?1439049944') format('woff'); }
+  src: url('fonts/BYekan.eot?1438228253');
+  src: url('fonts/BYekan.eot?&1438228253#iefix') format('embedded-opentype'), url('fonts/BYekan.ttf?1438228253') format('truetype'), url('fonts/BYekan.woff?1438228253') format('woff'); }
 /* normalize style */
 /* normalize-scss 3.0.2+normalize.3.0.2 | MIT/GPLv2 License | bit.ly/normalize-scss */
 /**
@@ -11,7 +11,7 @@
  * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
  * body `font-size` is set using `em` units.
  */
-/* line 106, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
   line-height: 1.5em; }
@@ -617,7 +617,7 @@ p {
   font-feature-settings: "liga", "dlig"; }
 
 /* ------------susy-------- */
-/* line 14, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/language/susyone/_grid.scss */
+/* line 14, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/language/susyone/_grid.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -691,6 +691,7 @@ ul, menu, dir {
     color: #fff; }
   /* line 11, sass/layout/_header.scss */
   .top-bar ul.top-nav {
+    font-size: 90%;
     font-weight: 300;
     width: 74.57627%;
     float: right;
@@ -698,22 +699,22 @@ ul, menu, dir {
     display: inline;
     margin: 0;
     line-height: 38px; }
-    /* line 16, sass/layout/_header.scss */
+    /* line 17, sass/layout/_header.scss */
     .top-bar ul.top-nav li {
       display: inline-block; }
-    /* line 21, sass/layout/_header.scss */
+    /* line 22, sass/layout/_header.scss */
     .top-bar ul.top-nav li a {
       padding: 7px 14px;
       border-right: 1px solid #20a9e7;
-      -moz-transition: all 0.5s ease-in-out 0s;
-      -o-transition: all 0.5s ease-in-out 0s;
-      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out 0s;
+      -o-transition: all 0.3s ease-in-out 0s;
+      -webkit-transition: all 0.3s ease-in-out;
       -webkit-transition-delay: 0s;
-      transition: all 0.5s ease-in-out 0s; }
-    /* line 26, sass/layout/_header.scss */
+      transition: all 0.3s ease-in-out 0s; }
+    /* line 27, sass/layout/_header.scss */
     .top-bar ul.top-nav li a:hover {
       background-color: #5DC2F0; }
-  /* line 31, sass/layout/_header.scss */
+  /* line 32, sass/layout/_header.scss */
   .top-bar .search-area {
     width: 23.72881%;
     float: left;
@@ -721,7 +722,7 @@ ul, menu, dir {
     *margin-right: -1em;
     display: inline;
     position: relative; }
-    /* line 36, sass/layout/_header.scss */
+    /* line 37, sass/layout/_header.scss */
     .top-bar .search-area input.top-search {
       float: left;
       outline: none;
@@ -738,17 +739,17 @@ ul, menu, dir {
       -webkit-transition: all 0.5s ease-in-out;
       -webkit-transition-delay: 0s;
       transition: all 0.5s ease-in-out 0s; }
-      /* line 50, sass/layout/_header.scss */
+      /* line 51, sass/layout/_header.scss */
       .top-bar .search-area input.top-search:focus {
         width: 80%;
         background-color: #37b2ea; }
-      /* line 55, sass/layout/_header.scss */
+      /* line 56, sass/layout/_header.scss */
       .top-bar .search-area input.top-search::-webkit-input-placeholder {
         color: #fff; }
-      /* line 58, sass/layout/_header.scss */
+      /* line 59, sass/layout/_header.scss */
       .top-bar .search-area input.top-search::-moz-placeholder {
         color: #fff; }
-    /* line 62, sass/layout/_header.scss */
+    /* line 63, sass/layout/_header.scss */
     .top-bar .search-area:before {
       content: "\F002";
       font-size: 22px;
@@ -760,13 +761,13 @@ ul, menu, dir {
       color: #fff;
       border-right: 1px solid #5DC2F0; }
 
-/* line 76, sass/layout/_header.scss */
+/* line 77, sass/layout/_header.scss */
 .menu-bar {
   background-color: #253B80; }
-  /* line 78, sass/layout/_header.scss */
+  /* line 79, sass/layout/_header.scss */
   .menu-bar a {
     color: #E6E6E6; }
-  /* line 81, sass/layout/_header.scss */
+  /* line 82, sass/layout/_header.scss */
   .menu-bar .logo-wrapper {
     width: 23.72881%;
     float: right;
@@ -774,11 +775,12 @@ ul, menu, dir {
     display: inline;
     padding-top: 23px;
     padding-bottom: 8px; }
-    /* line 87, sass/layout/_header.scss */
+    /* line 88, sass/layout/_header.scss */
     .menu-bar .logo-wrapper img {
       max-height: 70px; }
-  /* line 91, sass/layout/_header.scss */
+  /* line 92, sass/layout/_header.scss */
   .menu-bar ul.main-nav {
+    font-size: 90%;
     font-weight: 300;
     width: 74.57627%;
     float: left;
@@ -786,27 +788,27 @@ ul, menu, dir {
     *margin-right: -1em;
     display: inline;
     margin-top: 12px; }
-    /* line 95, sass/layout/_header.scss */
+    /* line 97, sass/layout/_header.scss */
     .menu-bar ul.main-nav li {
       position: relative;
       display: inline-block;
       max-width: 120px;
       vertical-align: baseline; }
-    /* line 102, sass/layout/_header.scss */
+    /* line 104, sass/layout/_header.scss */
     .menu-bar ul.main-nav li > a {
-      border-right: 1px solid #2b4494;
+      border-right: 1px solid #304da8;
       padding: 20px 15px;
       border-bottom: 5px solid #253B80;
       display: inherit;
-      -moz-transition: all 0.5s ease-in-out 0s;
-      -o-transition: all 0.5s ease-in-out 0s;
-      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out 0s;
+      -o-transition: all 0.3s ease-in-out 0s;
+      -webkit-transition: all 0.3s ease-in-out;
       -webkit-transition-delay: 0s;
-      transition: all 0.5s ease-in-out 0s; }
-    /* line 109, sass/layout/_header.scss */
+      transition: all 0.3s ease-in-out 0s; }
+    /* line 111, sass/layout/_header.scss */
     .menu-bar ul.main-nav li > a:hover {
       border-bottom-color: #179BD7; }
-    /* line 112, sass/layout/_header.scss */
+    /* line 114, sass/layout/_header.scss */
     .menu-bar ul.main-nav li ul.sub-menu {
       -moz-transition: all 0.3s ease-in-out 0s;
       -o-transition: all 0.3s ease-in-out 0s;
@@ -820,30 +822,30 @@ ul, menu, dir {
       top: 100%;
       right: -20%;
       background-color: #253B80; }
-      /* line 122, sass/layout/_header.scss */
+      /* line 124, sass/layout/_header.scss */
       .menu-bar ul.main-nav li ul.sub-menu li {
         text-align: center;
         width: 100%;
         max-width: 100%; }
-      /* line 127, sass/layout/_header.scss */
+      /* line 129, sass/layout/_header.scss */
       .menu-bar ul.main-nav li ul.sub-menu a {
         border-top: 1px solid #304da8;
         border-bottom: 1px solid #304da8;
         width: 100%;
         padding: 12px 15px; }
-        /* line 132, sass/layout/_header.scss */
+        /* line 134, sass/layout/_header.scss */
         .menu-bar ul.main-nav li ul.sub-menu a:hover {
           background-color: #5A6B9F; }
-      /* line 136, sass/layout/_header.scss */
+      /* line 138, sass/layout/_header.scss */
       .menu-bar ul.main-nav li ul.sub-menu li.menu-item-has-children > a:after {
         content: "\F104";
         left: 12px;
         position: absolute;
         vertical-align: middle; }
-    /* line 144, sass/layout/_header.scss */
+    /* line 146, sass/layout/_header.scss */
     .menu-bar ul.main-nav li:hover > ul.sub-menu {
       display: inline-block; }
-    /* line 148, sass/layout/_header.scss */
+    /* line 150, sass/layout/_header.scss */
     .menu-bar ul.main-nav ul.sub-menu li:hover ul {
       right: 100%;
       top: 0; }
@@ -858,7 +860,7 @@ ul, menu, dir {
   padding-right: 1em;
   margin-left: auto;
   margin-right: auto; }
-  /* line 38, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   .layout:after {
     content: "";
     display: table;
@@ -880,5 +882,103 @@ body {
 /* form style */
 /* table style */
 /* other style */
+/* line 2, sass/modules/_slider.scss */
+.sp-thumbnails-container {
+  direction: ltr; }
+
+/* line 5, sass/modules/_slider.scss */
+#news-slider .sp-thumbnail-image-container {
+  width: 100px;
+  height: 80px;
+  overflow: hidden;
+  float: right;
+  padding-right: 5px; }
+
+/* line 13, sass/modules/_slider.scss */
+#news-slider .sp-thumbnail-image {
+  height: 100%; }
+
+/* line 17, sass/modules/_slider.scss */
+#news-slider .sp-thumbnail-text {
+  width: 165px;
+  float: left;
+  padding: 8px;
+  background-color: #F0F0F0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 26, sass/modules/_slider.scss */
+#news-slider .sp-thumbnail-title {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: #333; }
+
+/* line 32, sass/modules/_slider.scss */
+#news-slider .sp-thumbnail-description {
+  font-size: 14px;
+  color: #333; }
+
+/* line 36, sass/modules/_slider.scss */
+.sp-caption-container {
+  text-align: center;
+  /* margin-top: -40px; */
+  /* opacity: 1 !important; */
+  position: absolute;
+  max-width: 300px;
+  background-color: rgba(44, 35, 40, 0.85);
+  bottom: 10px;
+  right: 20px;
+  padding: 10px;
+  color: #fff; }
+
+/* line 50, sass/modules/_slider.scss */
+.sp-left-thumbnails.sp-has-pointer .sp-selected-thumbnail:after {
+  border-left: 13px solid #179BD7;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent; }
+
+/* line 56, sass/modules/_slider.scss */
+.sp-left-thumbnails.sp-has-pointer .sp-selected-thumbnail:before {
+  border-left: 5px solid #179BD7; }
+
+/* line 61, sass/modules/_slider.scss */
+.sp-bottom-thumbnails.sp-has-pointer .sp-selected-thumbnail:before {
+  border-bottom: 5px solid #179BD7; }
+
+/* line 65, sass/modules/_slider.scss */
+.sp-bottom-thumbnails.sp-has-pointer .sp-selected-thumbnail:after {
+  border-bottom: 13px solid #179BD7;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent; }
+
+@media (max-width: 500px) {
+  /* line 72, sass/modules/_slider.scss */
+  .sp-caption-container {
+    display: none; }
+
+  /* line 75, sass/modules/_slider.scss */
+  #news-slider .sp-thumbnail {
+    text-align: center; }
+
+  /* line 79, sass/modules/_slider.scss */
+  #news-slider .sp-thumbnail-image-container {
+    display: none; }
+
+  /* line 83, sass/modules/_slider.scss */
+  #news-slider .sp-thumbnail-text {
+    width: 120px; }
+
+  /* line 87, sass/modules/_slider.scss */
+  #news-slider .sp-thumbnail-title {
+    font-size: 12px;
+    text-transform: uppercase; }
+
+  /* line 92, sass/modules/_slider.scss */
+  #news-slider .sp-thumbnail-description {
+    display: none; } }
+@media (max-width: 800px) {
+  /* line 97, sass/modules/_slider.scss */
+  .sp-caption-container {
+    bottom: 100px; } }
 /* setting style */
 /* utilities style */

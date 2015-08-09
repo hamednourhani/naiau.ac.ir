@@ -137,6 +137,7 @@ function naiau_scripts_and_styles() {
 		wp_register_script( 'naiau-modernizr', get_stylesheet_directory_uri() . '/js/lib/modernizr.custom.min.js', array(), '2.5.3', false );
 
 		// register main stylesheet
+		wp_register_style( 'slider-pro-css', get_stylesheet_directory_uri() . '/css/slider-pro.min.css', array(), '', 'all' );
 		wp_register_style( 'font-awesome', get_stylesheet_directory_uri() . '/css/font-awesome.min.css', array(), '', 'all' );
 		wp_register_style( 'naiau-stylesheet', get_stylesheet_directory_uri() . '/css/style.css', array(), '', 'all' );
 
@@ -149,10 +150,14 @@ function naiau_scripts_and_styles() {
     }
 
 		//adding scripts file in the footer
-		wp_register_script( 'naiau-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery','jssort5' ), '', true );
+		wp_register_script( 'slider-pro-js', get_stylesheet_directory_uri() . '/js/lib/jquery.sliderPro.min.js', array( 'jquery' ), '', true );
+		wp_register_script( 'naiau-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery','slider-pro-js' ), '', true );
+		
 		
 		// enqueue styles and scripts
 		wp_enqueue_script( 'naiau-modernizr' );
+
+		wp_enqueue_style( 'slider-pro-css' );
 		wp_enqueue_style('font-awesome' );
 		wp_enqueue_style( 'naiau-stylesheet' );
 		wp_enqueue_style( 'naiau-ie-only' );
@@ -165,7 +170,7 @@ function naiau_scripts_and_styles() {
 		and your site will load faster.
 		*/
 		wp_enqueue_script( 'jquery' );
-		
+		wp_enqueue_script( 'slider-pro' );
 		wp_enqueue_script( 'naiau-js' );
 		
 
