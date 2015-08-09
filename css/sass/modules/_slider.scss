@@ -1,5 +1,10 @@
 // _slider.scss
-
+.sp-caption-container a{
+	color : $white;
+}
+.sp-caption-container a:hover{
+	color : $skyblue2;
+}
 .sp-thumbnails-container{
 	direction : ltr;
 }

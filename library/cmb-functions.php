@@ -312,18 +312,12 @@ function naiau_register_tab_maker_metabox() {
 	 */
 	// WP_Query arguments
 	
-	$args = array (
-		'post_type'              => array( 'notify' ),
-		'posts_per_page'         => '20',
-	);
-
-
-	// The Query
-	$notify_list = get_posts( $args );
-	//var_dump($hotel_list);
-	$package_hotels = array();
-	foreach ( $notify_list as $post ) : setup_postdata( $post );
-			$package_hotels[$post->ID] = $post->post_title;
+	
+	$tax_terms = get_terms('notify_cat', array('hide_empty' => false));
+	
+	$notify_cat_list = array();
+	foreach ( $tax_terms as $term ) : setup_postdata( $term );
+			$notify_cat_list[$term->term_id] = $term->name;
  	endforeach; 
  	//wp_reset_postdata();
 	
@@ -347,6 +341,7 @@ function naiau_register_tab_maker_metabox() {
 			'true' => __( 'Yes', 'naiau' ),
 			
 			
+			
 		),
 	) );
 
@@ -355,7 +350,7 @@ function naiau_register_tab_maker_metabox() {
 		'desc'    => __( 'choose Notify Category ', 'naiau' ),
 		'id'      => 'notify_category',
 		'type'    => 'select',
-		'options' => $package_hotels,
+		'options' => $notify_cat_list,
 			
 	) );
 	

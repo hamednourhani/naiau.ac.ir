@@ -889,11 +889,19 @@ body {
 /* form style */
 /* table style */
 /* other style */
-/* line 3, sass/modules/_slider.scss */
+/* line 2, sass/modules/_slider.scss */
+.sp-caption-container a {
+  color: #fff; }
+
+/* line 5, sass/modules/_slider.scss */
+.sp-caption-container a:hover {
+  color: #5DC2F0; }
+
+/* line 8, sass/modules/_slider.scss */
 .sp-thumbnails-container {
   direction: ltr; }
 
-/* line 6, sass/modules/_slider.scss */
+/* line 11, sass/modules/_slider.scss */
 #news-slider .sp-thumbnail-image-container {
   width: 100px;
   height: 80px;
@@ -901,11 +909,11 @@ body {
   float: right;
   padding-right: 5px; }
 
-/* line 14, sass/modules/_slider.scss */
+/* line 19, sass/modules/_slider.scss */
 #news-slider .sp-thumbnail-image {
   height: 100%; }
 
-/* line 18, sass/modules/_slider.scss */
+/* line 23, sass/modules/_slider.scss */
 #news-slider .sp-thumbnail-text {
   width: 165px;
   float: left;
@@ -915,20 +923,20 @@ body {
   box-sizing: border-box;
   text-align: right; }
 
-/* line 28, sass/modules/_slider.scss */
+/* line 33, sass/modules/_slider.scss */
 #news-slider .sp-thumbnail-title {
   margin-bottom: 5px;
   text-transform: uppercase;
   color: #333;
   font-size: 90%; }
 
-/* line 35, sass/modules/_slider.scss */
+/* line 40, sass/modules/_slider.scss */
 #news-slider .sp-thumbnail-description {
   font-size: 14px;
   color: #333;
   font-size: 90%; }
 
-/* line 40, sass/modules/_slider.scss */
+/* line 45, sass/modules/_slider.scss */
 .sp-caption-container {
   text-align: center;
   /* margin-top: -40px; */
@@ -942,53 +950,53 @@ body {
   color: #fff;
   font-size: 90%; }
 
-/* line 55, sass/modules/_slider.scss */
+/* line 60, sass/modules/_slider.scss */
 .sp-left-thumbnails.sp-has-pointer .sp-selected-thumbnail:after {
   border-left: 13px solid #179BD7;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent; }
 
-/* line 61, sass/modules/_slider.scss */
+/* line 66, sass/modules/_slider.scss */
 .sp-left-thumbnails.sp-has-pointer .sp-selected-thumbnail:before {
   border-left: 5px solid #179BD7; }
 
-/* line 66, sass/modules/_slider.scss */
+/* line 71, sass/modules/_slider.scss */
 .sp-bottom-thumbnails.sp-has-pointer .sp-selected-thumbnail:before {
   border-bottom: 5px solid #179BD7; }
 
-/* line 70, sass/modules/_slider.scss */
+/* line 75, sass/modules/_slider.scss */
 .sp-bottom-thumbnails.sp-has-pointer .sp-selected-thumbnail:after {
   border-bottom: 13px solid #179BD7;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent; }
 
 @media (max-width: 500px) {
-  /* line 77, sass/modules/_slider.scss */
+  /* line 82, sass/modules/_slider.scss */
   .sp-caption-container {
     display: none; }
 
-  /* line 80, sass/modules/_slider.scss */
+  /* line 85, sass/modules/_slider.scss */
   #news-slider .sp-thumbnail {
     text-align: center; }
 
-  /* line 84, sass/modules/_slider.scss */
+  /* line 89, sass/modules/_slider.scss */
   #news-slider .sp-thumbnail-image-container {
     display: none; }
 
-  /* line 88, sass/modules/_slider.scss */
+  /* line 93, sass/modules/_slider.scss */
   #news-slider .sp-thumbnail-text {
     width: 120px; }
 
-  /* line 92, sass/modules/_slider.scss */
+  /* line 97, sass/modules/_slider.scss */
   #news-slider .sp-thumbnail-title {
     font-size: 12px;
     text-transform: uppercase; }
 
-  /* line 97, sass/modules/_slider.scss */
+  /* line 102, sass/modules/_slider.scss */
   #news-slider .sp-thumbnail-description {
     display: none; } }
 @media (max-width: 800px) {
-  /* line 102, sass/modules/_slider.scss */
+  /* line 107, sass/modules/_slider.scss */
   .sp-caption-container {
     bottom: 100px; } }
 /* line 1, sass/modules/_tabs.scss */

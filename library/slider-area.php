@@ -9,6 +9,7 @@ $args = array (
 
 	// The Query
 	$news_list = get_posts( $args );
+	
 
 
 	 
@@ -23,12 +24,16 @@ $args = array (
 			$slide_url = wp_get_attachment_image_src( get_post_thumbnail_id($news->ID), 'slider');
 		?>
 			<div class="sp-slide">
-				<img class="sp-image" src="<?php echo get_template_directory_uri();?> /images/blank.gif"
-					data-src="<?php echo $slide_url[0]; ?>"
-					data-retina="<?php echo $slide_url[0]; ?>"/>
+				<a href="<?php echo post_permalink( $news->ID ); ?> " >
+					<img class="sp-image" src="<?php echo get_template_directory_uri();?> /images/blank.gif"
+						data-src="<?php echo $slide_url[0]; ?>"
+						data-retina="<?php echo $slide_url[0]; ?>"/>
+				</a>
 
 				<div class="sp-caption">
-					<?php echo $news->post_title; ?>
+					<a href="<?php echo post_permalink( $news->ID ); ?> " >
+						<?php echo $news->post_title; ?>
+					</a>
 				</div>
 			</div>
 		<?php endforeach; ?>
