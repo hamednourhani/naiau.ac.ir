@@ -288,12 +288,12 @@ function naiau_register_tab_maker_metabox() {
 	$cmb_group = new_cmb2_box( array(
 		'id'           => $prefix . 'tab_metabox',
 		'title'        => __( 'Tabs', 'naiau' ),
-		'object_types' => array( 'tab_maker', ),
+		'object_types' => array( 'tab', ),
 	) );
 
 	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
 	$group_field_id = $cmb_group->add_field( array(
-		'id'          => $prefix . 'tab_maker',
+		'id'          => $prefix . 'tab',
 		'type'        => 'group',
 		'description' => __( 'Generates reusable form entries', 'naiau' ),
 		'options'     => array(
@@ -313,21 +313,26 @@ function naiau_register_tab_maker_metabox() {
 	// WP_Query arguments
 	
 	
-	$tax_terms = get_terms('notify_cat', array('hide_empty' => false));
+	$notifies = get_posts(array(
+			'post_type' => 'notify',
+			// 'posts_per_page' => -1,
+			)
+	);
+	// var_dump($notifies);
 
 	
-	$notify_cat_list = array();
-	foreach ( $tax_terms as $term ) : setup_postdata( $term );
-			$notify_cat_list[$term->slug] = $term->name;
+	$notifies_array = array();
+	foreach ( $notifies as $notify ) : setup_postdata( $notify );
+			$notifies_array[$notify->ID] = $notify->post_title;
  	endforeach; 
  	//wp_reset_postdata();
 	
-	$cmb_group->add_group_field( $group_field_id, array(
-		'name'        => __( 'Tab Title', 'naiau' ),
-		'description' => __( 'Enter Tab Title', 'naiau' ),
-		'id'          => 'tab_title',
-		'type'        => 'text',
-	) );
+	// $cmb_group->add_group_field( $group_field_id, array(
+	// 	'name'        => __( 'Tab Title', 'naiau' ),
+	// 	'description' => __( 'Enter Tab Title', 'naiau' ),
+	// 	'id'          => 'tab_title',
+	// 	'type'        => 'text',
+	// ) );
 
 	
 
@@ -338,7 +343,7 @@ function naiau_register_tab_maker_metabox() {
 		'type'             => 'radio_inline',
 		'show_option_none' => true,
 		'options'          => array(
-			'false' => __( 'No', 'naiau' ),
+			
 			'true' => __( 'Yes', 'naiau' ),
 
 			
@@ -347,11 +352,11 @@ function naiau_register_tab_maker_metabox() {
 	) );
 
 	$cmb_group->add_group_field($group_field_id , array(
-		'name'    => __( 'Notify Category', 'naiau' ),
-		'desc'    => __( 'choose Notify Category ', 'naiau' ),
-		'id'      => 'notify_category',
+		'name'    => __( 'Notify Name', 'naiau' ),
+		'desc'    => __( 'choose a Notify ', 'naiau' ),
+		'id'      => 'notify_id',
 		'type'    => 'select',
-		'options' => $notify_cat_list,
+		'options' => $notifies_array,
 			
 	) );
 	

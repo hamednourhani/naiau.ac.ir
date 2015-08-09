@@ -102,11 +102,9 @@
 			<div class="slider-wrap">
 				<?php get_template_part('library/slider','area'); ?>
 			</div>
-			<div class="notify-tabs-wrap">
-				<section class="layout">
+			
 					<?php get_template_part('library/notify','tabs'); ?>
-				</section>
-			</div>
+				
 
 		</div>
 		<?php get_footer();?>

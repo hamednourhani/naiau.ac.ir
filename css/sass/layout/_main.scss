@@ -18,4 +18,23 @@ body{
 	}
 	background-color: $navy1;
 	color : $grey1;
+	ul li.notifies-list{
+		@inlcude span-columns(4,12);
+		border : 1px dashed $grey1;
+		&:nth-child(3n){
+			@include span-columns(4 omega,12);
+		}
+		&:hover{
+			border : 1px dashed $skyblue1;
+
+		}
+		a{
+			color : $grey1;
+		}
+		a:hover{
+			color : $skyblue1;
+		}
+
+
+	}
 }
