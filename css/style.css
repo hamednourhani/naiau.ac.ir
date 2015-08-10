@@ -726,8 +726,11 @@ ul, menu, dir {
     *margin-right: -1em;
     display: inline;
     position: relative; }
-    /* line 37, sass/layout/_header.scss */
-    .top-bar .search-area input.top-search {
+    /* line 35, sass/layout/_header.scss */
+    .top-bar .search-area #searchsubmit, .top-bar .search-area label.screen-reader-text {
+      display: none; }
+    /* line 39, sass/layout/_header.scss */
+    .top-bar .search-area input#s {
       float: left;
       outline: none;
       border: none;
@@ -743,17 +746,17 @@ ul, menu, dir {
       -webkit-transition: all 0.5s ease-in-out;
       -webkit-transition-delay: 0s;
       transition: all 0.5s ease-in-out 0s; }
-      /* line 51, sass/layout/_header.scss */
-      .top-bar .search-area input.top-search:focus {
+      /* line 53, sass/layout/_header.scss */
+      .top-bar .search-area input#s:focus {
         width: 80%;
         background-color: #37b2ea; }
-      /* line 56, sass/layout/_header.scss */
-      .top-bar .search-area input.top-search::-webkit-input-placeholder {
+      /* line 58, sass/layout/_header.scss */
+      .top-bar .search-area input#s::-webkit-input-placeholder {
         color: #fff; }
-      /* line 59, sass/layout/_header.scss */
-      .top-bar .search-area input.top-search::-moz-placeholder {
+      /* line 61, sass/layout/_header.scss */
+      .top-bar .search-area input#s::-moz-placeholder {
         color: #fff; }
-    /* line 63, sass/layout/_header.scss */
+    /* line 65, sass/layout/_header.scss */
     .top-bar .search-area:before {
       content: "\F002";
       font-size: 22px;
@@ -765,13 +768,13 @@ ul, menu, dir {
       color: #fff;
       border-right: 1px solid #5DC2F0; }
 
-/* line 77, sass/layout/_header.scss */
+/* line 79, sass/layout/_header.scss */
 .menu-bar {
   background-color: #253B80; }
-  /* line 79, sass/layout/_header.scss */
+  /* line 81, sass/layout/_header.scss */
   .menu-bar a {
     color: #CCCCCC; }
-  /* line 82, sass/layout/_header.scss */
+  /* line 84, sass/layout/_header.scss */
   .menu-bar .logo-wrapper {
     width: 23.84615%;
     float: right;
@@ -779,10 +782,10 @@ ul, menu, dir {
     display: inline;
     padding-top: 23px;
     padding-bottom: 8px; }
-    /* line 88, sass/layout/_header.scss */
+    /* line 90, sass/layout/_header.scss */
     .menu-bar .logo-wrapper img {
       max-height: 70px; }
-  /* line 92, sass/layout/_header.scss */
+  /* line 94, sass/layout/_header.scss */
   .menu-bar ul.main-nav {
     font-size: 90%;
     font-weight: 300;
@@ -792,13 +795,13 @@ ul, menu, dir {
     *margin-right: -1em;
     display: inline;
     margin-top: 12px; }
-    /* line 97, sass/layout/_header.scss */
+    /* line 99, sass/layout/_header.scss */
     .menu-bar ul.main-nav li {
       position: relative;
       display: inline-block;
       max-width: 120px;
       vertical-align: baseline; }
-    /* line 104, sass/layout/_header.scss */
+    /* line 106, sass/layout/_header.scss */
     .menu-bar ul.main-nav li > a {
       border-right: 1px solid #304da8;
       padding: 20px 15px;
@@ -809,10 +812,10 @@ ul, menu, dir {
       -webkit-transition: all 0.3s ease-in-out;
       -webkit-transition-delay: 0s;
       transition: all 0.3s ease-in-out 0s; }
-    /* line 111, sass/layout/_header.scss */
+    /* line 113, sass/layout/_header.scss */
     .menu-bar ul.main-nav li > a:hover {
       border-bottom-color: #179BD7; }
-    /* line 114, sass/layout/_header.scss */
+    /* line 116, sass/layout/_header.scss */
     .menu-bar ul.main-nav li ul.sub-menu {
       -moz-transition: all 0.3s ease-in-out 0s;
       -o-transition: all 0.3s ease-in-out 0s;
@@ -827,30 +830,30 @@ ul, menu, dir {
       right: -20%;
       z-index: 99999;
       background-color: #253B80; }
-      /* line 125, sass/layout/_header.scss */
+      /* line 127, sass/layout/_header.scss */
       .menu-bar ul.main-nav li ul.sub-menu li {
         text-align: center;
         width: 100%;
         max-width: 100%; }
-      /* line 130, sass/layout/_header.scss */
+      /* line 132, sass/layout/_header.scss */
       .menu-bar ul.main-nav li ul.sub-menu a {
         border-top: 1px solid #304da8;
         border-bottom: 1px solid #304da8;
         width: 100%;
         padding: 12px 15px; }
-        /* line 135, sass/layout/_header.scss */
+        /* line 137, sass/layout/_header.scss */
         .menu-bar ul.main-nav li ul.sub-menu a:hover {
           background-color: #5A6B9F; }
-      /* line 139, sass/layout/_header.scss */
+      /* line 141, sass/layout/_header.scss */
       .menu-bar ul.main-nav li ul.sub-menu li.menu-item-has-children > a:after {
         content: "\F104";
         left: 12px;
         position: absolute;
         vertical-align: middle; }
-    /* line 147, sass/layout/_header.scss */
+    /* line 149, sass/layout/_header.scss */
     .menu-bar ul.main-nav li:hover > ul.sub-menu {
       display: inline-block; }
-    /* line 151, sass/layout/_header.scss */
+    /* line 153, sass/layout/_header.scss */
     .menu-bar ul.main-nav ul.sub-menu li:hover ul {
       right: 100%;
       top: 0; }

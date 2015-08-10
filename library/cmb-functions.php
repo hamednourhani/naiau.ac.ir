@@ -414,6 +414,26 @@ function naiau_register_section_maker_metabox() {
 		// 'on_front'        => false, // Optionally designate a field to wp-admin only
 		// 'repeatable'      => true,
 	) );
+
+	$cmb_demo->add_field( array(
+		'name'       => __( 'show comments', 'naiau' ),
+		'desc'       => __( 'show  page coments', 'naiau' ),
+		'id'         => $prefix . 'comment',
+		'type'       => 'radio_inline',
+		'show_option_none' => true,
+		'options'          => array(
+			'true' => __( 'Yes', 'naiau' ),
+			
+			
+			
+			
+		),
+		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
+		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+		// 'on_front'        => false, // Optionally designate a field to wp-admin only
+		// 'repeatable'      => true,
+	) );
 	$cmb_demo->add_field( array(
 		'name'       => __( 'hide sidebar', 'naiau' ),
 		'desc'       => __( 'hide page sidebar', 'naiau' ),

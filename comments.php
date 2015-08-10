@@ -1,50 +1,51 @@
 <?php
-/*
-The comments page for naiau
-*/
-
-// don't load it if you can't comment
-if ( post_password_required() ) {
+/* The Template for displaying comments.
+ *
+ * @package WordPress
+ * @subpackage fixy
+ * @since Fixy 0.1.0
+ */
+if ( post_password_required() )
   return;
-}
-
 ?>
 
-<?php // You can start editing here. ?>
+<div id="comments" class="comments-area">
 
   <?php if ( have_comments() ) : ?>
+    <h2 class="comments-title">
+      <i class="icon-comment"></i>
+      <?php
+        printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'fixy' ),
+          number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
+      ?>
+    </h2>
 
-    <h3 id="comments-title" class="h2"><?php comments_number( __( '<span>No</span> Comments', 'naiau' ), __( '<span>One</span> Comment', 'naiau' ), __( '<span>%</span> Comments', 'naiau' ) );?></h3>
-
-    <section class="commentlist">
+    <ol class="comment-list">
       <?php
         wp_list_comments( array(
-          'style'             => 'div',
-          'short_ping'        => true,
-          'avatar_size'       => 40,
-          'callback'          => 'naiau_comments',
-          'type'              => 'all',
-          'reply_text'        => __('Reply', 'naiau'),
-          'page'              => '',
-          'per_page'          => '',
-          'reverse_top_level' => null,
-          'reverse_children'  => ''
+          'style'       => 'ol',
+          'short_ping'  => true,
+          'avatar_size' => 74,
+          'reply_text' => __('Reply<i class=" icon-level-up"></i>','fixy')
         ) );
       ?>
-    </section>
+    </ol><!-- .comment-list -->
 
-    <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-    	<nav class="navigation comment-navigation" role="navigation">
-      	<div class="comment-nav-prev"><?php previous_comments_link( __( '&larr; Previous Comments', 'naiau' ) ); ?></div>
-      	<div class="comment-nav-next"><?php next_comments_link( __( 'More Comments &rarr;', 'naiau' ) ); ?></div>
-    	</nav>
+  <nav class="comment-navigation" >
+      <div class="previous-comments"><?php previous_comments_link( __( '<i class="icon-left-open"></i> Older Comments', 'fixy' ) ); ?></div>
+      <div class="next-comments"><?php next_comments_link( __( 'Newer Comments <i class="icon-right-open"></i>', 'fixy' ) ); ?></div>
+    </nav><!-- .comment-navigation -->  
+
+
+    <?php if ( ! comments_open() && get_comments_number() ) : ?>
+    <p class="no-comments"><?php _e( 'Comments are closed.' , 'fixy' ); ?></p>
     <?php endif; ?>
 
-    <?php if ( ! comments_open() ) : ?>
-    	<p class="no-comments"><?php _e( 'Comments are closed.' , 'naiau' ); ?></p>
-    <?php endif; ?>
+  <?php endif; // have_comments() ?>
 
-  <?php endif; ?>
+  
+
+</div><!-- #comments -->
 
   <?php comment_form(); ?>
 

@@ -32,9 +32,11 @@
 	.search-area{
 		@include span-columns(3 omega ,12);
 		position: relative;
+		#searchsubmit,label.screen-reader-text{
+			display : none;
+		}	
 		
-		
-		input.top-search{
+		input#s{
 			float : left;
 			outline : none;
 			border : none;

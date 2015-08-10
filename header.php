@@ -68,7 +68,8 @@
 
 					</nav>
 					<div class="search-area">
-						<input type="search" class="top-search" placeholder="<?php echo __('Search','naiau'); ?>" />
+						<!-- <input type="search" class="top-search" placeholder="<?php echo __('Search','naiau'); ?>" /> -->
+						<?php get_search_form( true ); ?>
 					</div>
 				</section>
 				</div>
