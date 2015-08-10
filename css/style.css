@@ -1134,6 +1134,9 @@ footer.site-footer, .site-footer {
       position: absolute;
       right: -20px;
       top: 5px; }
+  /* line 101, sass/modules/_tabs.scss */
+  .notify-tabs-wrap .tab-content {
+    padding: 10px; }
 
 /* line 1, sass/modules/_footerLinks.scss */
 .important-links-wrap {

@@ -39,8 +39,9 @@ if(!empty($tabs) && $notify_show == true){ ?>
 
 
             
-              
-              $tab_content =  '<div id="tabs-'.$counter.'">';
+              $tab_content = ""; 
+              $tab_content .=  '<div id="tabs-'.$counter.'">';
+              $tab_content .= '<div class="tab-content">'.$tab->post_content.'</div>';
               $tab_content .= '<ul class="notifies-list">';
                     $n_ids = $notify_ids[0];
                     foreach ( $n_ids as $n_id ) {
