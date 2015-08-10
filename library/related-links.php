@@ -11,7 +11,7 @@
 	
 
 	// _naiau_link_url
-if($show_related == 'true'){
+if($show_related == true){
 ?>
 
 <div class="important-links">

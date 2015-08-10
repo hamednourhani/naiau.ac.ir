@@ -8,11 +8,11 @@ $args = array (
 // The Query
 	$news_list = get_posts( $args );
 	$slider_show = get_post_meta(get_the_ID(),'_naiau_slider_show');
-	var_dump($slider_show);
+	
  ?>
 
 <div class="slider-wrap">
-	<?php if(!empty($news_list) && $slider_show == 'true'){ ?>
+	<?php if(!empty($news_list) && $slider_show == true){ ?>
 		<div id="news-slider" class="slider-pro">
 		
 			<div class="sp-slides">

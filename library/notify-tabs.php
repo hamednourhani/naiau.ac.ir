@@ -19,7 +19,7 @@
 
   
 
-if(!empty($tabs) && $notify_show == 'true'){ ?>
+if(!empty($tabs) && $notify_show == true){ ?>
 <div class="notify-tabs-wrap">
         <section class="layout">
     <div id="tabs">
