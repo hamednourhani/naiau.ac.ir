@@ -109,6 +109,10 @@
 				
 
 		</div>
-		<?php wp_footer(); ?>
+		
+		<footer class="site-footer">
+			<span>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, iste?</span>
+			<?php wp_footer(); ?>
+		</footer>
 	</body>
 </html>

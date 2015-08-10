@@ -29,7 +29,9 @@
 					  ?>
 					  <div class="item">
 					  		<a href="<?php echo esc_html($link[0]);?>">
-					  			<?php echo $thumb; ?>
+					  			<div class="thumb-wrapper">
+					  				<?php echo $thumb; ?>
+					  			</div>
 					  			<span>
 					  				<?php echo $related_link->post_title; ?>
 					  			</span>

@@ -71,12 +71,21 @@
     }
     a{
       color : $navy1;
+
     }
-    img{
-      max-width : 100%;
-      height : auto;
-      vertical-align: center;
+    .thumb-wrapper{
+      height : 100px;
+      text-align : center;
+      position : relative;
+       img{
+        max-width : 100%;
+        height : auto;
+       position : absolute;
+       bottom : 0;
+        
+      }
     }
+   
   }
   
   div.virtual-border{

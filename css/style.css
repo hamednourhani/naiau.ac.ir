@@ -882,6 +882,16 @@ body {
   width: 100%; }
 
 /* footer style */
+/* line 2, sass/layout/_footer.scss */
+footer.site-footer, .site-footer {
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  text-align: center;
+  background-color: #179BD7;
+  color: #fff;
+  font-size: 90%; }
+
 /* button style */
 /* dividers style */
 /* form style */
@@ -1493,16 +1503,22 @@ body {
     /* line 72, sass/modules/_owl.theme.default.scss */
     .important-links #owl-carousel .item a {
       color: #253B80; }
-    /* line 75, sass/modules/_owl.theme.default.scss */
-    .important-links #owl-carousel .item img {
-      max-width: 100%;
-      height: auto;
-      vertical-align: center; }
-  /* line 82, sass/modules/_owl.theme.default.scss */
+    /* line 76, sass/modules/_owl.theme.default.scss */
+    .important-links #owl-carousel .item .thumb-wrapper {
+      height: 100px;
+      text-align: center;
+      position: relative; }
+      /* line 80, sass/modules/_owl.theme.default.scss */
+      .important-links #owl-carousel .item .thumb-wrapper img {
+        max-width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: 0; }
+  /* line 91, sass/modules/_owl.theme.default.scss */
   .important-links div.virtual-border {
     position: relative;
     text-align: center; }
-    /* line 85, sass/modules/_owl.theme.default.scss */
+    /* line 94, sass/modules/_owl.theme.default.scss */
     .important-links div.virtual-border:before {
       content: "";
       display: block;
@@ -1511,7 +1527,7 @@ body {
       border-bottom: 1px solid #5A6B9F;
       margin: auto;
       margin-bottom: -20px; }
-    /* line 95, sass/modules/_owl.theme.default.scss */
+    /* line 104, sass/modules/_owl.theme.default.scss */
     .important-links div.virtual-border .related-links {
       color: #253B80;
       margin: auto;
