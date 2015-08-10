@@ -39,7 +39,7 @@ $args = array (
 			<div class="sp-thumbnails">
 				<?php foreach ( $news_list as $news ) :
 					$thumb_url = wp_get_attachment_image_src( get_post_thumbnail_id($news->ID), 'slider');
-					// var_dump($thumb_url);
+					
 				?>
 				<div class="sp-thumbnail">
 					<div class="sp-thumbnail-image-container">

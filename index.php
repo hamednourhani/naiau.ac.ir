@@ -5,7 +5,7 @@
 				$hide_title = get_post_meta(get_the_ID(),'_naiau_title');	
 				$hide_content = get_post_meta(get_the_ID(),'_naiau_content');
 				$hide_sidebar = get_post_meta(get_the_ID(),'_naiau_sidebar');
-				var_dump(get_post_meta(get_the_ID(),'_naiau_sidebar'));
+				
 				?>
 
 				
