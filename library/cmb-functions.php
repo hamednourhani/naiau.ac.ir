@@ -374,15 +374,74 @@ function naiau_register_section_maker_metabox() {
 		// 'closed'     => true, // true to keep the metabox closed by default
 	) );
 
+	
+
 	$cmb_demo->add_field( array(
-		'name'       => __( 'show news slider', 'naiau' ),
-		'desc'       => __( 'show news slider or not', 'naiau' ),
-		'id'         => $prefix . 'news_slider',
+		'name'       => __( 'news slider', 'naiau' ),
+		'desc'       => __( 'show news slider', 'naiau' ),
+		'id'         => $prefix . 'slider_show',
 		'type'       => 'radio_inline',
 		'show_option_none' => true,
 		'options'          => array(
-			'false' => __( 'No', 'naiau' ),
 			'true' => __( 'Yes', 'naiau' ),
+			
+		),	
+		
+		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
+		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+		// 'on_front'        => false, // Optionally designate a field to wp-admin only
+		// 'repeatable'      => true,
+	) );
+
+	$cmb_demo->add_field( array(
+		'name'       => __( 'hide title', 'naiau' ),
+		'desc'       => __( 'hide page title', 'naiau' ),
+		'id'         => $prefix . 'title',
+		'type'       => 'radio_inline',
+		'show_option_none' => true,
+		'options'          => array(
+			'true' => __( 'Yes', 'naiau' ),
+			
+			
+			
+			
+		),
+		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
+		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+		// 'on_front'        => false, // Optionally designate a field to wp-admin only
+		// 'repeatable'      => true,
+	) );
+	$cmb_demo->add_field( array(
+		'name'       => __( 'hide content', 'naiau' ),
+		'desc'       => __( 'hide page content', 'naiau' ),
+		'id'         => $prefix . 'content',
+		'type'       => 'radio_inline',
+		'show_option_none' => true,
+		'options'          => array(
+			'true' => __( 'Yes', 'naiau' ),
+			
+			
+			
+			
+		),
+		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
+		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+		// 'on_front'        => false, // Optionally designate a field to wp-admin only
+		// 'repeatable'      => true,
+	) );
+	$cmb_demo->add_field( array(
+		'name'       => __( 'hide sidebar', 'naiau' ),
+		'desc'       => __( 'hide page sidebar', 'naiau' ),
+		'id'         => $prefix . 'sidebar',
+		'type'       => 'radio_inline',
+		'show_option_none' => true,
+		'options'          => array(
+			'true' => __( 'Yes', 'naiau' ),
+			
+			
 			
 			
 		),
@@ -394,21 +453,24 @@ function naiau_register_section_maker_metabox() {
 	) );
 
 	$cmb_demo->add_field( array(
-		'name'       => __( 'news category', 'naiau' ),
-		'desc'       => __( 'which news category to show', 'naiau' ),
-		'id'         => $prefix . 'news_category',
-		'type'       => 'select',
+		'name'       => __( 'show notify tabs', 'naiau' ),
+		'desc'       => __( 'show notify tabs or not', 'naiau' ),
+		'id'         => $prefix . 'notify_tabs',
+		'type'       => 'radio_inline',
 		'show_option_none' => true,
-		'options'          => array(),
+		'options'          => array(
+			'true' => __( 'Yes', 'naiau' ),
 			
 			
-		
+			
+		),
 		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
 		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
 		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
 		// 'on_front'        => false, // Optionally designate a field to wp-admin only
 		// 'repeatable'      => true,
 	) );
+	
 	$cmb_demo->add_field( array(
 		'name'       => __( 'show important links', 'naiau' ),
 		'desc'       => __( 'show important links or not', 'naiau' ),
@@ -417,7 +479,7 @@ function naiau_register_section_maker_metabox() {
 		'show_option_none' => true,
 		'options'          => array(
 			'true' => __( 'Yes', 'naiau' ),
-			'false' => __( 'No', 'naiau' ),
+			
 			
 			
 		),
@@ -435,7 +497,7 @@ function naiau_register_section_maker_metabox() {
 		'show_option_none' => true,
 		'options'          => array(
 			'true' => __( 'Yes', 'naiau' ),
-			'false' => __( 'No', 'naiau' ),
+			
 			
 			
 		),

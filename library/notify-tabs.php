@@ -11,7 +11,7 @@
     'tab_cat'    => 'featured',
   );
   $tabs = get_posts($args);
-
+  $notify_show = get_post_meta(get_the_ID(),'_naiau_notify_tabs');
   // var_dump($tabs);
   // var_dump(get_post_meta('1867','_naiau_group_tab',true));
   
@@ -19,7 +19,7 @@
 
   
 
-if(!empty($tabs)){ ?>
+if(!empty($tabs) && $notify_show == 'true'){ ?>
 <div class="notify-tabs-wrap">
         <section class="layout">
     <div id="tabs">

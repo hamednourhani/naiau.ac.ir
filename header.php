@@ -44,38 +44,58 @@
 
 		<div class="body-wrapper">
 		<!-- <img src="images/introBack.jpg" class="back-wall"/> -->
-			<div class="body-content">
 			
-			<?php if(!is_front_page()){ ?>
-				<header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+			<header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
-
-
-				<div id="inner-header" class="inner-header cf">
-					<a href="#" class="menu-toggler">
-						<img class="mobile-site-logo" src="<?php echo get_template_directory_uri();?>/images/RayaSite-30.png" title="naiau" alt="naiau"/>
-						<img class="menu-icon" src="<?php echo get_template_directory_uri();?>/images/menu-toggler.png" alt="Menu" title="Menu"/>
-					</a>
-
-					<nav role="navigation" class = "header-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
-						<a href="http://naiau.com" class="site-logo"><img src="<?php echo get_template_directory_uri();?>/images/RayaSite-30.png" title="naiau" /></a>
+				<div id="top-bar" class="top-bar cf">
+				<section class="layout">
+					
+					<nav role="navigation" class = "top-bar-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+						
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
     					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
     					         'menu' => __( 'The Main Menu', 'naiau' ),  // nav name
     					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
-    					         'theme_location' => 'main-nav',                 // where it's located in the theme
+    					         'theme_location' => 'top-nav',                 // where it's located in the theme
     					         'before' => '',                                 // before the menu
         			               'after' => '',                                  // after the menu
         			               'link_before' => '',                            // before each link
         			               'link_after' => '',                             // after each link
-        			               'depth' => 3,                                   // limit the depth of the nav
+        			               'depth' => 1,                                   // limit the depth of the nav
     					         'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
 
 					</nav>
+					<div class="search-area">
+						<input type="search" class="top-search" placeholder="<?php echo __('Search','naiau'); ?>" />
+					</div>
+				</section>
+				</div>
 
+				<div id="menu-bar" class="menu-bar cf">
+					<section class="layout">
+						<div class="logo-wrapper">
+							<img src="<?php echo get_template_directory_uri();?>/images/nazarabad-logo.png" />
+						</div>
+						<nav role="navigation" class = "main-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+							
+							<?php wp_nav_menu(array(
+	    					         'container' => false,                           // remove nav container
+	    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+	    					         'menu' => __( 'The Main Menu', 'naiau' ),  // nav name
+	    					         'menu_class' => 'nav main-nav cf',               // adding custom nav class
+	    					         'theme_location' => 'main-nav',                 // where it's located in the theme
+	    					         'before' => '',                                 // before the menu
+	        			               'after' => '',                                  // after the menu
+	        			               'link_before' => '',                            // before each link
+	        			               'link_after' => '',                             // after each link
+	        			               'depth' => 3,                                   // limit the depth of the nav
+	    					         'fallback_cb' => ''                             // fallback function (if there is one)
+							)); ?>
+
+						</nav>
+					</section>
 				</div>
 
 			</header>
-		<?php } ?>

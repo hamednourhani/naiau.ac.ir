@@ -7,16 +7,17 @@
   );
 
 	$related_links = get_posts($args);
+	$show_related = get_post_meta(get_the_ID() , '_naiau_related_links');
 	
 
 	// _naiau_link_url
-
+if($show_related == 'true'){
 ?>
 
 <div class="important-links">
 	<section class="layout">
 		<div class="virtual-border"> 
-			<h4 class="related-links">related links</h4>
+			<h4 class="related-links"><?php echo __('related sites','naiau'); ?></h4>
 		</div>
 	</section>
 	<section class="layout">
@@ -64,3 +65,5 @@
 		 
 		});
 </script>
+
+<?php } ?>
