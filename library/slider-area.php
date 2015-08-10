@@ -1,7 +1,7 @@
 <?php
 $args = array (
 		'post_type'              => array( 'news' ),
-		'posts_per_page'         => '10',
+		'posts_per_page'         => '15',
 		// 'category'         => 'news_cat',
 		'news_cat'    => 'featured',
 	);
@@ -65,7 +65,7 @@ $args = array (
     	jQuery( document ).ready(function( $ ) {
         $( '#news-slider' ).sliderPro({
             width: 840,
-            height: 540,
+            height: 440,
             orientation: 'vertical',
             loop: true,
             arrows: true,

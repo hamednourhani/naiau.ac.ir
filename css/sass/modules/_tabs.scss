@@ -21,6 +21,9 @@ background: -o-linear-gradient(top, #5a6b9f 21%,#253b80 86%); /* Opera 11.10+ */
 background: -ms-linear-gradient(top, #5a6b9f 21%,#253b80 86%); /* IE10+ */
 background: linear-gradient(to bottom, #5a6b9f 21%,#253b80 86%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a6b9f', endColorstr='#253b80',GradientType=0 );
+font-family : $BYekan;
+font-size : 16px;
+
 }
 .ui-tabs-panel.ui-widget-content{
 background: #253b80; /* Old browsers */
@@ -31,6 +34,10 @@ background: -o-linear-gradient(left, #253b80 0%,#253b80 0%,#5a6b9f 20%,#5a6b9f 7
 background: -ms-linear-gradient(left, #253b80 0%,#253b80 0%,#5a6b9f 20%,#5a6b9f 79%,#253b80 100%); /* IE10+ */
 background: linear-gradient(to right, #253b80 0%,#253b80 0%,#5a6b9f 20%,#5a6b9f 79%,#253b80 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#253b80', endColorstr='#253b80',GradientType=1 ); /* IE6-9 */
+
+overflow : hidden;
+font-family : $BYekan;
+font-size : 14px;
 }
 
 .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited{
@@ -51,4 +58,44 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#253b80', end
     border: 0px;
     background: none;
     color: $grey1;
+}
+
+.notify-tabs-wrap{
+	padding :{
+		top: 30px;
+		bottom : 30px;
+	}
+	background-color: $navy1;
+	color : $grey1;
+	ul.notifies-list li{
+		@include span-columns(4,12);
+		border : 1px dashed $grey1;
+		padding : 10px 32px 10px 10px;
+		margin-bottom : 10px;
+		@include single-transition(all ,0.3s , ease-ion-out);
+		&:nth-child(3n){
+			@include span-columns(4 omega,12);
+		}
+		&:hover{
+			border : 1px dashed $skyblue2;
+
+		}
+		a{
+			color : $grey1;
+			position : relative;
+			@include single-transition(all ,0.3s , ease-ion-out);
+		}
+		a:hover{
+			color : $skyblue2;
+		}
+		a:before{
+			@extend .fa;
+			content : "\F067";
+			position : absolute;
+			right : -20px;
+			top : 5px;
+		}
+
+
+	}
 }

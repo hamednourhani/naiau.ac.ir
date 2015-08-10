@@ -4,11 +4,14 @@
 
   $args = array (
     'post_type'              => array( 'tab' ),
-    'posts_per_page'         => '15',
+    'posts_per_page'         => '10',
+    'orderby'          => 'date',
+    'order'            => 'ASC',
     // 'category'         => 'news_cat',
-    'tab_cat'    => 'front',
+    'tab_cat'    => 'featured',
   );
   $tabs = get_posts($args);
+
   // var_dump($tabs);
   // var_dump(get_post_meta('1867','_naiau_group_tab',true));
   
@@ -34,14 +37,17 @@ if(!empty($tabs)){ ?>
             foreach((array)$tabs as $tab): 
               $notify_ids = get_post_meta($tab->ID,'_naiau_group_tab');
 
+
             
               
               $tab_content =  '<div id="tabs-'.$counter.'">';
               $tab_content .= '<ul class="notifies-list">';
-                    foreach ( $notify_ids as $notify_id ) {
-                        $n_id = $notify_id[0]['notify_id'];
+                    $n_ids = $notify_ids[0];
+                    foreach ( $n_ids as $n_id ) {
+                       
+                        $notify_id = $n_id['notify_id'];
                         $tab_content .= '<li>';
-                        $tab_content .= '<a href="'.get_the_permalink($n_id).'">'.get_the_title($n_id).'</a>';  
+                        $tab_content .= '<a href="'.get_the_permalink($notify_id).'">'.get_the_title($notify_id).'</a>';  
                         $tab_content .= '</li>';
                         
                     } 

@@ -79,7 +79,7 @@ if ( ! isset( $content_width ) ) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'slider', 840, 540, array( 'center', 'center' ) );
+add_image_size( 'slider', 840, 440, array( 'center', 'center' ) );
 add_image_size( 'slider-thumb', 100, 80, array( 'center', 'center' ) );
 
 add_filter( 'image_size_names_choose', 'naiau_custom_sizes' );
@@ -265,5 +265,7 @@ function naiau_fonts() {
 		'search-form',
 		'comment-form'
 	) );
+
+
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

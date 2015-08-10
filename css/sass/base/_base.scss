@@ -24,7 +24,9 @@ a{
 // #wpadminbar{
 // 	display :none;
 // }
-
+img,video,audio,iframe{
+	max-width : 100;
+}
 input,textarea,button{
 	max-width : 100%;
 }

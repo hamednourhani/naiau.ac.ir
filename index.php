@@ -104,9 +104,10 @@
 			</div>
 			
 					<?php get_template_part('library/notify','tabs'); ?>
+					<?php get_template_part('library/footer','links'); ?>
 				
 
 		</div>
-		<?php get_footer();?>
+		<?php wp_footer(); ?>
 	</body>
 </html>

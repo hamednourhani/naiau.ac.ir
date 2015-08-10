@@ -336,21 +336,7 @@ function naiau_register_tab_maker_metabox() {
 
 	
 
-	$cmb_group->add_group_field($group_field_id , array(
-		'name'             => __( 'Show excerpt', 'naiau' ),
-		'desc'             => __( 'show excerpt of items or not', 'naiau' ),
-		'id'               => 'show_excerpt',
-		'type'             => 'radio_inline',
-		'show_option_none' => true,
-		'options'          => array(
-			
-			'true' => __( 'Yes', 'naiau' ),
-
-			
-			
-		),
-	) );
-
+	
 	$cmb_group->add_group_field($group_field_id , array(
 		'name'    => __( 'Notify Name', 'naiau' ),
 		'desc'    => __( 'choose a Notify ', 'naiau' ),
