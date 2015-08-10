@@ -153,6 +153,7 @@ function naiau_scripts_and_styles() {
 		//adding scripts file in the footer
 		wp_register_script( 'slider-pro-js', get_stylesheet_directory_uri() . '/js/lib/jquery.sliderPro.min.js', array( 'jquery' ), '', true );
 		wp_register_script( 'jquery-ui-js', get_stylesheet_directory_uri() . '/js/lib/jquery-ui.min.js', array( 'jquery' ), '', true );
+		wp_register_script( 'owl-carousel', get_stylesheet_directory_uri() . '/js/lib/owl.carousel.min.js', array( 'jquery' ), '', true );
 		wp_register_script( 'naiau-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery','slider-pro-js' ), '', true );
 		
 		
@@ -173,6 +174,7 @@ function naiau_scripts_and_styles() {
 		and your site will load faster.
 		*/
 		wp_enqueue_script( 'jquery' );
+		wp_enqueue_script('owl-carousel');
 		wp_enqueue_script( 'jquery-ui-js' );
 		wp_enqueue_script( 'slider-pro' );
 		wp_enqueue_script( 'naiau-js' );
@@ -196,7 +198,7 @@ function naiau_theme_support() {
 	add_theme_support( 'post-thumbnails' );
 
 	// default thumb size
-	set_post_thumbnail_size(150, 150, true);
+	set_post_thumbnail_size(600,400 , true);
 	
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',

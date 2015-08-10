@@ -81,6 +81,7 @@ if ( ! isset( $content_width ) ) {
 // Thumbnail sizes
 add_image_size( 'slider', 840, 440, array( 'center', 'center' ) );
 add_image_size( 'slider-thumb', 100, 80, array( 'center', 'center' ) );
+add_image_size( 'carousel', 320, 120, array( 'center', 'center' ) );
 
 add_filter( 'image_size_names_choose', 'naiau_custom_sizes' );
  

@@ -105,6 +105,7 @@
 			
 					<?php get_template_part('library/notify','tabs'); ?>
 					<?php get_template_part('library/footer','links'); ?>
+					<?php get_template_part('library/related','links'); ?>
 				
 
 		</div>
