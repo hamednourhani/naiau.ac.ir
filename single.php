@@ -1,54 +1,95 @@
+<?php
+/*
+ * CUSTOM POST TYPE TEMPLATE
+ *
+ * This is the custom post type post template. If you edit the post type name, you've got
+ * to change the name of this template to reflect that name change.
+ *
+ * For Example, if your custom post type is "register_post_type( 'bookmarks')",
+ * then your single template should be single-bookmarks.php
+ *
+ * Be aware that you should rename 'custom_cat' and 'custom_tag' to the appropiate custom
+ * category and taxonomy slugs, or this template will not finish to load properly.
+ *
+ * For more info: http://codex.wordpress.org/Post_Type_Templates
+*/
+?>
+
 <?php get_header(); ?>
 
-			<div id="content">
+			<main class="site-main">
 
-				<div id="inner-content" class="wrap cf">
+				
+					
+					<?php 
+					
+				$hide_content = get_post_meta(get_the_ID(),'_naiau_content');
+				$show_comments = get_post_meta(get_the_ID(),'_naiau_comments');
+				$hide_sidebar = get_post_meta(get_the_ID(),'_naiau_sidebar');
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+				
+				?>
 
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				
+				<?php get_template_part('library/slider','area'); ?>
 
-							<?php
-								/*
-								 * Ah, post formats. Nature's greatest mystery (aside from the sloth).
-								 *
-								 * So this function will bring in the needed template file depending on what the post
-								 * format is. The different post formats are located in the post-formats folder.
-								 *
-								 *
-								 * REMEMBER TO ALWAYS HAVE A DEFAULT ONE NAMED "format.php" FOR POSTS THAT AREN'T
-								 * A SPECIFIC POST FORMAT.
-								 *
-								 * If you want to remove post formats, just delete the post-formats folder and
-								 * replace the function below with the contents of the "format.php" file.
-								*/
-								get_template_part( 'post-formats/format', get_post_format() );
-							?>
-
-						<?php endwhile; ?>
-
-						<?php else : ?>
-
-							<article id="post-not-found" class="hentry cf">
-									<header class="article-header">
-										<h1><?php _e( 'Oops, Post Not Found!', 'naiau' ); ?></h1>
-									</header>
-									<section class="entry-content">
-										<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'naiau' ); ?></p>
+				
+				<?php if($hide_content !='true' && have_posts()){ ?>
+					 <div class="main-area">
+						<?php while(have_posts()) { the_post(); ?>
+							<div class="content-area">
+							
+								<div class="single-page-title">
+									<section class="layout">
+										<h1><?php the_title(); ?></h1>
 									</section>
-									<footer class="article-footer">
-											<p><?php _e( 'This is the error message in the single.php template.', 'naiau' ); ?></p>
-									</footer>
-							</article>
+								</div>
+								<div class="page-main">
+									<section class="layout">
 
-						<?php endif; ?>
+										<?php if($hide_sidebar != true){?>
+										
+											<div class="page-content with-sidebar">	
+												<div class="featured-image">
+													<?php echo the_post_thumbnail('slider');?>
+												</div>
+												<?php the_content(); ?>
+												<?php if($show_comments == true){?>
+													<div class="comment-area">
+														<?php comments_template(); ?>	
+													</div>
+												<?php } ?>
+											</div>
+											<div class="page-sidebar">
+												<?php get_sidebar(); ?>
+											</div>
+										<?php }else{ ?>
+											<div class="page-content">		
+												<div class="featured-image">
+													<?php echo the_post_thumbnail('slider');?>
+												</div>
+												<?php the_content(); ?> 
+												<?php if($show_comments == true){?>
+													<div class="comment-area">
+														<?php comments_template(); ?>	
+													</div>
+												<?php } ?>
+											</div>
+										<?php } ?>
+									</section>
+								</div>
+							</div>
+						<?php } ?>
+					</div>
+				<?php } ?>
+				
 
-					</main>
+				<?php get_template_part('library/notify','tabs'); ?>
+				<?php get_template_part('library/footer','links'); ?>
+				<?php get_template_part('library/related','links'); ?>
 
-					<?php get_sidebar(); ?>
+			
+		</main>
 
-				</div>
-
-			</div>
-
+				
 <?php get_footer(); ?>

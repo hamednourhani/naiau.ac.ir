@@ -49,6 +49,65 @@ body{
 			img{
 				max-width : 100%;
 			}
+			&.single-image{
+				width : 40%;
+				float : right;
+				padding : 10px;
+			}
+		}
+		.hentry {
+			width : 100%;
+			overflow : hidden;
+			margin-bottom : 20px;
+			padding-bottom : 10px;
+			border-bottom : 1px solid $grey2;
+		}
+		.post-title,.post-content{
+				width : 60%;
+				float : right;
+				
+				p{
+					padding : 5px;
+					margin :auto;
+					font-size : 90%;
+
+				}
+				a{
+					color :$skyblue1;
+				}				
+		}
+		.post-title{
+			padding : 10px;
+			width : 60%;
+			float : right;
+			h3{
+					padding : 5px;
+					margin :auto;
+					font-size : 90%;
+					color : $skyblue1;
+			}
+			
+		}
+		.post-meta{
+			font-size : 80%;
+			//border-top : 1px solid $grey2;
+			text-align : left;
+			span.meta-date{
+				position : relative;
+				a{
+					color : $navy2;
+				}
+				&:before{
+					@extend .fa;
+					display : block;
+					position : absolute;
+					top : 3px;
+					right : -20px;
+					content : "\F073";
+					color : $navy2;
+				}
+			}
+			
 		}
 		
 	}

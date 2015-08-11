@@ -26,7 +26,7 @@
 							
 								<div class="single-page-title">
 									<section class="layout">
-										<h1><?php echo __('Search : ','naiau'); ?></h1>
+										<h1><?php echo __('Archive : ','naiau'); ?></h1>
 									</section>
 								</div>
 								

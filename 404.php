@@ -1,35 +1,51 @@
+<?php
+/*
+ * CUSTOM POST TYPE TEMPLATE
+ *
+ * This is the custom post type post template. If you edit the post type name, you've got
+ * to change the name of this template to reflect that name change.
+ *
+ * For Example, if your custom post type is "register_post_type( 'bookmarks')",
+ * then your single template should be single-bookmarks.php
+ *
+ * Be aware that you should rename 'custom_cat' and 'custom_tag' to the appropiate custom
+ * category and taxonomy slugs, or this template will not finish to load properly.
+ *
+ * For more info: http://codex.wordpress.org/Post_Type_Templates
+*/
+?>
+
 <?php get_header(); ?>
 
-				<main id="main" class="site-main cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-					<section class="layout">
-						<article id="post-not-found" class="hentry cf">
+			<main class="site-main">
 
-							<header class="article-header">
+			
+					 <div class="main-area">
+						
+							<div class="content-area">
+							
+								<div class="single-page-title">
+									<section class="layout">
+										<h1><?php echo __('404','naiau'); ?></h1>
+									</section>
+								</div>
+								
+									<div class="page-main">
+										<section class="layout">
 
-								<h1><?php _e( 'Epic 404 - Article Not Found', 'naiau' ); ?></h1>
+									</section>
+								</div>
+							</div>
+					</div>
+				
+				
 
-							</header>
+				
+				<?php get_template_part('library/footer','links'); ?>
+				<?php get_template_part('library/related','links'); ?>
 
-							<section class="entry-content">
+			
+		</main>
 
-								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'naiau' ); ?></p>
-
-							</section>
-
-							<section class="search">
-
-									<p><?php get_search_form(); ?></p>
-
-							</section>
-
-							<footer class="article-footer">
-
-									<p><?php _e( 'This is the 404.php template.', 'naiau' ); ?></p>
-
-							</footer>
-
-						</article>
-					</section>		
-				</main>
 				
 <?php get_footer(); ?>

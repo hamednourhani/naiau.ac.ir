@@ -20,6 +20,10 @@ body {
 }
 a{
 	text-decoration : none;
+	color : $skyblue1;
+	&:hover{
+		color : $skyblue2;
+	}
 }
 // #wpadminbar{
 // 	display :none;
