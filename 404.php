@@ -26,14 +26,20 @@
 							
 								<div class="single-page-title">
 									<section class="layout">
-										<h1><?php echo __('404','naiau'); ?></h1>
+										<h1><?php echo __('404 page','naiau'); ?></h1>
 									</section>
 								</div>
 								
 									<div class="page-main">
 										<section class="layout">
-
-									</section>
+											 <div class="page-content">	
+													<article class="hentry page404">
+														<p><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'naiau' ); ?></p>
+														<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'naiau' ); ?></p>
+														<div><?php get_search_form( true ); ?></div>
+													</article>
+											</div>
+										</section>
 								</div>
 							</div>
 					</div>

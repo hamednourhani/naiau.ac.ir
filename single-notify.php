@@ -53,7 +53,9 @@
 												<div class="featured-image">
 													<?php echo the_post_thumbnail('slider');?>
 												</div>
+												<?php get_template_part('library/post','meta'); ?>
 												<?php the_content(); ?>
+												
 												<?php if($show_comments == true){?>
 													<div class="comment-area">
 														<?php comments_template(); ?>	
@@ -68,7 +70,9 @@
 												<div class="featured-image">
 													<?php echo the_post_thumbnail('slider');?>
 												</div>
+												<?php get_template_part('library/post','meta'); ?>
 												<?php the_content(); ?> 
+												
 												<?php if($show_comments == true){?>
 													<div class="comment-area">
 														<?php comments_template(); ?>	

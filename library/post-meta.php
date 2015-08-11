@@ -7,6 +7,7 @@
 						
 							
 							<span class="meta-date dt-published">
+								<i class="fa fa-calendar"></i>
 								<?php if(function_exists('jdate')) {
 									$date = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a>',
 													esc_url( get_permalink() ),

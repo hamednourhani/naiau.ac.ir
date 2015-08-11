@@ -98,6 +98,17 @@
 							)); ?>
 
 						</nav>
+						<span class="current-time">
+								
+								<?php if(function_exists(jdate)){
+											echo jdate( ' H:i Y-m-d', current_time( 'timestamp', 1 ) ); 
+										} else {
+											echo date( ' H:i Y-m-d', current_time( 'timestamp', 1 ) );
+										}
+
+									?>
+							<i class="fa fa-calendar"></i>
+						</span>
 					</section>
 				</div>
 

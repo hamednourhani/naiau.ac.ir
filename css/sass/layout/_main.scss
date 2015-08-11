@@ -59,7 +59,7 @@ body{
 			width : 100%;
 			overflow : hidden;
 			margin-bottom : 20px;
-			padding-bottom : 10px;
+			padding-bottom : 0px;
 			border-bottom : 1px solid $grey2;
 		}
 		.post-title,.post-content{
@@ -89,7 +89,12 @@ body{
 			
 		}
 		.post-meta{
-			font-size : 80%;
+			
+			padding : 2px 5px;
+			float : left;
+			display : inline-block;
+			background-color : $grey1;
+			font-size : 70%;
 			//border-top : 1px solid $grey2;
 			text-align : left;
 			span.meta-date{
@@ -97,17 +102,15 @@ body{
 				a{
 					color : $navy2;
 				}
-				&:before{
-					@extend .fa;
-					display : block;
-					position : absolute;
-					top : 3px;
-					right : -20px;
-					content : "\F073";
+				.fa-calendar{
+					padding-left : 8px;
 					color : $navy2;
 				}
 			}
 			
+		}
+		.searchform{
+			margin:20px;
 		}
 		
 	}
@@ -116,6 +119,19 @@ body{
 		@include at-breakpoint($medium){
 			@include span-columns(4 omega,12);
 		}
+		.sidebar-widget{
+			// input[type=submit]#searchsubmit, button#searchsubmit {
+			//     padding: 3px 15px;
+			//     float: left;
+			// }
+		}
+	}
+	.notfound{
+		margin-top : 20px;
+	}
+	.hentry.page404{
+		text-align : center;
+		border-bottom : none;
 	}
 
 }
@@ -126,7 +142,7 @@ body{
 		border-radius : 20px;
 		border-top-right-radius : 0px;
 		border-bottom-left-radius : 0px;
-		font-size : 90%;
+		font-size : 82%;
 		line-height : 230%;
 		margin : {
 			bottom : 5px;

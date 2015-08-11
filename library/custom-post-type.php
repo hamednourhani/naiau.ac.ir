@@ -134,7 +134,7 @@ function link_post_type() {
 			'public' => true,
 			'show_in_nav_menus' => true,
 			'publicly_queryable' => true,
-			'exclude_from_search' => false,
+			'exclude_from_search' => true,
 			'show_ui' => true,
 			'query_var' => true,
 			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
@@ -177,7 +177,7 @@ function gallery_post_type() {
 			'public' => true,
 			'show_in_nav_menus' => true,
 			'publicly_queryable' => true,
-			'exclude_from_search' => false,
+			'exclude_from_search' => true,
 			'show_ui' => true,
 			'query_var' => true,
 			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
@@ -220,7 +220,7 @@ function tab_post_type() {
 			'public' => true,
 			'show_in_nav_menus' => true,
 			'publicly_queryable' => true,
-			'exclude_from_search' => false,
+			'exclude_from_search' => true,
 			'show_ui' => true,
 			'query_var' => true,
 			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 

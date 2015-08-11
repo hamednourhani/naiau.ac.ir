@@ -26,7 +26,7 @@
 							
 								<div class="single-page-title">
 									<section class="layout">
-										<h1><?php echo __('Search : ','naiau'); ?></h1>
+										<h1><?php printf( __( 'Search Results for: %s', 'naiau' ), get_search_query() ); ?></h1>
 									</section>
 								</div>
 								
@@ -34,6 +34,7 @@
 										<section class="layout">
 
 										   <div class="page-content with-sidebar">	
+										   		<?php get_search_form( true ); ?>
 												<?php if(have_posts()){ ?>
 													<?php while(have_posts()) { the_post(); ?>
 													
@@ -54,6 +55,12 @@
 															</div>
 														</article>
 													<?php } ?>
+												<?php }else{ ?>
+													<article class="hentry page404">
+														
+															<p class="notfound"><?php _e( '<i class="icon-attention"></i>Sorry, but nothing matched your search terms. Please try again with different keywords.', 'naiau' ); ?></p>	
+														
+													
 												<?php } ?>
 												
 											</div>

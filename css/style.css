@@ -647,7 +647,7 @@ body {
   font-family: "BYekan", tahoma; }
 
 /* line 18, sass/base/_base.scss */
-.fa, .top-bar .search-area:before, .menu-bar ul.main-nav li ul.sub-menu li.menu-item-has-children > a:after, .page-main .page-content .post-meta span.meta-date:before, .notify-tabs-wrap ul.notifies-list li a:before {
+.fa, .top-bar .search-area:before, .menu-bar ul.main-nav li ul.sub-menu li.menu-item-has-children > a:after, .notify-tabs-wrap ul.notifies-list li a:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -790,6 +790,17 @@ ul, menu, dir {
     .menu-bar .logo-wrapper img {
       max-height: 70px; }
   /* line 94, sass/layout/_header.scss */
+  .menu-bar .current-time {
+    float: left;
+    color: #E6E6E6;
+    position: absolute;
+    top: 45px;
+    left: 10%;
+    font-size: 90%; }
+    /* line 101, sass/layout/_header.scss */
+    .menu-bar .current-time .fa-calendar {
+      padding-right: 5px; }
+  /* line 105, sass/layout/_header.scss */
   .menu-bar ul.main-nav {
     font-size: 90%;
     font-weight: 300;
@@ -799,13 +810,13 @@ ul, menu, dir {
     *margin-right: -1em;
     display: inline;
     margin-top: 12px; }
-    /* line 99, sass/layout/_header.scss */
+    /* line 110, sass/layout/_header.scss */
     .menu-bar ul.main-nav li {
       position: relative;
       display: inline-block;
       max-width: 120px;
       vertical-align: baseline; }
-    /* line 106, sass/layout/_header.scss */
+    /* line 117, sass/layout/_header.scss */
     .menu-bar ul.main-nav li > a {
       border-right: 1px solid #304da8;
       padding: 20px 15px;
@@ -816,10 +827,10 @@ ul, menu, dir {
       -webkit-transition: all 0.3s ease-in-out;
       -webkit-transition-delay: 0s;
       transition: all 0.3s ease-in-out 0s; }
-    /* line 113, sass/layout/_header.scss */
+    /* line 124, sass/layout/_header.scss */
     .menu-bar ul.main-nav li > a:hover {
       border-bottom-color: #179BD7; }
-    /* line 116, sass/layout/_header.scss */
+    /* line 127, sass/layout/_header.scss */
     .menu-bar ul.main-nav li ul.sub-menu {
       -moz-transition: all 0.3s ease-in-out 0s;
       -o-transition: all 0.3s ease-in-out 0s;
@@ -834,30 +845,30 @@ ul, menu, dir {
       right: -20%;
       z-index: 99999;
       background-color: #253B80; }
-      /* line 127, sass/layout/_header.scss */
+      /* line 138, sass/layout/_header.scss */
       .menu-bar ul.main-nav li ul.sub-menu li {
         text-align: center;
         width: 100%;
         max-width: 100%; }
-      /* line 132, sass/layout/_header.scss */
+      /* line 143, sass/layout/_header.scss */
       .menu-bar ul.main-nav li ul.sub-menu a {
         border-top: 1px solid #304da8;
         border-bottom: 1px solid #304da8;
         width: 100%;
         padding: 12px 15px; }
-        /* line 137, sass/layout/_header.scss */
+        /* line 148, sass/layout/_header.scss */
         .menu-bar ul.main-nav li ul.sub-menu a:hover {
           background-color: #5A6B9F; }
-      /* line 141, sass/layout/_header.scss */
+      /* line 152, sass/layout/_header.scss */
       .menu-bar ul.main-nav li ul.sub-menu li.menu-item-has-children > a:after {
         content: "\F104";
         left: 12px;
         position: absolute;
         vertical-align: middle; }
-    /* line 149, sass/layout/_header.scss */
+    /* line 160, sass/layout/_header.scss */
     .menu-bar ul.main-nav li:hover > ul.sub-menu {
       display: inline-block; }
-    /* line 153, sass/layout/_header.scss */
+    /* line 164, sass/layout/_header.scss */
     .menu-bar ul.main-nav ul.sub-menu li:hover ul {
       right: 100%;
       top: 0; }
@@ -948,7 +959,7 @@ body {
     width: 100%;
     overflow: hidden;
     margin-bottom: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     border-bottom: 1px solid #E6E6E6; }
   /* line 65, sass/layout/_main.scss */
   .page-main .page-content .post-title, .page-main .page-content .post-content {
@@ -975,47 +986,57 @@ body {
       color: #179BD7; }
   /* line 91, sass/layout/_main.scss */
   .page-main .page-content .post-meta {
-    font-size: 80%;
+    padding: 2px 5px;
+    float: left;
+    display: inline-block;
+    background-color: #CCCCCC;
+    font-size: 70%;
     text-align: left; }
-    /* line 95, sass/layout/_main.scss */
+    /* line 100, sass/layout/_main.scss */
     .page-main .page-content .post-meta span.meta-date {
       position: relative; }
-      /* line 97, sass/layout/_main.scss */
+      /* line 102, sass/layout/_main.scss */
       .page-main .page-content .post-meta span.meta-date a {
         color: #5A6B9F; }
-      /* line 100, sass/layout/_main.scss */
-      .page-main .page-content .post-meta span.meta-date:before {
-        display: block;
-        position: absolute;
-        top: 3px;
-        right: -20px;
-        content: "\F073";
+      /* line 105, sass/layout/_main.scss */
+      .page-main .page-content .post-meta span.meta-date .fa-calendar {
+        padding-left: 8px;
         color: #5A6B9F; }
-/* line 114, sass/layout/_main.scss */
+  /* line 112, sass/layout/_main.scss */
+  .page-main .page-content .searchform {
+    margin: 20px; }
+/* line 117, sass/layout/_main.scss */
 .page-main .page-sidebar {
   width: 100%;
   float: right;
   margin-left: 1.53846%;
   display: inline; }
   @media (min-width: 45em) {
-    /* line 114, sass/layout/_main.scss */
+    /* line 117, sass/layout/_main.scss */
     .page-main .page-sidebar {
       width: 32.30769%;
       float: left;
       margin-left: 0; } }
+/* line 129, sass/layout/_main.scss */
+.page-main .notfound {
+  margin-top: 20px; }
+/* line 132, sass/layout/_main.scss */
+.page-main .hentry.page404 {
+  text-align: center;
+  border-bottom: none; }
 
-/* line 123, sass/layout/_main.scss */
+/* line 139, sass/layout/_main.scss */
 .secondary .widget {
   border: 3px solid #E6E6E6;
   padding: 20px;
   border-radius: 20px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
-  font-size: 90%;
+  font-size: 82%;
   line-height: 230%;
   margin-bottom: 5px;
   margin-top: 10px; }
-/* line 136, sass/layout/_main.scss */
+/* line 152, sass/layout/_main.scss */
 .secondary .widgettitle {
   border-bottom: 1px solid #E6E6E6;
   margin: 0;
