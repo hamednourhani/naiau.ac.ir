@@ -24,7 +24,9 @@
 					<?php 
 					
 				$hide_content = get_post_meta(get_the_ID(),'_naiau_content');
+				$show_comments = get_post_meta(get_the_ID(),'_naiau_comments');
 				$hide_sidebar = get_post_meta(get_the_ID(),'_naiau_sidebar');
+
 				
 				?>
 
@@ -32,7 +34,7 @@
 				<?php get_template_part('library/slider','area'); ?>
 
 				
-				<?php if($hide_content !=='true' && have_posts()){ ?>
+				<?php if($hide_content !='true' && have_posts()){ ?>
 					 <div class="main-area">
 						<?php while(have_posts()) { the_post(); ?>
 							<div class="content-area">
@@ -44,18 +46,34 @@
 								</div>
 								<div class="page-main">
 									<section class="layout">
-										<?php if($hide_sidebar !== 'true'){?>
+
+										<?php if($hide_sidebar != true){?>
+										
 											<div class="page-content with-sidebar">	
+												<div class="featured-image">
+													<?php echo the_post_thumbnail('slider');?>
+												</div>
 												<?php the_content(); ?>
-												<?php comments_template(); ?>
+												<?php if($show_comments == true){?>
+													<div class="comment-area">
+														<?php comments_template(); ?>	
+													</div>
+												<?php } ?>
 											</div>
 											<div class="page-sidebar">
 												<?php get_sidebar(); ?>
 											</div>
 										<?php }else{ ?>
 											<div class="page-content">		
+												<div class="featured-image">
+													<?php echo the_post_thumbnail('slider');?>
+												</div>
 												<?php the_content(); ?> 
-												<?php comments_template(); ?>
+												<?php if($show_comments == true){?>
+													<div class="comment-area">
+														<?php comments_template(); ?>	
+													</div>
+												<?php } ?>
 											</div>
 										<?php } ?>
 									</section>

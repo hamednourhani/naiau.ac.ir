@@ -27,7 +27,14 @@ body{
 
 .page-main{
 	.page-content{
-		@include span-columns(12,12);
+			@include span-columns(12,12);
+			@include at-breakpoint($medium){
+				@include span-columns(8,12);
+				float:none;
+				margin : auto;
+				display : block;
+			}
+			padding-top : 20px;
 		&.with-sidebar{
 			@include span-columns(12,12);
 			@include at-breakpoint($medium){
@@ -35,18 +42,15 @@ body{
 			}
 		}
 		
-		.comment-respound.comment-area {
-			border-top : 1px solid $grey2;
-			margin-top : 20px;
-			padding : {
-				
-				
-				top : 20px;
-				bottom : 20px;
-
+		.featured-image{
+			width : 100%;
+			margin : auto;
+			text-align : center;
+			img{
+				max-width : 100%;
 			}
-			
 		}
+		
 	}
 	.page-sidebar{
 		@include span-columns(12,12);
@@ -58,19 +62,21 @@ body{
 }
 .secondary{
 	.widget{
-		background-color: $grey2;
+		border :3px solid $grey2;
 		padding : 20px;
 		border-radius : 20px;
 		border-top-right-radius : 0px;
 		border-bottom-left-radius : 0px;
+		font-size : 90%;
+		line-height : 230%;
 		margin : {
 			bottom : 5px;
 			top : 10px;
 		}
 	}
 	.widgettitle{
-		font-size : 90%;
-		border-bottom : 1px solid $navy1;
+		
+		border-bottom : 1px solid $grey2;
 		margin : 0;
 		padding-bottom : 10px;
 		margin-bottom : 15px;

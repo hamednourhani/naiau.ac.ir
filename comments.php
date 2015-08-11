@@ -47,5 +47,6 @@ if ( post_password_required() )
 
 </div><!-- #comments -->
 
-  <?php comment_form(); ?>
+  <?php get_template_part('library/comment','form'); ?>
+
 

@@ -418,7 +418,7 @@ function naiau_register_section_maker_metabox() {
 	$cmb_demo->add_field( array(
 		'name'       => __( 'show comments', 'naiau' ),
 		'desc'       => __( 'show  page coments', 'naiau' ),
-		'id'         => $prefix . 'comment',
+		'id'         => $prefix . 'comments',
 		'type'       => 'radio_inline',
 		'show_option_none' => true,
 		'options'          => array(
