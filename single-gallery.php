@@ -45,10 +45,10 @@
 									</section>
 								</div>
 								<div class="page-main">
-									<section class="layout">
-
+									<div class="gallery-slideshow-wrapper">
 										<?php get_template_part('library/gallery','slideshow'); ?>
-									</section>
+									</div>
+									
 								</div>
 							</div>
 						<?php } ?>
