@@ -34,7 +34,7 @@
 				<?php get_template_part('library/slider','area'); ?>
 
 				
-				<?php if($hide_content !='true' && have_posts()){ ?>
+				<?php if($hide_content !=true && have_posts()){ ?>
 					 <div class="main-area">
 						<?php while(have_posts()) { the_post(); ?>
 							<div class="content-area">

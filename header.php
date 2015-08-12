@@ -82,6 +82,17 @@
 							</a>
 						</div>
 						<nav role="navigation" class = "main-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+							<span class="current-time">
+								
+								<?php if(function_exists(jdate)){
+											echo jdate( ' H:i Y-m-d', current_time( 'timestamp', 0 ) ); 
+										} else {
+											echo date( ' H:i Y-m-d', current_time( 'timestamp', 1 ) );
+										}
+
+									?>
+								<i class="fa fa-calendar"></i>
+							</span>
 							
 							<?php wp_nav_menu(array(
 	    					         'container' => false,                           // remove nav container
@@ -98,17 +109,7 @@
 							)); ?>
 
 						</nav>
-						<span class="current-time">
-								
-								<?php if(function_exists(jdate)){
-											echo jdate( ' H:i Y-m-d', current_time( 'timestamp', 1 ) ); 
-										} else {
-											echo date( ' H:i Y-m-d', current_time( 'timestamp', 1 ) );
-										}
-
-									?>
-							<i class="fa fa-calendar"></i>
-						</span>
+						
 					</section>
 				</div>
 

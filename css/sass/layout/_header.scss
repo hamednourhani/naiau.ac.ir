@@ -91,17 +91,22 @@
 			max-height : 70px;
 		}
 	}
-	.current-time{
-		float : left;
-		color : $grey2;
-		position : absolute;
-		top : 45px;
-		left : 10%;
-		font-size : 90%;
-		.fa-calendar {
-			padding-right : 5px;
+
+	nav.main-menu{
+		position : relative;
+		.current-time{
+			// float : left;
+			color : $grey2;
+			position : absolute;
+			top : 10px;
+			left : 5%;
+			font-size : 90%;
+			.fa-calendar {
+				padding-right : 5px;
+			}
 		}
 	}
+	
 	ul.main-nav{
 		font-size : 90%;
 		font-weight : 300;

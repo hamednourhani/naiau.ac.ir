@@ -11,6 +11,14 @@ input[type=submit],button{
     	background-color: darken($grey2, 40%);
     }
     &#searchsubmit{
-    	padding : 3px 15px;
+    	padding : 8px 15px;
+    }
+}
+.sidebar-widget{
+    input[type=submit],button{
+        
+        &#searchsubmit{
+            padding : 3px 15px;
+        }
     }
 }

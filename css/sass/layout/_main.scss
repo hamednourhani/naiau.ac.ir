@@ -60,7 +60,7 @@ body{
 			overflow : hidden;
 			margin-bottom : 20px;
 			padding-bottom : 0px;
-			border-bottom : 1px solid $grey2;
+			border-bottom : 1px solid $navy2;
 		}
 		.post-title,.post-content{
 				width : 60%;
@@ -93,18 +93,18 @@ body{
 			padding : 2px 5px;
 			float : left;
 			display : inline-block;
-			background-color : $grey1;
+			background-color : $navy2;
 			font-size : 70%;
 			//border-top : 1px solid $grey2;
 			text-align : left;
 			span.meta-date{
 				position : relative;
 				a{
-					color : $navy2;
+					color : $grey2;
 				}
 				.fa-calendar{
 					padding-left : 8px;
-					color : $navy2;
+					color : $grey2;
 				}
 			}
 			
@@ -120,10 +120,10 @@ body{
 			@include span-columns(4 omega,12);
 		}
 		.sidebar-widget{
-			// input[type=submit]#searchsubmit, button#searchsubmit {
-			//     padding: 3px 15px;
-			//     float: left;
-			// }
+			padding:{
+				top :20px;
+				bottom : 20px;
+			}
 		}
 	}
 	.notfound{
