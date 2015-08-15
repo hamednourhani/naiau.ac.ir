@@ -297,9 +297,9 @@ function naiau_register_tab_maker_metabox() {
 		'type'        => 'group',
 		'description' => __( 'Generates reusable form entries', 'naiau' ),
 		'options'     => array(
-			'group_title'   => __( 'Tab {#}', 'naiau' ), // {#} gets replaced by row number
-			'add_button'    => __( 'Add Another Tab', 'naiau' ),
-			'remove_button' => __( 'Remove Tab', 'naiau' ),
+			'group_title'   => __( 'Notify {#}', 'naiau' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Notify', 'naiau' ),
+			'remove_button' => __( 'Remove Notify', 'naiau' ),
 			'sortable'      => true, // beta
 		),
 	) );

@@ -1,0 +1,1144 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: naiau\n"
+"POT-Creation-Date: 2015-08-15 16:45+0430\n"
+"PO-Revision-Date: 2015-08-15 17:25+0430\n"
+"Last-Translator: \n"
+"Language-Team: iTstar <info@iTstar.ir>\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: .sass-cache\n"
+
+#: 404.php:29
+msgid "404 page"
+msgstr "صفحه 404"
+
+#: 404.php:37
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "متاسفانه صفحه ای که به دنبال آن هستید یافت نشد."
+
+#: 404.php:38
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"به نظر می رسد این صفحه اشتباه می باشد. ممکن است جستجو به شما کمک نمایید."
+
+#: archive.php:29
+msgid "Archive : "
+msgstr "بایگانی : "
+
+#: category.php:29 index.php:29 tag.php:29 taxonomy-news_cat.php:29
+#: taxonomy-notify_cat.php:29
+msgid "Category : "
+msgstr "دسته بندی : "
+
+#: comments.php:29
+msgid "Reply<i class=\" icon-level-up\"></i>"
+msgstr "پاسخ "
+
+#: comments.php:35
+msgid "<i class=\"icon-left-open\"></i> Older Comments"
+msgstr "دیدگاه های قدیمی تر"
+
+#: comments.php:36
+msgid "Newer Comments <i class=\"icon-right-open\"></i>"
+msgstr "دیدگاه های جدیدتر"
+
+#: comments.php:41
+msgid "Comments are closed."
+msgstr "ارسال دیدگاه ها بسته است."
+
+#: footer.php:4
+msgid "All right reserved"
+msgstr ""
+"تمامی حقوق این سایت برای دانشگاه آزاد اسلامی واحد نظر آباد محفوظ می باشد."
+
+#: functions.php:90
+msgid "Slider Size"
+msgstr "سایز اسلایدشو"
+
+#: functions.php:91
+msgid "Slider Thumb"
+msgstr "سایز بندانگشتی اسلایدشو"
+
+#: functions.php:119
+msgid "600px by 400px"
+msgstr ""
+
+#: functions.php:120
+msgid "300px by 250px"
+msgstr ""
+
+#: functions.php:175
+msgid "Sidebar"
+msgstr "ستون کناری"
+
+#: functions.php:176
+msgid "The first (primary) sidebar."
+msgstr "ستون کناری اصلی"
+
+#: functions.php:231
+#, php-format
+msgid "<cite class=\"fn\">%1$s</cite> %2$s"
+msgstr ""
+
+#: functions.php:231
+msgid "(Edit)"
+msgstr "(ویرایش)"
+
+#: functions.php:232
+msgid "F jS, Y"
+msgstr ""
+
+#: functions.php:237
+msgid "Your comment is awaiting moderation."
+msgstr "دیدگاه شما در دست بررسی است"
+
+#: header.php:58 header.php:100 library/naiau.php:240
+msgid "The Main Menu"
+msgstr "منوی اصلی"
+
+#: header.php:71 searchform.php:6
+msgid "Search"
+msgstr "جستجو"
+
+#: library/admin.php:82
+msgid "j F Y @ g:i a"
+msgstr ""
+
+#: library/admin.php:94
+msgid "Recently on Themble (Customize on admin.php)"
+msgstr ""
+
+#: library/admin.php:141
+msgid ""
+"<span id=\"footer-thankyou\">Developed by <a href=\"http://naiau.com\" "
+"target=\"_blank\">naiau</a></span>. Built using <a href=\"http://themble.com/"
+"naiau\" target=\"_blank\">naiau</a>."
+msgstr ""
+
+#: library/cmb-functions.php:209
+msgid "Link Information"
+msgstr "توضیحات لینک"
+
+#: library/cmb-functions.php:220
+msgid "link address"
+msgstr "آدرس لینک"
+
+#: library/cmb-functions.php:221
+msgid "the web address of link"
+msgstr "آدرس وب برای لینک مورد نظر"
+
+#: library/cmb-functions.php:255
+msgid "Gallery Images"
+msgstr "تصاویر گالری"
+
+#: library/cmb-functions.php:268
+msgid "Images"
+msgstr "تصاویر"
+
+#: library/cmb-functions.php:269 library/cmb/example-functions.php:330
+msgid "Upload or add multiple images/attachments."
+msgstr "تصاویر را بارگذاری نمایید"
+
+#: library/cmb-functions.php:290
+msgid "Tabs"
+msgstr "تب ها"
+
+#: library/cmb-functions.php:298 library/cmb/example-functions.php:410
+msgid "Generates reusable form entries"
+msgstr "وارد کردن اطلاعات این تب"
+
+#: library/cmb-functions.php:300
+msgid "Notify {#}"
+msgstr "اطلاعیه  {#}"
+
+#: library/cmb-functions.php:301
+msgid "Add Another Notify"
+msgstr "افزودن اطلاعیه جدید"
+
+#: library/cmb-functions.php:302
+msgid "Remove Notify"
+msgstr "حذف اطلاعیه"
+
+#: library/cmb-functions.php:341
+msgid "Notify Name"
+msgstr "نام اطلاعیه"
+
+#: library/cmb-functions.php:342
+msgid "choose a Notify "
+msgstr "انتخاب یک اطلاعیه"
+
+#: library/cmb-functions.php:367
+msgid "Section Selection"
+msgstr "انتخاب صفحه سازها"
+
+#: library/cmb-functions.php:380
+msgid "news slider"
+msgstr "اسلایدر اخبار"
+
+#: library/cmb-functions.php:381
+msgid "show news slider"
+msgstr "نمایش اسلایدشو اخبار"
+
+#: library/cmb-functions.php:386 library/cmb-functions.php:405
+#: library/cmb-functions.php:425 library/cmb-functions.php:444
+#: library/cmb-functions.php:464 library/cmb-functions.php:483
+#: library/cmb-functions.php:501
+msgid "Yes"
+msgstr "بله"
+
+#: library/cmb-functions.php:399
+msgid "hide content"
+msgstr "مخفی کردن محتوا"
+
+#: library/cmb-functions.php:400
+msgid "hide page content"
+msgstr "محتوای ویرایشگر نمایش داده نشود."
+
+#: library/cmb-functions.php:419
+msgid "show comments"
+msgstr "نمایش دیدگاه ها"
+
+#: library/cmb-functions.php:420
+msgid "show  page coments"
+msgstr "دیدگاه ها نمایش داده شود"
+
+#: library/cmb-functions.php:438
+msgid "hide sidebar"
+msgstr "مخفی کردن ستون کناری "
+
+#: library/cmb-functions.php:439
+msgid "hide page sidebar"
+msgstr "ستون کناری مخفی شود"
+
+#: library/cmb-functions.php:458
+msgid "show notify tabs"
+msgstr "نمایش تب اطلاعیه ها"
+
+#: library/cmb-functions.php:459
+msgid "show notify tabs or not"
+msgstr "تب اطلاعیه های نمایش داده شود"
+
+#: library/cmb-functions.php:477
+msgid "show important links"
+msgstr "لینک های پانوشت"
+
+#: library/cmb-functions.php:478
+msgid "show important links or not"
+msgstr "لینک های پانوشت نمایش داده شود"
+
+#: library/cmb-functions.php:495
+msgid "show related links"
+msgstr "سایت های مرتبط"
+
+#: library/cmb-functions.php:496
+msgid "show related links or not"
+msgstr "سایت های مرتبط نمایش داده شود"
+
+#: library/cmb/example-functions.php:82
+msgid "Test Metabox"
+msgstr ""
+
+#: library/cmb/example-functions.php:93 library/cmb/example-functions.php:380
+msgid "Test Text"
+msgstr ""
+
+#: library/cmb/example-functions.php:94 library/cmb/example-functions.php:106
+#: library/cmb/example-functions.php:114 library/cmb/example-functions.php:122
+#: library/cmb/example-functions.php:131 library/cmb/example-functions.php:139
+#: library/cmb/example-functions.php:153 library/cmb/example-functions.php:160
+#: library/cmb/example-functions.php:168 library/cmb/example-functions.php:185
+#: library/cmb/example-functions.php:194 library/cmb/example-functions.php:202
+#: library/cmb/example-functions.php:209 library/cmb/example-functions.php:216
+#: library/cmb/example-functions.php:230 library/cmb/example-functions.php:243
+#: library/cmb/example-functions.php:256 library/cmb/example-functions.php:268
+#: library/cmb/example-functions.php:277 library/cmb/example-functions.php:285
+#: library/cmb/example-functions.php:294 library/cmb/example-functions.php:301
+#: library/cmb/example-functions.php:315 library/cmb/example-functions.php:381
+#: library/cmb/example-functions.php:475 library/cmb/example-functions.php:483
+#: library/cmb/example-functions.php:490 library/cmb/example-functions.php:497
+#: library/cmb/example-functions.php:504 library/cmb/example-functions.php:511
+#: library/cmb/example-functions.php:518 library/cmb/example-functions.php:556
+msgid "field description (optional)"
+msgstr ""
+
+#: library/cmb/example-functions.php:105
+msgid "Test Text Small"
+msgstr ""
+
+#: library/cmb/example-functions.php:113
+msgid "Test Text Medium"
+msgstr ""
+
+#: library/cmb/example-functions.php:121
+msgid "Website URL"
+msgstr ""
+
+#: library/cmb/example-functions.php:130
+msgid "Test Text Email"
+msgstr ""
+
+#: library/cmb/example-functions.php:138
+msgid "Test Time"
+msgstr ""
+
+#: library/cmb/example-functions.php:145 library/cmb/example-functions.php:146
+msgid "Time zone"
+msgstr ""
+
+#: library/cmb/example-functions.php:152
+msgid "Test Date Picker"
+msgstr ""
+
+#: library/cmb/example-functions.php:159
+msgid "Test Date Picker (UNIX timestamp)"
+msgstr ""
+
+#: library/cmb/example-functions.php:167
+msgid "Test Date/Time Picker Combo (UNIX timestamp)"
+msgstr ""
+
+#: library/cmb/example-functions.php:184
+msgid "Test Money"
+msgstr ""
+
+#: library/cmb/example-functions.php:193
+msgid "Test Color Picker"
+msgstr ""
+
+#: library/cmb/example-functions.php:201
+msgid "Test Text Area"
+msgstr ""
+
+#: library/cmb/example-functions.php:208
+msgid "Test Text Area Small"
+msgstr ""
+
+#: library/cmb/example-functions.php:215
+msgid "Test Text Area for Code"
+msgstr ""
+
+#: library/cmb/example-functions.php:222
+msgid "Test Title Weeeee"
+msgstr ""
+
+#: library/cmb/example-functions.php:223
+msgid "This is a title description"
+msgstr ""
+
+#: library/cmb/example-functions.php:229
+msgid "Test Select"
+msgstr ""
+
+#: library/cmb/example-functions.php:235 library/cmb/example-functions.php:248
+#: library/cmb/example-functions.php:260
+msgid "Option One"
+msgstr ""
+
+#: library/cmb/example-functions.php:236 library/cmb/example-functions.php:249
+#: library/cmb/example-functions.php:261
+msgid "Option Two"
+msgstr ""
+
+#: library/cmb/example-functions.php:237 library/cmb/example-functions.php:250
+#: library/cmb/example-functions.php:262
+msgid "Option Three"
+msgstr ""
+
+#: library/cmb/example-functions.php:242
+msgid "Test Radio inline"
+msgstr ""
+
+#: library/cmb/example-functions.php:255
+msgid "Test Radio"
+msgstr ""
+
+#: library/cmb/example-functions.php:267
+msgid "Test Taxonomy Radio"
+msgstr ""
+
+#: library/cmb/example-functions.php:276
+msgid "Test Taxonomy Select"
+msgstr ""
+
+#: library/cmb/example-functions.php:284
+msgid "Test Taxonomy Multi Checkbox"
+msgstr ""
+
+#: library/cmb/example-functions.php:293
+msgid "Test Checkbox"
+msgstr ""
+
+#: library/cmb/example-functions.php:300
+msgid "Test Multi Checkbox"
+msgstr ""
+
+#: library/cmb/example-functions.php:306
+msgid "Check One"
+msgstr ""
+
+#: library/cmb/example-functions.php:307
+msgid "Check Two"
+msgstr ""
+
+#: library/cmb/example-functions.php:308
+msgid "Check Three"
+msgstr ""
+
+#: library/cmb/example-functions.php:314
+msgid "Test wysiwyg"
+msgstr ""
+
+#: library/cmb/example-functions.php:322
+msgid "Test Image"
+msgstr ""
+
+#: library/cmb/example-functions.php:323
+msgid "Upload an image or enter a URL."
+msgstr ""
+
+#: library/cmb/example-functions.php:329
+msgid "Multiple Files"
+msgstr ""
+
+#: library/cmb/example-functions.php:337
+msgid "oEmbed"
+msgstr ""
+
+#: library/cmb/example-functions.php:338
+msgid ""
+"Enter a youtube, twitter, or instagram URL. Supports services listed at <a "
+"href=\"http://codex.wordpress.org/Embeds\">http://codex.wordpress.org/"
+"Embeds</a>."
+msgstr ""
+
+#: library/cmb/example-functions.php:371
+msgid "About Page Metabox"
+msgstr ""
+
+#: library/cmb/example-functions.php:402
+msgid "Repeating Field Group"
+msgstr ""
+
+#: library/cmb/example-functions.php:412
+msgid "Entry {#}"
+msgstr ""
+
+#: library/cmb/example-functions.php:413
+msgid "Add Another Entry"
+msgstr ""
+
+#: library/cmb/example-functions.php:414
+msgid "Remove Entry"
+msgstr ""
+
+#: library/cmb/example-functions.php:426
+msgid "Entry Title"
+msgstr ""
+
+#: library/cmb/example-functions.php:433
+msgid "Description"
+msgstr ""
+
+#: library/cmb/example-functions.php:434
+msgid "Write a short description for this entry"
+msgstr ""
+
+#: library/cmb/example-functions.php:440
+msgid "Entry Image"
+msgstr ""
+
+#: library/cmb/example-functions.php:446
+msgid "Image Caption"
+msgstr ""
+
+#: library/cmb/example-functions.php:467
+msgid "User Profile Metabox"
+msgstr ""
+
+#: library/cmb/example-functions.php:474
+msgid "Extra Info"
+msgstr ""
+
+#: library/cmb/example-functions.php:482
+msgid "Avatar"
+msgstr ""
+
+#: library/cmb/example-functions.php:489
+msgid "Facebook URL"
+msgstr ""
+
+#: library/cmb/example-functions.php:496
+msgid "Twitter URL"
+msgstr ""
+
+#: library/cmb/example-functions.php:503
+msgid "Google+ URL"
+msgstr ""
+
+#: library/cmb/example-functions.php:510
+msgid "Linkedin URL"
+msgstr ""
+
+#: library/cmb/example-functions.php:517
+msgid "User Field"
+msgstr ""
+
+#: library/cmb/example-functions.php:540
+msgid "Theme Options Metabox"
+msgstr ""
+
+#: library/cmb/example-functions.php:555
+msgid "Site Background Color"
+msgstr ""
+
+#: library/cmb/includes/CMB2.php:120
+msgid "Metabox configuration is required to have an ID parameter"
+msgstr ""
+
+#: library/cmb/includes/CMB2.php:326
+msgid "Click to toggle"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Ajax.php:40
+msgid "Please Try Again"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Ajax.php:135
+msgid "Remove Embed"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Ajax.php:139
+#, php-format
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Field.php:891
+msgid "Add Group"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Field.php:892
+msgid "Remove Group"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Field.php:914
+#: library/cmb/includes/CMB2_Field.php:918
+msgid "None"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:86 library/cmb/includes/CMB2_JS.php:119
+msgid "Clear"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:87
+msgid "Default"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:88
+msgid "Select Color"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:89
+msgid "Current Color"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:110
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:111
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:112
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:113
+msgid ""
+"January, February, March, April, May, June, July, August, September, "
+"October, November, December"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:114
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:115
+msgid "Next"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:116
+msgid "Prev"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:117
+msgid "Today"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:118 library/cmb/includes/CMB2_JS.php:128
+msgid "Done"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:122
+msgid "Choose Time"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:123
+msgid "Time"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:124
+msgid "Hour"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:125
+msgid "Minute"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:126
+msgid "Second"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:127
+msgid "Now"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:135
+msgid "Use this file"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:136 library/cmb/includes/CMB2_Types.php:983
+msgid "Remove Image"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:137 library/cmb/includes/CMB2_Types.php:356
+#: library/cmb/includes/CMB2_Types.php:1002
+msgid "Remove"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:138 library/cmb/includes/CMB2_Types.php:997
+msgid "File:"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:139
+#: library/cmb/includes/CMB2_Types.php:1000
+msgid "Download"
+msgstr ""
+
+#: library/cmb/includes/CMB2_JS.php:140
+msgid "Select / Deselect All"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Types.php:297
+msgid "Add Row"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Types.php:734
+#: library/cmb/includes/CMB2_Types.php:782
+msgid "No terms"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Types.php:847
+msgid "Add or Upload Files"
+msgstr ""
+
+#: library/cmb/includes/CMB2_Types.php:907
+msgid "Add or Upload File"
+msgstr ""
+
+#: library/cmb/includes/helper-functions.php:249
+msgid "Save"
+msgstr ""
+
+#: library/comment-form.php:8
+msgid ""
+"<span class=\"required\">Please fill the fields marked by <i class=\"icon-"
+"star\"></i></span>"
+msgstr "<span class=\"required\">لطفا فیلدهای ضروری را تکمیل نمایید</span>"
+
+#: library/comment-form.php:13
+msgid "Leave a Reply"
+msgstr "ارسال یک دیدگاه"
+
+#: library/comment-form.php:14
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "ارسال یک پاسخ برای %s"
+
+#: library/comment-form.php:15
+msgid "Cancel Reply<i class=\"icon-cancel\"></i>"
+msgstr "لغو پاسخ"
+
+#: library/comment-form.php:16
+msgid "Post Comment"
+msgstr "ارسال دیدگاه"
+
+#: library/comment-form.php:18
+msgid "<i class=\"icon-doc-text\"></i> Comment"
+msgstr "دیدگاه"
+
+#: library/comment-form.php:19
+msgid "your message"
+msgstr "پیام شما"
+
+#: library/comment-form.php:24
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "برای ارسال دیدگاه شما می بایست <a href=\"%s\">وارد سایت شده باشید</a>"
+
+#: library/comment-form.php:30
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"وارد شده با عنوان <a href=\"%1$s\">%2$s</a>.  <a href=\"%3$s\" title=\"Log "
+"out of this account\">خارج شوید?</a>"
+
+#: library/comment-form.php:37
+msgid "Your email address will not be published."
+msgstr "آدرس ایمیل شما منتشر نخواهد شد"
+
+#: library/comment-form.php:42
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+"شما می توانید از این تگ های <abbr title=\"HyperText Markup Language\">HTML</"
+"abbr> در دیدگاه خود استفاده نمایید : %s"
+
+#: library/comment-form.php:50
+msgid "<i class=\"icon-user\"></i> Name"
+msgstr "نام"
+
+#: library/comment-form.php:50
+msgid "yourname"
+msgstr "نام شما"
+
+#: library/comment-form.php:56
+msgid "<i class=\"icon-mail-alt\"></i> Email"
+msgstr "ایمیل"
+
+#: library/comment-form.php:56
+msgid "yourname@example.com"
+msgstr ""
+
+#: library/comment-form.php:63
+msgid "<i class=\"icon-link\"></i> Website"
+msgstr "وب سایت / وبلاگ"
+
+#: library/comment-form.php:64
+msgid "www.example.com"
+msgstr ""
+
+#: library/custom-post-type.php:31 library/custom-post-type.php:32
+msgid "News"
+msgstr "خبر"
+
+#: library/custom-post-type.php:33
+msgid "All News"
+msgstr "همه خبرها"
+
+#: library/custom-post-type.php:34 library/custom-post-type.php:79
+#: library/custom-post-type.php:122 library/custom-post-type.php:165
+#: library/custom-post-type.php:208
+msgid "Add New"
+msgstr "افزودن جدید"
+
+#: library/custom-post-type.php:35
+msgid "Add New News"
+msgstr "افزودن خبر جدید"
+
+#: library/custom-post-type.php:36 library/custom-post-type.php:81
+#: library/custom-post-type.php:124 library/custom-post-type.php:167
+#: library/custom-post-type.php:210 page-templates/contributors.php:35
+msgid "Edit"
+msgstr "ویرایش"
+
+#: library/custom-post-type.php:37
+msgid "Edit News"
+msgstr "ویرایش خبر"
+
+#: library/custom-post-type.php:38
+msgid "New News"
+msgstr "خبر جدید"
+
+#: library/custom-post-type.php:39
+msgid "View News"
+msgstr "نمایش خبر"
+
+#: library/custom-post-type.php:40
+msgid "Search News"
+msgstr "جستجوی خبر"
+
+#: library/custom-post-type.php:41 library/custom-post-type.php:86
+#: library/custom-post-type.php:129 library/custom-post-type.php:172
+#: library/custom-post-type.php:215
+msgid "Nothing found in the Database."
+msgstr "هیچ موردی در پایگاه داده موجود نمی باشد"
+
+#: library/custom-post-type.php:42 library/custom-post-type.php:87
+#: library/custom-post-type.php:130 library/custom-post-type.php:173
+#: library/custom-post-type.php:216
+msgid "Nothing found in Trash"
+msgstr "هیچ موردی در زباله دان موجود نمی باشد"
+
+#: library/custom-post-type.php:45
+msgid "This is a News"
+msgstr "این یک خبر است"
+
+#: library/custom-post-type.php:76 library/custom-post-type.php:77
+msgid "Notify"
+msgstr "اطلاعیه"
+
+#: library/custom-post-type.php:78
+msgid "All Notifies"
+msgstr "همه اطلاعیه ها"
+
+#: library/custom-post-type.php:80
+msgid "Add New Notify"
+msgstr "افزودن اطلاعیه جدید"
+
+#: library/custom-post-type.php:82
+msgid "Edit Notify"
+msgstr "ویرایش اطلاعیه"
+
+#: library/custom-post-type.php:83
+msgid "New Notify"
+msgstr "اطلاعیه جدید"
+
+#: library/custom-post-type.php:84
+msgid "View Notify"
+msgstr "نمایش اطلاعیه"
+
+#: library/custom-post-type.php:85
+msgid "Search Notifies"
+msgstr "جستجوی اطلاعیه ها"
+
+#: library/custom-post-type.php:90
+msgid "This is a notify"
+msgstr "این یک اطلاعیه است"
+
+#: library/custom-post-type.php:119 library/custom-post-type.php:120
+msgid "Link"
+msgstr "لینک"
+
+#: library/custom-post-type.php:121
+msgid "All Links"
+msgstr "همه لینک ها"
+
+#: library/custom-post-type.php:123
+msgid "Add New Link"
+msgstr "افزودن لینک جدید"
+
+#: library/custom-post-type.php:125
+msgid "Edit Link"
+msgstr "ویرایش لینک"
+
+#: library/custom-post-type.php:126
+msgid "New Link"
+msgstr "لینک جدید"
+
+#: library/custom-post-type.php:127
+msgid "View Link"
+msgstr "نمایش لینک"
+
+#: library/custom-post-type.php:128
+msgid "Search Links"
+msgstr "جستجوی لینک ها"
+
+#: library/custom-post-type.php:133
+msgid "This is a link"
+msgstr "این یک لینک است"
+
+#: library/custom-post-type.php:162 library/custom-post-type.php:163
+msgid "Gallery"
+msgstr "گالری"
+
+#: library/custom-post-type.php:164
+msgid "All Galleries"
+msgstr "همه گالری ها"
+
+#: library/custom-post-type.php:166
+msgid "Add New Gallery"
+msgstr "افزودن گالری جدید"
+
+#: library/custom-post-type.php:168
+msgid "Edit Gallery"
+msgstr "ویرایش گالری"
+
+#: library/custom-post-type.php:169
+msgid "New Gallery"
+msgstr "گالری جدید"
+
+#: library/custom-post-type.php:170
+msgid "View Gallery"
+msgstr "نمایش گالری"
+
+#: library/custom-post-type.php:171
+msgid "Search Galleries"
+msgstr "جستجوی گالری ها"
+
+#: library/custom-post-type.php:176
+msgid "This is a Gallery"
+msgstr "این یک گالری است"
+
+#: library/custom-post-type.php:205 library/custom-post-type.php:206
+msgid "Tab"
+msgstr "تب"
+
+#: library/custom-post-type.php:207
+msgid "All Tabs"
+msgstr "همه تب ها"
+
+#: library/custom-post-type.php:209
+msgid "Add New Tab"
+msgstr "افزودن تب جدید"
+
+#: library/custom-post-type.php:211
+msgid "Edit Tab"
+msgstr "ویرایش تب"
+
+#: library/custom-post-type.php:212
+msgid "New Tab"
+msgstr "تب جدید"
+
+#: library/custom-post-type.php:213
+msgid "View Tab"
+msgstr "نمایش تب"
+
+#: library/custom-post-type.php:214
+msgid "Search Tabs"
+msgstr "جستجوی تب ها"
+
+#: library/custom-post-type.php:219
+msgid "This is a tab"
+msgstr "این یک تب است"
+
+#: library/custom-post-type.php:264
+msgid "News Categories"
+msgstr "دسته بندی های خبر"
+
+#: library/custom-post-type.php:265
+msgid "News Category"
+msgstr "دسته بندی خبر"
+
+#: library/custom-post-type.php:266
+msgid "Search News Categories"
+msgstr "جستجوی دسته بندی های خبر"
+
+#: library/custom-post-type.php:267
+msgid "All News Categories"
+msgstr "همه دسته بندی های خبر"
+
+#: library/custom-post-type.php:268
+msgid "Parent News Category"
+msgstr "مادر دسته بندی خبر"
+
+#: library/custom-post-type.php:269
+msgid "Parent News Category:"
+msgstr "مادر دسته بندی خبر:"
+
+#: library/custom-post-type.php:270
+msgid "Edit News Category"
+msgstr "ویرایش دسته بندی خبر"
+
+#: library/custom-post-type.php:271
+msgid "Update News Category"
+msgstr "بروز رسانی دسته بندی خبر"
+
+#: library/custom-post-type.php:272
+msgid "Add New News Category"
+msgstr "افزودن دسته بندی خبر جدید"
+
+#: library/custom-post-type.php:273
+msgid "New News Category Name"
+msgstr "نام دسته بندی خبر جدید"
+
+#: library/custom-post-type.php:288
+msgid "News Tags"
+msgstr "برچسب های خبر"
+
+#: library/custom-post-type.php:289
+msgid "News Tag"
+msgstr "برچسب خبر"
+
+#: library/custom-post-type.php:290
+msgid "Search News Tags"
+msgstr "جستجوی برچسب های خبر"
+
+#: library/custom-post-type.php:291
+msgid "All News Tags"
+msgstr "همه برچسب های خبر"
+
+#: library/custom-post-type.php:292
+msgid "Parent News Tag"
+msgstr "برچسب مادر خبر"
+
+#: library/custom-post-type.php:293
+msgid "Parent News Tag:"
+msgstr "برچسب مادر خبر:"
+
+#: library/custom-post-type.php:294
+msgid "Edit News Tag"
+msgstr "ویرایش برچسب خبر"
+
+#: library/custom-post-type.php:295
+msgid "Update News Tag"
+msgstr "بروز رسانی برچسب خبر"
+
+#: library/custom-post-type.php:296
+msgid "Add New News Tag"
+msgstr "افزودن برچسب خبر جدید"
+
+#: library/custom-post-type.php:297
+msgid "New News Tag Name"
+msgstr "نام برچسب جدید خبر"
+
+#: library/custom-post-type.php:316
+msgid "Tab Categories"
+msgstr "دسته بندی ها تب"
+
+#: library/custom-post-type.php:317
+msgid "Tab Category"
+msgstr "دسته بندی تب"
+
+#: library/custom-post-type.php:318
+msgid "Search Tab Categories"
+msgstr "جستجوی دسته بندی های تب"
+
+#: library/custom-post-type.php:319
+msgid "All Tabs Categories"
+msgstr "همه دسته بندی های تب"
+
+#: library/custom-post-type.php:320
+msgid "Parent Tab Category"
+msgstr "دسته بندی مادر تب"
+
+#: library/custom-post-type.php:321
+msgid "Parent Tab Category:"
+msgstr "دسته بندی مادر تب:"
+
+#: library/custom-post-type.php:322
+msgid "Edit Tab Category"
+msgstr "ویرایش دسته بندی تب"
+
+#: library/custom-post-type.php:323
+msgid "Update Tab Category"
+msgstr "بروز رسانی دسته بندی تب"
+
+#: library/custom-post-type.php:324
+msgid "Add New Tab Category"
+msgstr "افزودن دسته بندی تب جدید"
+
+#: library/custom-post-type.php:325
+msgid "New Tab category Name"
+msgstr "نام دسته بندی تب جدید"
+
+#: library/custom-post-type.php:342
+msgid "Link Categories"
+msgstr "دسته بندی های لینک"
+
+#: library/custom-post-type.php:343
+msgid "Link Category"
+msgstr "دسته بندی لینک"
+
+#: library/custom-post-type.php:344
+msgid "Search Link Categories"
+msgstr "جستجوی دسته بندی های لینک"
+
+#: library/custom-post-type.php:345
+msgid "All Links Categories"
+msgstr "همه دسته بندی های لینک"
+
+#: library/custom-post-type.php:346
+msgid "Parent Link Category"
+msgstr "دسته بندی لینک مادر"
+
+#: library/custom-post-type.php:347
+msgid "Parent Link Category:"
+msgstr "دسته بندی لینک مادر"
+
+#: library/custom-post-type.php:348
+msgid "Edit Link Category"
+msgstr "ویرایش دسته بندی لینک"
+
+#: library/custom-post-type.php:349
+msgid "Update Link Category"
+msgstr "بروز رسانی دسته بندی لینک"
+
+#: library/custom-post-type.php:350
+msgid "Add New Link Category"
+msgstr "افزودن دسته بندی لینک جدید"
+
+#: library/custom-post-type.php:351
+msgid "New Link Category Name"
+msgstr "نام دسته بندی لینک جدید"
+
+#: library/naiau.php:87
+#, php-format
+msgid "Page %s"
+msgstr "صفحه %s"
+
+#: library/naiau.php:241
+msgid "Top Bar Menu"
+msgstr "منوی نوار بالا"
+
+#: library/naiau.php:272
+msgid "No Related Posts Yet!"
+msgstr "مطلب مرتبطی وجود ندارد"
+
+#: library/naiau.php:317
+msgid "Read "
+msgstr "ادامه"
+
+#: library/naiau.php:317
+msgid "Read more &raquo;"
+msgstr "ادامه مطلب"
+
+#: library/related-links.php:20
+msgid "related sites"
+msgstr "سایت های مرتبط"
+
+#: search.php:29
+#, php-format
+msgid "Search Results for: %s"
+msgstr "جستجو برای :  %s"
+
+#: search.php:61
+msgid ""
+"<i class=\"icon-attention\"></i>Sorry, but nothing matched your search "
+"terms. Please try again with different keywords."
+msgstr ""
+"متاسفیم ! ولی هیچ موردی منطبق با کلمه جستجو شده وجود ندارد. لطفا کلمات دیگری "
+"را امتحان نمایید."
+
+#: searchform.php:3
+msgid "Search for:"
+msgstr "جستجو برای : "
+
+#: taxonomy-tour_cat.php:45
+msgid " hala hoola Oops, Post Not Found!"
+msgstr "هیچ مطلبی یافت نشد!"
+
+#: taxonomy-tour_cat.php:48
+msgid "Uh Oh. Something is missing. Try double checking things."
+msgstr "اشکالی رخ داده است . لطفا موارد را بررسی نمایید."
+
+#: taxonomy-tour_cat.php:51
+msgid "This is the error message in the taxonomy-custom_cat.php template."
+msgstr "این یک خطا مربوط به تکه قالب taxonomy-custom_cat.php است"
+
+#~ msgid "Add Another Tab"
+#~ msgstr "افزودن اطلاعیه جدید"
