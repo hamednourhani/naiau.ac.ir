@@ -57,22 +57,7 @@
 									
 							<?php } ?>
 
-							<?php if( 'notify' == get_post_type() && is_singular()){
-											$cat_list =get_the_term_list( get_the_ID(), 'notify_cat', '<span class="cats-title">' . __( 'Notify category :', 'naiau' ) . '</span> ', ', ' );
-											
-											?>
-								
-									<?php if ( $cat_list) { ?>
-											
-												<li class="meta-cat">
-													<i class="fa fa-folder-open"></i>
-													<?php echo $cat_list ;?>
-												</li>
-											
-									<?php } ?>
-								
-																		
-							<?php } ?>
+							
 							
 							
 						</ul><!--.post-meta-list-->

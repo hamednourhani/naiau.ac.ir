@@ -280,6 +280,7 @@ function tab_post_type() {
 		)
 	);
 	
+		
 	// now let's add custom tags (these act like categories)
 	register_taxonomy( 'news_tag', 
 		array('news'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */

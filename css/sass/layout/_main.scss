@@ -27,6 +27,7 @@ body{
 
 .page-main{
 	.page-content{
+
 			@include span-columns(12,12);
 			@include at-breakpoint($medium){
 				@include span-columns(8,12);
@@ -34,6 +35,7 @@ body{
 				margin : auto;
 				display : block;
 			}
+			padding : 15px;
 			padding-top : 20px;
 		&.with-sidebar{
 			@include span-columns(12,12);

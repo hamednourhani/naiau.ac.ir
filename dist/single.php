@@ -49,7 +49,7 @@
 
 										<?php if($hide_sidebar != true){?>
 										
-											<div class="page-content with-sidebar">	
+											<div class="page-content with-sidebar single-page">	
 												<div class="featured-image">
 													<?php echo the_post_thumbnail('slider');?>
 												</div>
@@ -65,7 +65,7 @@
 												<?php get_sidebar(); ?>
 											</div>
 										<?php }else{ ?>
-											<div class="page-content">		
+											<div class="page-content single-page">		
 												<div class="featured-image">
 													<?php echo the_post_thumbnail('slider');?>
 												</div>
