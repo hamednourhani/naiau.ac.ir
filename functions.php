@@ -247,6 +247,20 @@ function naiau_comments( $comment, $args, $depth ) {
 } // don't remove this bracket!
 
 
+function naiau_pagination(){
+  global $wp_query;
+
+      $big = 999999999; 
+      echo paginate_links( array(
+        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+        'format' => '?paged=%#%',
+        'current' => max( 1, get_query_var('paged') ),
+        'total' => $wp_query->max_num_pages,
+        'prev_text'    => __('<i class="fa fa-angle-double-right"></i>','naiau'),
+        'next_text'    => __('<i class="fa fa-angle-double-left"></i>','naiau')
+      ) );
+}
+
 /*
 This is a modification of a function found in the
 twentythirteen theme where we can declare some

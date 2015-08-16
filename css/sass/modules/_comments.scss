@@ -64,8 +64,11 @@ clear : both;
 padding : 20px 20px 0;
 }
 .reply a {
-float : left;
-color : $skyblue1;
+	float : left;
+	color : $skyblue1;
+	i:before{
+		padding : auto 5px;
+	}
 }
 #respond {
 position : relative;
@@ -75,11 +78,11 @@ max-width : 100%;
 }
 a#cancel-comment-reply-link {
 font-style : italic;
-float : right;
 display : block;
 color : $skyblue1;
+float : left;
 }
-a#cancel-comment-reply-link .icon-cancel {
+a#cancel-comment-reply-link .fa-remove {
 margin : 0 5px;
 padding : 3px;
 border-radius : 4px;

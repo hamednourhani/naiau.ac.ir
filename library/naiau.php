@@ -238,7 +238,7 @@ function naiau_theme_support() {
 	register_nav_menus(
 		array(
 			'main-nav' => __( 'The Main Menu', 'naiau' ),   // main nav in header
-			'top-nav' => __( 'Top Bar Menu', 'naiau' ) // secondary nav in footer
+			'top-menu' => __( 'Top Bar Menu', 'naiau' ) // top menu  in footer
 		)
 	);
 

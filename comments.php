@@ -2,8 +2,8 @@
 /* The Template for displaying comments.
  *
  * @package WordPress
- * @subpackage fixy
- * @since Fixy 0.1.0
+ * @subpackage naiau
+ * @since naiau 0.1.0
  */
 if ( post_password_required() )
   return;
@@ -15,8 +15,7 @@ if ( post_password_required() )
     <h2 class="comments-title">
       <i class="icon-comment"></i>
       <?php
-        printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'fixy' ),
-          number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
+        printf( __( '%1$s thoughts on &ldquo;%2$s&rdquo;','naiau'), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
       ?>
     </h2>
 
@@ -26,19 +25,19 @@ if ( post_password_required() )
           'style'       => 'ol',
           'short_ping'  => true,
           'avatar_size' => 74,
-          'reply_text' => __('Reply<i class=" icon-level-up"></i>','fixy')
+          'reply_text' => __('Reply<i class=" fa fa-mail-reply"></i>','naiau')
         ) );
       ?>
     </ol><!-- .comment-list -->
 
   <nav class="comment-navigation" >
-      <div class="previous-comments"><?php previous_comments_link( __( '<i class="icon-left-open"></i> Older Comments', 'fixy' ) ); ?></div>
-      <div class="next-comments"><?php next_comments_link( __( 'Newer Comments <i class="icon-right-open"></i>', 'fixy' ) ); ?></div>
+      <div class="previous-comments"><?php previous_comments_link( __( '<i class="icon-left-open"></i> Older Comments', 'naiau' ) ); ?></div>
+      <div class="next-comments"><?php next_comments_link( __( 'Newer Comments <i class="icon-right-open"></i>', 'naiau' ) ); ?></div>
     </nav><!-- .comment-navigation -->  
 
 
     <?php if ( ! comments_open() && get_comments_number() ) : ?>
-    <p class="no-comments"><?php _e( 'Comments are closed.' , 'fixy' ); ?></p>
+    <p class="no-comments"><?php _e( 'Comments are closed.' , 'naiau' ); ?></p>
     <?php endif; ?>
 
   <?php endif; // have_comments() ?>

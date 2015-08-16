@@ -88,29 +88,74 @@ body{
 			}
 			
 		}
+		ul.post-meta-list{
+			padding : 3px;
+		}
 		.post-meta{
-			
+			margin-top : 10px;
 			padding : 2px 5px;
-			float : left;
+			//float : left;
 			display : inline-block;
 			background-color : $navy2;
 			font-size : 70%;
 			//border-top : 1px solid $grey2;
-			text-align : left;
-			span.meta-date{
+			text-align : right;
+			.meta-date{
 				position : relative;
 				a{
 					color : $grey2;
 				}
 				.fa-calendar{
 					padding-left : 8px;
+					vertical-align: middle;
 					color : $grey2;
 				}
 			}
 			
 		}
+		&.single-page{
+			.post-meta{
+				@include clearfix;
+				margin-top : auto;
+				border-top : 1px solid $grey1;
+				text-align : right;
+				background-color : $white;
+				font-size : 80%;
+				width : 100%;
+				padding : 10px;
+				.meta-date,.meta-cat,.meta-tag{
+					position : relative;
+					a{
+						color : $navy2;
+					}
+					.fa-calendar,.fa-tags,.fa-folder-open{
+						padding-left : 8px;
+						color : $navy2;
+						vertical-align: middle;
+					}
+				}
+			}
+		}
 		.searchform{
 			margin:20px;
+		}
+		.pagination{
+			text-align : center;
+			.page-numbers{
+				padding :5px 13px;
+				
+				background-color : $grey2;
+				color : $navy1;
+				@include border-radius(5px);
+				&.current,&:hover{
+					background-color : $navy2;
+					color : $white;
+				}
+				i:before{
+					vertical-align: middle;
+				}
+
+			}
 		}
 		
 	}

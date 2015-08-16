@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: naiau\n"
-"POT-Creation-Date: 2015-08-15 16:45+0430\n"
-"PO-Revision-Date: 2015-08-15 17:25+0430\n"
+"POT-Creation-Date: 2015-08-16 15:58+0430\n"
+"PO-Revision-Date: 2015-08-16 15:59+0430\n"
 "Last-Translator: \n"
 "Language-Team: iTstar <info@iTstar.ir>\n"
 "Language: fa_IR\n"
@@ -13,8 +13,9 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-KeywordsList: __;_e;_nx\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
 "X-Poedit-SearchPathExcluded-1: .sass-cache\n"
 
@@ -40,19 +41,24 @@ msgstr "بایگانی : "
 msgid "Category : "
 msgstr "دسته بندی : "
 
-#: comments.php:29
-msgid "Reply<i class=\" icon-level-up\"></i>"
-msgstr "پاسخ "
+#: comments.php:18
+#, php-format
+msgid "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr "%1$s دیدگاه در &ldquo;%2$s&rdquo; "
 
-#: comments.php:35
+#: comments.php:28
+msgid "Reply<i class=\" fa fa-mail-reply\"></i>"
+msgstr "پاسخ  <i class=\" fa fa-mail-reply\"></i>"
+
+#: comments.php:34
 msgid "<i class=\"icon-left-open\"></i> Older Comments"
 msgstr "دیدگاه های قدیمی تر"
 
-#: comments.php:36
+#: comments.php:35
 msgid "Newer Comments <i class=\"icon-right-open\"></i>"
 msgstr "دیدگاه های جدیدتر"
 
-#: comments.php:41
+#: comments.php:40
 msgid "Comments are closed."
 msgstr "ارسال دیدگاه ها بسته است."
 
@@ -102,13 +108,25 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr "دیدگاه شما در دست بررسی است"
 
-#: header.php:58 header.php:100 library/naiau.php:240
-msgid "The Main Menu"
-msgstr "منوی اصلی"
+#: functions.php:259
+msgid "<i class=\"fa fa-angle-double-right\"></i>"
+msgstr ""
+
+#: functions.php:260
+msgid "<i class=\"fa fa-angle-double-left\"></i>"
+msgstr ""
+
+#: header.php:58
+msgid "Top Menu"
+msgstr "منوی نوار بالا"
 
 #: header.php:71 searchform.php:6
 msgid "Search"
 msgstr "جستجو"
+
+#: header.php:100 library/naiau.php:240
+msgid "The Main Menu"
+msgstr "منوی اصلی"
 
 #: library/admin.php:82
 msgid "j F Y @ g:i a"
@@ -676,8 +694,8 @@ msgid "Leave a Reply to %s"
 msgstr "ارسال یک پاسخ برای %s"
 
 #: library/comment-form.php:15
-msgid "Cancel Reply<i class=\"icon-cancel\"></i>"
-msgstr "لغو پاسخ"
+msgid "Cancel Reply<i class=\"fa fa-remove\"></i>"
+msgstr "<i class=\"fa fa-remove\"></i> لغو دیدگاه"
 
 #: library/comment-form.php:16
 msgid "Post Comment"
@@ -703,7 +721,7 @@ msgid ""
 "this account\">Log out?</a>"
 msgstr ""
 "وارد شده با عنوان <a href=\"%1$s\">%2$s</a>.  <a href=\"%3$s\" title=\"Log "
-"out of this account\">خارج شوید?</a>"
+"out of this account\"> آیا می خواهید خارج شوید؟</a>"
 
 #: library/comment-form.php:37
 msgid "Your email address will not be published."
@@ -719,24 +737,24 @@ msgstr ""
 "abbr> در دیدگاه خود استفاده نمایید : %s"
 
 #: library/comment-form.php:50
-msgid "<i class=\"icon-user\"></i> Name"
-msgstr "نام"
+msgid "<i class=\"fa fa-user\"></i> Name"
+msgstr "<i class=\"fa fa-user\"></i> نام و نام خانوادگی"
 
 #: library/comment-form.php:50
 msgid "yourname"
 msgstr "نام شما"
 
 #: library/comment-form.php:56
-msgid "<i class=\"icon-mail-alt\"></i> Email"
-msgstr "ایمیل"
+msgid "<i class=\"fa fa-envelope\"></i> Email"
+msgstr "<i class=\"fa fa-envelope\"></i> ایمیل"
 
 #: library/comment-form.php:56
 msgid "yourname@example.com"
 msgstr ""
 
 #: library/comment-form.php:63
-msgid "<i class=\"icon-link\"></i> Website"
-msgstr "وب سایت / وبلاگ"
+msgid "<i class=\"fa fa-link\"></i> Website"
+msgstr "<i class=\"fa fa-link\"></i>  وب سایت / وبلاگ"
 
 #: library/comment-form.php:64
 msgid "www.example.com"
@@ -1107,6 +1125,22 @@ msgstr "ادامه"
 msgid "Read more &raquo;"
 msgstr "ادامه مطلب"
 
+#: library/post-meta.php:12
+msgid "Published Date : "
+msgstr "تاریخ انتشار : "
+
+#: library/post-meta.php:36
+msgid "News category :"
+msgstr "دسته بندی خبر : "
+
+#: library/post-meta.php:37
+msgid "News Tags :"
+msgstr "برچسب های خبر : "
+
+#: library/post-meta.php:61
+msgid "Notify category :"
+msgstr "دسته بندی اطلاعیه : "
+
 #: library/related-links.php:20
 msgid "related sites"
 msgstr "سایت های مرتبط"
@@ -1128,17 +1162,36 @@ msgstr ""
 msgid "Search for:"
 msgstr "جستجو برای : "
 
-#: taxonomy-tour_cat.php:45
-msgid " hala hoola Oops, Post Not Found!"
-msgstr "هیچ مطلبی یافت نشد!"
+#: taxonomy-news_tag.php:29
+msgid "tag : "
+msgstr "برچسب : "
 
-#: taxonomy-tour_cat.php:48
-msgid "Uh Oh. Something is missing. Try double checking things."
-msgstr "اشکالی رخ داده است . لطفا موارد را بررسی نمایید."
+#~ msgid "Cancel Reply<i class=\"icon-cancel\"></i>"
+#~ msgstr "لغو پاسخ"
 
-#: taxonomy-tour_cat.php:51
-msgid "This is the error message in the taxonomy-custom_cat.php template."
-msgstr "این یک خطا مربوط به تکه قالب taxonomy-custom_cat.php است"
+#~ msgid "Reply<i class=\" icon-level-up\"></i>"
+#~ msgstr "پاسخ "
+
+#~ msgid "<i class=\"icon-user\"></i> Name"
+#~ msgstr "نام"
+
+#~ msgid "<i class=\"icon-mail-alt\"></i> Email"
+#~ msgstr "ایمیل"
+
+#~ msgid "<i class=\"icon-link\"></i> Website"
+#~ msgstr "وب سایت / وبلاگ"
+
+#~ msgid "One thought on &ldquo;%2$s&rdquo;"
+#~ msgstr "یک دیدگاه در &ldquo;%2$s&rdquo; "
+
+#~ msgid " hala hoola Oops, Post Not Found!"
+#~ msgstr "هیچ مطلبی یافت نشد!"
+
+#~ msgid "Uh Oh. Something is missing. Try double checking things."
+#~ msgstr "اشکالی رخ داده است . لطفا موارد را بررسی نمایید."
+
+#~ msgid "This is the error message in the taxonomy-custom_cat.php template."
+#~ msgstr "این یک خطا مربوط به تکه قالب taxonomy-custom_cat.php است"
 
 #~ msgid "Add Another Tab"
 #~ msgstr "افزودن اطلاعیه جدید"

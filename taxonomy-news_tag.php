@@ -26,7 +26,7 @@
 							
 								<div class="single-page-title">
 									<section class="layout">
-										<h1><?php single_cat_title(__('Category : ','naiau'),true); ?></h1>
+										<h1><?php single_cat_title(__('tag : ','naiau'),true); ?></h1>
 									</section>
 								</div>
 								
@@ -54,10 +54,6 @@
 															</div>
 														</article>
 													<?php } ?>
-
-													<nav class="pagination">
-														<?php naiau_pagination(); ?>
-													</nav>
 												<?php } ?>
 												
 											</div>

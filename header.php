@@ -55,9 +55,9 @@
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
     					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'The Main Menu', 'naiau' ),  // nav name
+    					         'menu' => __( 'Top Menu', 'naiau' ),  // nav name
     					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
-    					         'theme_location' => 'top-nav',                 // where it's located in the theme
+    					         'theme_location' => 'top-menu',                 // where it's located in the theme
     					         'before' => '',                                 // before the menu
         			               'after' => '',                                  // after the menu
         			               'link_before' => '',                            // before each link
