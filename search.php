@@ -50,7 +50,7 @@
 																</a>
 															</div>
 															<div class="post-content">
-																<?php the_content(); ?>
+																<?php the_excerpt(); ?>
 																<?php get_template_part('library/post','meta'); ?>
 															</div>
 														</article>

@@ -21,7 +21,7 @@ $args = array (
 			?>
 				<div class="sp-slide">
 					<a href="<?php echo post_permalink( $news->ID ); ?> " >
-						<img class="sp-image" src="<?php echo get_template_directory_uri();?> /images/blank.gif"
+						<img class="sp-image" src="<?php echo get_template_directory_uri();?>/images/blank.gif"
 							data-src="<?php echo $slide_url[0]; ?>"
 							data-retina="<?php echo $slide_url[0]; ?>"/>
 					</a>
