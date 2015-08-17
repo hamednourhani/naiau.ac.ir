@@ -241,6 +241,192 @@ function tab_post_type() {
 	
 }
 
+function managment_post_type() { 
+// creating (registering) the custom type 
+	register_post_type( 'managment', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+		// let's now add all the options for this post type
+		array( 'labels' => array(
+			'name' => __( 'managment', 'naiau' ), /* This is the Title of the Group */
+			'singular_name' => __( 'managment', 'naiau' ), /* This is the individual type */
+			'all_items' => __( 'All managments', 'naiau' ), /* the all items menu item */
+			'add_new' => __( 'Add New', 'naiau' ), /* The add new menu item */
+			'add_new_item' => __( 'Add New managment', 'naiau' ), /* Add New Display Title */
+			'edit' => __( 'Edit', 'naiau' ), /* Edit Dialog */
+			'edit_item' => __( 'Edit managment', 'naiau' ), /* Edit Display Title */
+			'new_item' => __( 'New managment', 'naiau' ), /* New Display Title */
+			'view_item' => __( 'View managment', 'naiau' ), /* View Display Title */
+			'search_items' => __( 'Search managments', 'naiau' ), /* Search Custom Type Title */ 
+			'not_found' =>  __( 'Nothing found in the Database.', 'naiau' ), /* This displays if there are no entries yet */ 
+			'not_found_in_trash' => __( 'Nothing found in Trash', 'naiau' ), /* This displays if there is nothing in the trash */
+			'parent_item_colon' => ''
+			), /* end of arrays */
+			'description' => __( 'This is a managment', 'naiau' ), /* Custom Type Description */
+			'public' => true,
+			'show_in_nav_menus' => true,
+			'publicly_queryable' => true,
+			'exclude_from_search' => true,
+			'show_ui' => true,
+			'query_var' => true,
+
+			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
+			'menu_icon' => get_stylesheet_directory_uri() . '/images/managment-icon.png', /* the icon for the custom post type menu */
+			'rewrite'	=> array( 'slug' => 'managment', 'with_front' => false ), /* you can specify its url slug */
+			'has_archive' => 'tab', /* you can rename the slug here */
+			'capability_type' => 'post',
+			'hierarchical' => true,
+			/* the next one is important, it tells what's enabled in the post editor */
+			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments','revisions' ,'sticky'),
+
+
+		) /* end of options */
+	); /* end of register post type */
+	
+	/* this adds your post categories to your custom post type */
+	//register_taxonomy_for_object_type( 'category', 'tour' );
+	/* this adds your post tags to your custom post type */
+	//register_taxonomy_for_object_type( 'post_tag', 'tour' );
+	
+}
+function sub_management_post_type() { 
+// creating (registering) the custom type 
+	register_post_type( 'sub-management', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+		// let's now add all the options for this post type
+		array( 'labels' => array(
+			'name' => __( 'sub management', 'naiau' ), /* This is the Title of the Group */
+			'singular_name' => __( 'sub management', 'naiau' ), /* This is the individual type */
+			'all_items' => __( 'All sub managements', 'naiau' ), /* the all items menu item */
+			'add_new' => __( 'Add New', 'naiau' ), /* The add new menu item */
+			'add_new_item' => __( 'Add New sub management', 'naiau' ), /* Add New Display Title */
+			'edit' => __( 'Edit', 'naiau' ), /* Edit Dialog */
+			'edit_item' => __( 'Edit sub management', 'naiau' ), /* Edit Display Title */
+			'new_item' => __( 'New sub management', 'naiau' ), /* New Display Title */
+			'view_item' => __( 'View sub management', 'naiau' ), /* View Display Title */
+			'search_items' => __( 'Search sub managements', 'naiau' ), /* Search Custom Type Title */ 
+			'not_found' =>  __( 'Nothing found in the Database.', 'naiau' ), /* This displays if there are no entries yet */ 
+			'not_found_in_trash' => __( 'Nothing found in Trash', 'naiau' ), /* This displays if there is nothing in the trash */
+			'parent_item_colon' => ''
+			), /* end of arrays */
+			'description' => __( 'This is a sub management', 'naiau' ), /* Custom Type Description */
+			'public' => true,
+			'show_in_nav_menus' => true,
+			'publicly_queryable' => true,
+			'exclude_from_search' => true,
+			'show_ui' => true,
+			'query_var' => true,
+
+			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
+			'menu_icon' => get_stylesheet_directory_uri() . '/images/sub-icon.png', /* the icon for the custom post type menu */
+			'rewrite'	=> array( 'slug' => 'sub-management', 'with_front' => false ), /* you can specify its url slug */
+			'has_archive' => 'sub_management', /* you can rename the slug here */
+			'capability_type' => 'post',
+			'hierarchical' => true,
+			/* the next one is important, it tells what's enabled in the post editor */
+			'supports' => array( 'title', 'editor', /*'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments','revisions' ,'sticky'*/),
+			'show_in_menu'  => 'edit.php?post_type=managment',
+
+			
+		) /* end of options */
+	); /* end of register post type */
+	
+	/* this adds your post categories to your custom post type */
+	//register_taxonomy_for_object_type( 'category', 'tour' );
+	/* this adds your post tags to your custom post type */
+	//register_taxonomy_for_object_type( 'post_tag', 'tour' );
+	
+}
+
+function education_post_type() { 
+// creating (registering) the custom type 
+	register_post_type( 'education', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+		// let's now add all the options for this post type
+		array( 'labels' => array(
+			'name' => __( 'education', 'naiau' ), /* This is the Title of the Group */
+			'singular_name' => __( 'education', 'naiau' ), /* This is the individual type */
+			'all_items' => __( 'All educations', 'naiau' ), /* the all items menu item */
+			'add_new' => __( 'Add New', 'naiau' ), /* The add new menu item */
+			'add_new_item' => __( 'Add New education', 'naiau' ), /* Add New Display Title */
+			'edit' => __( 'Edit', 'naiau' ), /* Edit Dialog */
+			'edit_item' => __( 'Edit education', 'naiau' ), /* Edit Display Title */
+			'new_item' => __( 'New education', 'naiau' ), /* New Display Title */
+			'view_item' => __( 'View education', 'naiau' ), /* View Display Title */
+			'search_items' => __( 'Search educations', 'naiau' ), /* Search Custom Type Title */ 
+			'not_found' =>  __( 'Nothing found in the Database.', 'naiau' ), /* This displays if there are no entries yet */ 
+			'not_found_in_trash' => __( 'Nothing found in Trash', 'naiau' ), /* This displays if there is nothing in the trash */
+			'parent_item_colon' => ''
+			), /* end of arrays */
+			'description' => __( 'This is a education', 'naiau' ), /* Custom Type Description */
+			'public' => true,
+			'show_in_nav_menus' => true,
+			'publicly_queryable' => true,
+			'exclude_from_search' => true,
+			'show_ui' => true,
+			'query_var' => true,
+			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
+			'menu_icon' => get_stylesheet_directory_uri() . '/images/education-icon.png', /* the icon for the custom post type menu */
+			'rewrite'	=> array( 'slug' => 'education', 'with_front' => false ), /* you can specify its url slug */
+			'has_archive' => 'tab', /* you can rename the slug here */
+			'capability_type' => 'post',
+			'hierarchical' => false,
+			/* the next one is important, it tells what's enabled in the post editor */
+			'supports' => array( 'title', 'editor', /*'author', 'thumbnail', 'excerpt', /*'trackbacks'*/ 'custom-fields', /*'comments'*/ /*'revisions'*/ 'sticky')
+		) /* end of options */
+	); /* end of register post type */
+	
+	/* this adds your post categories to your custom post type */
+	//register_taxonomy_for_object_type( 'category', 'tour' );
+	/* this adds your post tags to your custom post type */
+	//register_taxonomy_for_object_type( 'post_tag', 'tour' );
+	
+}
+function sub_education_post_type() { 
+// creating (registering) the custom type 
+	register_post_type( 'sub-education', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+		// let's now add all the options for this post type
+		array( 'labels' => array(
+			'name' => __( 'sub education', 'naiau' ), /* This is the Title of the Group */
+			'singular_name' => __( 'sub education', 'naiau' ), /* This is the individual type */
+			'all_items' => __( 'All sub educations', 'naiau' ), /* the all items menu item */
+			'add_new' => __( 'Add New', 'naiau' ), /* The add new menu item */
+			'add_new_item' => __( 'Add New sub education', 'naiau' ), /* Add New Display Title */
+			'edit' => __( 'Edit', 'naiau' ), /* Edit Dialog */
+			'edit_item' => __( 'Edit sub education', 'naiau' ), /* Edit Display Title */
+			'new_item' => __( 'New sub education', 'naiau' ), /* New Display Title */
+			'view_item' => __( 'View sub education', 'naiau' ), /* View Display Title */
+			'search_items' => __( 'Search sub educations', 'naiau' ), /* Search Custom Type Title */ 
+			'not_found' =>  __( 'Nothing found in the Database.', 'naiau' ), /* This displays if there are no entries yet */ 
+			'not_found_in_trash' => __( 'Nothing found in Trash', 'naiau' ), /* This displays if there is nothing in the trash */
+			'parent_item_colon' => ''
+			), /* end of arrays */
+			'description' => __( 'This is a sub education', 'naiau' ), /* Custom Type Description */
+			'public' => true,
+			'show_in_nav_menus' => true,
+			'publicly_queryable' => true,
+			'exclude_from_search' => true,
+			'show_ui' => true,
+			'query_var' => true,
+
+			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
+			'menu_icon' => get_stylesheet_directory_uri() . '/images/sub-icon.png', /* the icon for the custom post type menu */
+			'rewrite'	=> array( 'slug' => 'sub-education', 'with_front' => false ), /* you can specify its url slug */
+			'has_archive' => 'sub_education', /* you can rename the slug here */
+			'capability_type' => 'post',
+			'hierarchical' => true,
+			/* the next one is important, it tells what's enabled in the post editor */
+			'supports' => array( 'title', 'editor', /*'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments','revisions' ,'sticky'*/),
+			'show_in_menu'  => 'edit.php?post_type=education',
+
+			
+		) /* end of options */
+	); /* end of register post type */
+	
+	/* this adds your post categories to your custom post type */
+	//register_taxonomy_for_object_type( 'category', 'tour' );
+	/* this adds your post tags to your custom post type */
+	//register_taxonomy_for_object_type( 'post_tag', 'tour' );
+	
+}
+
+
 
 	// adding the function to the Wordpress init
 	add_action( 'init', 'notify_post_type');
@@ -248,6 +434,11 @@ function tab_post_type() {
 	add_action( 'init', 'link_post_type');
 	add_action( 'init', 'gallery_post_type');
 	add_action( 'init', 'tab_post_type');
+	add_action( 'init', 'managment_post_type');
+	add_action( 'init', 'sub_management_post_type');
+	add_action( 'init', 'education_post_type');
+	add_action( 'init', 'sub_education_post_type');
+	
 	
 
 	
@@ -279,6 +470,28 @@ function tab_post_type() {
 			'show_in_nav_menus' => true,
 		)
 	);
+	register_taxonomy( 'notify_cat', 
+			array('notify'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+			array('hierarchical' => true,     /* if this is true, it acts like categories */
+				'labels' => array(
+					'name' => __( 'Notify Categories', 'naiau' ), /* name of the custom taxonomy */
+					'singular_name' => __( 'Notify Category', 'naiau' ), /* single taxonomy name */
+					'search_items' =>  __( 'Search Notify Categories', 'naiau' ), /* search title for taxomony */
+					'all_items' => __( 'All Notify Categories', 'naiau' ), /* all title for taxonomies */
+					'parent_item' => __( 'Parent Notify Category', 'naiau' ), /* parent title for taxonomy */
+					'parent_item_colon' => __( 'Parent Notify Category:', 'naiau' ), /* parent taxonomy title */
+					'edit_item' => __( 'Edit Notify Category', 'naiau' ), /* edit custom taxonomy title */
+					'update_item' => __( 'Update Notify Category', 'naiau' ), /* update title for taxonomy */
+					'add_new_item' => __( 'Add New Notify Category', 'naiau' ), /* add new title for taxonomy */
+					'new_item_name' => __( 'New Notify Category Name', 'naiau' ) /* name title for taxonomy */
+				),
+				'show_admin_column' => true, 
+				'show_ui' => true,
+				'query_var' => true,
+				'rewrite' => array( 'slug' => 'notify-cat' ),
+				'show_in_nav_menus' => true,
+			)
+		);
 	
 		
 	// now let's add custom tags (these act like categories)
