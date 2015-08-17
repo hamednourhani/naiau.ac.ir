@@ -30,7 +30,7 @@ body{
 
 			@include span-columns(12,12);
 			@include at-breakpoint($medium){
-				@include span-columns(8,12);
+				@include span-columns(9,12);
 				float:none;
 				margin : auto;
 				display : block;
@@ -40,7 +40,7 @@ body{
 		&.with-sidebar{
 			@include span-columns(12,12);
 			@include at-breakpoint($medium){
-				@include span-columns(8,12);
+				@include span-columns(9,12);
 			}
 		}
 		
@@ -165,7 +165,7 @@ body{
 	.page-sidebar{
 		@include span-columns(12,12);
 		@include at-breakpoint($medium){
-			@include span-columns(4 omega,12);
+			@include span-columns(3 omega,12);
 		}
 		.sidebar-widget{
 			padding:{
@@ -187,9 +187,10 @@ body{
 	.widget{
 		border :3px solid $grey2;
 		padding : 20px;
-		border-radius : 20px;
-		border-top-right-radius : 0px;
-		border-bottom-left-radius : 0px;
+		@extend .widget-radius;
+		// border-radius : 20px;
+		// border-top-right-radius : 0px;
+		// border-bottom-left-radius : 0px;
 		font-size : 82%;
 		line-height : 230%;
 		margin : {
@@ -221,5 +222,36 @@ body{
 
 	 .sp-selected-thumbnail {
 		border: 4px solid #000;
+	}
+}
+.has-sub-page{
+	.page-sidebar{
+		margin:{
+			top :10px;
+			bottom : 20px;
+		}
+		ul.sub-widget,ul.related-widget{
+			margin-bottom: 20px;
+			li{
+				width : 100%;
+			}
+			li a,li span.related-header{
+				width : 100%;
+				@extend .widget-radius;
+				background-color : $grey2;
+				display : inline-block;
+				padding : 10px 15px;
+				margin-bottom : 5px;
+				&.current,&:hover{
+					background-color : $skyblue2;
+					color : $white;
+				}
+			}
+			li a.related-link:hover,
+			li span.related-header,li span.related-header:hover,{
+				background-color : $navy1;
+				color : $white;
+			}
+		}
 	}
 }

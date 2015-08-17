@@ -48,3 +48,7 @@ ul, menu, dir {
     -webkit-margin-end: 0px;
     -webkit-padding-start: 0px;
 }
+.widget-radius{
+	@include border-corner-radius(top, left, 20px);
+  	@include border-corner-radius(bottom, right, 20px);
+}

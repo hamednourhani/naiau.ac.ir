@@ -241,26 +241,26 @@ function tab_post_type() {
 	
 }
 
-function managment_post_type() { 
+function management_post_type() { 
 // creating (registering) the custom type 
-	register_post_type( 'managment', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+	register_post_type( 'management', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 		// let's now add all the options for this post type
 		array( 'labels' => array(
-			'name' => __( 'managment', 'naiau' ), /* This is the Title of the Group */
-			'singular_name' => __( 'managment', 'naiau' ), /* This is the individual type */
-			'all_items' => __( 'All managments', 'naiau' ), /* the all items menu item */
+			'name' => __( 'management', 'naiau' ), /* This is the Title of the Group */
+			'singular_name' => __( 'management', 'naiau' ), /* This is the individual type */
+			'all_items' => __( 'All managements', 'naiau' ), /* the all items menu item */
 			'add_new' => __( 'Add New', 'naiau' ), /* The add new menu item */
-			'add_new_item' => __( 'Add New managment', 'naiau' ), /* Add New Display Title */
+			'add_new_item' => __( 'Add New management', 'naiau' ), /* Add New Display Title */
 			'edit' => __( 'Edit', 'naiau' ), /* Edit Dialog */
-			'edit_item' => __( 'Edit managment', 'naiau' ), /* Edit Display Title */
-			'new_item' => __( 'New managment', 'naiau' ), /* New Display Title */
-			'view_item' => __( 'View managment', 'naiau' ), /* View Display Title */
-			'search_items' => __( 'Search managments', 'naiau' ), /* Search Custom Type Title */ 
+			'edit_item' => __( 'Edit management', 'naiau' ), /* Edit Display Title */
+			'new_item' => __( 'New management', 'naiau' ), /* New Display Title */
+			'view_item' => __( 'View management', 'naiau' ), /* View Display Title */
+			'search_items' => __( 'Search managements', 'naiau' ), /* Search Custom Type Title */ 
 			'not_found' =>  __( 'Nothing found in the Database.', 'naiau' ), /* This displays if there are no entries yet */ 
 			'not_found_in_trash' => __( 'Nothing found in Trash', 'naiau' ), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'This is a managment', 'naiau' ), /* Custom Type Description */
+			'description' => __( 'This is a management', 'naiau' ), /* Custom Type Description */
 			'public' => true,
 			'show_in_nav_menus' => true,
 			'publicly_queryable' => true,
@@ -269,13 +269,13 @@ function managment_post_type() {
 			'query_var' => true,
 
 			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
-			'menu_icon' => get_stylesheet_directory_uri() . '/images/managment-icon.png', /* the icon for the custom post type menu */
-			'rewrite'	=> array( 'slug' => 'managment', 'with_front' => false ), /* you can specify its url slug */
-			'has_archive' => 'tab', /* you can rename the slug here */
+			'menu_icon' => get_stylesheet_directory_uri() . '/images/management-icon.png', /* the icon for the custom post type menu */
+			'rewrite'	=> array( 'slug' => 'management', 'with_front' => false ), /* you can specify its url slug */
+			'has_archive' => 'management', /* you can rename the slug here */
 			'capability_type' => 'post',
 			'hierarchical' => true,
 			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments','revisions' ,'sticky'),
+			'supports' => array( 'title', 'editor', /*'author',*/ 'thumbnail', 'excerpt'/*, 'trackbacks', 'custom-fields', 'comments','revisions' ,'sticky'*/),
 
 
 		) /* end of options */
@@ -289,7 +289,7 @@ function managment_post_type() {
 }
 function sub_management_post_type() { 
 // creating (registering) the custom type 
-	register_post_type( 'sub-management', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+	register_post_type( 'sub_management', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 		// let's now add all the options for this post type
 		array( 'labels' => array(
 			'name' => __( 'sub management', 'naiau' ), /* This is the Title of the Group */
@@ -322,7 +322,7 @@ function sub_management_post_type() {
 			'hierarchical' => true,
 			/* the next one is important, it tells what's enabled in the post editor */
 			'supports' => array( 'title', 'editor', /*'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments','revisions' ,'sticky'*/),
-			'show_in_menu'  => 'edit.php?post_type=managment',
+			'show_in_menu'  => 'edit.php?post_type=management',
 
 			
 		) /* end of options */
@@ -368,7 +368,7 @@ function education_post_type() {
 			'capability_type' => 'post',
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', 'editor', /*'author', 'thumbnail', 'excerpt', /*'trackbacks'*/ 'custom-fields', /*'comments'*/ /*'revisions'*/ 'sticky')
+			'supports' => array( 'title', 'editor', /*'author',*/ 'thumbnail', 'excerpt', /*'trackbacks','custom-fields','comments','revisions', 'sticky'*/),
 		) /* end of options */
 	); /* end of register post type */
 	
@@ -380,7 +380,7 @@ function education_post_type() {
 }
 function sub_education_post_type() { 
 // creating (registering) the custom type 
-	register_post_type( 'sub-education', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+	register_post_type( 'sub_education', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 		// let's now add all the options for this post type
 		array( 'labels' => array(
 			'name' => __( 'sub education', 'naiau' ), /* This is the Title of the Group */
@@ -434,7 +434,7 @@ function sub_education_post_type() {
 	add_action( 'init', 'link_post_type');
 	add_action( 'init', 'gallery_post_type');
 	add_action( 'init', 'tab_post_type');
-	add_action( 'init', 'managment_post_type');
+	add_action( 'init', 'management_post_type');
 	add_action( 'init', 'sub_management_post_type');
 	add_action( 'init', 'education_post_type');
 	add_action( 'init', 'sub_education_post_type');

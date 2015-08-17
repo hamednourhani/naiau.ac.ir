@@ -271,6 +271,12 @@ function naiau_SearchFilter($query) {
 
 add_filter('pre_get_posts','naiau_SearchFilter');
 
+function naiau_add_query_vars_filter( $vars ){
+  $vars[] = "sub_id";
+  return $vars;
+}
+add_filter( 'query_vars', 'naiau_add_query_vars_filter' );
+
 // add_filter( 'the_content', 'naiau_remove_br_gallery', 11, 2);
 // function naiau_remove_br_gallery($output) {
 //     return preg_replace('/<br style=(.*)>/mi','',$output);

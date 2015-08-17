@@ -1,8 +1,8 @@
 <?php
 
-$footer_links = get_post_meta(get_the_ID(),'_naiau_important_links');
+// $footer_links = get_post_meta(get_the_ID(),'_naiau_important_links');
 
-if($footer_links == true){ ?>
+// if($footer_links == true){ ?>
 
 	<div class="important-links-wrap">
 		<div class="ilink-wrap navy-link">
@@ -18,4 +18,3 @@ if($footer_links == true){ ?>
 			<a href="#">سامانه ثبت نام و اطلاع رسانی تحصیلی</a>
 		</div>
 	</div>
-<?php } ?>
