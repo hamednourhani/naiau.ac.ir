@@ -30,7 +30,8 @@ a{
 // 	display :none;
 // }
 img,video,audio,iframe{
-	max-width : 100;
+	max-width : 100%;
+	height : auto;
 }
 input,textarea,button{
 	max-width : 100%;

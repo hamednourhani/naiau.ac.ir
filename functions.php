@@ -261,6 +261,20 @@ function naiau_pagination(){
       ) );
 }
 
+
+function naiau_SearchFilter($query) {
+    if ($query->is_search) {
+      $query->set('post_type', array('post','news','notify'));
+    }
+    return $query;
+    }
+
+add_filter('pre_get_posts','naiau_SearchFilter');
+
+// add_filter( 'the_content', 'naiau_remove_br_gallery', 11, 2);
+// function naiau_remove_br_gallery($output) {
+//     return preg_replace('/<br style=(.*)>/mi','',$output);
+// }
 /*
 This is a modification of a function found in the
 twentythirteen theme where we can declare some
