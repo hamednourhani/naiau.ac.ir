@@ -199,13 +199,13 @@ function naiau_register_tab_maker_metabox() {
 
 	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
 	$group_field_id = $cmb_group->add_field( array(
-		'id'          => $prefix . 'tab',
+		'id'          => $prefix.'tab',
 		'type'        => 'group',
 		'description' => __( 'Generates reusable form entries', 'naiau' ),
 		'options'     => array(
-			'group_title'   => __( 'Notify {#}', 'naiau' ), // {#} gets replaced by row number
-			'add_button'    => __( 'Add Another Notify', 'naiau' ),
-			'remove_button' => __( 'Remove Notify', 'naiau' ),
+			'group_title'   => __( 'Sub Tab {#}', 'naiau' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Sub Tab', 'naiau' ),
+			'remove_button' => __( 'Remove Sub Tab', 'naiau' ),
 			'sortable'      => true, // beta
 		),
 	) );
@@ -219,17 +219,17 @@ function naiau_register_tab_maker_metabox() {
 	// WP_Query arguments
 	
 	
-	$notifies = get_posts(array(
-			'post_type' => 'notify',
+	$sub_tabs = get_posts(array(
+			'post_type' => 'sub_tab',
 			// 'posts_per_page' => -1,
 			)
 	);
 	
 
 	
-	$notifies_array = array();
-	foreach ( $notifies as $notify ) : setup_postdata( $notify );
-			$notifies_array[$notify->ID] = $notify->post_title;
+	$sub_array = array();
+	foreach ( $sub_tabs as $sub_tab ) : setup_postdata( $sub_tab );
+			$sub_array[$sub_tab->ID] = $sub_tab->post_title;
  	endforeach; 
  	//wp_reset_postdata();
 	
@@ -241,14 +241,22 @@ function naiau_register_tab_maker_metabox() {
 	// ) );
 
 	
-
+ 	
+ 	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Sub Tab Name', 'naiau' ),
+		'desc'    => __( 'write the sub tab name ', 'naiau' ),
+		'id'      => 'tab_name',
+		'type'    => 'text',
+		
+			
+	) );
 	
 	$cmb_group->add_group_field($group_field_id , array(
-		'name'    => __( 'Notify Name', 'naiau' ),
-		'desc'    => __( 'choose a Notify ', 'naiau' ),
-		'id'      => 'notify_id',
+		'name'    => __( 'Choose a sub Tab ', 'naiau' ),
+		'desc'    => __( 'Choose a  the sub tab from list ', 'naiau' ),
+		'id'      => 'tab_id',
 		'type'    => 'select',
-		'options' => $notifies_array,
+		'options' => $sub_array,
 			
 	) );
 	
@@ -361,42 +369,42 @@ function naiau_register_section_maker_metabox() {
 	) );
 
 	$cmb_demo->add_field( array(
-		'name'       => __( 'show notify tabs', 'naiau' ),
-		'desc'       => __( 'show notify tabs or not', 'naiau' ),
-		'id'         => $prefix . 'notify_tabs',
+		'name'       => __( 'show tabs', 'naiau' ),
+		'desc'       => __( 'show tabs or not', 'naiau' ),
+		'id'         => $prefix . 'show_tabs',
 		'type'       => 'radio_inline',
 		'show_option_none' => true,
 		'options'          => array(
 			'true' => __( 'Yes', 'naiau' ),
-			
-			
-			
 		),
-		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
-		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
-		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
-		// 'on_front'        => false, // Optionally designate a field to wp-admin only
-		// 'repeatable'      => true,
 	) );
+
 	
-	// $cmb_demo->add_field( array(
-	// 	'name'       => __( 'show important links', 'naiau' ),
-	// 	'desc'       => __( 'show important links or not', 'naiau' ),
-	// 	'id'         => $prefix . 'important_links',
-	// 	'type'       => 'radio_inline',
-	// 	'show_option_none' => true,
-	// 	'options'          => array(
-	// 		'true' => __( 'Yes', 'naiau' ),
-			
-			
-			
-	// 	),
-	// 	//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
-	// 	// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
-	// 	// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
-	// 	// 'on_front'        => false, // Optionally designate a field to wp-admin only
-	// 	// 'repeatable'      => true,
-	// ) );
+	$tabs_list = get_posts(array(
+			'post_type' => 'tab',
+			// 'posts_per_page' => -1,
+			)
+	);
+	
+
+	
+	$tab_array = array();
+	foreach ( $tabs_list as $tab ) : setup_postdata( $tab );
+			$tab_array[$tab->ID] = $tab->post_title;
+ 	endforeach; 
+
+
+	$cmb_demo->add_field( array(
+		'name'       => __( 'show tabs', 'naiau' ),
+		'desc'       => __( 'show tabs or not', 'naiau' ),
+		'id'         => $prefix . 'tab_id',
+		'type'       => 'select',
+		'options'          => $tab_array,
+
+		
+	));
+	
+
 	$cmb_demo->add_field( array(
 		'name'       => __( 'show related links', 'naiau' ),
 		'desc'       => __( 'show related links or not', 'naiau' ),

@@ -58,7 +58,7 @@
 												
 											</div>
 											<div class="page-sidebar">
-												<?php get_sidebar(); ?>
+												<?php get_sidebar('notify'); ?>
 											</div>
 										
 									</section>

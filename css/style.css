@@ -2,8 +2,8 @@
 /* fonts */
 @font-face {
   font-family: "Yekan";
-  src: url('fonts/Yekan.eot?1402561813');
-  src: url('fonts/Yekan.eot?&1402561813#iefix') format('embedded-opentype'), url('fonts/Yekan.ttf?1402561509') format('truetype'), url('fonts/Yekan.woff?1402561504') format('woff');
+  src: url('fonts/Yekan.eot?1439716606');
+  src: url('fonts/Yekan.eot?&1439716606#iefix') format('embedded-opentype'), url('fonts/Yekan.ttf?1439716606') format('truetype'), url('fonts/Yekan.woff?1439716606') format('woff');
   font-weight: "Yekan.svg"; }
 /* normalize style */
 /* normalize-scss 3.0.2+normalize.3.0.2 | MIT/GPLv2 License | bit.ly/normalize-scss */
@@ -12,7 +12,7 @@
  * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
  * body `font-size` is set using `em` units.
  */
-/* line 106, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
   line-height: 1.5em; }
@@ -618,7 +618,7 @@ p {
   font-feature-settings: "liga", "dlig"; }
 
 /* ------------susy-------- */
-/* line 14, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/language/susyone/_grid.scss */
+/* line 14, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/language/susyone/_grid.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -689,13 +689,45 @@ ul, menu, dir {
   -webkit-padding-start: 0px; }
 
 /* line 51, sass/base/_base.scss */
-.widget-radius, .secondary .widget, .has-sub-page .page-sidebar ul.sub-widget li a, .has-sub-page .page-sidebar ul.sub-widget li span.related-header, .has-sub-page .page-sidebar ul.related-widget li a, .has-sub-page .page-sidebar ul.related-widget li span.related-header {
+.widget-radius, .secondary .widget, .has-sub-page .page-sidebar ul.sub-widget, .has-sub-page .page-sidebar ul.related-widget, .has-sub-page .page-sidebar ul.sub-widget li a, .has-sub-page .page-sidebar ul.sub-widget li span.related-header,
+.has-sub-page .page-sidebar ul.sub-widget li span.sub-header, .has-sub-page .page-sidebar ul.related-widget li a, .has-sub-page .page-sidebar ul.related-widget li span.related-header,
+.has-sub-page .page-sidebar ul.related-widget li span.sub-header {
   -moz-border-radius-topleft: 20px;
   -webkit-border-top-left-radius: 20px;
   border-top-left-radius: 20px;
   -moz-border-radius-bottomright: 20px;
   -webkit-border-bottom-right-radius: 20px;
   border-bottom-right-radius: 20px; }
+
+/* line 55, sass/base/_base.scss */
+.alignright {
+  float: right;
+  display: inline-block; }
+
+/* line 59, sass/base/_base.scss */
+.alignleft {
+  float: left;
+  display: inline-block; }
+
+/* line 63, sass/base/_base.scss */
+.aligncenter {
+  display: block;
+  clear: both;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 70, sass/base/_base.scss */
+blockquote, q {
+  quotes: none;
+  max-width: 80%;
+  padding: 10px 15px;
+  margin: auto;
+  border-right: 3px solid #5DC2F0;
+  background-color: #CCCCCC;
+  margin-bottom: 10px; }
+  /* line 79, sass/base/_base.scss */
+  blockquote P, q P {
+    margin: 0; }
 
 /* header style */
 /* line 2, sass/layout/_header.scss */
@@ -897,7 +929,7 @@ ul, menu, dir {
   padding-right: 1em;
   margin-left: auto;
   margin-right: auto; }
-  /* line 38, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   .layout:after {
     content: "";
     display: table;
@@ -921,13 +953,14 @@ body {
   .content-area .single-page-title {
     width: 100%;
     background-color: #E6E6E6;
-    overflow: hidden; }
-    /* line 21, sass/layout/_main.scss */
+    overflow: hidden;
+    text-align: center; }
+    /* line 22, sass/layout/_main.scss */
     .content-area .single-page-title h1 {
       font-size: 140%;
       padding: 10px 0; }
 
-/* line 29, sass/layout/_main.scss */
+/* line 30, sass/layout/_main.scss */
 .page-main .page-content {
   width: 100%;
   float: right;
@@ -936,7 +969,7 @@ body {
   padding: 15px;
   padding-top: 20px; }
   @media (min-width: 45em) {
-    /* line 29, sass/layout/_main.scss */
+    /* line 30, sass/layout/_main.scss */
     .page-main .page-content {
       width: 74.61538%;
       float: right;
@@ -944,66 +977,66 @@ body {
       float: none;
       margin: auto;
       display: block; } }
-  /* line 40, sass/layout/_main.scss */
+  /* line 41, sass/layout/_main.scss */
   .page-main .page-content.with-sidebar {
     width: 100%;
     float: right;
     margin-left: 1.53846%;
     display: inline; }
     @media (min-width: 45em) {
-      /* line 40, sass/layout/_main.scss */
+      /* line 41, sass/layout/_main.scss */
       .page-main .page-content.with-sidebar {
         width: 74.61538%;
-        float: right;
-        margin-left: 1.53846%; } }
-  /* line 47, sass/layout/_main.scss */
+        float: left;
+        margin-left: 0; } }
+  /* line 48, sass/layout/_main.scss */
   .page-main .page-content .featured-image {
     width: 100%;
     margin: auto;
     text-align: center; }
-    /* line 51, sass/layout/_main.scss */
+    /* line 52, sass/layout/_main.scss */
     .page-main .page-content .featured-image img {
       max-width: 100%; }
-    /* line 54, sass/layout/_main.scss */
+    /* line 55, sass/layout/_main.scss */
     .page-main .page-content .featured-image.single-image {
       width: 40%;
       float: right;
       padding: 10px;
       min-height: 220px; }
-  /* line 61, sass/layout/_main.scss */
+  /* line 62, sass/layout/_main.scss */
   .page-main .page-content .hentry {
     width: 100%;
     overflow: hidden;
     margin-bottom: 20px;
     padding-bottom: 0px;
     border-bottom: 1px solid #5A6B9F; }
-  /* line 68, sass/layout/_main.scss */
+  /* line 69, sass/layout/_main.scss */
   .page-main .page-content .post-title, .page-main .page-content .post-content {
     width: 60%;
     float: right; }
-    /* line 72, sass/layout/_main.scss */
+    /* line 73, sass/layout/_main.scss */
     .page-main .page-content .post-title p, .page-main .page-content .post-content p {
       padding: 5px;
       margin: auto;
       font-size: 90%; }
-    /* line 78, sass/layout/_main.scss */
+    /* line 79, sass/layout/_main.scss */
     .page-main .page-content .post-title a, .page-main .page-content .post-content a {
       color: #179BD7; }
-  /* line 82, sass/layout/_main.scss */
+  /* line 83, sass/layout/_main.scss */
   .page-main .page-content .post-title {
     padding: 10px;
     width: 60%;
     float: right; }
-    /* line 86, sass/layout/_main.scss */
+    /* line 87, sass/layout/_main.scss */
     .page-main .page-content .post-title h3 {
       padding: 5px;
       margin: auto;
       font-size: 90%;
       color: #179BD7; }
-  /* line 94, sass/layout/_main.scss */
+  /* line 95, sass/layout/_main.scss */
   .page-main .page-content ul.post-meta-list {
     padding: 3px; }
-  /* line 97, sass/layout/_main.scss */
+  /* line 98, sass/layout/_main.scss */
   .page-main .page-content .post-meta {
     margin-top: 10px;
     padding: 2px 5px;
@@ -1011,18 +1044,18 @@ body {
     background-color: #5A6B9F;
     font-size: 70%;
     text-align: right; }
-    /* line 106, sass/layout/_main.scss */
+    /* line 107, sass/layout/_main.scss */
     .page-main .page-content .post-meta .meta-date {
       position: relative; }
-      /* line 108, sass/layout/_main.scss */
+      /* line 109, sass/layout/_main.scss */
       .page-main .page-content .post-meta .meta-date a {
         color: #E6E6E6; }
-      /* line 111, sass/layout/_main.scss */
+      /* line 112, sass/layout/_main.scss */
       .page-main .page-content .post-meta .meta-date .fa-calendar {
         padding-left: 8px;
         vertical-align: middle;
         color: #E6E6E6; }
-  /* line 120, sass/layout/_main.scss */
+  /* line 121, sass/layout/_main.scss */
   .page-main .page-content.single-page .post-meta {
     overflow: hidden;
     *zoom: 1;
@@ -1033,24 +1066,24 @@ body {
     font-size: 80%;
     width: 100%;
     padding: 10px; }
-    /* line 129, sass/layout/_main.scss */
+    /* line 130, sass/layout/_main.scss */
     .page-main .page-content.single-page .post-meta .meta-date, .page-main .page-content.single-page .post-meta .meta-cat, .page-main .page-content.single-page .post-meta .meta-tag {
       position: relative; }
-      /* line 131, sass/layout/_main.scss */
+      /* line 132, sass/layout/_main.scss */
       .page-main .page-content.single-page .post-meta .meta-date a, .page-main .page-content.single-page .post-meta .meta-cat a, .page-main .page-content.single-page .post-meta .meta-tag a {
         color: #5A6B9F; }
-      /* line 134, sass/layout/_main.scss */
+      /* line 135, sass/layout/_main.scss */
       .page-main .page-content.single-page .post-meta .meta-date .fa-calendar, .page-main .page-content.single-page .post-meta .meta-date .fa-tags, .page-main .page-content.single-page .post-meta .meta-date .fa-folder-open, .page-main .page-content.single-page .post-meta .meta-cat .fa-calendar, .page-main .page-content.single-page .post-meta .meta-cat .fa-tags, .page-main .page-content.single-page .post-meta .meta-cat .fa-folder-open, .page-main .page-content.single-page .post-meta .meta-tag .fa-calendar, .page-main .page-content.single-page .post-meta .meta-tag .fa-tags, .page-main .page-content.single-page .post-meta .meta-tag .fa-folder-open {
         padding-left: 8px;
         color: #5A6B9F;
         vertical-align: middle; }
-  /* line 142, sass/layout/_main.scss */
+  /* line 143, sass/layout/_main.scss */
   .page-main .page-content .searchform {
     margin: 20px; }
-  /* line 145, sass/layout/_main.scss */
+  /* line 146, sass/layout/_main.scss */
   .page-main .page-content .pagination {
     text-align: center; }
-    /* line 147, sass/layout/_main.scss */
+    /* line 148, sass/layout/_main.scss */
     .page-main .page-content .pagination .page-numbers {
       padding: 5px 13px;
       background-color: #E6E6E6;
@@ -1058,38 +1091,38 @@ body {
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
       border-radius: 5px; }
-      /* line 153, sass/layout/_main.scss */
+      /* line 154, sass/layout/_main.scss */
       .page-main .page-content .pagination .page-numbers.current, .page-main .page-content .pagination .page-numbers:hover {
         background-color: #5A6B9F;
         color: #fff; }
-      /* line 157, sass/layout/_main.scss */
+      /* line 158, sass/layout/_main.scss */
       .page-main .page-content .pagination .page-numbers i:before {
         vertical-align: middle; }
-/* line 165, sass/layout/_main.scss */
+/* line 166, sass/layout/_main.scss */
 .page-main .page-sidebar {
   width: 100%;
   float: right;
   margin-left: 1.53846%;
   display: inline; }
   @media (min-width: 45em) {
-    /* line 165, sass/layout/_main.scss */
+    /* line 166, sass/layout/_main.scss */
     .page-main .page-sidebar {
       width: 23.84615%;
-      float: left;
-      margin-left: 0; } }
-  /* line 170, sass/layout/_main.scss */
+      float: right;
+      margin-left: 1.53846%; } }
+  /* line 171, sass/layout/_main.scss */
   .page-main .page-sidebar .sidebar-widget {
     padding-top: 20px;
     padding-bottom: 20px; }
-/* line 177, sass/layout/_main.scss */
+/* line 178, sass/layout/_main.scss */
 .page-main .notfound {
   margin-top: 20px; }
-/* line 180, sass/layout/_main.scss */
+/* line 181, sass/layout/_main.scss */
 .page-main .hentry.page404 {
   text-align: center;
   border-bottom: none; }
 
-/* line 187, sass/layout/_main.scss */
+/* line 188, sass/layout/_main.scss */
 .secondary .widget {
   border: 3px solid #E6E6E6;
   padding: 20px;
@@ -1097,7 +1130,7 @@ body {
   line-height: 230%;
   margin-bottom: 5px;
   margin-top: 10px; }
-/* line 201, sass/layout/_main.scss */
+/* line 202, sass/layout/_main.scss */
 .secondary .widgettitle {
   border-bottom: 1px solid #E6E6E6;
   margin: 0;
@@ -1105,7 +1138,7 @@ body {
   margin-bottom: 15px;
   color: #253B80; }
 
-/* line 211, sass/layout/_main.scss */
+/* line 212, sass/layout/_main.scss */
 .gallery-slideshow-wrapper {
   width: 100%;
   background-color: #CCCCCC;
@@ -1114,35 +1147,46 @@ body {
   padding-left: auto;
   padding-right: auto;
   text-align: center; }
-  /* line 223, sass/layout/_main.scss */
+  /* line 224, sass/layout/_main.scss */
   .gallery-slideshow-wrapper .sp-selected-thumbnail {
     border: 4px solid #000; }
 
-/* line 228, sass/layout/_main.scss */
+/* line 229, sass/layout/_main.scss */
 .has-sub-page .page-sidebar {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 20px; }
-  /* line 233, sass/layout/_main.scss */
+  /* line 234, sass/layout/_main.scss */
   .has-sub-page .page-sidebar ul.sub-widget, .has-sub-page .page-sidebar ul.related-widget {
-    margin-bottom: 20px; }
-    /* line 235, sass/layout/_main.scss */
+    border: 3px solid #E6E6E6;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 6px 3px; }
+    /* line 242, sass/layout/_main.scss */
     .has-sub-page .page-sidebar ul.sub-widget li, .has-sub-page .page-sidebar ul.related-widget li {
       width: 100%; }
-    /* line 238, sass/layout/_main.scss */
-    .has-sub-page .page-sidebar ul.sub-widget li a, .has-sub-page .page-sidebar ul.sub-widget li span.related-header, .has-sub-page .page-sidebar ul.related-widget li a, .has-sub-page .page-sidebar ul.related-widget li span.related-header {
+    /* line 246, sass/layout/_main.scss */
+    .has-sub-page .page-sidebar ul.sub-widget li a, .has-sub-page .page-sidebar ul.sub-widget li span.related-header,
+    .has-sub-page .page-sidebar ul.sub-widget li span.sub-header, .has-sub-page .page-sidebar ul.related-widget li a, .has-sub-page .page-sidebar ul.related-widget li span.related-header,
+    .has-sub-page .page-sidebar ul.related-widget li span.sub-header {
+      text-align: center;
       width: 100%;
       background-color: #E6E6E6;
       display: inline-block;
       padding: 10px 15px;
       margin-bottom: 5px; }
-      /* line 245, sass/layout/_main.scss */
-      .has-sub-page .page-sidebar ul.sub-widget li a.current, .has-sub-page .page-sidebar ul.sub-widget li a:hover, .has-sub-page .page-sidebar ul.sub-widget li span.related-header.current, .has-sub-page .page-sidebar ul.sub-widget li span.related-header:hover, .has-sub-page .page-sidebar ul.related-widget li a.current, .has-sub-page .page-sidebar ul.related-widget li a:hover, .has-sub-page .page-sidebar ul.related-widget li span.related-header.current, .has-sub-page .page-sidebar ul.related-widget li span.related-header:hover {
+      /* line 255, sass/layout/_main.scss */
+      .has-sub-page .page-sidebar ul.sub-widget li a.current, .has-sub-page .page-sidebar ul.sub-widget li a:hover, .has-sub-page .page-sidebar ul.sub-widget li span.related-header.current, .has-sub-page .page-sidebar ul.sub-widget li span.related-header:hover,
+      .has-sub-page .page-sidebar ul.sub-widget li span.sub-header.current,
+      .has-sub-page .page-sidebar ul.sub-widget li span.sub-header:hover, .has-sub-page .page-sidebar ul.related-widget li a.current, .has-sub-page .page-sidebar ul.related-widget li a:hover, .has-sub-page .page-sidebar ul.related-widget li span.related-header.current, .has-sub-page .page-sidebar ul.related-widget li span.related-header:hover,
+      .has-sub-page .page-sidebar ul.related-widget li span.sub-header.current,
+      .has-sub-page .page-sidebar ul.related-widget li span.sub-header:hover {
         background-color: #5DC2F0;
         color: #fff; }
-    /* line 250, sass/layout/_main.scss */
-    .has-sub-page .page-sidebar ul.sub-widget li a.related-link:hover,
-    .has-sub-page .page-sidebar ul.sub-widget li span.related-header, .has-sub-page .page-sidebar ul.sub-widget li span.related-header:hover, .has-sub-page .page-sidebar ul.related-widget li a.related-link:hover,
-    .has-sub-page .page-sidebar ul.related-widget li span.related-header, .has-sub-page .page-sidebar ul.related-widget li span.related-header:hover {
+    /* line 260, sass/layout/_main.scss */
+    .has-sub-page .page-sidebar ul.sub-widget li span.sub-header, .has-sub-page .page-sidebar ul.sub-widget li span.related-header, .has-sub-page .page-sidebar ul.related-widget li span.sub-header, .has-sub-page .page-sidebar ul.related-widget li span.related-header {
+      color: #fff; }
+    /* line 274, sass/layout/_main.scss */
+    .has-sub-page .page-sidebar ul.sub-widget li a.related-link:hover, .has-sub-page .page-sidebar ul.related-widget li a.related-link:hover {
       background-color: #253B80;
       color: #fff; }
 
@@ -1437,7 +1481,11 @@ input#s {
 
 /* line 11, sass/modules/_tabs.scss */
 .ui-state-default.ui-corner-top,
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active,
+.ui-state-active,
+.has-sub-page .page-sidebar ul.sub-widget li span.sub-header,
+.has-sub-page .page-sidebar ul.sub-widget li span.related-header,
+.has-sub-page .page-sidebar ul.related-widget li span.sub-header,
+.has-sub-page .page-sidebar ul.related-widget li span.related-header, .ui-widget-content .ui-state-active, .ui-widget-content .has-sub-page .page-sidebar ul.sub-widget li span.sub-header, .has-sub-page .page-sidebar ul.sub-widget li .ui-widget-content span.sub-header, .ui-widget-content .has-sub-page .page-sidebar ul.sub-widget li span.related-header, .has-sub-page .page-sidebar ul.sub-widget li .ui-widget-content span.related-header, .ui-widget-content .has-sub-page .page-sidebar ul.related-widget li span.sub-header, .has-sub-page .page-sidebar ul.related-widget li .ui-widget-content span.sub-header, .ui-widget-content .has-sub-page .page-sidebar ul.related-widget li span.related-header, .has-sub-page .page-sidebar ul.related-widget li .ui-widget-content span.related-header, .ui-widget-header .ui-state-active, .ui-widget-header .has-sub-page .page-sidebar ul.sub-widget li span.sub-header, .has-sub-page .page-sidebar ul.sub-widget li .ui-widget-header span.sub-header, .ui-widget-header .has-sub-page .page-sidebar ul.sub-widget li span.related-header, .has-sub-page .page-sidebar ul.sub-widget li .ui-widget-header span.related-header, .ui-widget-header .has-sub-page .page-sidebar ul.related-widget li span.sub-header, .has-sub-page .page-sidebar ul.related-widget li .ui-widget-header span.sub-header, .ui-widget-header .has-sub-page .page-sidebar ul.related-widget li span.related-header, .has-sub-page .page-sidebar ul.related-widget li .ui-widget-header span.related-header,
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover {
   border-color: #253B80;
   background: #5a6b9f;
@@ -1485,7 +1533,7 @@ input#s {
   color: #CCCCCC; }
 
 /* line 46, sass/modules/_tabs.scss */
-.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited,
+.ui-state-active a, .has-sub-page .page-sidebar ul.sub-widget li span.sub-header a, .has-sub-page .page-sidebar ul.sub-widget li span.related-header a, .has-sub-page .page-sidebar ul.related-widget li span.sub-header a, .has-sub-page .page-sidebar ul.related-widget li span.related-header a, .ui-state-active a:link, .has-sub-page .page-sidebar ul.sub-widget li span.sub-header a:link, .has-sub-page .page-sidebar ul.sub-widget li span.related-header a:link, .has-sub-page .page-sidebar ul.related-widget li span.sub-header a:link, .has-sub-page .page-sidebar ul.related-widget li span.related-header a:link, .ui-state-active a:visited, .has-sub-page .page-sidebar ul.sub-widget li span.sub-header a:visited, .has-sub-page .page-sidebar ul.sub-widget li span.related-header a:visited, .has-sub-page .page-sidebar ul.related-widget li span.sub-header a:visited, .has-sub-page .page-sidebar ul.related-widget li span.related-header a:visited,
 .ui-state-hover a, .ui-state-hover a:link, .ui-state-hover a:visited {
   color: #5DC2F0; }
 

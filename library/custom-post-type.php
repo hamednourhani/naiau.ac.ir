@@ -241,6 +241,56 @@ function tab_post_type() {
 	
 }
 
+function sub_tab_post_type() { 
+// creating (registering) the custom type 
+	register_post_type( 'sub_tab', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+		// let's now add all the options for this post type
+		array( 'labels' => array(
+			'name' => __( 'sub tab', 'naiau' ), /* This is the Title of the Group */
+			'singular_name' => __( 'sub tab', 'naiau' ), /* This is the individual type */
+			'all_items' => __( 'All sub tabs', 'naiau' ), /* the all items menu item */
+			'add_new' => __( 'Add New', 'naiau' ), /* The add new menu item */
+			'add_new_item' => __( 'Add New sub tab', 'naiau' ), /* Add New Display Title */
+			'edit' => __( 'Edit', 'naiau' ), /* Edit Dialog */
+			'edit_item' => __( 'Edit sub tab', 'naiau' ), /* Edit Display Title */
+			'new_item' => __( 'New sub tab', 'naiau' ), /* New Display Title */
+			'view_item' => __( 'View sub tab', 'naiau' ), /* View Display Title */
+			'search_items' => __( 'Search sub tabs', 'naiau' ), /* Search Custom Type Title */ 
+			'not_found' =>  __( 'Nothing found in the Database.', 'naiau' ), /* This displays if there are no entries yet */ 
+			'not_found_in_trash' => __( 'Nothing found in Trash', 'naiau' ), /* This displays if there is nothing in the trash */
+			'parent_item_colon' => ''
+			), /* end of arrays */
+			'description' => __( 'This is a sub tab', 'naiau' ), /* Custom Type Description */
+			'public' => true,
+			'show_in_nav_menus' => false,
+			'publicly_queryable' => true,
+			'exclude_from_search' => true,
+			'show_ui' => true,
+			'query_var' => true,
+
+			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
+			'menu_icon' => get_stylesheet_directory_uri() . '/images/sub-icon.png', /* the icon for the custom post type menu */
+			'rewrite'	=> array( 'slug' => 'sub-tab', 'with_front' => false ), /* you can specify its url slug */
+			'has_archive' => 'sub_tab', /* you can rename the slug here */
+			'capability_type' => 'post',
+			'hierarchical' => true,
+			/* the next one is important, it tells what's enabled in the post editor */
+			'supports' => array( 'title', 'editor', /*'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments','revisions' ,'sticky'*/),
+			'show_in_menu'  => 'edit.php?post_type=tab',
+
+			
+		) /* end of options */
+	); /* end of register post type */
+	
+	/* this adds your post categories to your custom post type */
+	//register_taxonomy_for_object_type( 'category', 'tour' );
+	/* this adds your post tags to your custom post type */
+	//register_taxonomy_for_object_type( 'post_tag', 'tour' );
+	
+}
+
+
+
 function management_post_type() { 
 // creating (registering) the custom type 
 	register_post_type( 'management', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
@@ -308,7 +358,7 @@ function sub_management_post_type() {
 			), /* end of arrays */
 			'description' => __( 'This is a sub management', 'naiau' ), /* Custom Type Description */
 			'public' => true,
-			'show_in_nav_menus' => true,
+			'show_in_nav_menus' => false,
 			'publicly_queryable' => true,
 			'exclude_from_search' => true,
 			'show_ui' => true,
@@ -364,7 +414,7 @@ function education_post_type() {
 			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/education-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'education', 'with_front' => false ), /* you can specify its url slug */
-			'has_archive' => 'tab', /* you can rename the slug here */
+			'has_archive' => 'education', /* you can rename the slug here */
 			'capability_type' => 'post',
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
@@ -399,7 +449,7 @@ function sub_education_post_type() {
 			), /* end of arrays */
 			'description' => __( 'This is a sub education', 'naiau' ), /* Custom Type Description */
 			'public' => true,
-			'show_in_nav_menus' => true,
+			'show_in_nav_menus' => false,
 			'publicly_queryable' => true,
 			'exclude_from_search' => true,
 			'show_ui' => true,
@@ -434,6 +484,7 @@ function sub_education_post_type() {
 	add_action( 'init', 'link_post_type');
 	add_action( 'init', 'gallery_post_type');
 	add_action( 'init', 'tab_post_type');
+	add_action( 'init', 'sub_tab_post_type');
 	add_action( 'init', 'management_post_type');
 	add_action( 'init', 'sub_management_post_type');
 	add_action( 'init', 'education_post_type');
@@ -523,28 +574,28 @@ function sub_education_post_type() {
 	*/
 	
 	// now let's add custom categories (these act like categories)
-	register_taxonomy( 'tab_cat', 
-		array('tab'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
-		array('hierarchical' => true,     /* if this is true, it acts like categories */
-			'labels' => array(
-				'name' => __( 'Tab Categories', 'naiau' ), /* name of the custom taxonomy */
-				'singular_name' => __( 'Tab Category', 'naiau' ), /* single taxonomy name */
-				'search_items' =>  __( 'Search Tab Categories', 'naiau' ), /* search title for taxomony */
-				'all_items' => __( 'All Tabs Categories', 'naiau' ), /* all title for taxonomies */
-				'parent_item' => __( 'Parent Tab Category', 'naiau' ), /* parent title for taxonomy */
-				'parent_item_colon' => __( 'Parent Tab Category:', 'naiau' ), /* parent taxonomy title */
-				'edit_item' => __( 'Edit Tab Category', 'naiau' ), /* edit custom taxonomy title */
-				'update_item' => __( 'Update Tab Category', 'naiau' ), /* update title for taxonomy */
-				'add_new_item' => __( 'Add New Tab Category', 'naiau' ), /* add new title for taxonomy */
-				'new_item_name' => __( 'New Tab category Name', 'naiau' ) /* name title for taxonomy */
-			),
-			'show_admin_column' => true, 
-			'show_ui' => true,
-			'query_var' => true,
-			'rewrite' => array( 'slug' => 'tab-cat' ),
-			'show_in_nav_menus' => true,
-		)
-	);
+	// register_taxonomy( 'tab_cat', 
+	// 	array('tab'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+	// 	array('hierarchical' => true,     /* if this is true, it acts like categories */
+	// 		'labels' => array(
+	// 			'name' => __( 'Tab Categories', 'naiau' ), /* name of the custom taxonomy */
+	// 			'singular_name' => __( 'Tab Category', 'naiau' ), /* single taxonomy name */
+	// 			'search_items' =>  __( 'Search Tab Categories', 'naiau' ), /* search title for taxomony */
+	// 			'all_items' => __( 'All Tabs Categories', 'naiau' ), /* all title for taxonomies */
+	// 			'parent_item' => __( 'Parent Tab Category', 'naiau' ),  parent title for taxonomy 
+	// 			'parent_item_colon' => __( 'Parent Tab Category:', 'naiau' ), /* parent taxonomy title */
+	// 			'edit_item' => __( 'Edit Tab Category', 'naiau' ), /* edit custom taxonomy title */
+	// 			'update_item' => __( 'Update Tab Category', 'naiau' ), /* update title for taxonomy */
+	// 			'add_new_item' => __( 'Add New Tab Category', 'naiau' ), /* add new title for taxonomy */
+	// 			'new_item_name' => __( 'New Tab category Name', 'naiau' ) /* name title for taxonomy */
+	// 		),
+	// 		'show_admin_column' => true, 
+	// 		'show_ui' => true,
+	// 		'query_var' => true,
+	// 		'rewrite' => array( 'slug' => 'tab-cat' ),
+	// 		'show_in_nav_menus' => true,
+	// 	)
+	// );
 	
 	// now let's add custom tags (these act like categories)
 	
@@ -568,7 +619,7 @@ function sub_education_post_type() {
 			'show_ui' => true,
 			'query_var' => true,
 			'rewrite' => array( 'slug' => 'link-cat' ),
-			'show_in_nav_menus' => true,
+			'show_in_nav_menus' => false,
 		)
 	);
 	
