@@ -179,6 +179,15 @@ function naiau_register_sidebars() {
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
+  register_sidebar(array(
+    'id' => 'notify-sidebar',
+    'name' => __( 'Notify Sidebar', 'naiau' ),
+    'description' => __( 'The Notify sidebar.', 'naiau' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="widgettitle">',
+    'after_title' => '</h4>',
+  ));
 
 	/*
 	to add more sidebars or widgetized areas, just copy
@@ -261,6 +270,26 @@ function naiau_pagination(){
       ) );
 }
 
+
+function naiau_SearchFilter($query) {
+    if ($query->is_search) {
+      $query->set('post_type', array('post','news','notify'));
+    }
+    return $query;
+    }
+
+add_filter('pre_get_posts','naiau_SearchFilter');
+
+function naiau_add_query_vars_filter( $vars ){
+  $vars[] = "sub_id";
+  return $vars;
+}
+add_filter( 'query_vars', 'naiau_add_query_vars_filter' );
+
+// add_filter( 'the_content', 'naiau_remove_br_gallery', 11, 2);
+// function naiau_remove_br_gallery($output) {
+//     return preg_replace('/<br style=(.*)>/mi','',$output);
+// }
 /*
 This is a modification of a function found in the
 twentythirteen theme where we can declare some
@@ -283,4 +312,188 @@ function naiau_fonts() {
 
 
 
-/* DON'T DELETE THIS CLOSING TAG */ ?>
+/* DON'T DELETE THIS CLOSING TAG */ 
+/*---------------Widgets----------------------*/
+
+// Creating the widget 
+class last_notify_widget extends WP_Widget {
+
+    function __construct() {
+        parent::__construct(
+        // Base ID of your widget
+        'last_notify_widget', 
+
+        // Widget name will appear in UI
+        __('Last Notify Widget', 'naiau'), 
+
+        // Widget description
+        array( 'description' => __( 'Display Last Notifies', 'naiau' ), ) 
+        );
+    }
+
+    // Creating widget front-end
+    // This is where the action happens
+    public function widget( $args, $instance ) {
+        global $wp_query;
+
+        $title = apply_filters( 'widget_title', $instance['title'] );
+        $number = $instance['number'];
+
+        $notifies = get_posts(array(
+            'post_type' => 'notify',
+            'posts_per_page' => $number,
+            )
+        );
+        //var_dump($notifies);
+        $content = '<ul>';
+        foreach($notifies as $notify) : setup_postdata( $notify );
+          $url = get_the_permalink($notify->ID);
+          $name = $notify->post_title;
+          $content .='<li><i class="fa fa-bullhorn"></i><a href="'.$url.'">'.$name.'</a><li>';
+        endforeach;
+        $content .= '</ul>';
+
+      
+       
+
+        
+        // before and after widget arguments are defined by themes
+        echo $args['before_widget'];
+        
+        if ( ! empty( $title ) )
+          echo $args['before_title'] . $title . $args['after_title'];
+          echo $content;
+        // This is where you run the code and display the output
+          echo $args['after_widget'];
+    }
+        
+    // Widget Backend 
+    public function form( $instance ) {
+        if ( isset( $instance[ 'title' ] ) ) {
+            $title = $instance[ 'title' ];
+        }else {
+            $title = __( 'New title', 'naiau' );
+        }
+        if ( isset( $instance[ 'number' ] ) ) {
+            $number = $instance[ 'number' ];
+        }else {
+            $number = 5;
+        }
+        // Widget admin form
+        ?>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+        </p>
+         <p>
+            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Notify Numbers :','naiau' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" />
+        </p>
+        <?php 
+    }
+      
+    // Updating widget replacing old instances with new
+    public function update( $new_instance, $old_instance ) {
+        $instance = array();
+        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+        $instance['number'] = ( ! empty( $new_instance['number'] ) ) ? strip_tags( $new_instance['number'] ) : '';
+        return $instance;
+    }
+} // Class wpb_widget ends here
+
+
+
+class last_news_widget extends WP_Widget {
+
+    function __construct() {
+        parent::__construct(
+        // Base ID of your widget
+        'last_news_widget', 
+
+        // Widget name will appear in UI
+        __('Last News Widget', 'naiau'), 
+
+        // Widget description
+        array( 'description' => __( 'Display Last News', 'naiau' ), ) 
+        );
+    }
+
+    // Creating widget front-end
+    // This is where the action happens
+    public function widget( $args, $instance ) {
+        global $wp_query;
+
+        $title = apply_filters( 'widget_title', $instance['title'] );
+        $number = $instance['number'];
+
+        $news_list = get_posts(array(
+            'post_type' => 'news',
+            'posts_per_page' => $number,
+            )
+        );
+        //var_dump($notifies);
+        $content = '<ul>';
+        foreach($news_list as $news) : setup_postdata( $news );
+          $url = get_the_permalink($news->ID);
+          $name = $news->post_title;
+          $content .='<li><i class="fa fa-newspaper-o"></i><a href="'.$url.'">'.$name.'</a><li>';
+        endforeach;
+        $content .= '</ul>';
+
+      
+       
+
+        
+        // before and after widget arguments are defined by themes
+        echo $args['before_widget'];
+        
+        if ( ! empty( $title ) )
+          echo $args['before_title'] . $title . $args['after_title'];
+          echo $content;
+        // This is where you run the code and display the output
+          echo $args['after_widget'];
+    }
+        
+    // Widget Backend 
+    public function form( $instance ) {
+        if ( isset( $instance[ 'title' ] ) ) {
+            $title = $instance[ 'title' ];
+        }else {
+            $title = __( 'New title', 'naiau' );
+        }
+        if ( isset( $instance[ 'number' ] ) ) {
+            $number = $instance[ 'number' ];
+        }else {
+            $number = 5;
+        }
+        // Widget admin form
+        ?>
+        <p>
+        <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+        <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+        </p>
+         <p>
+        <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'News Numbers :','naiau' ); ?></label> 
+        <input class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" />
+        </p>
+        <?php 
+    }
+      
+    // Updating widget replacing old instances with new
+    public function update( $new_instance, $old_instance ) {
+    $instance = array();
+    $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+    $instance['number'] = ( ! empty( $new_instance['number'] ) ) ? strip_tags( $new_instance['number'] ) : '';
+    return $instance;
+    }
+} // Class wpb_widget ends here
+
+
+// Register and load the widget
+function naiau_widget() {
+  register_widget( 'last_notify_widget' );
+  register_widget( 'last_news_widget' );
+}
+add_action( 'widgets_init', 'naiau_widget' );
+
+

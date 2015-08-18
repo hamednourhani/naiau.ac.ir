@@ -66,6 +66,9 @@ body{
 			padding-bottom : 0px;
 			border-bottom : 1px solid $navy2;
 		}
+		ol,ul{
+			padding: 10px 40px;
+		}
 		.post-title,.post-content{
 				width : 60%;
 				float : right;

@@ -49,13 +49,13 @@
 
 										<?php if($hide_sidebar != true){?>
 										
-											<div class="page-content with-sidebar">	
+											<div class="page-content with-sidebar single-page">	
 												<div class="featured-image">
 													<?php echo the_post_thumbnail('slider');?>
 												</div>
-												<?php get_template_part('library/post','meta'); ?>
 												<?php the_content(); ?>
-												
+												<?php get_template_part('library/post','meta'); ?>
+
 												<?php if($show_comments == true){?>
 													<div class="comment-area">
 														<?php comments_template(); ?>	
@@ -63,16 +63,16 @@
 												<?php } ?>
 											</div>
 											<div class="page-sidebar">
-												<?php get_sidebar(); ?>
+												<?php get_sidebar('notify'); ?>
 											</div>
 										<?php }else{ ?>
-											<div class="page-content">		
+											<div class="page-content single-page">		
 												<div class="featured-image">
 													<?php echo the_post_thumbnail('slider');?>
 												</div>
-												<?php get_template_part('library/post','meta'); ?>
-												<?php the_content(); ?> 
 												
+												<?php the_content(); ?> 
+												<?php get_template_part('library/post','meta'); ?>
 												<?php if($show_comments == true){?>
 													<div class="comment-area">
 														<?php comments_template(); ?>	

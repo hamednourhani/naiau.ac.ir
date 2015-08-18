@@ -26,7 +26,7 @@
 							
 								<div class="single-page-title">
 									<section class="layout">
-										<h1><?php single_cat_title(__('Category : ','naiau'),true); ?></h1>
+										<h1><?php the_title(); ?></h1>
 									</section>
 								</div>
 								
@@ -40,7 +40,7 @@
 														<article class="hentry">
 															<div class="featured-image single-image">
 																<a href="<?php the_permalink(); ?>">
-																	<?php echo the_post_thumbnail('medium');?>
+																	<?php get_template_part('library/thumbnail','maker'); ?>
 																</a>
 															</div>
 															<div class="post-title">
@@ -49,7 +49,7 @@
 																</a>
 															</div>
 															<div class="post-content">
-																<?php the_content(); ?>
+																<?php the_excerpt(); ?>
 																<?php get_template_part('library/post','meta'); ?>
 															</div>
 														</article>

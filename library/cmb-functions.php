@@ -382,7 +382,7 @@ function naiau_register_section_maker_metabox() {
 	
 	$tabs_list = get_posts(array(
 			'post_type' => 'tab',
-			// 'posts_per_page' => -1,
+			'posts_per_page' => '100',
 			)
 	);
 	
@@ -455,7 +455,7 @@ function naiau_register_management_maker_metabox() {
 	
 	$pages = get_posts(array(
 			'post_type' => 'sub_management',
-			// 'posts_per_page' => -1,
+			'posts_per_page' => '100',
 			)
 	);
 	
@@ -521,7 +521,7 @@ function naiau_register_education_maker_metabox() {
 	
 	$pages = get_posts(array(
 			'post_type' => 'sub_education',
-			// 'posts_per_page' => -1,
+			'posts_per_page' => '100',
 			)
 	);
 	

@@ -2,24 +2,28 @@
 <!-- $tour_packages = get_post_meta( get_the_ID(), '_naiau_group_tour_package', true ); -->
 <?php 
 
-  $args = array (
-    'post_type'              => array( 'tab' ),
-    'posts_per_page'         => '10',
-    'orderby'          => 'date',
-    'order'            => 'ASC',
-    // 'category'         => 'news_cat',
-    'tab_cat'    => 'featured',
-  );
-  $tabs = get_posts($args);
-  $notify_show = get_post_meta(get_the_ID(),'_naiau_notify_tabs');
-  // var_dump($tabs);
+  // $args = array (
+  //   'post_type'              => array( 'tab' ),
+  //   'posts_per_page'         => '10',
+  //   'orderby'          => 'date',
+  //   'order'            => 'ASC',
+  //   // 'category'         => 'news_cat',
+  //   'tab_cat'    => 'featured',
+  // );
+  // $tab = get_posts($args);
+  
+  $show_tabs = get_post_meta(get_the_ID(),'_naiau_show_tabs');
+  $tab_id= get_post_meta(get_the_ID(),'_naiau_tab_id');
+   //var_dump($tab_id);
   // var_dump(get_post_meta('1867','_naiau_group_tab',true));
   
- 
+ $tabs = get_post_meta($tab_id[0],'_naiau_group_tab');
+ $tabs = $tabs[0];
+ //var_dump($tabs);
 
   
 
-if(!empty($tabs) && $notify_show == true){ ?>
+if( !empty($tabs) && $show_tabs == true){ ?>
 <div class="notify-tabs-wrap">
         <section class="layout">
     <div id="tabs">
@@ -27,7 +31,7 @@ if(!empty($tabs) && $notify_show == true){ ?>
        <?php
         $counter = 1;
          foreach((array)$tabs as $tab): 
-          echo '<li><a href="#tabs-'.$counter.'">'.$tab->post_title.'</a></li>';
+          echo '<li><a href="#tabs-'.$counter.'">'.$tab['tab_name'].'</a></li>';
           $counter++;
           endforeach; 
         ?>
@@ -35,23 +39,20 @@ if(!empty($tabs) && $notify_show == true){ ?>
           <?php 
             $counter = 1;
             foreach((array)$tabs as $tab): 
-              $notify_ids = get_post_meta($tab->ID,'_naiau_group_tab');
+
+                        $content_post = get_post($tab['tab_id']);
+                        $content = $content_post->post_content;
+                        $content = apply_filters('the_content', $content);
+                        $content = str_replace(']]>', ']]&gt;', $content);
+
+              
 
 
             
               $tab_content = ""; 
               $tab_content .=  '<div id="tabs-'.$counter.'">';
-              $tab_content .= '<div class="tab-content">'.$tab->post_content.'</div>';
               $tab_content .= '<ul class="notifies-list">';
-                    $n_ids = $notify_ids[0];
-                    foreach ( $n_ids as $n_id ) {
-                       
-                        $notify_id = $n_id['notify_id'];
-                        $tab_content .= '<li>';
-                        $tab_content .= '<a href="'.get_the_permalink($notify_id).'">'.get_the_title($notify_id).'</a>';  
-                        $tab_content .= '</li>';
-                        
-                    } 
+              $tab_content .= $content;
               $tab_content .= '</ul></div>';
               echo $tab_content;
               $counter++;

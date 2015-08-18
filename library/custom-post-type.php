@@ -358,7 +358,7 @@ function sub_management_post_type() {
 			), /* end of arrays */
 			'description' => __( 'This is a sub management', 'naiau' ), /* Custom Type Description */
 			'public' => true,
-			'show_in_nav_menus' => false,
+			'show_in_nav_menus' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => true,
 			'show_ui' => true,
@@ -449,7 +449,7 @@ function sub_education_post_type() {
 			), /* end of arrays */
 			'description' => __( 'This is a sub education', 'naiau' ), /* Custom Type Description */
 			'public' => true,
-			'show_in_nav_menus' => false,
+			'show_in_nav_menus' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => true,
 			'show_ui' => true,

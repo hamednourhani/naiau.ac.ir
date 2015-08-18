@@ -41,7 +41,7 @@
 														<article class="hentry">
 															<div class="featured-image single-image">
 																<a href="<?php the_permalink(); ?>">
-																	<?php echo the_post_thumbnail('medium');?>
+																	<?php get_template_part('library/thumbnail','maker'); ?>
 																</a>
 															</div>
 															<div class="post-title">

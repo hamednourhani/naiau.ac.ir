@@ -40,7 +40,7 @@
 														<article class="hentry">
 															<div class="featured-image single-image">
 																<a href="<?php the_permalink(); ?>">
-																	<?php echo the_post_thumbnail('medium');?>
+																	<?php get_template_part('library/thumbnail','maker'); ?>
 																</a>
 															</div>
 															<div class="post-title">
@@ -49,7 +49,7 @@
 																</a>
 															</div>
 															<div class="post-content">
-																<?php the_content(); ?>
+																<?php the_excerpt(); ?>
 																<?php get_template_part('library/post','meta'); ?>
 															</div>
 														</article>
@@ -58,7 +58,7 @@
 												
 											</div>
 											<div class="page-sidebar">
-												<?php get_sidebar(); ?>
+												<?php get_sidebar('notify'); ?>
 											</div>
 										
 									</section>

@@ -62,7 +62,7 @@ $args = array (
 	        $( '#news-slider' ).sliderPro({
 	            width: 840,
 	            height: 440,
-	            orientation: 'horizental',
+	            orientation: 'vertical',
 	            loop: false,
 	            arrows: true,
 	            buttons: false,
