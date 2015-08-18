@@ -82,7 +82,11 @@
 		color : $grey1;
 	}
 	.logo-wrapper{
-		@include span-columns(3,12);
+		text-align : center;
+		@include span-columns(12,12);
+		@include at-breakpoint($medium) {
+		    @include span-columns(3,12);
+		}
 		padding : {
 			top : 23px;
 			bottom : 8px;
@@ -93,9 +97,14 @@
 	}
 
 	nav.main-menu{
+		
 		position : relative;
 		.current-time{
 			// float : left;
+			display: none;
+			@include at-breakpoint($medium) {
+				display:  inline-block;
+			}
 			color : $grey2;
 			position : absolute;
 			top : 10px;
@@ -110,7 +119,11 @@
 	ul.main-nav{
 		font-size : 90%;
 		font-weight : 300;
-		@include span-columns(9 omega,12);
+		display : none;
+		@include at-breakpoint($medium){
+			@include span-columns(9 omega,12);
+			display : inline-block;
+		}
 		margin-top : 12px;
 		li{
 			

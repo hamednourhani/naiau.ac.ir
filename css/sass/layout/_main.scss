@@ -207,6 +207,10 @@ body{
 		margin-bottom : 15px;
 		color : $navy1;
 	}
+	i:before{
+		padding : 5px;
+		vertical-align: middle;
+	}
 	
 }
 .gallery-slideshow-wrapper{
@@ -240,7 +244,27 @@ body{
 			}
 			padding: 5px 6px 3px;
 			li{
+				position : relative;
 				width : 100%;
+				& a.related-link,
+				& a.sub-page-link,
+				& a.sub-edu-link{
+					@include single-transition(all ,.2s, ease-out);
+					&:before{
+						@extend .fa;
+						content : "\f0c1";
+						vertical-align: middle;
+						position : absolute;
+						right : 14px;
+						top : 12px;
+					}
+				}
+				& a.sub-page-link:before{
+					content : "\f15c";
+				}
+				& a.sub-edu-link:before{
+					content : "\f19d";
+				}
 
 			}
 			li a,li span.related-header,
@@ -258,15 +282,6 @@ body{
 				}
 			}
 			li span.sub-header,li span.related-header{
-// 				background-color : $skyblue2;
-// 				background: #5a6b9f; /* Old browsers */
-// background: -moz-linear-gradient(top, #5a6b9f 21%, #253b80 86%); /* FF3.6+ */
-// background: -webkit-gradient(linear, left top, left bottom, color-stop(21%,#5a6b9f), color-stop(86%,#253b80)); /* Chrome,Safari4+ */
-// background: -webkit-linear-gradient(top, #5a6b9f 21%,#253b80 86%); Chrome10+,Safari5.1+
-// background: -o-linear-gradient(top, #5a6b9f 21%,#253b80 86%); /* Opera 11.10+ */
-// background: -ms-linear-gradient(top, #5a6b9f 21%,#253b80 86%); /* IE10+ */
-// background: linear-gradient(to bottom, #5a6b9f 21%,#253b80 86%); /* W3C */
-// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a6b9f', endColorstr='#253b80',GradientType=0 );
 				@extend .ui-state-active;
 				color : $white;
 

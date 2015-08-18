@@ -74,7 +74,10 @@
 
     }
     .thumb-wrapper{
-      height : 100px;
+      height : 40px;
+      @include at-breakpoint($medium){
+        height : 100px;
+      }
 
       text-align : center;
       position : relative;
@@ -103,7 +106,7 @@
       height : 10px;
       border-bottom : 1px solid $navy2;
       margin : auto;
-      margin-bottom : -20px;
+      margin-bottom : -23px;
       
     }
     .related-links{

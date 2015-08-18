@@ -55,7 +55,7 @@
 													} elseif($sub_id != '1' && $sub_pages[0][0] == $sub_id){
 														$sub_class="current";
 													}
-													echo '<li><a class="'.$sub_class.'" href="'.$sub_page_url.'</a></li>';
+													echo '<li><a class="sub-edu-link  '.$sub_class.'" href="'.$sub_page_url.'</a></li>';
 												}?>
 												
 											</ul>

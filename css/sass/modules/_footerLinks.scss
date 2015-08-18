@@ -3,8 +3,23 @@
 	overflow : hidden;
 	padding :0;
 	margin:0;
+	font-size : 90%;
 	.ilink-wrap{
-		width : 26%;
+		width : 100%;
+		@include at-breakpoint($medium){
+			width : 26%;
+			@include transform2d(skewX(-30deg));
+			&:first-child{
+			margin-right : -2%;
+			}
+			&:last-child{
+				margin-left : -2%;
+			}
+			a{
+				@include transform2d(skewX(30deg));
+			}
+
+		}
 		margin:0;
 		
 		display : inline-block;
@@ -12,14 +27,9 @@
 		text-align : center;
 		background-color: darken($navy1,5%);
 		
-		@include transform2d(skewX(-30deg));
+		
 		// @include single-transition(all ,0.2s,ease-out);
-		&:first-child{
-			margin-right : -2%;
-		}
-		&:last-child{
-			margin-left : -2%;
-		}
+		
 		&:hover{
 			opacity : 0.8;
 		}
@@ -37,7 +47,6 @@
 			}
 		}
 		a{
-			@include transform2d(skewX(30deg));
 			color : $white;
 			display : inline-block;
 			padding : 20px 10px;
