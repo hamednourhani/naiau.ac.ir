@@ -279,7 +279,7 @@ function naiau_register_section_maker_metabox() {
 	$cmb_demo = new_cmb2_box( array(
 		'id'            => $prefix . 'section_maker_metabox',
 		'title'         => __( 'Section Selection', 'naiau' ),
-		'object_types'  => array( 'post','page','gallery','notify','news' ), // Post type
+		'object_types'  => array( 'post','page','news' ), // Post type
 		// 'show_on_cb' => 'naiau_show_if_front_page', // function should return a bool value
 		// 'context'    => 'normal',
 		// 'priority'   => 'high',
