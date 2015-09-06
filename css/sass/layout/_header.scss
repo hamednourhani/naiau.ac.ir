@@ -1,19 +1,32 @@
 /* header style */
+
+
 .site-header,.menu-bar,.top-bar{
 	width : 100%;
 }
 .top-bar{
 	background-color: $skyblue1;
-	min-height : 36px;
+	min-height : 30px;
+	max-height : 30px;
 	a{
 		color : $white;
 	}
+	.top-bar-menu{
+		
+	}
 	ul.top-nav{
-		font-size : 90%;
+		display : none;
+		@include at-breakpoint($medium) {
+			display : inline-block;
+			overflow: hidden;
+			max-height : 30px;		  
+		}	  
+		
+		font-size : 80%;
 		font-weight : 300;
 		@include span-columns(9,12);
 		margin : 0;
-		line-height : 38px;
+		line-height : 30px;
 		li{
 			display: inline-block;
 			
@@ -30,9 +43,13 @@
 		}
 	}
 	.search-area{
-		@include span-columns(3 omega ,12);
+		width : 100%;
+		@include at-breakpoint($medium) {
+		  @include span-columns(3 omega ,12);
+		}
+		
 		position: relative;
-		#searchsubmit,label.screen-reader-text{
+		label.screen-reader-text{
 			display : none;
 		}	
 		
@@ -40,7 +57,7 @@
 			float : left;
 			outline : none;
 			border : none;
-			height :36px;
+			height :30px;
 			padding:{
 				left : 40px;
 				right : 20px
@@ -62,17 +79,28 @@
     				color:$white;
 			}
 		}
-		&:before{
-			@extend .fa;
-		    content: "\F002";
-    		font-size: 22px;
-    		position: absolute;
-    		left: 10px;
-    		top: 5px;
-    		padding : 2px;
-    		padding-right : 9px;
-    		color : $white;
-    		border-right : 1px solid $skyblue2;
+		#searchsubmit{
+			width : 0px;
+			height : 0px;
+			background : none;
+			content : "";
+			box-shadow  : none;
+			font-size : 0px;
+			&::before{
+				@extend .fa;
+			    content: "\F002";
+	    		font-size: 16px;
+	    		position: absolute;
+	    		left: 10px;
+	    		top: 5px;
+	    		padding : 2px;
+	    		padding-right : 9px;
+	    		color : $white;
+	    		border-right : 1px solid $skyblue2;
+	    		&:hover{
+	    			cursor : pointer;
+	    		}
+			}
 		}
 	}
 }
@@ -81,6 +109,7 @@
 	a{
 		color : $grey1;
 	}
+
 	.logo-wrapper{
 		text-align : center;
 		@include span-columns(12,12);
@@ -93,6 +122,23 @@
 		}
 		img{
 			max-height : 70px;
+		}
+		a.menu-toggler{
+			display : inline-block;
+			float : right ;
+			margin : 10px;
+			padding : 5px 10px 3px;
+			border : 1px solid $navy2;
+			@include at-breakpoint($medium){
+				display : none;
+			}
+			i.fa-navicon{
+				
+				font-size : 140%;
+			}
+			&:hover{
+				cursor : pointer;
+			}
 		}
 	}
 
@@ -115,6 +161,7 @@
 			}
 		}
 	}
+	
 	
 	ul.main-nav{
 		font-size : 90%;
@@ -186,5 +233,86 @@
 
 		
 	}
+	.responsive-menu{
+		display : block;
+		@include single-transition(all , 0.6s , ease-in-out);
+		@include at-breakpoint($medium) {
+		  	display: none;
+		}
+		z-index : 9999;
+		position : fixed;
+		right : -250px;
+		top : 0;
+		overflow: auto;
+		min-height :800px;
+		max-height : 100%;
+		width : 250px;
+		max-width : 100%;
+		background-color : $navy1;
+		padding : 10px;
+		color : $white
+		a{
+			color : $white;
+		}
+		&.show-menu{
+			transform : translateX(-250px);
+		}
+		a.close-responsive{
+			color : $white;
+			padding : 2px 5px 0px;
+			border : 1px solid $white;
+			
+			font-size : 110%;
+			float : left;
+			&:hover{
+				cursor: pointer;
+			}
+		}
+		ul.responsive-nav{
+			margin-top : 30px;
+			padding : 20px;
+			font-size : 90%;
+			
+			&>li{
+				padding-bottom : 10px;
+				margin-bottom : 10px;
+				border-bottom : 1px solid $skyblue2;
+			}
+			
+			li{
+				
+				a{
+					color : $white;
+					line-height: 130%;
+					
+					&:hover{
+						color : $skyblue2;
+					}
+				}
+			}
+			ul.sub-menu{
+				margin-right : 30px;
+				a{
+					position : relative;
+					color : $grey2;
+					&:before{
+						@extend .fa;
+						content : "\f177";
+						position : absolute;
+						right : -20px;
+						top : 6px;
+						color : $skyblue1;
+
+					}
+					&:hover{
+						color : $skyblue2;
+					}
+				}
+			}
+
+
+		}
+	}
+
 
 }

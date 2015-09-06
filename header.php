@@ -45,6 +45,7 @@
 		<div class="body-wrapper">
 		<!-- <img src="images/introBack.jpg" class="back-wall"/> -->
 			
+
 			<header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
 				<div id="top-bar" class="top-bar cf">
@@ -76,7 +77,13 @@
 
 				<div id="menu-bar" class="menu-bar cf">
 					<section class="layout">
+												<!-- logo wrapper -->
 						<div class="logo-wrapper">
+							<!-- responsive menu toggler -->
+							<a id="menu-toggler" class="menu-toggler" >
+								<i class="fa fa-navicon"></i>
+							</a>
+
 							<a href="<?php echo get_bloginfo('url'); ?>">
 								<img src="<?php echo get_template_directory_uri();?>/images/nazarabad-logo.png" />
 							</a>
@@ -109,6 +116,25 @@
 							)); ?>
 
 						</nav>
+
+						<div id="responsive-menu" class="responsive-menu">
+							<a id="close-responsive" class="close-responsive">
+								<i class="fa fa-close"></i>
+							</a>
+							<?php wp_nav_menu(array(
+				    					         'container' => false,                           // remove nav container
+				    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+				    					         'menu' => __( 'The Main Menu', 'naiau' ),  // nav name
+				    					         'menu_class' => 'nav responsive-nav cf',               // adding custom nav class
+				    					         'theme_location' => 'responsive-nav',                 // where it's located in the theme
+				    					         'before' => '',                                 // before the menu
+				        			               'after' => '',                                  // after the menu
+				        			               'link_before' => '',                            // before each link
+				        			               'link_after' => '',                             // after each link
+				        			               'depth' => 3,                                   // limit the depth of the nav
+				    					         'fallback_cb' => ''                             // fallback function (if there is one)
+							)); ?>
+						</div>
 						
 					</section>
 				</div>
