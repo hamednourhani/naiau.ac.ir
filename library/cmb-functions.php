@@ -135,9 +135,9 @@ function naiau_is_sub_page_metabox() {
 		'options'	   => array(
 			'mother'	=> __('Mother Page','naiau'),
 			'sub'		=> __('Sub Page','naiau'),
-			'none'		=> __('None of them','naiau'),
+			
 			),
-		'default' => 'none',
+		'default' => 'sub',
 	) );
 
 	

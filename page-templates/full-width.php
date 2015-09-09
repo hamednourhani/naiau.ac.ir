@@ -2,41 +2,100 @@
 /**
  * Template Name: Full Width Page
  *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * 
  */
 
-get_header(); ?>
+/*
+ * CUSTOM POST TYPE TEMPLATE
+ *
+ * This is the custom post type post template. If you edit the post type name, you've got
+ * to change the name of this template to reflect that name change.
+ *
+ * For Example, if your custom post type is "register_post_type( 'bookmarks')",
+ * then your single template should be single-bookmarks.php
+ *
+ * Be aware that you should rename 'custom_cat' and 'custom_tag' to the appropiate custom
+ * category and taxonomy slugs, or this template will not finish to load properly.
+ *
+ *
+ * For more info: http://codex.wordpress.org/Post_Type_Templates
+ */
 
-<div id="main-content" class="main-content">
+ get_header(); ?>
 
-<?php
-	if ( is_front_page() && twentyfourteen_has_featured_posts() ) {
-		// Include the featured content template.
-		get_template_part( 'featured-content' );
-	}
-?>
+			<main class="site-main">
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-			<?php
-				// Start the Loop.
-				while ( have_posts() ) : the_post();
+				
+					
+					<?php 
+					
+				$hide_content = get_post_meta(get_the_ID(),'_naiau_content');
+				$show_comments = get_post_meta(get_the_ID(),'_naiau_comments');
+				$hide_sidebar = get_post_meta(get_the_ID(),'_naiau_sidebar');
 
-					// Include the page content template.
-					get_template_part( 'content', 'page' );
+				
+				?>
 
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) {
-						comments_template();
-					}
-				endwhile;
-			?>
-		</div><!-- #content -->
-	</div><!-- #primary -->
-</div><!-- #main-content -->
+				
+				<?php get_template_part('library/slider','area'); ?>
 
-<?php
-get_sidebar();
-get_footer();
+				
+				<?php if($hide_content !=true && have_posts()){ ?>
+					 <div class="main-area">
+						<?php while(have_posts()) { the_post(); ?>
+							<div class="content-area">
+							
+								<div class="single-page-title">
+									<section class="layout">
+										<h1><?php the_title(); ?></h1>
+									</section>
+								</div>
+								<div class="page-main">
+									<section class="layout">
+
+										<?php if($hide_sidebar != true){?>
+										
+											<div class="page-content with-sidebar">	
+												<div class="featured-image">
+													<?php echo the_post_thumbnail('slider');?>
+												</div>
+												<?php the_content(); ?>
+												<?php if($show_comments == true){?>
+													<div class="comment-area">
+														<?php comments_template(); ?>	
+													</div>
+												<?php } ?>
+											</div>
+											<div class="page-sidebar">
+												<?php get_sidebar(); ?>
+											</div>
+										<?php }else{ ?>
+											<div class="page-content">		
+												<div class="featured-image">
+													<?php echo the_post_thumbnail('slider');?>
+												</div>
+												<?php the_content(); ?> 
+												<?php if($show_comments == true){?>
+													<div class="comment-area">
+														<?php comments_template(); ?>	
+													</div>
+												<?php } ?>
+											</div>
+										<?php } ?>
+									</section>
+								</div>
+							</div>
+						<?php } ?>
+					</div>
+				<?php } ?>
+				
+
+				<?php get_template_part('library/notify','tabs'); ?>
+				<?php get_template_part('library/footer','links'); ?>
+				<?php get_template_part('library/related','links'); ?>
+
+			
+		</main>
+
+				
+<?php get_footer(); ?>

@@ -1,40 +1,38 @@
-<?php
-/*
- * CUSTOM POST TYPE TEMPLATE
- *
- * This is the custom post type post template. If you edit the post type name, you've got
- * to change the name of this template to reflect that name change.
- *
- * For Example, if your custom post type is "register_post_type( 'bookmarks')",
- * then your single template should be single-bookmarks.php
- *
- * Be aware that you should rename 'custom_cat' and 'custom_tag' to the appropiate custom
- * category and taxonomy slugs, or this template will not finish to load properly.
- *
- * For more info: http://codex.wordpress.org/Post_Type_Templates
-*/
-?>
-
 <?php get_header(); ?>
 
 			<main class="site-main">
 
 				
-					
-					<?php 
-					
-				$hide_content = get_post_meta(get_the_ID(),'_naiau_content');
-				$show_comments = get_post_meta(get_the_ID(),'_naiau_comments');
-				$hide_sidebar = get_post_meta(get_the_ID(),'_naiau_sidebar');
+				<?php 
+						var_dump(get_post_ancestors( $post->ID ));
+						$sub_mother = get_post_meta(get_the_ID(),'_naiau_sub_mother_page');
+						
+						$current_page_id = $post->ID;
+						$parent_id = $post->ID;
 
-				
+						// $children = get_pages('child_of='.get_the_ID());
+						if($sub_mother[0] == 'mother') { 
+							$sub_pages = get_post_meta($current_page_id,'_naiau_group_sub_pages');
+							$related_pages = get_post_meta($current_page_id,'_naiau_group_related_pages');
+						}elseif($post->post_parent){
+							$sub_pages = get_post_meta($post->post_parent,'_naiau_group_sub_pages');
+							$related_pages = get_post_meta($post->post_parent,'_naiau_group_related_pages');
+							$parent_id = $post->post_parent;
+						}else{
+							$sub_pages = array();
+							$related_pages = array();
+						}
+						var_dump(get_the_title($parent_id));
+						
+
+						
+												
 				?>
+				
+				
 
 				
-				<?php get_template_part('library/slider','area'); ?>
-
-				
-				<?php if($hide_content !=true && have_posts()){ ?>
+				<?php if(have_posts()){ ?>
 					 <div class="main-area">
 						<?php while(have_posts()) { the_post(); ?>
 							<div class="content-area">
@@ -44,38 +42,45 @@
 										<h1><?php the_title(); ?></h1>
 									</section>
 								</div>
-								<div class="page-main">
+								<div class="page-main has-sub-page">
 									<section class="layout">
+										<div class="page-sidebar">
+											<ul class="sub-widget">
+												<li><span class="sub-header"><?php get_the_title($parent_id);?></span></li>
+												
+												<?php foreach ($sub_pages[0] as $sub_page) {
+													
+													$sub_class = "";
+													
+													if($sub_page['sub_id'] == $current_page_id){
+														$sub_class="current";
+													} 
+													echo '<li><a class="sub-page-link '.$sub_class.'" href="'.get_the_permalink($sub_page['sub_id']).'">'.$sub_page['list_name'].'</a></li>';
+												}?>
+												
+											</ul>
+											<?php if(!empty($related_pages[0])){ ?>
+												<ul class="sub-widget">
+													<li><span class="related-header"><?php echo __('related links','naiau');?></span></li>
+													<?php foreach ($related_pages[0] as $related_page) {
+													
+													$sub_class = "";
+													
+													if($related_page['sub_id'] == $current_page_id){
+														$sub_class="current";
+													} 
+													echo '<li><a class="related-link '.$sub_class.'" href="'.get_the_permalink($related_page['sub_id']).'">'.$related_page['list_name'].'</a></li>';
+												}?>
+													
+												</ul>
 
-										<?php if($hide_sidebar != true){?>
+											<?php }?>
+										</div>
+
+										<div class="page-content with-sidebar">	
+											<?php the_content() ?>
+										</div>
 										
-											<div class="page-content with-sidebar">	
-												<div class="featured-image">
-													<?php echo the_post_thumbnail('slider');?>
-												</div>
-												<?php the_content(); ?>
-												<?php if($show_comments == true){?>
-													<div class="comment-area">
-														<?php comments_template(); ?>	
-													</div>
-												<?php } ?>
-											</div>
-											<div class="page-sidebar">
-												<?php get_sidebar(); ?>
-											</div>
-										<?php }else{ ?>
-											<div class="page-content">		
-												<div class="featured-image">
-													<?php echo the_post_thumbnail('slider');?>
-												</div>
-												<?php the_content(); ?> 
-												<?php if($show_comments == true){?>
-													<div class="comment-area">
-														<?php comments_template(); ?>	
-													</div>
-												<?php } ?>
-											</div>
-										<?php } ?>
 									</section>
 								</div>
 							</div>
@@ -84,9 +89,9 @@
 				<?php } ?>
 				
 
-				<?php get_template_part('library/notify','tabs'); ?>
+				
 				<?php get_template_part('library/footer','links'); ?>
-				<?php get_template_part('library/related','links'); ?>
+				
 
 			
 		</main>
