@@ -96,6 +96,216 @@ function naiau_before_row_if_2( $field_args, $field ) {
 }
 
 
+
+/******************************************************************/
+/*------------Mother Page and Sub page Maker----------------------*/
+/******************************************************************/
+
+ add_action( 'cmb2_init', 'naiau_is_sub_page_metabox' );
+/**
+ * Hook in and add a demo metabox. Can only happen on the 'cmb2_init' hook.
+ */
+function naiau_is_sub_page_metabox() {
+
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_naiau_';
+
+	/**
+	 * Sample metabox to demonstrate each field type included
+	 */
+	$cmb_demo = new_cmb2_box( array(
+		'id'            => $prefix . 'sub_mother',
+		'title'         => __( 'Page Kind', 'naiau' ),
+		'object_types'  => array( 'page' ), // Post type
+		// 'show_on_cb' => 'naiau_show_if_front_page', // function should return a bool value
+		// 'context'    => 'normal',
+		// 'priority'   => 'high',
+		// 'show_names' => true, // Show field names on the left
+		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+		// 'closed'     => true, // true to keep the metabox closed by default
+	) );
+
+
+	
+	$cmb_demo->add_field( array(
+		'name'         => __( 'Mother or Sub', 'naiau' ),
+		'desc'         => __( 'is this page a mother or a sub page?', 'naiau' ),
+		'id'           => $prefix . 'sub_mother_page',
+		'type'         => 'radio_inline',
+		'options'	   => array(
+			'mother'	=> __('Mother Page','naiau'),
+			'sub'		=> __('Sub Page','naiau'),
+			'none'		=> __('None of them','naiau'),
+			),
+		'default' => 'none',
+	) );
+
+	
+
+}
+
+
+add_action( 'cmb2_init', 'naiau_select_subpage_metabox' );
+function naiau_select_subpage_metabox() {
+
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_naiau_group_';
+	
+	$cmb_group = new_cmb2_box( array(
+		'id'           => $prefix . 'sub',
+		'title'        => __( 'Sub Pages Layout', 'naiau' ),
+		'object_types' => array( 'page'),
+	) );
+
+	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
+	$group_field_id = $cmb_group->add_field( array(
+		'id'          => $prefix . 'sub_pages',
+		'type'        => 'group',
+		'description' => __( 'Layout sub pages', 'naiau' ),
+		'options'     => array(
+			'group_title'   => __( 'sub page {#}', 'naiau' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add sub page', 'naiau' ),
+			'remove_button' => __( 'Remove sub page', 'naiau' ),
+			'sortable'      => true, // beta
+		),
+	) );
+
+	
+	
+	
+ 	
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'List Name', 'naiau' ),
+		'desc'    => __( 'The name of sub page in List ', 'naiau' ),
+		'id'      => 'list_name',
+		'type'    => 'text',
+		
+			
+	) );
+
+	$post_id = ($_GET['post'])?($_GET['post']):"";
+
+	
+	$args = array(
+	    'child_of'     => $post_id,
+	    'sort_order'   => 'ASC',
+	    'sort_column'  => 'post_title',
+	    'post_type' => 'page',
+		'post_status' => 'publish',
+		'hierarchical' => 1,
+		'parent' => $post_id,
+	);
+
+	 $sub_pages_list = get_pages($args);
+
+	 $sub_array = array();
+	 $sub_array['none'] = '--';
+	foreach ( $sub_pages_list as $page ) : setup_postdata( $page );
+			$sub_array[$page->ID] = $page->post_title;
+ 	endforeach; 
+
+
+
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Sub Page', 'naiau' ),
+		'desc'    => __( 'Select The sub page', 'naiau' ),
+		'id'      => 'sub_id',
+		'type'    => 'select',
+		'options' =>  $sub_array,
+		'default' => 'none',
+			
+	) );
+
+
+
+	
+	
+	
+	
+}
+
+add_action( 'cmb2_init', 'naiau_select_related_pages_metabox' );
+function naiau_select_related_pages_metabox() {
+
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_naiau_group_';
+	
+	$cmb_group = new_cmb2_box( array(
+		'id'           => $prefix . 'related',
+		'title'        => __( 'Related Pages Layout', 'naiau' ),
+		'object_types' => array( 'page'),
+	) );
+
+	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
+	$group_field_id = $cmb_group->add_field( array(
+		'id'          => $prefix . 'related_pages',
+		'type'        => 'group',
+		'description' => __( 'Layout Related pages', 'naiau' ),
+		'options'     => array(
+			'group_title'   => __( 'Related page {#}', 'naiau' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Related page', 'naiau' ),
+			'remove_button' => __( 'Remove Related page', 'naiau' ),
+			'sortable'      => true, // beta
+		),
+	) );
+
+	
+	
+	
+ 	
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'List Name', 'naiau' ),
+		'desc'    => __( 'The name of Related page in List ', 'naiau' ),
+		'id'      => 'list_name',
+		'type'    => 'text',
+		
+			
+	) );
+
+	$post_id = ($_GET['post'])?($_GET['post']):"";
+
+	
+	$args = array(
+	    'child_of'     => $post_id,
+	    'sort_order'   => 'ASC',
+	    'sort_column'  => 'post_title',
+	    'post_type' => 'page',
+		'post_status' => 'publish',
+		'hierarchical' => 1,
+		'parent' => $post_id,
+	);
+
+	 $sub_pages_list = get_pages($args);
+
+	 $sub_array = array();
+	 $sub_array['none'] = '--';
+	foreach ( $sub_pages_list as $page ) : setup_postdata( $page );
+			$sub_array[$page->ID] = $page->post_title;
+ 	endforeach; 
+
+
+
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Related Page', 'naiau' ),
+		'desc'    => __( 'Select The Related page', 'naiau' ),
+		'id'      => 'sub_id',
+		'type'    => 'select',
+		'options' =>  $sub_array,
+		'default' => 'none',
+			
+	) );
+
+
+
+	
+	
+	
+	
+}
 /******************************************************************/
 /*--------------------Link Page-----------------------------------*/
 /******************************************************************/
@@ -612,3 +822,7 @@ function naiau_register_related_widget_metabox() {
 	
 	
 }
+
+
+
+
