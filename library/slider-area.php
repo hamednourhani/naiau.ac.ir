@@ -1,18 +1,24 @@
 <?php
-$args = array (
-		'post_type'              => array( 'news' ),
-		'posts_per_page'         => '15',
-		// 'category'         => 'news_cat',
-		'news_cat'    => 'featured',
-	);
-// The Query
-	$news_list = get_posts( $args );
-	$slider_show = get_post_meta(get_the_ID(),'_naiau_slider_show');
+
+$slider_show = get_post_meta(get_the_ID(),'_naiau_slider_show');
 	
- ?>
+if($slider_show == true){
+	$news_cat = get_post_meta(get_the_ID(),'_naiau_news_cat');
+
+	$args = array (
+			'post_type'              => array( 'news' ),
+			'posts_per_page'         => '15',
+			// 'category'         => 'news_cat',
+			'news_cat'    => 'featured',
+		);
+
+	$news_list = get_posts( $args );
+
+if(!empty($news_list)){ ?>
+
 
 <div class="slider-wrap">
-	<?php if(!empty($news_list) && $slider_show == true){ ?>
+	
 		<div id="news-slider" class="slider-pro">
 		
 			<div class="sp-slides">
@@ -85,9 +91,10 @@ $args = array (
 	    });
 	    
 	    </script>
-	 <?php 
-	}
-	wp_reset_postdata();
-?>
- </div>
+</div>	 
+<?php wp_reset_postdata();
+
+} ?>
+<?php } ?>
+ 
 

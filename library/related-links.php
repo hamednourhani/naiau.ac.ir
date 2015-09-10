@@ -1,17 +1,23 @@
 <?php
-	$args = array (
-    'post_type'              => array( 'link' ),
-    'posts_per_page'         => '20',
-        // 'category'         => 'news_cat',
-    'link_cat'    => 'featured',
-  );
-
-	$related_links = get_posts($args);
+	
 	$show_related = get_post_meta(get_the_ID() , '_naiau_related_links');
 	
 
 	// _naiau_link_url
-if($show_related == true && !empty($related_links)){
+if($show_related == true){
+
+	
+
+	$args = array (
+	    'post_type'              => array( 'link' ),
+	    'posts_per_page'         => '20',
+	        // 'category'         => 'news_cat',
+	    'link_cat'    => $links_cat,
+	  );
+
+	$related_links = get_posts($args);
+	
+	if(!empty($related_links)){
 ?>
 
 <div class="important-links">
@@ -65,5 +71,8 @@ if($show_related == true && !empty($related_links)){
 		 
 		});
 </script>
+<?php wp_reset_postdata();
+
+} ?>
 
 <?php } ?>

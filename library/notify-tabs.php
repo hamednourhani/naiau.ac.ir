@@ -2,28 +2,19 @@
 <!-- $tour_packages = get_post_meta( get_the_ID(), '_naiau_group_tour_package', true ); -->
 <?php 
 
-  // $args = array (
-  //   'post_type'              => array( 'tab' ),
-  //   'posts_per_page'         => '10',
-  //   'orderby'          => 'date',
-  //   'order'            => 'ASC',
-  //   // 'category'         => 'news_cat',
-  //   'tab_cat'    => 'featured',
-  // );
-  // $tab = get_posts($args);
-  
+    
   $show_tabs = get_post_meta(get_the_ID(),'_naiau_show_tabs');
+  
+ 
+if($show_tabs == true){ 
+
   $tab_id= get_post_meta(get_the_ID(),'_naiau_tab_id');
-   //var_dump($tab_id);
-  // var_dump(get_post_meta('1867','_naiau_group_tab',true));
-  
- $tabs = get_post_meta($tab_id[0],'_naiau_group_tab');
- $tabs = $tabs[0];
- //var_dump($tabs);
+  $tabs = get_post_meta($tab_id[0],'_naiau_group_tab');
+  $tabs = $tabs[0];
 
-  
+  if( !empty($tabs)){
+?>
 
-if( !empty($tabs) && $show_tabs == true){ ?>
 <div class="notify-tabs-wrap">
         <section class="layout">
     <div id="tabs">
@@ -68,4 +59,7 @@ if( !empty($tabs) && $show_tabs == true){ ?>
     </script>
   </section>
 </div>
+<?php wp_reset_postdata();
+
+} ?>
 <?php } ?>

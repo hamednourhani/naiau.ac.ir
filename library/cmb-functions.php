@@ -101,48 +101,48 @@ function naiau_before_row_if_2( $field_args, $field ) {
 /*------------Mother Page and Sub page Maker----------------------*/
 /******************************************************************/
 
- add_action( 'cmb2_init', 'naiau_is_sub_page_metabox' );
-/**
- * Hook in and add a demo metabox. Can only happen on the 'cmb2_init' hook.
- */
-function naiau_is_sub_page_metabox() {
+//  add_action( 'cmb2_init', 'naiau_is_sub_page_metabox' );
+// /**
+//  * Hook in and add a demo metabox. Can only happen on the 'cmb2_init' hook.
+//  */
+// function naiau_is_sub_page_metabox() {
 
-	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_naiau_';
+// 	// Start with an underscore to hide fields from custom fields list
+// 	$prefix = '_naiau_';
 
-	/**
-	 * Sample metabox to demonstrate each field type included
-	 */
-	$cmb_demo = new_cmb2_box( array(
-		'id'            => $prefix . 'sub_mother',
-		'title'         => __( 'Page Kind', 'naiau' ),
-		'object_types'  => array( 'page' ), // Post type
-		// 'show_on_cb' => 'naiau_show_if_front_page', // function should return a bool value
-		// 'context'    => 'normal',
-		// 'priority'   => 'high',
-		// 'show_names' => true, // Show field names on the left
-		// 'cmb_styles' => false, // false to disable the CMB stylesheet
-		// 'closed'     => true, // true to keep the metabox closed by default
-	) );
+// 	/**
+// 	 * Sample metabox to demonstrate each field type included
+// 	 */
+// 	$cmb_demo = new_cmb2_box( array(
+// 		'id'            => $prefix . 'sub_mother',
+// 		'title'         => __( 'Page Kind', 'naiau' ),
+// 		'object_types'  => array( 'page' ), // Post type
+// 		// 'show_on_cb' => 'naiau_show_if_front_page', // function should return a bool value
+// 		// 'context'    => 'normal',
+// 		// 'priority'   => 'high',
+// 		// 'show_names' => true, // Show field names on the left
+// 		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+// 		// 'closed'     => true, // true to keep the metabox closed by default
+// 	) );
 
 
 	
-	$cmb_demo->add_field( array(
-		'name'         => __( 'Mother or Sub', 'naiau' ),
-		'desc'         => __( 'is this page a mother or a sub page?', 'naiau' ),
-		'id'           => $prefix . 'sub_mother_page',
-		'type'         => 'radio_inline',
-		'options'	   => array(
-			'mother'	=> __('Mother Page','naiau'),
-			'sub'		=> __('Sub Page','naiau'),
+// 	$cmb_demo->add_field( array(
+// 		'name'         => __( 'Mother or Sub', 'naiau' ),
+// 		'desc'         => __( 'is this page a mother or a sub page?', 'naiau' ),
+// 		'id'           => $prefix . 'sub_mother_page',
+// 		'type'         => 'radio_inline',
+// 		'options'	   => array(
+// 			'mother'	=> __('Mother Page','naiau'),
+// 			'sub'		=> __('Sub Page','naiau'),
 			
-			),
-		'default' => 'sub',
-	) );
+// 			),
+// 		'default' => 'sub',
+// 	) );
 
 	
 
-}
+// }
 
 
 add_action( 'cmb2_init', 'naiau_select_subpage_metabox' );
@@ -184,8 +184,10 @@ function naiau_select_subpage_metabox() {
 			
 	) );
 
-	$post_id = ($_GET['post'])?($_GET['post']):"";
-
+	
+	
+	
+		$post_id = ($_GET['post'])?($_GET['post']):"";
 	
 	$args = array(
 	    'child_of'     => $post_id,
@@ -219,12 +221,9 @@ function naiau_select_subpage_metabox() {
 	) );
 
 
-
-	
-	
-	
 	
 }
+
 
 add_action( 'cmb2_init', 'naiau_select_related_pages_metabox' );
 function naiau_select_related_pages_metabox() {
@@ -265,8 +264,34 @@ function naiau_select_related_pages_metabox() {
 			
 	) );
 
-	$post_id = ($_GET['post'])?($_GET['post']):"";
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Link Type', 'naiau' ),
+		'desc'    => __( 'is this a page or a link ', 'naiau' ),
+		'id'      => 'link_or_page',
+		'type'    => 'radio_inline',
+		'options' => array(
+			'link' =>__('Link','naiau'),
+			'page' => __('page','naiau'),
+			),
+		'default' => 'page'
+					
+	) );
 
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Link url', 'naiau' ),
+		'desc'    => __( 'Enter the link url ', 'naiau' ),
+		'id'      => 'link_url',
+		'type'    => 'text_url',
+		
+					
+	) );
+
+	
+    
+		$post_id = ($_GET['post'])?($_GET['post']):"";
+		
+	// global $post;
+	// $post_id = $post->ID;
 	
 	$args = array(
 	    'child_of'     => $post_id,
@@ -299,13 +324,8 @@ function naiau_select_related_pages_metabox() {
 			
 	) );
 
+	}
 
-
-	
-	
-	
-	
-}
 /******************************************************************/
 /*--------------------Link Page-----------------------------------*/
 /******************************************************************/
@@ -518,6 +538,22 @@ function naiau_register_section_maker_metabox() {
 		// 'repeatable'      => true,
 	) );
 
+	$news_array = array();
+	$news_array['none'] = "---";
+	$news_cats = get_terms('news_cat');
+	if(count($news_cats)>0){
+		foreach($news_cats as $news_cat){
+				$news_array[$news_cat->term_id] = $news_cat->name;
+		}
+	}
+	$cmb_demo->add_field( array(
+		'name'       => __( 'News Category', 'naiau' ),
+		'desc'       => __( 'which news category?', 'naiau' ),
+		'id'         => $prefix . 'news_cat',
+		'type'       => 'select',
+		'options'          => $news_array,
+	));
+
 	
 	$cmb_demo->add_field( array(
 		'name'       => __( 'hide content', 'naiau' ),
@@ -558,6 +594,14 @@ function naiau_register_section_maker_metabox() {
 		// 'on_front'        => false, // Optionally designate a field to wp-admin only
 		// 'repeatable'      => true,
 	) );
+
+	
+
+
+
+
+
+	// var_dump($news_cats);
 	$cmb_demo->add_field( array(
 		'name'       => __( 'hide sidebar', 'naiau' ),
 		'desc'       => __( 'hide page sidebar', 'naiau' ),
@@ -605,8 +649,8 @@ function naiau_register_section_maker_metabox() {
 
 
 	$cmb_demo->add_field( array(
-		'name'       => __( 'show tabs', 'naiau' ),
-		'desc'       => __( 'show tabs or not', 'naiau' ),
+		'name'       => __( 'tabs category', 'naiau' ),
+		'desc'       => __( 'which tab category?', 'naiau' ),
 		'id'         => $prefix . 'tab_id',
 		'type'       => 'select',
 		'options'          => $tab_array,
@@ -629,6 +673,22 @@ function naiau_register_section_maker_metabox() {
 		),
 		
 	) );
+
+	$link_array = array();
+	$link_array['none'] = "---";
+	$link_cats = get_terms('link_cat');
+	if(count($link_cats)>0){
+		foreach($link_cats as $link_cat){
+				$link_array[$link_cat->term_id] = $link_cat->name;
+		}
+	}
+	$cmb_demo->add_field( array(
+		'name'       => __( 'Links Category', 'naiau' ),
+		'desc'       => __( 'which Link category?', 'naiau' ),
+		'id'         => $prefix . 'links_cat',
+		'type'       => 'select',
+		'options'          => $link_array,
+	));
 
 	
 }
