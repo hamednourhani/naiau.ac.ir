@@ -4,112 +4,120 @@
 .site-header,.menu-bar,.top-bar{
 	width : 100%;
 }
-.top-bar{
-	background-color: $skyblue1;
-	min-height : 30px;
-	max-height : 30px;
-	a{
-		color : $white;
-	}
-	.top-bar-menu{
-		
-	}
-	ul.top-nav{
-		display : none;
-		@include at-breakpoint($medium) {
-			display : inline-block;
-			overflow: hidden;
-			max-height : 30px;		  
-		}	  
-		
-		font-size : 80%;
-		font-weight : 300;
-		@include span-columns(9,12);
-		margin : 0;
-		line-height : 30px;
-		li{
-			display: inline-block;
-			
-		}
-		
-		li a{
-			padding : 7px 14px;
-			border-right : 1px solid lighten($skyblue1, 5%);
-			@include single-transition(all , 0.3s , ease-in-out);
-		}
-		li a:hover{
-			background-color : $skyblue2;
 
-		}
-	}
-	.search-area{
-		width : 100%;
-		@include at-breakpoint($medium) {
-		  @include span-columns(3 omega ,12);
-		}
-		
-		position: relative;
-		label.screen-reader-text{
-			display : none;
-		}	
-		
-		input#s{
-			float : left;
-			outline : none;
-			border : none;
-			height :30px;
-			padding:{
-				left : 40px;
-				right : 20px
-			}
-			display : inline-block;
-			width : 70%;
-			background-color: lighten($skyblue1, 5%);
-			color : $white;
-			@include single-transition(all , 0.5s , ease-in-out);
-			&:focus{
-				width : 80%;
-				background-color: lighten($skyblue1, 10%);
-				
-			}
-			&::-webkit-input-placeholder{
-    				color:$white;
-			}
-			&::-moz-placeholder {
-    				color:$white;
-			}
-		}
-		#searchsubmit{
-			width : 0px;
-			height : 0px;
-			background : none;
-			content : "";
-			box-shadow  : none;
-			font-size : 0px;
-			&::before{
-				@extend .fa;
-			    content: "\F002";
-	    		font-size: 16px;
-	    		position: absolute;
-	    		left: 10px;
-	    		top: 5px;
-	    		padding : 2px;
-	    		padding-right : 9px;
-	    		color : $white;
-	    		border-right : 1px solid $skyblue2;
-	    		&:hover{
-	    			cursor : pointer;
-	    		}
-			}
-		}
-	}
-}
 .menu-bar{
 	background-color: $navy1;
 	a{
 		color : $grey1;
 	}
+	.top-bar{
+		background-color: $skyblue1;
+		min-height : 30px;
+		max-height : 30px;
+		a{
+			color : $white;
+		}
+		@include span-columns(12,12);
+		@include at-breakpoint($medium){
+			@include span-columns(9 omega,12);
+			display : inline-block;
+		}
+		ul.top-nav{
+			display : none;
+			@include at-breakpoint($medium) {
+				display : inline-block;
+				overflow: hidden;
+				max-height : 30px;
+				@include span-columns(8,12);	  
+			}	  
+			
+			font-size : 80%;
+			font-weight : 300;
+			
+			margin : 0;
+			line-height : 30px;
+			li{
+				display: inline-block;
+				
+			}
+			
+			li a{
+				padding : 7px 14px;
+				border-right : 1px solid lighten($skyblue1, 5%);
+				@include single-transition(all , 0.3s , ease-in-out);
+				
+			}
+			li a:first-child{
+					border : none;
+			}
+			li a:hover{
+				background-color : $skyblue2;
 
+			}
+		}
+		.search-area{
+			width : 100%;
+			@include at-breakpoint($medium) {
+			  @include span-columns(4 omega ,12);
+			}
+			
+			position: relative;
+			label.screen-reader-text{
+				display : none;
+			}	
+			
+			input#s{
+				float : left;
+				outline : none;
+				border : none;
+				height :30px;
+				padding:{
+					left : 40px;
+					right : 20px
+				}
+				display : inline-block;
+				width : 70%;
+				background-color: darken($grey1, 5%);
+				color : $black;
+				@include single-transition(all , 0.5s , ease-in-out);
+				&:focus{
+					width : 80%;
+					background-color: $white;
+					
+				}
+				&::-webkit-input-placeholder{
+	    				color:$white;
+				}
+				&::-moz-placeholder {
+	    				color:$white;
+				}
+			}
+			#searchsubmit{
+				width : 0px;
+				height : 0px;
+				background : none;
+				content : "";
+				box-shadow  : none;
+				font-size : 0px;
+				&::before{
+					@extend .fa;
+				    content: "\F002";
+		    		font-size: 16px;
+		    		position: absolute;
+		    		display: inline-block;
+		    		left: 10px;
+		    		top: 5px;
+		    		padding : 2px;
+		    		padding-right : 9px;
+		    		color : $black;
+		    		border-right : 1px solid $black;
+		    		&:hover{
+		    			cursor : pointer;
+		    		}
+				}
+			}
+		}
+	}
 	.logo-wrapper{
 		text-align : center;
 		@include span-columns(12,12);
@@ -117,11 +125,11 @@
 		    @include span-columns(3,12);
 		}
 		padding : {
-			top : 23px;
-			bottom : 8px;
+			top : 12px;
+			bottom : 6px;
 		}
 		img{
-			max-height : 70px;
+			max-height : 80px;
 		}
 		a.menu-toggler{
 			display : inline-block;
@@ -151,10 +159,10 @@
 			@include at-breakpoint($medium) {
 				display:  inline-block;
 			}
-			color : $grey2;
+			color : $white;
 			position : absolute;
-			top : 10px;
-			left : 5%;
+			top : 36px;
+			left : 18px;
 			font-size : 90%;
 			.fa-calendar {
 				padding-right : 5px;
@@ -171,18 +179,17 @@
 			@include span-columns(9 omega,12);
 			display : inline-block;
 		}
-		margin-top : 12px;
+		margin-top : 36px;
 		li{
 			
 			position : relative;
 			display: inline-block;
-			max-width : 120px;
 			vertical-align: baseline;
 		}
 		li>a{
 			border-right : 1px solid lighten($navy1, 10%);
-			padding : 20px 15px;
-			border-bottom : 5px solid $navy1;
+			padding : 2px 8px 12px;
+			border-bottom : 3px solid $navy1;
 			display: inherit;
 			@include single-transition(all , 0.3s , ease-in-out);
 		}

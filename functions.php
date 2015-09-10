@@ -504,3 +504,15 @@ function naiau_is_tree($pid) {      // $pid = The ID of the page we're looking f
   else 
                return false;  // we're elsewhere
 };
+
+function naiau_search_form( $form ) {
+  $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
+  <div><input type="text" value="' . get_search_query() . '" placeholder="'.__('Search','naiau').'" name="s" id="s" />
+  <button type="submit" id="searchsubmit" />'.__('Search','naiau').'</button>
+  </div>
+  </form>';
+
+  return $form;
+}
+
+add_filter( 'get_search_form', 'naiau_search_form' );

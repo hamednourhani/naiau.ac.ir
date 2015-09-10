@@ -48,36 +48,38 @@
 
 			<header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
-				<div id="top-bar" class="top-bar cf">
-				<section class="layout">
-					
-					<nav role="navigation" class = "top-bar-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
-						
-						<?php wp_nav_menu(array(
-    					         'container' => false,                           // remove nav container
-    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'Top Menu', 'naiau' ),  // nav name
-    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
-    					         'theme_location' => 'top-menu',                 // where it's located in the theme
-    					         'before' => '',                                 // before the menu
-        			               'after' => '',                                  // after the menu
-        			               'link_before' => '',                            // before each link
-        			               'link_after' => '',                             // after each link
-        			               'depth' => 1,                                   // limit the depth of the nav
-    					         'fallback_cb' => ''                             // fallback function (if there is one)
-						)); ?>
-
-					</nav>
-					<div class="search-area">
-						<!-- <input type="search" class="top-search" placeholder="<?php echo __('Search','naiau'); ?>" /> -->
-						<?php get_search_form( true ); ?>
-					</div>
-				</section>
-				</div>
+				
 
 				<div id="menu-bar" class="menu-bar cf">
 					<section class="layout">
 												<!-- logo wrapper -->
+						<div id="top-bar" class="top-bar cf">
+									
+							<div class="search-area">
+								<!-- <input type="search" class="top-search" placeholder="<?php echo __('Search','naiau'); ?>" /> -->
+								<?php get_search_form( true ); ?>
+							</div>
+							<nav role="navigation" class = "top-bar-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+								
+								<?php wp_nav_menu(array(
+		    					         'container' => false,                           // remove nav container
+		    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+		    					         'menu' => __( 'Top Menu', 'naiau' ),  // nav name
+		    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
+		    					         'theme_location' => 'top-menu',                 // where it's located in the theme
+		    					         'before' => '',                                 // before the menu
+		        			               'after' => '',                                  // after the menu
+		        			               'link_before' => '',                            // before each link
+		        			               'link_after' => '',                             // after each link
+		        			               'depth' => 1,                                   // limit the depth of the nav
+		    					         'fallback_cb' => ''                             // fallback function (if there is one)
+								)); ?>
+
+							</nav>
+							
+						
+						</div>
+						
 						<div class="logo-wrapper">
 							<!-- responsive menu toggler -->
 							<a id="menu-toggler" class="menu-toggler" >
@@ -88,6 +90,7 @@
 								<img src="<?php echo get_template_directory_uri();?>/images/nazarabad-logo.png" />
 							</a>
 						</div>
+
 						<nav role="navigation" class = "main-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
 							<span class="current-time">
 								

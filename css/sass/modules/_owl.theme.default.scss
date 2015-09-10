@@ -76,7 +76,7 @@
     .thumb-wrapper{
       height : 40px;
       @include at-breakpoint($medium){
-        height : 100px;
+        height : 60px;
       }
 
       text-align : center;
@@ -99,6 +99,9 @@
   div.virtual-border{
     position : relative;
     text-align : center;
+
+
+    display :none;
     &:before{
       content : "";
       display: block;
