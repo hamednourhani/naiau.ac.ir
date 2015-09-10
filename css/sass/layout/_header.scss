@@ -17,6 +17,8 @@
 		a{
 			color : $white;
 		}
+		@include border-bottom-radius(7px);
+		@include box-shadow(0px 0px 7px $black);
 		@include span-columns(12,12);
 		@include at-breakpoint($medium){
 			@include span-columns(9 omega,12);
@@ -76,12 +78,23 @@
 					right : 20px
 				}
 				display : inline-block;
-				width : 70%;
+				width :100%;
+				@include border-bottom-left-radius(7px);
+				@include border-bottom-right-radius(7px);
+				@include at-breakpoint($medium) {
+			 		 width : 70%;
+				@include border-bottom-right-radius(0px);
+
+				}
+				
 				background-color: darken($grey1, 5%);
 				color : $black;
 				@include single-transition(all , 0.5s , ease-in-out);
 				&:focus{
-					width : 80%;
+					width :100%;
+					@include at-breakpoint($medium) {
+				 		 width : 80%;
+					}
 					background-color: $white;
 					
 				}
@@ -132,11 +145,17 @@
 			max-height : 80px;
 		}
 		a.menu-toggler{
-			display : inline-block;
-			float : right ;
-			margin : 10px;
+			display : block;
+			margin : 4px auto;
+			width :43px;
+			
 			padding : 5px 10px 3px;
 			border : 1px solid $navy2;
+			@include at-breakpoint($small){
+				display : inline-block;
+				float : right ;
+				margin : 10px;
+			}
 			@include at-breakpoint($medium){
 				display : none;
 			}
@@ -162,7 +181,7 @@
 			color : $white;
 			position : absolute;
 			top : 36px;
-			left : 18px;
+			left : 46px;
 			font-size : 90%;
 			.fa-calendar {
 				padding-right : 5px;
@@ -242,6 +261,7 @@
 	}
 	.responsive-menu{
 		display : block;
+		@include box-shadow(0px 0px 8px $black);
 		@include single-transition(all , 0.6s , ease-in-out);
 		@include at-breakpoint($medium) {
 		  	display: none;
@@ -283,7 +303,7 @@
 			&>li{
 				padding-bottom : 10px;
 				margin-bottom : 10px;
-				border-bottom : 1px solid $skyblue2;
+				border-bottom : 1px solid $navy2;
 			}
 			
 			li{
@@ -308,7 +328,7 @@
 						position : absolute;
 						right : -20px;
 						top : 6px;
-						color : $skyblue1;
+						color : $navy2;
 
 					}
 					&:hover{

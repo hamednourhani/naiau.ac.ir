@@ -64,6 +64,25 @@ if($show_related == true){
 		      autoplayTimeout : 1500,
 		      autoplayHoverPause : true,
 		      loop : true,
+		      responsive:{
+			        0:{
+			            items:1,
+			            //nav:true
+			        },
+			        400:{
+			            items:2,
+			            //nav:true
+			        },
+			        600:{
+			            items:3,
+			            //nav:true
+			        },
+			        1000:{
+			            items:5,
+			            //nav:true,
+			            loop:true
+			        }
+			    }
 		  });
 		 
 		  // Custom Navigation Events

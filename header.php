@@ -82,12 +82,14 @@
 						
 						<div class="logo-wrapper">
 							<!-- responsive menu toggler -->
-							<a id="menu-toggler" class="menu-toggler" >
-								<i class="fa fa-navicon"></i>
-							</a>
+							
 
 							<a href="<?php echo get_bloginfo('url'); ?>">
 								<img src="<?php echo get_template_directory_uri();?>/images/nazarabad-logo.png" />
+							</a>
+
+							<a id="menu-toggler" class="menu-toggler" >
+								<i class="fa fa-navicon"></i>
 							</a>
 						</div>
 

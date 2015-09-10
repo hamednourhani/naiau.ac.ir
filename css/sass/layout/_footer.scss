@@ -4,16 +4,31 @@ footer.site-footer,.site-footer{
 	margin :0;
 	padding : 8px;
 	min-height : 40px;
-	
+	display :block;
+	overflow: hidden;
 	background-color: $skyblue1;
 	color : $white;
 	font-size : 90%;
 	.site-credit{
-		float : right;
+		float : none;
+		text-align : center;
+		display : block;
+		margin : auto;
+		@include at-breakpoint($medium){
+			float : right;
+		}
+		padding : 3px 20px;
+
 	}
 	.site-statistics{
-		float : left;
-		padding : 8px 30px;
+		float : none;
+		text-align : center;
+		display : block;
+		margin : auto;
+		@include at-breakpoint($medium){
+			float : left;
+		}
+		padding : 3px 60px;
 	}
 }
 

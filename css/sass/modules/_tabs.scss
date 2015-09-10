@@ -1,12 +1,13 @@
 .ui-tabs .ui-tabs-nav li, .ui-tabs .ui-tabs-nav li.ui-tabs-active {
     float: right;
-    margin: 0 -12px 0px 0;
-    border-top-left-radius: 30px;
+    margin: 0 -6px 0px 0;
+    @include border-top-radius(15px);
     padding-left: 6px;
     outline : none;
 }
 .ui-tabs .ui-tabs-nav {
-    margin-right: 10px;
+    margin-right: 20px;
+    margin-left : 20px;
 }
 .ui-state-default.ui-corner-top,
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active,
@@ -22,7 +23,7 @@ background: -ms-linear-gradient(top, #5a6b9f 21%,#253b80 86%); /* IE10+ */
 background: linear-gradient(to bottom, #5a6b9f 21%,#253b80 86%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a6b9f', endColorstr='#253b80',GradientType=0 );
 font-family : $Yekan;
-font-size : 18px;
+font-size : 17px;
 
 }
 .ui-tabs-panel.ui-widget-content{
@@ -63,18 +64,22 @@ font-size : 16px;
 .notify-tabs-wrap{
 	padding :{
 		top: 0;
-		bottom : 15px;
+		bottom : 10px;
 	}
 	background-color: $navy1;
 	color : $grey1;
-	ul.notifies-list li{
-		@include span-columns(4,12);
+	ul.notifies-list li,ul.notifies-list p{
 		border : 1px dashed $grey1;
 		padding : 10px 32px 10px 10px;
 		margin-bottom : 10px;
 		@include single-transition(all ,0.3s , ease-ion-out);
-		&:nth-child(3n){
-			@include span-columns(4 omega,12);
+		@include span-columns(12,12);
+		@include at-breakpoint($medium){
+			@include span-columns(4,12);
+			
+			&:nth-child(3n){
+				@include span-columns(4 omega,12);
+			}
 		}
 		&:hover{
 			border : 1px dashed $skyblue2;
@@ -88,11 +93,11 @@ font-size : 16px;
 		a:hover{
 			color : $skyblue2;
 		}
-		a:before{
+		p:before,a:before{
 			@extend .fa;
-			content : "\F067";
+			content : "\f19d";
 			position : absolute;
-			right : -20px;
+			right : -25px;
 			top : 5px;
 		}
 
