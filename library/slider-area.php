@@ -66,8 +66,8 @@ if(!empty($news_list)){ ?>
 	    <script type="text/javascript" >
 	    	jQuery( document ).ready(function( $ ) {
 	        $( '#news-slider' ).sliderPro({
-	            width: 1200,
-	            height: 340,
+	            width: 1120,
+	            height: 400,
 	            orientation: 'vertical',
 	            loop: false,
 	            arrows: true,

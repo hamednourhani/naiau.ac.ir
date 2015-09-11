@@ -79,7 +79,8 @@ if ( ! isset( $content_width ) ) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'slider', 1040, 340, array( 'center', 'center' ) );
+add_image_size( 'slider', 1120, 400, array( 'center', 'center' ) );
+add_image_size( 'gallery-slide', 960, 500, array( 'center', 'center' ) );
 add_image_size( 'slider-thumb', 100, 80, array( 'center', 'center' ) );
 add_image_size( 'carousel', 320, 120, false );
 
@@ -116,10 +117,13 @@ add_filter( 'image_size_names_choose', 'naiau_custom_image_sizes' );
 
 function naiau_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'naiau-thumb-600' => __('600px by 400px'),
-        'naiau-thumb-300' => __('300px by 250px'),
+        'slider' => __('1120px by 400px'),
+        'gallery-slide' => __('960px by 500px'),
+        'slider-thumb' => __('100px by 80px'),
+        'carousel' => __('320px by 120px'),
     ) );
 }
+
 
 /*
 The function above adds the ability to use the dropdown menu to select
