@@ -8,10 +8,21 @@
 	
 						$current_page_id = $post->ID;
 						$parent_id = $post->ID;
+						$current_content = $post->ID;
 
 						$sub_pages = get_post_meta($current_page_id,'_naiau_group_sub_pages');
+						$has_child = false;
+						foreach($sub_pages[0] as $sub_page){
+
+							if($sub_page['sub_id'] !== 'none' && $has_child == false){
+								$has_child = true;
+								$current_content = $sub_page['sub_id'];
+								
+							}
+						}
 						// var_dump($sub_pages[0][0]['sub_id']);
-						if($post->post_parent && $sub_pages[0][0]['sub_id'] =="none" ){
+						if($post->post_parent && $has_child !== true/*$sub_pages[0][0]['sub_id'] =="none"*/ ){
+							// var_dump($sub_pages);
 							
 							$sub_pages = get_post_meta($post->post_parent,'_naiau_group_sub_pages');
 							$related_pages = get_post_meta($post->post_parent,'_naiau_group_related_pages');
@@ -56,7 +67,7 @@
 														
 														$sub_class = "";
 														
-														if($sub_page['sub_id'] == $current_page_id){
+														if($sub_page['sub_id'] == $current_content){
 															$sub_class="current";
 														}
 														if($sub_page['sub_id'] !=="none"){
@@ -71,7 +82,7 @@
 													<?php foreach ($related_pages[0] as $related_page) {
 															
 															$sub_class = "";
-															if($related_page['sub_id'] == $current_page_id){
+															if($related_page['sub_id'] == $current_content){
 																$sub_class="current";
 															} 
 															if($related_page['sub_id'] !=="none" && $related_page['link_or_page'] == 'page'){
@@ -95,7 +106,15 @@
 										</div>
 
 										<div class="page-content with-sidebar">	
-											<?php the_content(); ?>
+											<?php// the_content(); ?>
+
+											<?php 	
+													$content_post = get_post($current_content);
+													$content = $content_post->post_content;
+													$content = apply_filters('the_content', $content);
+													$content = str_replace(']]>', ']]&gt;', $content);
+													echo $content; 
+											?>
 										</div>
 										
 									</section>

@@ -485,10 +485,10 @@ function sub_education_post_type() {
 	add_action( 'init', 'gallery_post_type');
 	add_action( 'init', 'tab_post_type');
 	add_action( 'init', 'sub_tab_post_type');
-	//add_action( 'init', 'management_post_type');
-	//add_action( 'init', 'sub_management_post_type');
-	//add_action( 'init', 'education_post_type');
-	//add_action( 'init', 'sub_education_post_type');
+	add_action( 'init', 'management_post_type');
+	add_action( 'init', 'sub_management_post_type');
+	add_action( 'init', 'education_post_type');
+	add_action( 'init', 'sub_education_post_type');
 	
 	
 

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: naiau\n"
-"POT-Creation-Date: 2015-09-11 09:26+0430\n"
-"PO-Revision-Date: 2015-09-11 09:37+0430\n"
+"POT-Creation-Date: 2015-09-11 11:38+0430\n"
+"PO-Revision-Date: 2015-09-11 11:39+0430\n"
 "Last-Translator: \n"
 "Language-Team: iTstar <info@iTstar.ir>\n"
 "Language: fa_IR\n"
@@ -1642,7 +1642,15 @@ msgstr "آمار سایت : "
 
 #: footer.php:9
 msgid " visit "
-msgstr "بازدید"
+msgstr "  بازدید"
+
+#: footer.php:9
+msgid "Designed by "
+msgstr "طراحی شده توسط "
+
+#: footer.php:9
+msgid " Farakaranet"
+msgstr " فراکارانت"
 
 #: functions.php:120
 msgid "1120px by 400px"

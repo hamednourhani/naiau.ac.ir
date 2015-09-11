@@ -6,7 +6,7 @@
 				<span class="site-statistics">
 					<?php 
 						if(function_exists(cystats_countHits)){
-							echo __('Site State : ','naiau').cystats_countHits(all, $showmode=false).__(' visit ','naiau');
+							echo __('Site State : ','naiau').cystats_countHits(all, $showmode=false).__(" visit ","naiau").' | '.__("Designed by ","naiau").'<a href="http://karait.com">'.__(" Farakaranet","naiau").'</a>';
 						} ?>
 				</span>
 				<?php wp_footer(); ?>
