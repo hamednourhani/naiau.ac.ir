@@ -199,17 +199,29 @@
 			display : inline-block;
 		}
 		margin-top : 36px;
+		margin-bottom : 0px;
 		li{
 			
 			position : relative;
 			display: inline-block;
 			vertical-align: baseline;
 		}
+		li.menu-item-has-children a{
+			position: relative;
+			
+		}
+		li.menu-item-has-children a:before{
+			@extend .fa;
+			content : "\f0c1";
+			vertical-align: middle;
+			position : absolute;
+			left : 14px;
+			top : 12px;
+		}
 		li>a{
 			border-right : 1px solid lighten($navy1, 10%);
 			padding : 2px 8px 12px;
 			border-bottom : 3px solid $navy1;
-			display: inherit;
 			@include single-transition(all , 0.3s , ease-in-out);
 		}
 		li>a:hover{
@@ -224,7 +236,7 @@
 			top : 100%;
 			right : -20%;
 			z-index : 99999;
-			
+			margin-top: 0px;
 			background-color : $navy1;
 			li{
 				text-align: center;
@@ -240,12 +252,13 @@
 					background-color : $navy2;
 				}
 			}
-			li.menu-item-has-children>a:after{
+			li.menu-item-has-children>a::after{
 				@extend .fa;
-				content: "\F104";
+				content: "\f053";
 			    left: 12px;
 			    position: absolute;
 			    vertical-align : middle;
+			    color : $skyblue1;
 			}
 		}
 		li:hover>ul.sub-menu{
