@@ -543,7 +543,7 @@ array(
       'update_plugin' => false, // User can’t update any plugins
       'update_core' => false, // user cant perform core updates
       'upload_files' => true,
-      'moderate_comments' => false',
+      'moderate_comments' => false,
 
 
  ) );
