@@ -154,7 +154,7 @@ function naiau_select_subpage_metabox() {
 	$cmb_group = new_cmb2_box( array(
 		'id'           => $prefix . 'sub',
 		'title'        => __( 'Sub Pages Layout', 'naiau' ),
-		'object_types' => array( 'page','user'),
+		'object_types' => array( 'page'),
 	) );
 
 	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
@@ -874,14 +874,222 @@ function naiau_register_related_widget_metabox() {
 		
 			
 	) );
+}
+/******************************************************************/
+/*--------------------Scientifc Board user Profile ----------------*/
+/******************************************************************/
+global $user_ID,$wp_roles;
+
+$current_user = wp_get_current_user();
+$roles = $current_user->roles;
+$role = array_shift($roles);
+
+// if ( $role == "administrator" || $role == 'editor' || $role == 'sciences_board') {
+	add_action('cmb2_init','naiau_science_article_metabox');
+// }
+
+
+function naiau_science_article_metabox() {
+
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_naiau_user_';
+
+	/**
+	 * Sample metabox to demonstrate each field type included
+	 */
+	$cmb_demo = new_cmb2_box( array(
+		'id'            => $prefix . 'section_maker_metabox',
+		'title'         => __( 'Section Selection', 'naiau' ),
+		'object_types'  => array( 'user' ), // Post type
+		// 'new_user_section' => 'add-new-user', // where form will show on new user page. 'add-existing-user' is only other valid option.
+		// 'show_on_cb' => 'naiau_show_if_front_page', // function should return a bool value
+		// 'context'    => 'normal',
+		// 'priority'   => 'high',
+		// 'show_names' => true, // Show field names on the left
+		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+		// 'closed'     => true, // true to keep the metabox closed by default
+	) );
+
+	
+
+	$cmb_demo->add_field( array(
+		'name'       => __( 'news slider', 'naiau' ),
+		'desc'       => __( 'show news slider', 'naiau' ),
+		'id'         => $prefix . 'slider_show',
+		'type'       => 'radio_inline',
+		'show_option_none' => true,
+		'options'          => array(
+			'true' => __( 'Yes', 'naiau' ),
+			
+		),	
+		
+		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
+		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+		// 'on_front'        => false, // Optionally designate a field to wp-admin only
+		// 'repeatable'      => true,
+	) );
+
+	$news_array = array();
+	$news_array['none'] = "---";
+	$news_cats = get_terms('news_cat');
+	if(count($news_cats)>0){
+		foreach($news_cats as $news_cat){
+				$news_array[$news_cat->term_id] = $news_cat->name;
+		}
+	}
+	$cmb_demo->add_field( array(
+		'name'       => __( 'News Category', 'naiau' ),
+		'desc'       => __( 'which news category?', 'naiau' ),
+		'id'         => $prefix . 'news_cat',
+		'type'       => 'select',
+		'options'          => $news_array,
+	));
+
+	
+	$cmb_demo->add_field( array(
+		'name'       => __( 'hide content', 'naiau' ),
+		'desc'       => __( 'hide page content', 'naiau' ),
+		'id'         => $prefix . 'content',
+		'type'       => 'radio_inline',
+		'show_option_none' => true,
+		'options'          => array(
+			'true' => __( 'Yes', 'naiau' ),
+			
+			
+			
+			
+		),
+		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
+		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+		// 'on_front'        => false, // Optionally designate a field to wp-admin only
+		// 'repeatable'      => true,
+	) );
+
+	$cmb_demo->add_field( array(
+		'name'       => __( 'show comments', 'naiau' ),
+		'desc'       => __( 'show  page coments', 'naiau' ),
+		'id'         => $prefix . 'comments',
+		'type'       => 'radio_inline',
+		'show_option_none' => true,
+		'options'          => array(
+			'true' => __( 'Yes', 'naiau' ),
+			
+			
+			
+			
+		),
+		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
+		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+		// 'on_front'        => false, // Optionally designate a field to wp-admin only
+		// 'repeatable'      => true,
+	) );
+
+	
 
 
 
+
+
+	// var_dump($news_cats);
+	$cmb_demo->add_field( array(
+		'name'       => __( 'hide sidebar', 'naiau' ),
+		'desc'       => __( 'hide page sidebar', 'naiau' ),
+		'id'         => $prefix . 'sidebar',
+		'type'       => 'radio_inline',
+		'show_option_none' => true,
+		'options'          => array(
+			'true' => __( 'Yes', 'naiau' ),
+			
+			
+			
+			
+		),
+		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
+		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+		// 'on_front'        => false, // Optionally designate a field to wp-admin only
+		// 'repeatable'      => true,
+	) );
+
+	$cmb_demo->add_field( array(
+		'name'       => __( 'show tabs', 'naiau' ),
+		'desc'       => __( 'show tabs or not', 'naiau' ),
+		'id'         => $prefix . 'show_tabs',
+		'type'       => 'radio_inline',
+		'show_option_none' => true,
+		'options'          => array(
+			'true' => __( 'Yes', 'naiau' ),
+		),
+	) );
+
 	
+	$tabs_list = get_posts(array(
+			'post_type' => 'tab',
+			'posts_per_page' => '100',
+			)
+	);
 	
+
 	
+	$tab_array = array();
+	foreach ( $tabs_list as $tab ) : setup_postdata( $tab );
+			$tab_array[$tab->ID] = $tab->post_title;
+ 	endforeach; 
+
+
+	$cmb_demo->add_field( array(
+		'name'       => __( 'tabs category', 'naiau' ),
+		'desc'       => __( 'which tab category?', 'naiau' ),
+		'id'         => $prefix . 'tab_id',
+		'type'       => 'select',
+		'options'          => $tab_array,
+
+		
+	));
+	
+
+	$cmb_demo->add_field( array(
+		'name'       => __( 'show related links', 'naiau' ),
+		'desc'       => __( 'show related links or not', 'naiau' ),
+		'id'         => $prefix . 'related_links',
+		'type'       => 'radio_inline',
+		'show_option_none' => true,
+		'options'          => array(
+			'true' => __( 'Yes', 'naiau' ),
+			
+			
+			
+		),
+		
+	) );
+
+	$link_array = array();
+	$link_array['none'] = "---";
+	$link_cats = get_terms('link_cat');
+	if(count($link_cats)>0){
+		foreach($link_cats as $link_cat){
+				$link_array[$link_cat->term_id] = $link_cat->name;
+		}
+	}
+	$cmb_demo->add_field( array(
+		'name'       => __( 'Links Category', 'naiau' ),
+		'desc'       => __( 'which Link category?', 'naiau' ),
+		'id'         => $prefix . 'links_cat',
+		'type'       => 'select',
+		'options'          => $link_array,
+	));
+
 	
 }
+
+	
+	
+	
+	
+
 
 
 

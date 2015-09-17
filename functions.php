@@ -535,8 +535,8 @@ function naiau_add_user_roles(){
 remove_role('sciene_board');
 remove_role('scientific_board');
 
-$role = add_role( 'scienes_board', __(
-'Scienes Board','naiau' ),
+$role = add_role( 'sciences_board', __(
+'Sciences Board','naiau' ),
 array(
 
 
