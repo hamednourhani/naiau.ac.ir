@@ -199,29 +199,24 @@
 			display : inline-block;
 		}
 		margin-top : 36px;
-		margin-bottom : 0px;
+		margin-bottom : 0px ;
 		li{
 			
 			position : relative;
 			display: inline-block;
 			vertical-align: baseline;
 		}
-		li.menu-item-has-children a{
-			position: relative;
-			
-		}
-		li.menu-item-has-children a:before{
+		li.menu-item-has-children>a:after{
 			@extend .fa;
-			content : "\f0c1";
-			vertical-align: middle;
-			position : absolute;
-			left : 14px;
-			top : 12px;
+			content : "\F078";
+			padding-right : 3px;
+			color : $skyblue1;
 		}
 		li>a{
 			border-right : 1px solid lighten($navy1, 10%);
 			padding : 2px 8px 12px;
 			border-bottom : 3px solid $navy1;
+			display: inherit;
 			@include single-transition(all , 0.3s , ease-in-out);
 		}
 		li>a:hover{
@@ -252,13 +247,14 @@
 					background-color : $navy2;
 				}
 			}
-			li.menu-item-has-children>a::after{
+			li.menu-item-has-children>a:after{
 				@extend .fa;
-				content: "\f053";
+				content: "\F053";
 			    left: 12px;
 			    position: absolute;
 			    vertical-align : middle;
 			    color : $skyblue1;
+			    top :17px;
 			}
 		}
 		li:hover>ul.sub-menu{

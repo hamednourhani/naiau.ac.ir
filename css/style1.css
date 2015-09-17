@@ -649,7 +649,7 @@ body {
   font-size: 110%; }
 
 /* line 19, sass/base/_base.scss */
-.fa, .menu-bar .top-bar .search-area #searchsubmit::before, .menu-bar ul.main-nav li.menu-item-has-children > a:after, .menu-bar ul.main-nav li ul.sub-menu li.menu-item-has-children > a:after, .menu-bar .responsive-menu ul.responsive-nav ul.sub-menu a:before, .has-sub-page .page-sidebar ul.sub-widget li a.related-link:before, .has-sub-page .page-sidebar ul.sub-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.sub-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.sub-widget li a.parent-link:before, .has-sub-page .page-sidebar ul.related-widget li a.related-link:before, .has-sub-page .page-sidebar ul.related-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.related-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.related-widget li a.parent-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.related-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.parent-link:before, .notify-tabs-wrap ul.notifies-list li p:before, .notify-tabs-wrap ul.notifies-list li a:before, .notify-tabs-wrap ul.notifies-list p p:before, .notify-tabs-wrap ul.notifies-list p a:before {
+.fa, .menu-bar .top-bar .search-area #searchsubmit::before, .menu-bar ul.main-nav li.menu-item-has-children > a:before, .menu-bar ul.main-nav li ul.sub-menu li.menu-item-has-children > a::after, .menu-bar .responsive-menu ul.responsive-nav ul.sub-menu a:before, .has-sub-page .page-sidebar ul.sub-widget li a.related-link:before, .has-sub-page .page-sidebar ul.sub-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.sub-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.sub-widget li a.parent-link:before, .has-sub-page .page-sidebar ul.related-widget li a.related-link:before, .has-sub-page .page-sidebar ul.related-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.related-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.related-widget li a.parent-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.related-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.parent-link:before, .notify-tabs-wrap ul.notifies-list li p:before, .notify-tabs-wrap ul.notifies-list li a:before, .notify-tabs-wrap ul.notifies-list p p:before, .notify-tabs-wrap ul.notifies-list p a:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -951,7 +951,7 @@ blockquote, q {
     font-weight: 300;
     display: none;
     margin-top: 36px;
-    margin-bottom: 0px; }
+    margin-bottom: 0px !important; }
     @media (min-width: 45em) {
       /* line 193, sass/layout/_header.scss */
       .menu-bar ul.main-nav {
@@ -965,25 +965,32 @@ blockquote, q {
       display: inline-block;
       vertical-align: baseline; }
     /* line 209, sass/layout/_header.scss */
-    .menu-bar ul.main-nav li.menu-item-has-children > a:after {
-      content: "\F078";
+    .menu-bar ul.main-nav li.menu-item-has-children > a {
+      position: relative;
+      display: inline-block; }
+    /* line 213, sass/layout/_header.scss */
+    .menu-bar ul.main-nav li.menu-item-has-children > a:before {
+      content: "\f078";
       padding-right: 3px;
-      color: #179BD7; }
-    /* line 215, sass/layout/_header.scss */
+      color: #179BD7;
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      display: inline-block; }
+    /* line 223, sass/layout/_header.scss */
     .menu-bar ul.main-nav li > a {
       border-right: 1px solid #304da8;
       padding: 2px 8px 12px;
       border-bottom: 3px solid #253B80;
-      display: inherit;
       -moz-transition: all 0.3s ease-in-out 0s;
       -o-transition: all 0.3s ease-in-out 0s;
       -webkit-transition: all 0.3s ease-in-out;
       -webkit-transition-delay: 0s;
       transition: all 0.3s ease-in-out 0s; }
-    /* line 222, sass/layout/_header.scss */
+    /* line 229, sass/layout/_header.scss */
     .menu-bar ul.main-nav li > a:hover {
       border-bottom-color: #179BD7; }
-    /* line 225, sass/layout/_header.scss */
+    /* line 232, sass/layout/_header.scss */
     .menu-bar ul.main-nav li ul.sub-menu {
       -moz-transition: all 0.3s ease-in-out 0s;
       -o-transition: all 0.3s ease-in-out 0s;
@@ -999,36 +1006,35 @@ blockquote, q {
       z-index: 99999;
       margin-top: 0px;
       background-color: #253B80; }
-      /* line 236, sass/layout/_header.scss */
+      /* line 243, sass/layout/_header.scss */
       .menu-bar ul.main-nav li ul.sub-menu li {
         text-align: center;
         width: 100%;
         max-width: 100%; }
-      /* line 241, sass/layout/_header.scss */
+      /* line 248, sass/layout/_header.scss */
       .menu-bar ul.main-nav li ul.sub-menu a {
         border-top: 1px solid #304da8;
         border-bottom: 1px solid #304da8;
         width: 100%;
         padding: 12px 15px; }
-        /* line 246, sass/layout/_header.scss */
+        /* line 253, sass/layout/_header.scss */
         .menu-bar ul.main-nav li ul.sub-menu a:hover {
           background-color: #5A6B9F; }
-      /* line 250, sass/layout/_header.scss */
-      .menu-bar ul.main-nav li ul.sub-menu li.menu-item-has-children > a:after {
-        content: "\F053";
+      /* line 257, sass/layout/_header.scss */
+      .menu-bar ul.main-nav li ul.sub-menu li.menu-item-has-children > a::after {
+        content: "\f053";
         left: 12px;
         position: absolute;
         vertical-align: middle;
-        color: #179BD7;
-        top: 17px; }
-    /* line 260, sass/layout/_header.scss */
+        color: #179BD7; }
+    /* line 266, sass/layout/_header.scss */
     .menu-bar ul.main-nav li:hover > ul.sub-menu {
       display: inline-block; }
-    /* line 264, sass/layout/_header.scss */
+    /* line 270, sass/layout/_header.scss */
     .menu-bar ul.main-nav ul.sub-menu li:hover ul {
       right: 100%;
       top: 0; }
-  /* line 271, sass/layout/_header.scss */
+  /* line 277, sass/layout/_header.scss */
   .menu-bar .responsive-menu {
     display: block;
     -moz-box-shadow: 0px 0px 8px #000;
@@ -1053,54 +1059,54 @@ blockquote, q {
     color: #fff a;
       color-color: #fff; }
     @media (min-width: 45em) {
-      /* line 271, sass/layout/_header.scss */
+      /* line 277, sass/layout/_header.scss */
       .menu-bar .responsive-menu {
         display: none; } }
-    /* line 293, sass/layout/_header.scss */
+    /* line 299, sass/layout/_header.scss */
     .menu-bar .responsive-menu.show-menu {
       transform: translateX(-250px); }
-    /* line 296, sass/layout/_header.scss */
+    /* line 302, sass/layout/_header.scss */
     .menu-bar .responsive-menu a.close-responsive {
       color: #fff;
       padding: 2px 5px 0px;
       border: 1px solid #fff;
       font-size: 110%;
       float: left; }
-      /* line 303, sass/layout/_header.scss */
+      /* line 309, sass/layout/_header.scss */
       .menu-bar .responsive-menu a.close-responsive:hover {
         cursor: pointer; }
-    /* line 307, sass/layout/_header.scss */
+    /* line 313, sass/layout/_header.scss */
     .menu-bar .responsive-menu ul.responsive-nav {
       margin-top: 30px;
       padding: 20px;
       font-size: 90%; }
-      /* line 312, sass/layout/_header.scss */
+      /* line 318, sass/layout/_header.scss */
       .menu-bar .responsive-menu ul.responsive-nav > li {
         padding-bottom: 10px;
         margin-bottom: 10px;
         border-bottom: 1px solid #5A6B9F; }
-      /* line 320, sass/layout/_header.scss */
+      /* line 326, sass/layout/_header.scss */
       .menu-bar .responsive-menu ul.responsive-nav li a {
         color: #fff;
         line-height: 130%; }
-        /* line 324, sass/layout/_header.scss */
+        /* line 330, sass/layout/_header.scss */
         .menu-bar .responsive-menu ul.responsive-nav li a:hover {
           color: #5DC2F0; }
-      /* line 329, sass/layout/_header.scss */
+      /* line 335, sass/layout/_header.scss */
       .menu-bar .responsive-menu ul.responsive-nav ul.sub-menu {
         margin-right: 30px; }
-        /* line 331, sass/layout/_header.scss */
+        /* line 337, sass/layout/_header.scss */
         .menu-bar .responsive-menu ul.responsive-nav ul.sub-menu a {
           position: relative;
           color: #E6E6E6; }
-          /* line 334, sass/layout/_header.scss */
+          /* line 340, sass/layout/_header.scss */
           .menu-bar .responsive-menu ul.responsive-nav ul.sub-menu a:before {
             content: "\f177";
             position: absolute;
             right: -20px;
             top: 6px;
             color: #5A6B9F; }
-          /* line 343, sass/layout/_header.scss */
+          /* line 349, sass/layout/_header.scss */
           .menu-bar .responsive-menu ul.responsive-nav ul.sub-menu a:hover {
             color: #5DC2F0; }
 

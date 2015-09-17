@@ -64,6 +64,8 @@ function naiau_ahoy() {
   // cleaning up excerpt
   add_filter( 'excerpt_more', 'naiau_excerpt_more' );
 
+
+
 } /* end naiau ahoy */
 
 // let's get this party started
@@ -262,7 +264,7 @@ function naiau_comments( $comment, $args, $depth ) {
 
 function naiau_pagination(){
   global $wp_query;
-
+      
       $big = 999999999; 
       echo paginate_links( array(
         'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
@@ -520,3 +522,19 @@ function naiau_search_form( $form ) {
 }
 
 add_filter( 'get_search_form', 'naiau_search_form' );
+
+// add_role(): Enables you to add a custom role.
+// remove_role(): Enables you to remove a custom role.
+// add_cap(): Enables you to add a custom capability to a role.
+// remove_cap(): Enables you to remove a custom capability from a role.
+// get_role (): Gets information about a role as well as the capabilities associated with the role.
+
+function naiau_add_user_role(){
+
+$result = add_role( 'scientific_board', __(
+      'Scientific Board','naiau' ),
+      array( ) );
+} /* end naiau ahoy */
+
+// let's get this party started
+add_action( 'after_setup_theme', 'naiau_add_user_role' );

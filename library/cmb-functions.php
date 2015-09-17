@@ -154,7 +154,7 @@ function naiau_select_subpage_metabox() {
 	$cmb_group = new_cmb2_box( array(
 		'id'           => $prefix . 'sub',
 		'title'        => __( 'Sub Pages Layout', 'naiau' ),
-		'object_types' => array( 'page'),
+		'object_types' => array( 'page','user'),
 	) );
 
 	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
