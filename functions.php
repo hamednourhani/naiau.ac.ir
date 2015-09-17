@@ -7,7 +7,8 @@ This is where you can drop your custom functions or
 just edit things like thumbnail sizes, header images,
 sidebars, comments, ect.
 */
-
+// define( 'WPCF7_ADMIN_READ_CAPABILITY', 'manage_options' );
+// define( 'WPCF7_ADMIN_READ_WRITE_CAPABILITY', 'manage_options' );
 // LOAD naiau CORE (if you remove this, the theme will break)
 require_once( 'library/naiau.php' );
 
@@ -524,17 +525,25 @@ function naiau_search_form( $form ) {
 add_filter( 'get_search_form', 'naiau_search_form' );
 
 
-function naiau_add_user_roles(){
 
-$result = add_role( 'scientific_board', __(
-'Scientific Board','naiau' ),
+/*-----------------user roles config functions -----------------------*/
+/*-----------------user roles config functions -----------------------*/
+/*-----------------user roles config functions -----------------------*/
+
+
+function naiau_add_user_roles(){
+remove_role('sciene_board');
+remove_role('scientific_board');
+
+$role = add_role( 'scienes_board', __(
+'Scienes Board','naiau' ),
 array(
 
 
       'read' => true, // true allows this capability
       'edit_posts' => true, // Allows user to edit their own posts
       'edit_pages' => false, // Allows user to edit pages
-      'edit_others_posts' => true,false, // Allows user to edit others posts not just their own
+      'edit_others_posts' => false, // Allows user to edit others posts not just their own
       'create_posts' => true, // Allows user to create new posts
       'manage_categories' => false, // Allows user to manage post categories
       'publish_posts' => true, // Allows the user to publish, otherwise posts stays in draft mode
@@ -547,10 +556,10 @@ array(
 
 
  ) );
-
+   
 }
 // let's get this party started
-add_action( 'after_setup_theme', 'naiau_add_user_roles' );
+add_action( 'after_setup_theme', 'naiau_add_user_roles',11 );
 
 add_action('admin_init','naiau_add_role_caps',999);
     function naiau_add_role_caps() {
@@ -562,19 +571,53 @@ add_action('admin_init','naiau_add_role_caps',999);
     foreach($roles as $the_role) { 
 
          $role = get_role($the_role);
+
       
                $role->add_cap( 'read' );
                $role->add_cap( 'read_admin_post');
-               $role->add_cap( 'read_admin_post' );
+               $role->add_cap( 'read_admin_posts' );
                $role->add_cap( 'edit_admin_post' );
-               $role->add_cap( 'edit_admin_post' );
-               $role->add_cap( 'edit_others_admin_post' );
-               $role->add_cap( 'edit_published_admin_post' );
-               $role->add_cap( 'publish_admin_post' );
-               $role->add_cap( 'delete_others_admin_post' );
-               $role->add_cap( 'delete_private_admin_post' );
-               $role->add_cap( 'delete_published_admin_post' );
+               $role->add_cap( 'edit_admin_posts' );
+               $role->add_cap( 'edit_others_admin_posts' );
+               $role->add_cap( 'edit_published_admin_posts' );
+               $role->add_cap( 'publish_admin_posts' );
+               $role->add_cap( 'delete_others_admin_posts' );
+               $role->add_cap( 'delete_private_admin_posts' );
+               $role->add_cap( 'delete_published_admin_posts' );
     
+    }
+}
+
+add_action( 'admin_init', 'naiau_remove_menu_pages',999 );
+function naiau_remove_menu_pages() {
+
+    global $user_ID,$wp_roles;
+    
+    $current_user = wp_get_current_user();
+    $roles = $current_user->roles;
+    $role = array_shift($roles);
+
+    
+    
+
+    if ( $role == "administrator" || $role == 'editor') {
+      //some code
+    } else {
+
+   
+      
+      // remove_menu_page('upload.php'); // Media
+      remove_menu_page('link-manager.php'); // Links
+      remove_menu_page('edit-comments.php'); // Comments
+      // remove_menu_page('edit.php?post_type=page'); // Pages
+      remove_menu_page('plugins.php'); // Plugins
+      remove_menu_page('themes.php'); // Appearance
+      // remove_menu_page('users.php'); // Users
+      remove_menu_page('tools.php'); // Tools
+      remove_menu_page('options-general.php'); // Settings   
+      remove_menu_page('admin.php?page=wpcf7'); // contact form  
+      remove_menu_page('upload.php'); // Settings 
+      remove_menu_page( 'wpcf7' );
     }
 }
 

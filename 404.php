@@ -37,6 +37,7 @@
 														<p><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'naiau' ); ?></p>
 														<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'naiau' ); ?></p>
 														<div><?php get_search_form( true ); ?></div>
+														<a href="<?php echo wp_logout_url( 'http://multisiteparent.com' ); ?>">Logout</a>
 													</article>
 											</div>
 										</section>

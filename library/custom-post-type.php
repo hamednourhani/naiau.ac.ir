@@ -99,7 +99,7 @@ function notify_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/notify-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'notify', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'notify', /* you can rename the slug here */
-			'capability_type' => 'admin_post',
+			'capability_type' => array('admin_post','admin_posts'),
 			'map_meta_cap'        => true,
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
@@ -143,7 +143,7 @@ function link_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/link-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'link', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'link', /* you can rename the slug here */
-			'capability_type' => 'admin_post',
+			'capability_type' => array('admin_post','admin_posts'),
 			'map_meta_cap'        => true,
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
@@ -187,7 +187,7 @@ function gallery_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/gallery-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'gallery', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'gallery', /* you can rename the slug here */
-			'capability_type' => 'admin_post',
+			'capability_type' => array('admin_post','admin_posts'),
 			'map_meta_cap'        => true,
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
@@ -231,7 +231,7 @@ function tab_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/tab-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'tab', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'tab', /* you can rename the slug here */
-			'capability_type' => 'admin_post',
+			'capability_type' => array('admin_post','admin_posts'),
 			'map_meta_cap'        => true,
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
@@ -277,7 +277,7 @@ function sub_tab_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/sub-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'sub-tab', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'sub_tab', /* you can rename the slug here */
-			'capability_type' => 'admin_post',
+			'capability_type' => array('admin_post','admin_posts'),
 			'map_meta_cap'        => true,
 			'hierarchical' => true,
 			/* the next one is important, it tells what's enabled in the post editor */
@@ -328,7 +328,7 @@ function management_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/management-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'management', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'management', /* you can rename the slug here */
-			'capability_type' => 'admin_post',
+			'capability_type' => array('admin_post','admin_posts'),
 			'map_meta_cap'        => true,
 			'hierarchical' => true,
 			/* the next one is important, it tells what's enabled in the post editor */
@@ -375,7 +375,7 @@ function sub_management_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/sub-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'sub-management', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'sub_management', /* you can rename the slug here */
-			'capability_type' => 'admin_post',
+			'capability_type' => array('admin_post','admin_posts'),
 			'map_meta_cap'        => true,
 			'hierarchical' => true,
 			/* the next one is important, it tells what's enabled in the post editor */
@@ -423,7 +423,7 @@ function education_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/education-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'education', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'education', /* you can rename the slug here */
-			'capability_type' => 'admin_post',
+			'capability_type' => array('admin_post','admin_posts'),
 			'map_meta_cap'        => true,
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
@@ -468,7 +468,7 @@ function sub_education_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/sub-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'sub-education', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'sub_education', /* you can rename the slug here */
-			'capability_type' => 'admin_post',
+			'capability_type' => array('admin_post','admin_posts'),
 			'map_meta_cap'        => true,
 			'hierarchical' => true,
 			/* the next one is important, it tells what's enabled in the post editor */
@@ -489,12 +489,12 @@ function sub_education_post_type() {
 
 
 	// adding the function to the Wordpress init
-	add_action( 'init', 'notify_post_type');
-	add_action( 'init', 'news_post_type');
-	add_action( 'init', 'link_post_type');
-	add_action( 'init', 'gallery_post_type');
-	add_action( 'init', 'tab_post_type');
-	add_action( 'init', 'sub_tab_post_type');
+	add_action( 'init', 'notify_post_type',10);
+	add_action( 'init', 'news_post_type',10);
+	add_action( 'init', 'link_post_type',10);
+	add_action( 'init', 'gallery_post_type',10);
+	add_action( 'init', 'tab_post_type',10);
+	add_action( 'init', 'sub_tab_post_type',10);
 	//add_action( 'init', 'management_post_type');
 	//add_action( 'init', 'sub_management_post_type');
 	//add_action( 'init', 'education_post_type');
