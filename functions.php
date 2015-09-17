@@ -523,18 +523,58 @@ function naiau_search_form( $form ) {
 
 add_filter( 'get_search_form', 'naiau_search_form' );
 
-// add_role(): Enables you to add a custom role.
-// remove_role(): Enables you to remove a custom role.
-// add_cap(): Enables you to add a custom capability to a role.
-// remove_cap(): Enables you to remove a custom capability from a role.
-// get_role (): Gets information about a role as well as the capabilities associated with the role.
 
-function naiau_add_user_role(){
+function naiau_add_user_roles(){
 
 $result = add_role( 'scientific_board', __(
-      'Scientific Board','naiau' ),
-      array( ) );
-} /* end naiau ahoy */
+'Scientific Board','naiau' ),
+array(
 
+
+      'read' => true, // true allows this capability
+      'edit_posts' => true, // Allows user to edit their own posts
+      'edit_pages' => false, // Allows user to edit pages
+      'edit_others_posts' => true,false, // Allows user to edit others posts not just their own
+      'create_posts' => true, // Allows user to create new posts
+      'manage_categories' => false, // Allows user to manage post categories
+      'publish_posts' => true, // Allows the user to publish, otherwise posts stays in draft mode
+      'edit_themes' => false, // false denies this capability. User can’t edit your theme
+      'install_plugins' => false, // User cant add new plugins
+      'update_plugin' => false, // User can’t update any plugins
+      'update_core' => false, // user cant perform core updates
+      'upload_files' => true,
+      'moderate_comments' => false',
+
+
+ ) );
+
+}
 // let's get this party started
-add_action( 'after_setup_theme', 'naiau_add_user_role' );
+add_action( 'after_setup_theme', 'naiau_add_user_roles' );
+
+add_action('admin_init','naiau_add_role_caps',999);
+    function naiau_add_role_caps() {
+
+    // Add the roles you'd like to administer the custom post types
+    $roles = array('editor','administrator');
+    
+    // Loop through each role and assign capabilities
+    foreach($roles as $the_role) { 
+
+         $role = get_role($the_role);
+      
+               $role->add_cap( 'read' );
+               $role->add_cap( 'read_admin_post');
+               $role->add_cap( 'read_admin_post' );
+               $role->add_cap( 'edit_admin_post' );
+               $role->add_cap( 'edit_admin_post' );
+               $role->add_cap( 'edit_others_admin_post' );
+               $role->add_cap( 'edit_published_admin_post' );
+               $role->add_cap( 'publish_admin_post' );
+               $role->add_cap( 'delete_others_admin_post' );
+               $role->add_cap( 'delete_private_admin_post' );
+               $role->add_cap( 'delete_published_admin_post' );
+    
+    }
+}
+
