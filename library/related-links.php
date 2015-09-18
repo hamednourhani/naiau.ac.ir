@@ -40,7 +40,7 @@ if($show_related == true){
 					  				<?php echo $thumb; ?>
 					  			</div>
 					  			<span>
-					  				<?php echo $related_link->post_title; ?>
+					  				<?php //echo $related_link->post_title; ?>
 					  			</span>
 					  		</a>
 					  </div>
