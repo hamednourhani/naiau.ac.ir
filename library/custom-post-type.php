@@ -53,7 +53,8 @@ function news_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/news-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'news', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'notify', /* you can rename the slug here */
-			'capability_type' => 'post',
+			'capability_type' => 'admin_post',
+			'map_meta_cap'        => true,
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
 			'supports' => array( 'title', 'editor', 'author', 'thumbnail', /*'excerpt', 'trackbacks', 'custom-fields',*/ 'comments',/* 'revisions',*/ 'sticky')
@@ -98,7 +99,8 @@ function notify_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/notify-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'notify', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'notify', /* you can rename the slug here */
-			'capability_type' => 'post',
+			'capability_type' => 'admin_post',
+			'map_meta_cap'        => true,
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
 			'supports' => array( 'title', 'editor', 'author', 'thumbnail', /*'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'sticky'*/)
@@ -141,7 +143,8 @@ function link_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/link-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'link', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'link', /* you can rename the slug here */
-			'capability_type' => 'post',
+			'capability_type' => 'admin_post',
+			'map_meta_cap'        => true,
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
 			'supports' => array( 'title', /*'editor', 'author',*/ 'thumbnail', /*'excerpt', 'trackbacks',*/ 'custom-fields', /*'comments', 'revisions',*/ 'sticky')
@@ -184,7 +187,8 @@ function gallery_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/gallery-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'gallery', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'gallery', /* you can rename the slug here */
-			'capability_type' => 'post',
+			'capability_type' => 'admin_post',
+			'map_meta_cap'        => true,
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
 			'supports' => array( 'title', /*'editor','author',*/ /*'thumbnail' ,'excerpt',*/ /*'trackbacks',*/ /*'custom-fields',*/ /*'comments'*/ /*'revisions'*/ /*'sticky'*/)
@@ -227,7 +231,8 @@ function tab_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/tab-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'tab', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'tab', /* you can rename the slug here */
-			'capability_type' => 'post',
+			'capability_type' => 'admin_post',
+			'map_meta_cap'        => true,
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
 			'supports' => array( 'title', /*'editor',*/ /*'author', 'thumbnail', 'excerpt', /*'trackbacks'*/ /*'custom-fields',*/ /*'comments'*/ /*'revisions'*/ /*'sticky'*/)
@@ -272,7 +277,8 @@ function sub_tab_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/sub-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'sub-tab', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'sub_tab', /* you can rename the slug here */
-			'capability_type' => 'post',
+			'capability_type' => 'admin_post',
+			'map_meta_cap'        => true,
 			'hierarchical' => true,
 			/* the next one is important, it tells what's enabled in the post editor */
 			'supports' => array( 'title', 'editor', /*'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments','revisions' ,'sticky'*/),
@@ -322,7 +328,8 @@ function management_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/management-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'management', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'management', /* you can rename the slug here */
-			'capability_type' => 'post',
+			'capability_type' => 'admin_post',
+			'map_meta_cap'        => true,
 			'hierarchical' => true,
 			/* the next one is important, it tells what's enabled in the post editor */
 			'supports' => array( 'title', /*'editor', 'author',*/ /*'thumbnail', 'excerpt'*//*, 'trackbacks', 'custom-fields', 'comments','revisions' ,'sticky'*/),
@@ -368,7 +375,8 @@ function sub_management_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/sub-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'sub-management', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'sub_management', /* you can rename the slug here */
-			'capability_type' => 'post',
+			'capability_type' => 'admin_post',
+			'map_meta_cap'        => true,
 			'hierarchical' => true,
 			/* the next one is important, it tells what's enabled in the post editor */
 			'supports' => array( 'title', 'editor', /*'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments','revisions' ,'sticky'*/),
@@ -415,7 +423,8 @@ function education_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/education-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'education', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'education', /* you can rename the slug here */
-			'capability_type' => 'post',
+			'capability_type' => 'admin_post',
+			'map_meta_cap'        => true,
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
 			'supports' => array( 'title', /*'editor', 'author',*/ /*'thumbnail', 'excerpt',*/ /*'trackbacks','custom-fields','comments','revisions', 'sticky'*/),
@@ -459,7 +468,8 @@ function sub_education_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/sub-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'sub-education', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'sub_education', /* you can rename the slug here */
-			'capability_type' => 'post',
+			'capability_type' => 'admin_post',
+			'map_meta_cap'        => true,
 			'hierarchical' => true,
 			/* the next one is important, it tells what's enabled in the post editor */
 			'supports' => array( 'title', 'editor', /*'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments','revisions' ,'sticky'*/),
