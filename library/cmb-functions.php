@@ -1349,7 +1349,7 @@ function naiau_science_research_projects_metabox() {
 	) );
 	
 
-
+}
 
 	
 function naiau_science_books_metabox() {
