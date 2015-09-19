@@ -101,48 +101,56 @@ function naiau_before_row_if_2( $field_args, $field ) {
 /*------------Mother Page and Sub page Maker----------------------*/
 /******************************************************************/
 
-//  add_action( 'cmb2_init', 'naiau_is_sub_page_metabox' );
-// /**
-//  * Hook in and add a demo metabox. Can only happen on the 'cmb2_init' hook.
-//  */
-// function naiau_is_sub_page_metabox() {
+ add_action( 'cmb2_init', 'naiau_page_has_content_metabox' );
+/**
+ * Hook in and add a demo metabox. Can only happen on the 'cmb2_init' hook.
+ */
+function naiau_page_has_content_metabox() {
 
-// 	// Start with an underscore to hide fields from custom fields list
-// 	$prefix = '_naiau_';
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_naiau_';
 
-// 	/**
-// 	 * Sample metabox to demonstrate each field type included
-// 	 */
-// 	$cmb_demo = new_cmb2_box( array(
-// 		'id'            => $prefix . 'sub_mother',
-// 		'title'         => __( 'Page Kind', 'naiau' ),
-// 		'object_types'  => array( 'page' ), // Post type
-// 		// 'show_on_cb' => 'naiau_show_if_front_page', // function should return a bool value
-// 		// 'context'    => 'normal',
-// 		// 'priority'   => 'high',
-// 		// 'show_names' => true, // Show field names on the left
-// 		// 'cmb_styles' => false, // false to disable the CMB stylesheet
-// 		// 'closed'     => true, // true to keep the metabox closed by default
-// 	) );
+	/**
+	 * Sample metabox to demonstrate each field type included
+	 */
+	$cmb_demo = new_cmb2_box( array(
+		'id'            => $prefix . 'sub_mother',
+		'title'         => __( 'Page has Content', 'naiau' ),
+		'object_types'  => array( 'page' ), // Post type
+		// 'show_on_cb' => 'naiau_show_if_front_page', // function should return a bool value
+		// 'context'    => 'normal',
+		// 'priority'   => 'high',
+		// 'show_names' => true, // Show field names on the left
+		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+		// 'closed'     => true, // true to keep the metabox closed by default
+	) );
 
 
 	
-// 	$cmb_demo->add_field( array(
-// 		'name'         => __( 'Mother or Sub', 'naiau' ),
-// 		'desc'         => __( 'is this page a mother or a sub page?', 'naiau' ),
-// 		'id'           => $prefix . 'sub_mother_page',
-// 		'type'         => 'radio_inline',
-// 		'options'	   => array(
-// 			'mother'	=> __('Mother Page','naiau'),
-// 			'sub'		=> __('Sub Page','naiau'),
+	$cmb_demo->add_field( array(
+		'name'         => __( 'Page Contnet', 'naiau' ),
+		'desc'         => __( 'does page has Content or show the first subpage content?', 'naiau' ),
+		'id'           => $prefix . 'sub_mother_page',
+		'type'         => 'radio_inline',
+		'options'	   => array(
+			'has_content'	=> __('Page has Content','naiau'),
+			'show_first_subpage'		=> __('Show first SubPage','naiau'),
+			'redirect_to'   => __('Redirect to Other Page','naiau'),
 			
-// 			),
-// 		'default' => 'sub',
-// 	) );
+			),
+		'default' => 'show_first_subpage',
+	) );
 
+	$cmb_demo->add_field( array(
+		'name'         => __( 'Redirect To Page', 'naiau' ),
+		'desc'         => __( 'enter the page url', 'naiau' ),
+		'id'           => $prefix . 'redirect_to',
+		'type'         => 'text_url',
+		
+	) );
 	
 
-// }
+}
 
 
 add_action( 'cmb2_init', 'naiau_select_subpage_metabox' );

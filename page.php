@@ -9,6 +9,14 @@
 						$current_page_id = $post->ID;
 						$parent_id = $post->ID;
 						$current_content = $post->ID;
+						$sub_mother = get_post_meta( $post->ID,'_naiau_sub_mother_page',1);
+
+						$redirect_to = get_post_meta( $post->ID,'_naiau_redirect_to',1);
+						if($sub_mother == 'redirect_to' && $redirect_to !== null){
+							wp_redirect($redirect_to); /* Redirect browser */
+							exit();
+							
+						}
 
 						$sub_pages = get_post_meta($current_page_id,'_naiau_group_sub_pages');
 						$has_child = false;
@@ -35,7 +43,10 @@
 							$related_pages = get_post_meta($current_page_id,'_naiau_group_related_pages');
 						}
 
-
+						//if the self page has content
+						if($sub_mother == 'has_content'){
+							$current_content = '';
+						}
 						
 
 						
@@ -109,11 +120,15 @@
 											<?php// the_content(); ?>
 
 											<?php 	
-													$content_post = get_post($current_content);
-													$content = $content_post->post_content;
-													$content = apply_filters('the_content', $content);
-													$content = str_replace(']]>', ']]&gt;', $content);
-													echo $content; 
+													if($sub_mother == 'show_first_subpage'){
+														$content_post = get_post($current_content);
+														$content = $content_post->post_content;
+														$content = apply_filters('the_content', $content);
+														$content = str_replace(']]>', ']]&gt;', $content);
+														echo $content; 
+													} else {
+														the_content();
+													}
 											?>
 										</div>
 										

@@ -280,7 +280,7 @@ function naiau_pagination(){
 
 function naiau_SearchFilter($query) {
     if ($query->is_search) {
-      $query->set('post_type', array('post','news','notify','page'));
+      $query->set('post_type', array('post','news','notify','page','circular'));
     }
     return $query;
     }
