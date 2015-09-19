@@ -63,7 +63,7 @@
 												<?php } ?>
 											</div>
 											<div class="page-sidebar">
-												<?php get_sidebar('notify'); ?>
+												<?php get_sidebar('circular'); ?>
 											</div>
 										<?php }else{ ?>
 											<div class="page-content single-page">		
@@ -91,7 +91,6 @@
 				
 				<?php get_template_part('library/footer','links'); ?>
 				
-
 			
 		</main>
 

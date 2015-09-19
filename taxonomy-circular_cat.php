@@ -58,11 +58,12 @@
 												
 											</div>
 											<div class="page-sidebar">
-												<?php get_sidebar(); ?>
+												<?php get_sidebar('circular'); ?>
+												<nav class="pagination">
+													<?php naiau_pagination();
+												 ?>
+												</nav>	?>
 											</div>
-											<nav class="pagination">
-													<?php naiau_pagination(); ?>
-												</nav>	
 										
 									</section>
 								</div>
@@ -73,7 +74,7 @@
 
 				
 				<?php get_template_part('library/footer','links'); ?>
-				<?php get_template_part('library/related','links'); ?>
+				
 
 			
 		</main>

@@ -70,8 +70,7 @@
 
 				
 				<?php get_template_part('library/footer','links'); ?>
-				<?php get_template_part('library/related','links'); ?>
-
+				
 			
 		</main>
 

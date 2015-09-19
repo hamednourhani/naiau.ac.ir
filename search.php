@@ -39,21 +39,15 @@
 													<?php while(have_posts()) { the_post(); ?>
 													
 														<article class="hentry">
-															<div class="featured-image single-image">
-																<a href="<?php the_permalink(); ?>">
-																	<?php get_template_part('library/thumbnail','maker'); ?>
-																</a>
-															</div>
+															
 															<div class="post-title">
 																<a href="<?php the_permalink(); ?>">
 																	<h3><?php the_title(); ?></h3>
 																</a>
 															</div>
 															<div class="post-content">
-																
 																<?php the_excerpt(); ?>
-																<?php get_template_part('library/post','meta'); ?>
-															</div>
+																															</div>
 														</article>
 													<?php } ?>
 												<?php }else{ ?>

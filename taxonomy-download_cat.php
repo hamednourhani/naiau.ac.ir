@@ -44,7 +44,7 @@
 																</a>
 															</div>
 															<div class="post-title">
-																<a href="<?php the_permalink(); ?>">
+																<a href="<?php echo get_post_meta($get_the_ID,'_naiau_download_url',1); ?>">
 																	<h3><?php the_title(); ?></h3>
 																</a>
 															</div>
@@ -55,14 +55,14 @@
 														</article>
 													<?php } ?>
 												<?php } ?>
-												
-											</div>
-											<div class="page-sidebar">
-												<?php get_sidebar(); ?>
-											</div>
-											<nav class="pagination">
+												<nav class="pagination">
 													<?php naiau_pagination(); ?>
 												</nav>	
+											</div>
+											<div class="page-sidebar">
+												<?php get_sidebar('download'); ?>
+											</div>
+											
 										
 									</section>
 								</div>
@@ -73,7 +73,7 @@
 
 				
 				<?php get_template_part('library/footer','links'); ?>
-				<?php get_template_part('library/related','links'); ?>
+				
 
 			
 		</main>

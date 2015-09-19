@@ -15,7 +15,24 @@
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_header(); 
+			$archive_name ='';
+			$download_page = false;
+			$notify_page = false;
+			$circular_page = false;
+	if($_GET['post_type'] && $_GET['post_type'] == 'download' ){
+			$archive_name = __("Downloads",'naiau');
+			$download_page = ture;
+	}elseif($_GET['post_type'] && $_GET['post_type'] == 'notify' ){
+			$archive_name = __("Notifies",'naiau');
+			$notify_page = ture;
+	}elseif($_GET['post_type'] && $_GET['post_type'] == 'circular' ){
+			$archive_name = __("Circulars",'naiau');
+			$circular_page = ture;
+
+	}
+?>
+
 
 			<main class="site-main">
 
@@ -26,7 +43,7 @@
 							
 								<div class="single-page-title">
 									<section class="layout">
-										<h1><?php echo __('Archive : ','naiau'); ?></h1>
+										<h1><?php echo __('Archive : ','naiau').$archive_name; ?></h1>
 									</section>
 								</div>
 								
@@ -39,7 +56,11 @@
 													
 														<article class="hentry">
 															<div class="featured-image single-image">
+															<?php if($download_page='true'){ ?>
+																<a href="<?php echo get_post_meta($get_the_ID,'_naiau_download_url',1); ?>">
+															<?php }else{ ?>	
 																<a href="<?php the_permalink(); ?>">
+															<?php } ?>
 																	<?php get_template_part('library/thumbnail','maker'); ?>
 																</a>
 															</div>
@@ -58,7 +79,18 @@
 												
 											</div>
 											<div class="page-sidebar">
-												<?php get_sidebar(); ?>
+												<?php
+													if($download_page == true){
+														get_sidebar('download');
+													}elseif($notify_page == true){
+														get_sidebar('notify');
+													}elseif($circular_page == true){
+														get_sidebar('circular');
+													}else{
+														get_sidebar(); 
+													}
+													
+												?>
 											</div>
 										
 									</section>

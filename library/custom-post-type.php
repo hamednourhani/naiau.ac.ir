@@ -666,36 +666,51 @@ function circular_post_type() {
 		)
 	);
 
-		/*
-	for more information on taxonomies, go here:
-	http://codex.wordpress.org/Function_Reference/register_taxonomy
-	*/
+	register_taxonomy( 'download_cat', 
+		array('download'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+		array('hierarchical' => true,     /* if this is true, it acts like categories */
+			'labels' => array(
+				'name' => __( 'download Categories', 'naiau' ), /* name of the custom taxonomy */
+				'singular_name' => __( 'download Category', 'naiau' ), /* single taxonomy name */
+				'search_items' =>  __( 'Search download Categories', 'naiau' ), /* search title for taxomony */
+				'all_items' => __( 'All download Categories', 'naiau' ), /* all title for taxonomies */
+				'parent_item' => __( 'Parent download Category', 'naiau' ), /* parent title for taxonomy */
+				'parent_item_colon' => __( 'Parent download Category:', 'naiau' ), /* parent taxonomy title */
+				'edit_item' => __( 'Edit download Category', 'naiau' ), /* edit custom taxonomy title */
+				'update_item' => __( 'Update download Category', 'naiau' ), /* update title for taxonomy */
+				'add_new_item' => __( 'Add New download Category', 'naiau' ), /* add new title for taxonomy */
+				'new_item_name' => __( 'New download Category Name', 'naiau' ) /* name title for taxonomy */
+			),
+			'show_admin_column' => true, 
+			'show_ui' => true,
+			'query_var' => true,
+			'rewrite' => array( 'slug' => 'download-cat' ),
+			'show_in_nav_menus' => true,
+		)
+	);
 	
-	// now let's add custom categories (these act like categories)
-	// register_taxonomy( 'tab_cat', 
-	// 	array('tab'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
-	// 	array('hierarchical' => true,     /* if this is true, it acts like categories */
-	// 		'labels' => array(
-	// 			'name' => __( 'Tab Categories', 'naiau' ), /* name of the custom taxonomy */
-	// 			'singular_name' => __( 'Tab Category', 'naiau' ), /* single taxonomy name */
-	// 			'search_items' =>  __( 'Search Tab Categories', 'naiau' ), /* search title for taxomony */
-	// 			'all_items' => __( 'All Tabs Categories', 'naiau' ), /* all title for taxonomies */
-	// 			'parent_item' => __( 'Parent Tab Category', 'naiau' ),  parent title for taxonomy 
-	// 			'parent_item_colon' => __( 'Parent Tab Category:', 'naiau' ), /* parent taxonomy title */
-	// 			'edit_item' => __( 'Edit Tab Category', 'naiau' ), /* edit custom taxonomy title */
-	// 			'update_item' => __( 'Update Tab Category', 'naiau' ), /* update title for taxonomy */
-	// 			'add_new_item' => __( 'Add New Tab Category', 'naiau' ), /* add new title for taxonomy */
-	// 			'new_item_name' => __( 'New Tab category Name', 'naiau' ) /* name title for taxonomy */
-	// 		),
-	// 		'show_admin_column' => true, 
-	// 		'show_ui' => true,
-	// 		'query_var' => true,
-	// 		'rewrite' => array( 'slug' => 'tab-cat' ),
-	// 		'show_in_nav_menus' => true,
-	// 	)
-	// );
-	
-	// now let's add custom tags (these act like categories)
+	register_taxonomy( 'circular_cat', 
+		array('circular'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+		array('hierarchical' => true,     /* if this is true, it acts like categories */
+			'labels' => array(
+				'name' => __( 'circular Categories', 'naiau' ), /* name of the custom taxonomy */
+				'singular_name' => __( 'circular Category', 'naiau' ), /* single taxonomy name */
+				'search_items' =>  __( 'Search circular Categories', 'naiau' ), /* search title for taxomony */
+				'all_items' => __( 'All circular Categories', 'naiau' ), /* all title for taxonomies */
+				'parent_item' => __( 'Parent circular Category', 'naiau' ), /* parent title for taxonomy */
+				'parent_item_colon' => __( 'Parent circular Category:', 'naiau' ), /* parent taxonomy title */
+				'edit_item' => __( 'Edit circular Category', 'naiau' ), /* edit custom taxonomy title */
+				'update_item' => __( 'Update circular Category', 'naiau' ), /* update title for taxonomy */
+				'add_new_item' => __( 'Add New circular Category', 'naiau' ), /* add new title for taxonomy */
+				'new_item_name' => __( 'New circular Category Name', 'naiau' ) /* name title for taxonomy */
+			),
+			'show_admin_column' => true, 
+			'show_ui' => true,
+			'query_var' => true,
+			'rewrite' => array( 'slug' => 'circular-cat' ),
+			'show_in_nav_menus' => true,
+		)
+	);
 	
 
 	register_taxonomy( 'link_cat', 

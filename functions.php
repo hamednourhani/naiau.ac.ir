@@ -195,6 +195,24 @@ function naiau_register_sidebars() {
     'before_title' => '<h4 class="widgettitle">',
     'after_title' => '</h4>',
   ));
+  register_sidebar(array(
+    'id' => 'download-sidebar',
+    'name' => __( 'download Sidebar', 'naiau' ),
+    'description' => __( 'The download sidebar.', 'naiau' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="widgettitle">',
+    'after_title' => '</h4>',
+  ));
+  register_sidebar(array(
+    'id' => 'circular-sidebar',
+    'name' => __( 'circular Sidebar', 'naiau' ),
+    'description' => __( 'The circular sidebar.', 'naiau' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="widgettitle">',
+    'after_title' => '</h4>',
+  ));
 
 	/*
 	to add more sidebars or widgetized areas, just copy
@@ -409,6 +427,225 @@ class last_notify_widget extends WP_Widget {
     }
 } // Class wpb_widget ends here
 
+// Creating the widget 
+class last_downloads_widget extends WP_Widget {
+
+    function __construct() {
+        parent::__construct(
+        // Base ID of your widget
+        'last_downloads_widget', 
+
+        // Widget name will appear in UI
+        __('Last Downloads Widget', 'naiau'), 
+
+        // Widget description
+        array( 'description' => __( 'Display Last Downloads', 'naiau' ), ) 
+        );
+    }
+
+    // Creating widget front-end
+    // This is where the action happens
+    public function widget( $args, $instance ) {
+        global $wp_query;
+
+        $title = apply_filters( 'widget_title', $instance['title'] );
+        $number = $instance['number'];
+        $term = get_term($instance['cat'],'download_cat');
+
+        //var_dump($instance);
+        $downloads = get_posts(array(
+            'post_type' => 'download',
+            'posts_per_page' => $number,
+            'download_cat'         => $term->slug,
+            )
+        );
+       
+        $content = '<ul>';
+        foreach($downloads as $download) : setup_postdata( $download );
+          $url = get_the_permalink($download->ID);
+          $name = $download->post_title;
+          $content .='<li><i class="fa fa-cloud-download"></i><a href="'.$url.'">'.$name.'</a><li>';
+        endforeach;
+        $content .= '</ul>';
+
+      
+       
+
+        
+        // before and after widget arguments are defined by themes
+        echo $args['before_widget'];
+        
+        if ( ! empty( $title ) )
+          echo $args['before_title'] . $title . $args['after_title'];
+          echo $content;
+        // This is where you run the code and display the output
+          echo $args['after_widget'];
+    }
+        
+    // Widget Backend 
+    public function form( $instance ) {
+        if ( isset( $instance[ 'title' ] ) ) {
+            $title = $instance[ 'title' ];
+        }else {
+            $title = __( 'Last downloads', 'naiau' );
+        }
+        if ( isset( $instance[ 'number' ] ) ) {
+            $number = $instance[ 'number' ];
+        }else {
+            $number = 5;
+        }
+        if ( isset( $instance[ 'cat' ] ) ) {
+            $cat = $instance[ 'cat' ];
+        }else {
+            $cat ="";
+        }
+        // Widget admin form
+        ?>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+        </p>
+         <p>
+            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'downloads Numbers :','naiau' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" />
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'cat' ); ?>"><?php _e( 'download Category :','naiau' ); ?></label> 
+           <?php wp_dropdown_categories(array(
+                  'name'               => $this->get_field_name( 'cat' ),
+                  'id'                 => $this->get_field_id( 'cat' ),
+                  'class'              => 'widefat',
+                  'taxonomy'           => 'download_cat',
+                  'echo'               => '1',
+                  'selected'          =>esc_attr( $cat ),
+            )); ?>
+
+
+        </p>
+        
+        <?php 
+    }
+      
+    // Updating widget replacing old instances with new
+    public function update( $new_instance, $old_instance ) {
+        $instance = array();
+        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+        $instance['number'] = ( ! empty( $new_instance['number'] ) ) ? strip_tags( $new_instance['number'] ) : '';
+        $instance['cat'] = ( ! empty( $new_instance['cat'] ) ) ? strip_tags( $new_instance['cat'] ) : '';
+        //var_dump($instance);
+        return $instance;
+    }
+} // Class wpb_widget ends here
+
+class last_circulars_widget extends WP_Widget {
+
+    function __construct() {
+        parent::__construct(
+        // Base ID of your widget
+        'last_circulars_widget', 
+
+        // Widget name will appear in UI
+        __('Last circulars Widget', 'naiau'), 
+
+        // Widget description
+        array( 'description' => __( 'Display Last circulars', 'naiau' ), ) 
+        );
+    }
+
+    // Creating widget front-end
+    // This is where the action happens
+    public function widget( $args, $instance ) {
+        global $wp_query;
+
+        $title = apply_filters( 'widget_title', $instance['title'] );
+        $number = $instance['number'];
+        $term = get_term($instance['cat'],'circular_cat');
+
+        //var_dump($instance);
+        $circulars = get_posts(array(
+            'post_type' => 'circular',
+            'posts_per_page' => $number,
+            'circular_cat'         => $term->slug,
+            )
+        );
+       
+        $content = '<ul>';
+        foreach($circulars as $circular) : setup_postdata( $circular );
+          $url = get_the_permalink($circular->ID);
+          $name = $circular->post_title;
+          $content .='<li><i class="fa fa-cloud-download"></i><a href="'.$url.'">'.$name.'</a><li>';
+        endforeach;
+        $content .= '</ul>';
+
+      
+       
+
+        
+        // before and after widget arguments are defined by themes
+        echo $args['before_widget'];
+        
+        if ( ! empty( $title ) )
+          echo $args['before_title'] . $title . $args['after_title'];
+          echo $content;
+        // This is where you run the code and display the output
+          echo $args['after_widget'];
+    }
+        
+    // Widget Backend 
+    public function form( $instance ) {
+        if ( isset( $instance[ 'title' ] ) ) {
+            $title = $instance[ 'title' ];
+        }else {
+            $title = __( 'Last circulars', 'naiau' );
+        }
+        if ( isset( $instance[ 'number' ] ) ) {
+            $number = $instance[ 'number' ];
+        }else {
+            $number = 5;
+        }
+        if ( isset( $instance[ 'cat' ] ) ) {
+            $cat = $instance[ 'cat' ];
+        }else {
+            $cat ="";
+        }
+        // Widget admin form
+        ?>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+        </p>
+         <p>
+            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'circulars Numbers :','naiau' ); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" />
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'cat' ); ?>"><?php _e( 'circular Category :','naiau' ); ?></label> 
+           <?php wp_dropdown_categories(array(
+                  'name'               => $this->get_field_name( 'cat' ),
+                  'id'                 => $this->get_field_id( 'cat' ),
+                  'class'              => 'widefat',
+                  'taxonomy'           => 'circular_cat',
+                  'echo'               => '1',
+                  'selected'          =>esc_attr( $cat ),
+            )); ?>
+
+
+        </p>
+        
+        <?php 
+    }
+      
+    // Updating widget replacing old instances with new
+    public function update( $new_instance, $old_instance ) {
+        $instance = array();
+        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+        $instance['number'] = ( ! empty( $new_instance['number'] ) ) ? strip_tags( $new_instance['number'] ) : '';
+        $instance['cat'] = ( ! empty( $new_instance['cat'] ) ) ? strip_tags( $new_instance['cat'] ) : '';
+        //var_dump($instance);
+        return $instance;
+    }
+} // Class wpb_widget ends here
+
 
 
 class last_news_widget extends WP_Widget {
@@ -501,6 +738,8 @@ class last_news_widget extends WP_Widget {
 function naiau_widget() {
   register_widget( 'last_notify_widget' );
   register_widget( 'last_news_widget' );
+  register_widget( 'last_downloads_widget' );
+  register_widget( 'last_circulars_widget' );
 }
 add_action( 'widgets_init', 'naiau_widget' );
 
@@ -652,3 +891,158 @@ function naiau_show_download(){
   }
 }
 
+/*-----------------------Shortcodes----------------------------*/
+function naiau_notifies_in_cat( $atts, $content = null ) {
+   global $wp_query;
+    $a = shortcode_atts( array(
+        'cat' => '',
+        'qty' => -1,
+        'icon' => 'fa-graduation-cap',
+        'show_more' => "true",
+        // ...etc
+    ), $atts );
+
+   
+
+$notifies = get_posts(array(
+                            'post_type' => 'notify',
+                            'posts_per_page' => $a['qty'],
+                            'notify_cat'         => $a['cat'],
+                            )
+                        );
+
+  $notify_cat_url = get_term_link($a['cat'],'notify_cat');
+  if(is_wp_error($notify_cat_url)){
+      $notify_cat_url = home_url('/').'?post_type=notify';
+  } 
+
+  
+  if(!empty($notifies)){
+    
+    
+     $notify_list = ''; 
+     foreach($notifies as $notify){
+        setup_postdata( $notify ) ;
+               
+        $notify_list .= '<li>';
+        $notify_list .= '<i class="fa '.$a['icon'].'"></i>';
+        $notify_list .= '<a href="'.get_the_permalink($notify->ID).'">';
+        $notify_list .= '<span>'.$notify->post_title.'</span>';
+        $notify_list .= '</a>';
+          
+        $notify_list .= '</li>';
+      } 
+    if($a['show_more'] == "true"){  
+        $notify_list .='<li><a href="'.$notify_cat_url.'">'.__('More Items ','naiau').'<i class="fa fa-long-arrow-left"></i></a></li>';
+    }
+      
+   
+  } 
+  return $notify_list;
+  wp_reset_query();
+}
+add_shortcode( 'notifies', 'naiau_notifies_in_cat' );
+
+
+function naiau_downloads_in_cat( $atts, $content = null ) {
+   global $wp_query;
+    $a = shortcode_atts( array(
+        'cat' => '',
+        'qty' => -1,
+        'icon' => 'fa-cloud-download',
+        'show_more' => "true",
+        // ...etc
+    ), $atts );
+
+   
+
+$downloads = get_posts(array(
+                            'post_type' => 'download',
+                            'posts_per_page' => $a['qty'],
+                            'download_cat'         => $a['cat'],
+                            )
+                        );
+
+  $download_cat_url = get_term_link($a['cat'],'download_cat');
+  if(is_wp_error($download_cat_url)){
+      $download_cat_url = home_url('/').'?post_type=download';
+  } 
+
+  
+  if(!empty($downloads)){
+    
+    
+     $download_list = ''; 
+     foreach($downloads as $download){
+        setup_postdata( $download ) ;
+               
+        $download_list .= '<li>';
+        $download_list .= '<i class="fa '.$a['icon'].'"></i>';
+        $download_list .= '<a href="'.get_post_meta($download->ID,'_naiau_download_url',1).'">';
+        $download_list .= '<span>'.$download->post_title.'</span>';
+        $download_list .= '</a>';
+          
+        $download_list .= '</li>';
+      } 
+    if($a['show_more'] == "true"){  
+        $download_list .='<li><a href="'.$download_cat_url.'">'.__('More Items ','naiau').'<i class="fa fa-long-arrow-left"></i></a></li>';
+    }
+      
+   
+  } 
+  return $download_list;
+  wp_reset_query();
+}
+add_shortcode( 'downloads', 'naiau_downloads_in_cat' );
+
+
+function naiau_circulars_in_cat( $atts, $content = null ) {
+   global $wp_query;
+    $a = shortcode_atts( array(
+        'cat' => '',
+        'qty' => -1,
+        'icon' => 'fa-file-text',
+        'show_more' => "true",
+        // ...etc
+    ), $atts );
+
+   
+
+$circulars = get_posts(array(
+                            'post_type' => 'circular',
+                            'posts_per_page' => $a['qty'],
+                            'circular_cat'         => $a['cat'],
+                            )
+                        );
+
+  $circular_cat_url = get_term_link($a['cat'],'circular_cat');
+  if(is_wp_error($circular_cat_url)){
+      $circular_cat_url = home_url('/').'?post_type=circular';
+  } 
+
+  
+  if(!empty($circulars)){
+    
+    
+     $circular_list = ''; 
+     foreach($circulars as $circular){
+        setup_postdata( $circular ) ;
+               
+        $circular_list .= '<li>';
+        $circular_list .= '<i class="fa '.$a['icon'].'"></i>';
+        $circular_list .= '<a href="'.get_the_permalink($circular->ID).'">';
+        $circular_list .= '<span>'.$circular->post_title.'</span>';
+        $circular_list .= '</a>';
+          
+        $circular_list .= '</li>';
+      } 
+    if($a['show_more'] == "true"){  
+        $circular_list .='<li><a href="'.$circular_cat_url.'">'.__('More Items ','naiau').'<i class="fa fa-long-arrow-left"></i></a></li>';
+    }
+      
+   
+  } 
+  return $circular_list;
+  wp_reset_query();
+}
+add_shortcode( 'circulars', 'naiau_circulars_in_cat' );

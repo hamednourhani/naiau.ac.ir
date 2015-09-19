@@ -85,21 +85,24 @@ font-size : 16px;
 			border : 1px dashed $skyblue2;
 
 		}
+		i:before{
+			vertical-align: middle;
+		}
 		a{
 			color : $grey1;
 			position : relative;
 			@include single-transition(all ,0.3s , ease-ion-out);
+			padding-right : 5px;
+			
 		}
 		a:hover{
 			color : $skyblue2;
 		}
-		p:before,a:before{
-			@extend .fa;
-			content : "\f19d";
-			position : absolute;
-			right : -25px;
-			top : 5px;
-		}
+		// p:before,a:before{
+		// 	position : absolute;
+		// 	right : -25px;
+		// 	top : 5px;
+		// }
 
 
 	}

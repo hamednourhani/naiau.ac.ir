@@ -63,7 +63,7 @@
 												<?php } ?>
 											</div>
 											<div class="page-sidebar">
-												<?php get_sidebar('notify'); ?>
+												<?php get_sidebar('download'); ?>
 											</div>
 										<?php }else{ ?>
 											<div class="page-content single-page">		
@@ -72,6 +72,7 @@
 												</div>
 												
 												<?php the_content(); ?> 
+												<?php echo __('Download Link : ','naiau').'<a href="'.get_the_title().'">'.get_post_meta(get_the_ID(),'_naiau_download_url').'</a>'; ?>
 												<?php get_template_part('library/post','meta'); ?>
 												<?php if($show_comments == true){?>
 													<div class="comment-area">
@@ -91,7 +92,6 @@
 				
 				<?php get_template_part('library/footer','links'); ?>
 				
-
 			
 		</main>
 
