@@ -57,6 +57,9 @@ body{
 				@include span-columns(9 omega,12);
 			}
 		}
+		&.without-sidebar{
+			@include span-columns(12,12);
+		}
 		
 		.featured-image{
 			width : 100%;
@@ -199,6 +202,63 @@ body{
 		border-bottom : none;
 	}
 
+}
+.page-content{
+	.science-pic{
+		display :inline-block;
+		float : left;
+		margin : 10px;
+		width : 150px;
+		height: auto;
+	}
+	ul.science-info{
+		padding :10px 10px;
+		li{
+			padding : 5px;
+			display : table;
+			border-bottom : 1px solid $grey1;
+		}
+	}
+	.science-name,.science-study,.science-magazine,
+	.science-conference,.science-books,.science-research{
+		display : block;
+		overflow: hidden;
+	}
+	.table-container{
+		width : 90%;
+		margin : auto;
+		padding : 20px 0px;
+		table.scientific-board{
+			width : 100%;
+
+			th{
+				text-align: center;
+				padding:5px;
+				border : 1px solid $grey2;
+				color : $white;
+				background-color: $navy1;
+				max-width : 40%;
+				font-size : 90%;
+
+
+			}
+			tr{
+				text-align:center;
+				&:nth-of-type(2n){
+					background-color: lighten($grey1,15%);
+				}
+
+			}
+			td{
+				text-align : center;
+				padding:5px;
+				border : 1px solid $grey2;
+				max-width : 40%;
+				font-size : 90%;
+
+			}
+		}
+	}
 }
 .secondary{
 	.widget{

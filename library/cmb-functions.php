@@ -368,6 +368,47 @@ function naiau_register_link_metabox() {
 }
 
 
+/******************************************************************/
+/*--------------------Link Page-----------------------------------*/
+/******************************************************************/
+
+add_action('cmb2_init','naiau_register_download_metabox');
+// add_action('cmb2_init','naiau_register_tour_information_metabox');
+function naiau_register_download_metabox() {
+
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_naiau_';
+
+	/**
+	 * Sample metabox to demonstrate each field type included
+	 */
+	$cmb_demo = new_cmb2_box( array(
+		'id'            => $prefix . 'download_metabox',
+		'title'         => __( 'Download Information', 'naiau' ),
+		'object_types'  => array( 'download' ), // Post type
+		// 'show_on_cb' => 'naiau_show_if_front_page', // function should return a bool value
+		// 'context'    => 'normal',
+		// 'priority'   => 'high',
+		// 'show_names' => true, // Show field names on the left
+		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+		// 'closed'     => true, // true to keep the metabox closed by default
+	) );
+
+	$cmb_demo->add_field( array(
+		'name'       => __( 'download file address', 'naiau' ),
+		'desc'       => __( 'the web address of download', 'naiau' ),
+		'id'         => $prefix . 'download_url',
+		'type'       => 'text_url',
+		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
+		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+		// 'on_front'        => false, // Optionally designate a field to wp-admin only
+		// 'repeatable'      => true,
+	) );
+
+	
+}
+
 
 /******************************************************************/
 /*--------------------Gallery Page-----------------------------------*/
@@ -878,18 +919,42 @@ function naiau_register_related_widget_metabox() {
 /******************************************************************/
 /*--------------------Scientifc Board user Profile ----------------*/
 /******************************************************************/
-global $user_ID,$wp_roles;
+global $user_ID,$pagenow;
 
-$current_user = wp_get_current_user();
-$roles = $current_user->roles;
-$role = array_shift($roles);
+$current_user_id = get_current_user_id();
 
-if ( $role == "administrator" || $role == 'editor' || $role == 'sciences_board') {
-	add_action('cmb2_init','naiau_science_article_metabox');
+
+// if ( $role == "administrator" || $role == 'editor' || $role == 'sciences_board') {
+// 	add_action('cmb2_init','naiau_science_article_metabox');
+// }
+// =======
+if($pagenow == 'profile.php' || $pagenow == 'user-edit.php'){
+
+
+	if (isset($_GET['user_id']) && is_user_logged_in()){
+		
+		$userProfile = get_userdata( $_GET['user_id']);
+		$roles = $userProfile->roles;
+		$current_role = array_shift($roles);
+
+	}elseif(isset($current_user_id) && is_user_logged_in()){
+		$userProfile = get_userdata($current_user_id);
+		$roles = $userProfile->roles;
+		$current_role = array_shift($roles);
+
+
+	}
+	if (isset($current_role) &&  ($current_role == 'scientific_board' || $current_role == 'administrator') ) {
+			add_action('cmb2_init','naiau_science_extra_info_metabox');
+			add_action('cmb2_init','naiau_science_study_metabox');
+			add_action('cmb2_init','naiau_science_articles_metabox');
+			add_action('cmb2_init','naiau_science_conf_articles_metabox');
+			add_action('cmb2_init','naiau_science_research_projects_metabox');
+			add_action('cmb2_init','naiau_science_books_metabox');
+		}
 }
 
-
-function naiau_science_article_metabox() {
+function naiau_science_extra_info_metabox() {
 
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_naiau_user_';
@@ -901,244 +966,456 @@ function naiau_science_article_metabox() {
 		'id'            => $prefix . 'section_maker_metabox',
 		'title'         => __( 'Section Selection', 'naiau' ),
 		'object_types'  => array( 'user' ), // Post type
-		// 'new_user_section' => 'add-new-user', // where form will show on new user page. 'add-existing-user' is only other valid option.
-		// 'show_on_cb' => 'naiau_show_if_front_page', // function should return a bool value
-		// 'context'    => 'normal',
-		// 'priority'   => 'high',
-		// 'show_names' => true, // Show field names on the left
-		// 'cmb_styles' => false, // false to disable the CMB stylesheet
-		// 'closed'     => true, // true to keep the metabox closed by default
-	) );
-
-	
-
-	$cmb_demo->add_field( array(
-		'name'       => __( 'news slider', 'naiau' ),
-		'desc'       => __( 'show news slider', 'naiau' ),
-		'id'         => $prefix . 'slider_show',
-		'type'       => 'radio_inline',
-		'show_option_none' => true,
-		'options'          => array(
-			'true' => __( 'Yes', 'naiau' ),
-			
-		),	
+		'new_user_section' => 'add-exiting-user', // where form will show on new user page. 'add-existing-user' is only other valid option.
 		
-		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
-		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
-		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
-		// 'on_front'        => false, // Optionally designate a field to wp-admin only
-		// 'repeatable'      => true,
-	) );
-
-	$news_array = array();
-	$news_array['none'] = "---";
-	$news_cats = get_terms('news_cat');
-	if(count($news_cats)>0){
-		foreach($news_cats as $news_cat){
-				$news_array[$news_cat->term_id] = $news_cat->name;
-		}
-	}
-	$cmb_demo->add_field( array(
-		'name'       => __( 'News Category', 'naiau' ),
-		'desc'       => __( 'which news category?', 'naiau' ),
-		'id'         => $prefix . 'news_cat',
-		'type'       => 'select',
-		'options'          => $news_array,
-	));
-
-	
-	$cmb_demo->add_field( array(
-		'name'       => __( 'hide content', 'naiau' ),
-		'desc'       => __( 'hide page content', 'naiau' ),
-		'id'         => $prefix . 'content',
-		'type'       => 'radio_inline',
-		'show_option_none' => true,
-		'options'          => array(
-			'true' => __( 'Yes', 'naiau' ),
-			
-			
-			
-			
-		),
-		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
-		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
-		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
-		// 'on_front'        => false, // Optionally designate a field to wp-admin only
-		// 'repeatable'      => true,
 	) );
 
 	$cmb_demo->add_field( array(
-		'name'       => __( 'show comments', 'naiau' ),
-		'desc'       => __( 'show  page coments', 'naiau' ),
-		'id'         => $prefix . 'comments',
-		'type'       => 'radio_inline',
-		'show_option_none' => true,
-		'options'          => array(
-			'true' => __( 'Yes', 'naiau' ),
-			
-			
-			
-			
-		),
-		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
-		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
-		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
-		// 'on_front'        => false, // Optionally designate a field to wp-admin only
-		// 'repeatable'      => true,
-	) );
-
-	
-
-
-
-
-
-	// var_dump($news_cats);
-	$cmb_demo->add_field( array(
-		'name'       => __( 'hide sidebar', 'naiau' ),
-		'desc'       => __( 'hide page sidebar', 'naiau' ),
-		'id'         => $prefix . 'sidebar',
-		'type'       => 'radio_inline',
-		'show_option_none' => true,
-		'options'          => array(
-			'true' => __( 'Yes', 'naiau' ),
-			
-			
-			
-			
-		),
-		//'show_on_cb' => 'naiau_hide_if_no_cats', // function should return a bool value
-		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
-		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
-		// 'on_front'        => false, // Optionally designate a field to wp-admin only
-		// 'repeatable'      => true,
-	) );
-
-	$cmb_demo->add_field( array(
-		'name'       => __( 'show tabs', 'naiau' ),
-		'desc'       => __( 'show tabs or not', 'naiau' ),
-		'id'         => $prefix . 'show_tabs',
-		'type'       => 'radio_inline',
-		'show_option_none' => true,
-		'options'          => array(
-			'true' => __( 'Yes', 'naiau' ),
-		),
-	) );
-
-	
-	$tabs_list = get_posts(array(
-			'post_type' => 'tab',
-			'posts_per_page' => '100',
-			)
+		'name'       => __( 'Profile Picture', 'naiau' ),
+		'desc'       => __( 'Upload profile picture or enter the url', 'naiau' ),
+		'id'         => $prefix . 'picture',
+		'type'       => 'file',
+		
+		)
+		
 	);
-	
-
-	
-	$tab_array = array();
-	foreach ( $tabs_list as $tab ) : setup_postdata( $tab );
-			$tab_array[$tab->ID] = $tab->post_title;
- 	endforeach; 
-
-
 	$cmb_demo->add_field( array(
-		'name'       => __( 'tabs category', 'naiau' ),
-		'desc'       => __( 'which tab category?', 'naiau' ),
-		'id'         => $prefix . 'tab_id',
-		'type'       => 'select',
-		'options'          => $tab_array,
-
+		'name'       => __( 'Science Degree', 'naiau' ),
+		'desc'       => __( 'enter the science degree ', 'naiau' ),
+		'id'         => $prefix . 'degree',
+		'type'       => 'text',
 		
-	));
-	
-
-	$cmb_demo->add_field( array(
-		'name'       => __( 'show related links', 'naiau' ),
-		'desc'       => __( 'show related links or not', 'naiau' ),
-		'id'         => $prefix . 'related_links',
-		'type'       => 'radio_inline',
-		'show_option_none' => true,
-		'options'          => array(
-			'true' => __( 'Yes', 'naiau' ),
-			
-			
-			
-		),
+		)
 		
-	) );
+	);
 
-	$link_array = array();
-	$link_array['none'] = "---";
-	$link_cats = get_terms('link_cat');
-	if(count($link_cats)>0){
-		foreach($link_cats as $link_cat){
-				$link_array[$link_cat->term_id] = $link_cat->name;
-		}
-	}
 	$cmb_demo->add_field( array(
-		'name'       => __( 'Links Category', 'naiau' ),
-		'desc'       => __( 'which Link category?', 'naiau' ),
-		'id'         => $prefix . 'links_cat',
+		'name'       => __( 'Educational Group', 'naiau' ),
+		'desc'       => __( 'select educational group ', 'naiau' ),
+		'id'         => $prefix . 'edu_group',
 		'type'       => 'select',
-		'options'          => $link_array,
+		'options'    => array(
+
+								'electronic' => __('Electronic','naiau'),
+								'mechanic' => __('Mechanic','naiau'),
+								'building' => __('Building','naiau'),
+								'material' => __('Material','naiau'),
+								'computer' => __('Computer','naiau'),
+								'public' => __('Public','naiau'),
+			),
+		
+		)
+		
+	 );
+	
+	$cmb_demo->add_field( array(
+		'name'       => __( 'Emails', 'naiau' ),
+		'desc'       => __( 'enter the Email Addresses sepeprate with comma eg. info@gmail.com , info@yahoo.com ', 'naiau' ),
+		'id'         => $prefix . 'emails',
+		'type'       => 'text',
+		
+		)
+		
+	 );
+	
+	$cmb_demo->add_field( array(
+		'name'       => __( 'Description', 'naiau' ),
+		'desc'       => __( 'Enter Description', 'naiau' ),
+		'id'         => $prefix . 'description',
+		'type' => 'wysiwyg',
+	    'options' => array(
+	        // 'wpautop' => true, // use wpautop?
+	        // 'media_buttons' => true, // show insert/upload button(s)
+	        // 'textarea_name' => $editor_id, // set the textarea name to something different, square brackets [] can be used here
+	        // 'textarea_rows' => get_option('default_post_edit_rows', 10), // rows="..."
+	        // 'tabindex' => '',
+	        // 'editor_css' => '', // intended for extra styles for both visual and HTML editors buttons, needs to include the `<style>` tags, can use "scoped".
+	        // 'editor_class' => '', // add extra class(es) to the editor textarea
+	        // 'teeny' => false, // output the minimal editor config used in Press This
+	        // 'dfw' => false, // replace the default fullscreen with DFW (needs specific css)
+	        // 'tinymce' => true, // load TinyMCE, can be used to pass settings directly to TinyMCE using an array()
+	        // 'quicktags' => true // load Quicktags, can be used to pass settings directly to Quicktags using an array()  
+	    )
 	));
 
 	
 }
 
-add_action( 'cmb2_init', 'naiau_register_related_widget_metabox' );
-function naiau_register_related_widget_metabox() {
+function naiau_science_study_metabox() {
 
 	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_naiau_group_';
-	
+	$prefix = '_naiau_study_';
+
 	$cmb_group = new_cmb2_box( array(
-		'id'           => $prefix . 'related_widget',
-		'title'        => __( 'Related Links', 'naiau' ),
-		'object_types' => array( 'management','education' ),
+		'id'           => $prefix . 'main',
+		'title'        => __( 'Study Experinces', 'naiau' ),
+		'object_types' => array( 'user' ),
+		'new_user_section' => 'add-exiting-user', // where form will show on new user page. 'add-existing-user' is only other valid option.
+
 	) );
 
 	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
 	$group_field_id = $cmb_group->add_field( array(
-		'id'          => $prefix . 'related_links',
+		'id'          => $prefix . 'exp',
 		'type'        => 'group',
-		'description' => __( 'Generates reusable form entries', 'naiau' ),
+		'description' => __( 'Layout study experiences', 'naiau' ),
 		'options'     => array(
-			'group_title'   => __( 'Link {#}', 'naiau' ), // {#} gets replaced by row number
-			'add_button'    => __( 'Add Another Link', 'naiau' ),
-			'remove_button' => __( 'Remove Link', 'naiau' ),
+			'group_title'   => __( 'experince {#}', 'naiau' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another experince', 'naiau' ),
+			'remove_button' => __( 'Remove Experince', 'naiau' ),
 			'sortable'      => true, // beta
 		),
 	) );
 
-	
-	
-	
- 	
-
 	$cmb_group->add_group_field($group_field_id , array(
-		'name'    => __( 'Link Name', 'naiau' ),
-		'desc'    => __( 'The name of related link ', 'naiau' ),
-		'id'      => 'link_name',
+		'name'    => __( 'Study Degree', 'naiau' ),
+		'desc'    => __( 'enter the study degree ', 'naiau' ),
+		'id'      => 'study_degree',
+		'type'    => 'text',
+		
+			
+	) );
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'study Course', 'naiau' ),
+		'desc'    => __( 'enter the study course ', 'naiau' ),
+		'id'      => 'study_course',
 		'type'    => 'text',
 		
 			
 	) );
 
 	$cmb_group->add_group_field($group_field_id , array(
-		'name'    => __( 'Link Url', 'naiau' ),
-		'desc'    => __( 'The Url of Link ', 'naiau' ),
-		'id'      => 'link_url',
-		'type'    => 'text_url',
+		'name'    => __( 'Study University', 'naiau' ),
+		'desc'    => __( 'enter the study university ', 'naiau' ),
+		'id'      => 'study_uni',
+		'type'    => 'text',
 		
 			
 	) );
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Study year', 'naiau' ),
+		'desc'    => __( 'enter the jalali study year eg. : 1390', 'naiau' ),
+		'id'      => 'study_year',
+		'type'    => 'text',
+		
+			
+	) );
+
 }
 
+function naiau_science_articles_metabox() {
+
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_naiau_article_';
+
+	$cmb_group = new_cmb2_box( array(
+		'id'           => $prefix . 'main',
+		'title'        => __( 'Magazine Articles', 'naiau' ),
+		'object_types' => array( 'user' ),
+		'new_user_section' => 'add-exiting-user', // where form will show on new user page. 'add-existing-user' is only other valid option.
+
+	) );
+
+	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
+	$group_field_id = $cmb_group->add_field( array(
+		'id'          => $prefix . 'art',
+		'type'        => 'group',
+		'description' => __( 'Layout Magazine Articles', 'naiau' ),
+		'options'     => array(
+			'group_title'   => __( 'article {#}', 'naiau' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another article', 'naiau' ),
+			'remove_button' => __( 'Remove article', 'naiau' ),
+			'sortable'      => true, // beta
+		),
+	) );
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Article Title', 'naiau' ),
+		'desc'    => __( 'enter the Article Title ', 'naiau' ),
+		'id'      => 'article_title',
+		'type'    => 'textarea',
+		
+			
+	) );
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Publisher', 'naiau' ),
+		'desc'    => __( 'enter the Publisher Name ', 'naiau' ),
+		'id'      => 'publisher',
+		'type'    => 'text',
+		
+			
+	) );
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'magazine degree', 'naiau' ),
+		'desc'    => __( 'enter the magazine degree ', 'naiau' ),
+		'id'      => 'mag_degree',
+		'type'    => 'text',
+		
+			
+	) );
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Publish Date', 'naiau' ),
+		'desc'    => __( 'enter the publish date ', 'naiau' ),
+		'id'      => 'publish_date',
+		'type'    => 'text',
+		
+			
+	) );
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Jalali Publish year', 'naiau' ),
+		'desc'    => __( 'enter the jalali publish year eg. : 1390', 'naiau' ),
+		'id'      => 'jalali_publish_year',
+		'type'    => 'text',
+		
+			
+	) );
+
+}
 	
-	
-	
+function naiau_science_conf_articles_metabox() {
+
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_naiau_conf_article_';
+
+	$cmb_group = new_cmb2_box( array(
+		'id'           => $prefix . 'main',
+		'title'        => __( 'Conferences Articles', 'naiau' ),
+		'object_types' => array( 'user' ),
+		'new_user_section' => 'add-exiting-user', // where form will show on new user page. 'add-existing-user' is only other valid option.
+
+	) );
+
+	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
+	$group_field_id = $cmb_group->add_field( array(
+		'id'          => $prefix . 'art',
+		'type'        => 'group',
+		'description' => __( 'Layout Conference Articles', 'naiau' ),
+		'options'     => array(
+			'group_title'   => __( 'article {#}', 'naiau' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another article', 'naiau' ),
+			'remove_button' => __( 'Remove article', 'naiau' ),
+			'sortable'      => true, // beta
+		),
+	) );
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Article Title', 'naiau' ),
+		'desc'    => __( 'enter the Article Title ', 'naiau' ),
+		'id'      => 'article_title',
+		'type'    => 'textarea',
+		
+			
+	) );
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Conference Title', 'naiau' ),
+		'desc'    => __( 'enter the Conference Title ', 'naiau' ),
+		'id'      => 'conf_title',
+		'type'    => 'text',
+		
+			
+	) );
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Conference Level', 'naiau' ),
+		'desc'    => __( 'enter the Conference Level ', 'naiau' ),
+		'id'      => 'conf_level',
+		'type'    => 'text',
+		
+			
+	) );
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Conference Location', 'naiau' ),
+		'desc'    => __( 'enter the Conference Location ', 'naiau' ),
+		'id'      => 'conf_location',
+		'type'    => 'text',
+		
+			
+	) );
 	
 
+	
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Conference Date', 'naiau' ),
+		'desc'    => __( 'enter the Conference date ', 'naiau' ),
+		'id'      => 'conference_date',
+		'type'    => 'text',
+		
+			
+	) );
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Conference Jalali Year', 'naiau' ),
+		'desc'    => __( 'enter the jalali Conference year eg. : 1390 ', 'naiau' ),
+		'id'      => 'conference_year',
+		'type'    => 'text',
+		
+			
+	) );
+
+}	
+
+function naiau_science_research_projects_metabox() {
+
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_naiau_res_projects_';
+
+	$cmb_group = new_cmb2_box( array(
+		'id'           => $prefix . 'main',
+		'title'        => __( 'Research Projects', 'naiau' ),
+		'object_types' => array( 'user' ),
+		'new_user_section' => 'add-exiting-user', // where form will show on new user page. 'add-existing-user' is only other valid option.
+
+	) );
+
+	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
+	$group_field_id = $cmb_group->add_field( array(
+		'id'          => $prefix . 'res',
+		'type'        => 'group',
+		'description' => __( 'Layout Projects', 'naiau' ),
+		'options'     => array(
+			'group_title'   => __( 'project {#}', 'naiau' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another project', 'naiau' ),
+			'remove_button' => __( 'Remove project', 'naiau' ),
+			'sortable'      => true, // beta
+		),
+	) );
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Project Title', 'naiau' ),
+		'desc'    => __( 'enter the project Title ', 'naiau' ),
+		'id'      => 'project_title',
+		'type'    => 'textarea',
+		
+			
+	) );
+	
+
+	
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Approval authority', 'naiau' ),
+		'desc'    => __( 'enter the Approval authority', 'naiau' ),
+		'id'      => 'approval_authority',
+		'type'    => 'text',
+		
+			
+	) );
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Naiau project', 'naiau' ),
+		'desc'    => __( 'is naiau approved this project?', 'naiau' ),
+		'id'      => 'naiau_project',
+		'type'    => 'radio_inline',
+		'options' => array(
+							'no' => __('No','naiau'),
+							'yes' => __('Yes','naiau'),
+			),
+		'default' => 'no',
+		
+			
+	) );
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Project Duration', 'naiau' ),
+		'desc'    => __( 'enter the Project Duration', 'naiau' ),
+		'id'      => 'project_duration',
+		'type'    => 'text',
+		
+			
+	) );
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Project End Jalali Date', 'naiau' ),
+		'desc'    => __( 'enter the Project End Jalali Date eg. : 1390', 'naiau' ),
+		'id'      => 'project_end_date',
+		'type'    => 'text',
+		
+			
+	) );
+	
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Project status', 'naiau' ),
+		'desc'    => __( 'select the project status', 'naiau' ),
+		'id'      => 'project_status',
+		'type'    => 'radio_inline',
+		'options' => array(
+							'in_proccess' =>__('In Proccess','naiau'),
+							'cleared' =>__('Cleared','naiau'),
+			),
+		
+			
+	) );
+	
+
+
+
+	
+function naiau_science_books_metabox() {
+
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_naiau_books_';
+
+	$cmb_group = new_cmb2_box( array(
+		'id'           => $prefix . 'main',
+		'title'        => __( 'Books', 'naiau' ),
+		'object_types' => array( 'user' ),
+		'new_user_section' => 'add-exiting-user', // where form will show on new user page. 'add-existing-user' is only other valid option.
+
+	) );
+
+	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
+	$group_field_id = $cmb_group->add_field( array(
+		'id'          => $prefix . 'books',
+		'type'        => 'group',
+		'description' => __( 'Layout books', 'naiau' ),
+		'options'     => array(
+			'group_title'   => __( 'Book {#}', 'naiau' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another book', 'naiau' ),
+			'remove_button' => __( 'Remove book', 'naiau' ),
+			'sortable'      => true, // beta
+		),
+	) );
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'book Title', 'naiau' ),
+		'desc'    => __( 'enter the project Title ', 'naiau' ),
+		'id'      => 'book_title',
+		'type'    => 'text',
+		
+			
+	) );
+	
+
+	
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Author', 'naiau' ),
+		'desc'    => __( 'enter the book Author', 'naiau' ),
+		'id'      => 'author',
+		'type'    => 'text',
+		
+			
+	) );
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Translator', 'naiau' ),
+		'desc'    => __( 'enter translator name', 'naiau' ),
+		'id'      => 'translator',
+		'type'    => 'text',
+		
+			
+	) );
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Publisher', 'naiau' ),
+		'desc'    => __( 'enter the Publisher Name', 'naiau' ),
+		'id'      => 'publisher',
+		'type'    => 'text',
+		
+			
+	) );
+	
+
+}	
 
 
 

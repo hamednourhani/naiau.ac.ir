@@ -280,7 +280,7 @@ function naiau_pagination(){
 
 function naiau_SearchFilter($query) {
     if ($query->is_search) {
-      $query->set('post_type', array('post','news','notify'));
+      $query->set('post_type', array('post','news','notify','page'));
     }
     return $query;
     }
@@ -289,6 +289,7 @@ add_filter('pre_get_posts','naiau_SearchFilter');
 
 function naiau_add_query_vars_filter( $vars ){
   $vars[] = "sub_id";
+  $vars[] = "science_board";
   return $vars;
 }
 add_filter( 'query_vars', 'naiau_add_query_vars_filter' );
@@ -529,24 +530,31 @@ add_filter( 'get_search_form', 'naiau_search_form' );
 /*-----------------user roles config functions -----------------------*/
 /*-----------------user roles config functions -----------------------*/
 /*-----------------user roles config functions -----------------------*/
+function naiau_profile_admin_css() {
+    $screen_id = isset( get_current_screen()->id ) ? get_current_screen()->id : null;
 
+    if ( 'profile' === $screen_id || 'user-edit' === $screen_id ) {
+        wp_enqueue_style( 'profile-admin-css', get_template_directory_uri().'/css/profile.css' );
+    }
+}
+add_action( 'admin_enqueue_scripts', 'naiau_profile_admin_css' );
 
 function naiau_add_user_roles(){
 remove_role('sciene_board');
-remove_role('scientific_board');
+remove_role('sciences_board');
 
-$role = add_role( 'sciences_board', __(
-'Sciences Board','naiau' ),
+$role = add_role( 'scientific_board', __(
+'Scientific Board','naiau' ),
 array(
 
 
       'read' => true, // true allows this capability
-      'edit_posts' => true, // Allows user to edit their own posts
+      'edit_posts' => false, // Allows user to edit their own posts
       'edit_pages' => false, // Allows user to edit pages
       'edit_others_posts' => false, // Allows user to edit others posts not just their own
-      'create_posts' => true, // Allows user to create new posts
+      'create_posts' => false, // Allows user to create new posts
       'manage_categories' => false, // Allows user to manage post categories
-      'publish_posts' => true, // Allows the user to publish, otherwise posts stays in draft mode
+      'publish_posts' => false, // Allows the user to publish, otherwise posts stays in draft mode
       'edit_themes' => false, // false denies this capability. User can’t edit your theme
       'install_plugins' => false, // User cant add new plugins
       'update_plugin' => false, // User can’t update any plugins
@@ -619,5 +627,28 @@ function naiau_remove_menu_pages() {
       remove_menu_page('upload.php'); // Settings 
       remove_menu_page( 'wpcf7' );
     }
+}
+
+add_action( 'after_setup_theme', 'naiau_remove_core_updates' );
+function naiau_remove_core_updates()
+{
+    if ( current_user_can( 'update_core' ) ) {
+        return;
+    }
+    add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_version_check' );" ), 2 );
+    add_filter( 'pre_option_update_core', '__return_null' );
+    add_filter( 'pre_site_transient_update_core', '__return_null' ); 
+    remove_action( 'load-update-core.php', 'wp_update_plugins' );
+    add_filter( 'pre_site_transient_update_plugins', '__return_null' );
+} 
+
+add_shortcode( 'naiau_register', 'naiau_show_download' );
+
+//user login shortcode
+function naiau_show_download(){
+  $args = array('echo'=>false);
+  if ( !is_user_logged_in() ) {
+      return '<div class="login-container">'.wp_login_form( $args ).'</div>';
+  }
 }
 
