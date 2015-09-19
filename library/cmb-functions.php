@@ -884,9 +884,9 @@ $current_user = wp_get_current_user();
 $roles = $current_user->roles;
 $role = array_shift($roles);
 
-// if ( $role == "administrator" || $role == 'editor' || $role == 'sciences_board') {
+if ( $role == "administrator" || $role == 'editor' || $role == 'sciences_board') {
 	add_action('cmb2_init','naiau_science_article_metabox');
-// }
+}
 
 
 function naiau_science_article_metabox() {
@@ -1083,6 +1083,55 @@ function naiau_science_article_metabox() {
 	));
 
 	
+}
+
+add_action( 'cmb2_init', 'naiau_register_related_widget_metabox' );
+function naiau_register_related_widget_metabox() {
+
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_naiau_group_';
+	
+	$cmb_group = new_cmb2_box( array(
+		'id'           => $prefix . 'related_widget',
+		'title'        => __( 'Related Links', 'naiau' ),
+		'object_types' => array( 'management','education' ),
+	) );
+
+	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
+	$group_field_id = $cmb_group->add_field( array(
+		'id'          => $prefix . 'related_links',
+		'type'        => 'group',
+		'description' => __( 'Generates reusable form entries', 'naiau' ),
+		'options'     => array(
+			'group_title'   => __( 'Link {#}', 'naiau' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Link', 'naiau' ),
+			'remove_button' => __( 'Remove Link', 'naiau' ),
+			'sortable'      => true, // beta
+		),
+	) );
+
+	
+	
+	
+ 	
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Link Name', 'naiau' ),
+		'desc'    => __( 'The name of related link ', 'naiau' ),
+		'id'      => 'link_name',
+		'type'    => 'text',
+		
+			
+	) );
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Link Url', 'naiau' ),
+		'desc'    => __( 'The Url of Link ', 'naiau' ),
+		'id'      => 'link_url',
+		'type'    => 'text_url',
+		
+			
+	) );
 }
 
 	
