@@ -5,3 +5,10 @@
     float: right !important;
     
 }
+.cmb-repeatable-group .cmb-group-description .cmb-th {
+    text-align: right !important;
+    
+}
+p.cmb2-metabox-description{
+	color : navy !important;
+}

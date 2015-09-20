@@ -208,13 +208,17 @@
 		}
 		li.menu-item-has-children>a:after{
 			@extend .fa;
-			content : "\F078";
+			content : "\f107";
 			padding-right : 3px;
 			color : $skyblue1;
+			position: absolute;
+		    top: 55%;
+		    left: 42%;
+		    font-size : 110%;
 		}
 		li>a{
 			border-right : 1px solid lighten($navy1, 10%);
-			padding : 2px 8px 12px;
+			padding : 2px 12px 12px;
 			border-bottom : 3px solid $navy1;
 			display: inherit;
 			@include single-transition(all , 0.3s , ease-in-out);
@@ -249,7 +253,7 @@
 			}
 			li.menu-item-has-children>a:after{
 				@extend .fa;
-				content: "\F053";
+				content: "\f104";
 			    left: 12px;
 			    position: absolute;
 			    vertical-align : middle;

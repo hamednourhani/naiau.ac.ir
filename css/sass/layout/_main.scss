@@ -204,30 +204,45 @@ body{
 
 }
 .page-content{
+	min-height : 100%;
+	.table-container{
+		width : 90%;
+		margin: 10px auto;
+		display : block;
+	}
 	.science-pic{
 		display :inline-block;
-		float : left;
+		float : right;
 		margin : 10px;
+		margin-left : 30px;
 		width : 150px;
 		height: auto;
 	}
-	ul.science-info{
-		padding :10px 10px;
-		li{
-			padding : 5px;
-			display : table;
-			border-bottom : 1px solid $grey1;
+	.science-info-wrapper{
+		display: inline-block;
+		overflow: hidden;
+
+		ul.science-info{
+			padding :10px 10px;
+			li{
+				padding : 5px;
+				display : table;
+				border-bottom : 1px solid $grey1;
+			}
 		}
 	}
-	.science-name,.science-study,.science-magazine,
-	.science-conference,.science-books,.science-research{
+	.science-name{
+		padding-bottom : 30px;
+	}
+	.science-name,.science-desc{
 		display : block;
 		overflow: hidden;
-	}
-	.table-container{
-		width : 90%;
 		margin : auto;
-		padding : 20px 0px;
+		// padding : 20px 0px;
+	}
+	
+	.science-tabs{
+		
 		table.scientific-board{
 			width : 100%;
 
@@ -259,6 +274,7 @@ body{
 			}
 		}
 	}
+	
 }
 .secondary{
 	.widget{
@@ -374,7 +390,17 @@ body{
 				}
 			}
 			li a.sub-header,li span.related-header{
-				@extend .ui-state-active;
+				border-color : $navy1;
+				background: #5a6b9f; /* Old browsers */
+				background: -moz-linear-gradient(top, #5a6b9f 21%, #253b80 86%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(21%,#5a6b9f), color-stop(86%,#253b80)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top, #5a6b9f 21%,#253b80 86%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top, #5a6b9f 21%,#253b80 86%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top, #5a6b9f 21%,#253b80 86%); /* IE10+ */
+				background: linear-gradient(to bottom, #5a6b9f 21%,#253b80 86%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a6b9f', endColorstr='#253b80',GradientType=0 );
+				font-family : $Yekan;
+				font-size : 17px;
 				color : $white;
 
 			}
