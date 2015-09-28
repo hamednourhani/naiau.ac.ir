@@ -67,6 +67,7 @@ body{
 			text-align : center;
 			img{
 				max-width : 100%;
+				@include border-radius(10px);
 			}
 			&.single-image{
 				width : 40%;
@@ -112,11 +113,12 @@ body{
 			
 		}
 		ul.post-meta-list{
-			padding : 3px;
+			padding : 1px;
 		}
 		.post-meta{
 			margin-top : 10px;
-			padding : 2px 5px;
+			padding : 0px 3px;
+			@include border-radius(3px);
 			//float : left;
 			display : inline-block;
 			background-color : $navy2;
@@ -223,7 +225,7 @@ body{
 		overflow: hidden;
 
 		ul.science-info{
-			padding :10px 10px;
+			padding :35px 10px 10px;
 			li{
 				padding : 5px;
 				display : table;
@@ -246,8 +248,14 @@ body{
 		table.scientific-board{
 			width : 100%;
 
+			tbody{
+				display : table;
+				width: 100%;
+			}
 			th{
+				height : 57px;
 				text-align: center;
+				vertical-align: middle;
 				padding:5px;
 				border : 1px solid $grey2;
 				color : $white;

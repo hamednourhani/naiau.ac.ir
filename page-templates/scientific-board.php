@@ -22,12 +22,15 @@
  */
 
  get_header(); 
-	
-if($_GET['science_board']){
 
-	$single_user_id = $_GET['science_board']; 
-	$single_user = get_userdata($single_user_id);
+//if($_GET['science_board']){
+if($wp_query->query_vars['sb']){
 
+	$single_user_slug = $wp_query->query_vars['sb']; 
+	//$single_user = get_userdata($single_user_id);
+	$single_user = get_user_by('slug',$single_user_slug);
+	$single_user_id = $single_user->ID;
+	//var_dump(get_option('permalink_structure'));
 } else {
 
 	 $args = array(
@@ -125,7 +128,16 @@ if($_GET['science_board']){
 																	// $prev_group = $current_group;
 																?>
 																<td><?php echo $counter ;?></td>
-																<td><a href="<?php echo get_the_permalink().'?science_board='.$user->ID;?>"><?php echo $user->first_name.' '.$user->last_name; ?></a></td>
+																
+																<?php 
+																	if(get_option('permalink_structure') == '/%postname%/'){
+																		$sb_url = get_the_permalink().'/'.$user->user_nicename;
+																	} else {
+																		$sb_url = add_query_arg( array('sb' => $user->user_nicename), get_the_permalink() );
+																	}
+																?>
+																																
+																<td><a href="<?php echo $sb_url;?>"><?php echo $user->first_name.' '.$user->last_name; ?></a></td>
 																<td><?php echo get_usermeta( $user->ID, $meta_key = '_naiau_user_degree' );?></td>
 																<td><?php echo $edu_group; ?></td>
 															
@@ -176,7 +188,7 @@ if($_GET['science_board']){
 															<li><?php echo '<strong>'.__('Name and Family : ','naiau').'</strong>'.$single_user->display_name;?></li>
 															<li><?php echo '<strong>'.__('Science Degree : ','naiau').'</strong>'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_degree' );?></li>
 															<li><?php echo '<strong>'.__('Educational Group : ','naiau').'</strong>'.$edu_group;?></li>
-															<li><?php echo '<strong>'.__('Emails : ','naiau').'</strong>'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_emals' );?></li>
+															<li><?php echo '<strong>'.__('Emails : ','naiau').'</strong>'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_emails' );?></li>
 
 														</ul>
 													</div>

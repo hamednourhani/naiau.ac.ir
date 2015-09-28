@@ -307,7 +307,7 @@ add_filter('pre_get_posts','naiau_SearchFilter');
 
 function naiau_add_query_vars_filter( $vars ){
   $vars[] = "sub_id";
-  $vars[] = "science_board";
+  $vars[] = "sb";
   return $vars;
 }
 add_filter( 'query_vars', 'naiau_add_query_vars_filter' );
@@ -1046,3 +1046,17 @@ $circulars = get_posts(array(
   wp_reset_query();
 }
 add_shortcode( 'circulars', 'naiau_circulars_in_cat' );
+
+function naiau_custom_rewrite_basic() {
+  add_rewrite_rule(
+        // The regex to match the incoming URL
+        'science/([^/]+)/?',
+        // The resulting internal URL: `index.php` because we still use WordPress
+        // `pagename` because we use this WordPress page
+        // `designer_slug` because we assign the first captured regex part to this variable
+        'index.php?pagename=science&sb=$matches[1]',
+        // This is a rather specific URL, so we add it to the top of the list
+        // Otherwise, the "catch-all" rules at the bottom (for pages and attachments) will "win"
+        'top' );
+}
+add_action('init', 'naiau_custom_rewrite_basic');
