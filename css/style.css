@@ -1205,6 +1205,8 @@ body {
     /* line 68, sass/layout/_main.scss */
     .page-main .page-content .featured-image img {
       max-width: 100%;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
       border-radius: 10px; }
     /* line 72, sass/layout/_main.scss */
     .page-main .page-content .featured-image.single-image {
@@ -1247,27 +1249,30 @@ body {
       color: #179BD7; }
   /* line 115, sass/layout/_main.scss */
   .page-main .page-content ul.post-meta-list {
-    padding: 3px; }
+    padding: 1px; }
   /* line 118, sass/layout/_main.scss */
   .page-main .page-content .post-meta {
     margin-top: 10px;
     padding: 0px 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
     display: inline-block;
     background-color: #5A6B9F;
     font-size: 70%;
     text-align: right; }
-    /* line 127, sass/layout/_main.scss */
+    /* line 128, sass/layout/_main.scss */
     .page-main .page-content .post-meta .meta-date {
       position: relative; }
-      /* line 129, sass/layout/_main.scss */
+      /* line 130, sass/layout/_main.scss */
       .page-main .page-content .post-meta .meta-date a {
         color: #E6E6E6; }
-      /* line 132, sass/layout/_main.scss */
+      /* line 133, sass/layout/_main.scss */
       .page-main .page-content .post-meta .meta-date .fa-calendar {
         padding-left: 8px;
         vertical-align: middle;
         color: #E6E6E6; }
-  /* line 141, sass/layout/_main.scss */
+  /* line 142, sass/layout/_main.scss */
   .page-main .page-content.single-page .post-meta {
     overflow: hidden;
     *zoom: 1;
@@ -1278,24 +1283,24 @@ body {
     font-size: 80%;
     width: 100%;
     padding: 10px; }
-    /* line 150, sass/layout/_main.scss */
+    /* line 151, sass/layout/_main.scss */
     .page-main .page-content.single-page .post-meta .meta-date, .page-main .page-content.single-page .post-meta .meta-cat, .page-main .page-content.single-page .post-meta .meta-tag {
       position: relative; }
-      /* line 152, sass/layout/_main.scss */
+      /* line 153, sass/layout/_main.scss */
       .page-main .page-content.single-page .post-meta .meta-date a, .page-main .page-content.single-page .post-meta .meta-cat a, .page-main .page-content.single-page .post-meta .meta-tag a {
         color: #5A6B9F; }
-      /* line 155, sass/layout/_main.scss */
+      /* line 156, sass/layout/_main.scss */
       .page-main .page-content.single-page .post-meta .meta-date .fa-calendar, .page-main .page-content.single-page .post-meta .meta-date .fa-tags, .page-main .page-content.single-page .post-meta .meta-date .fa-folder-open, .page-main .page-content.single-page .post-meta .meta-cat .fa-calendar, .page-main .page-content.single-page .post-meta .meta-cat .fa-tags, .page-main .page-content.single-page .post-meta .meta-cat .fa-folder-open, .page-main .page-content.single-page .post-meta .meta-tag .fa-calendar, .page-main .page-content.single-page .post-meta .meta-tag .fa-tags, .page-main .page-content.single-page .post-meta .meta-tag .fa-folder-open {
         padding-left: 8px;
         color: #5A6B9F;
         vertical-align: middle; }
-  /* line 163, sass/layout/_main.scss */
+  /* line 164, sass/layout/_main.scss */
   .page-main .page-content .searchform {
     margin: 20px; }
-  /* line 166, sass/layout/_main.scss */
+  /* line 167, sass/layout/_main.scss */
   .page-main .page-content .pagination {
     text-align: center; }
-    /* line 168, sass/layout/_main.scss */
+    /* line 169, sass/layout/_main.scss */
     .page-main .page-content .pagination .page-numbers {
       padding: 5px 13px;
       background-color: #E6E6E6;
@@ -1303,82 +1308,54 @@ body {
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
       border-radius: 5px; }
-      /* line 174, sass/layout/_main.scss */
+      /* line 175, sass/layout/_main.scss */
       .page-main .page-content .pagination .page-numbers.current, .page-main .page-content .pagination .page-numbers:hover {
         background-color: #5A6B9F;
         color: #fff; }
-      /* line 178, sass/layout/_main.scss */
+      /* line 179, sass/layout/_main.scss */
       .page-main .page-content .pagination .page-numbers i:before {
         vertical-align: middle; }
-/* line 186, sass/layout/_main.scss */
+/* line 187, sass/layout/_main.scss */
 .page-main .page-sidebar {
   width: 100%;
   float: right;
   margin-left: 1.53846%;
   display: inline; }
   @media (min-width: 45em) {
-    /* line 186, sass/layout/_main.scss */
+    /* line 187, sass/layout/_main.scss */
     .page-main .page-sidebar {
       width: 23.84615%;
       float: right;
       margin-left: 1.53846%; } }
-  /* line 191, sass/layout/_main.scss */
+  /* line 192, sass/layout/_main.scss */
   .page-main .page-sidebar .sidebar-widget {
     padding-top: 10px;
     padding-bottom: 10px; }
-/* line 198, sass/layout/_main.scss */
+/* line 199, sass/layout/_main.scss */
 .page-main .notfound {
   margin-top: 20px; }
-/* line 201, sass/layout/_main.scss */
+/* line 202, sass/layout/_main.scss */
 .page-main .hentry.page404 {
   text-align: center;
   border-bottom: none; }
 
-/* line 207, sass/layout/_main.scss */
+/* line 208, sass/layout/_main.scss */
 .page-content {
   min-height: 100%; }
-  /* line 209, sass/layout/_main.scss */
+  /* line 210, sass/layout/_main.scss */
   .page-content .table-container {
     width: 90%;
     margin: 10px auto;
     display: block; }
-  /* line 214, sass/layout/_main.scss */
-  .page-content .science-pic {
-    display: inline-block;
-    float: right;
-    margin: 10px;
-    margin-left: 30px;
-    width: 150px;
-    height: auto; }
-  /* line 222, sass/layout/_main.scss */
-  .page-content .science-info-wrapper {
-    display: inline-block;
-    overflow: hidden; }
-    /* line 226, sass/layout/_main.scss */
-    .page-content .science-info-wrapper ul.science-info {
-      padding: 35px 10px 10px; }
-      /* line 228, sass/layout/_main.scss */
-      .page-content .science-info-wrapper ul.science-info li {
-        padding: 5px;
-        display: table;
-        border-bottom: 1px solid #CCCCCC; }
-  /* line 235, sass/layout/_main.scss */
-  .page-content .science-name {
-    padding-bottom: 30px; }
-  /* line 238, sass/layout/_main.scss */
-  .page-content .science-name, .page-content .science-desc {
-    display: block;
-    overflow: hidden;
-    margin: auto; }
-  /* line 247, sass/layout/_main.scss */
-  .page-content .science-tabs table.scientific-board {
+  /* line 216, sass/layout/_main.scss */
+  .page-content table.scientific-board {
     width: 100%; }
-    /* line 250, sass/layout/_main.scss */
-    .page-content .science-tabs table.scientific-board tbody {
+    /* line 219, sass/layout/_main.scss */
+    .page-content table.scientific-board tbody {
       display: table;
       width: 100%; }
-    /* line 254, sass/layout/_main.scss */
-    .page-content .science-tabs table.scientific-board th {
+    /* line 223, sass/layout/_main.scss */
+    .page-content table.scientific-board th {
       height: 57px;
       text-align: center;
       vertical-align: middle;
@@ -1388,21 +1365,53 @@ body {
       background-color: #253B80;
       max-width: 40%;
       font-size: 90%; }
-    /* line 267, sass/layout/_main.scss */
-    .page-content .science-tabs table.scientific-board tr {
+    /* line 236, sass/layout/_main.scss */
+    .page-content table.scientific-board tr {
       text-align: center; }
-      /* line 269, sass/layout/_main.scss */
-      .page-content .science-tabs table.scientific-board tr:nth-of-type(2n) {
+      /* line 238, sass/layout/_main.scss */
+      .page-content table.scientific-board tr:nth-of-type(2n) {
         background-color: #f2f2f2; }
-    /* line 274, sass/layout/_main.scss */
-    .page-content .science-tabs table.scientific-board td {
+    /* line 243, sass/layout/_main.scss */
+    .page-content table.scientific-board td {
       text-align: center;
       padding: 5px;
       border: 1px solid #E6E6E6;
       max-width: 40%;
       font-size: 90%; }
 
-/* line 287, sass/layout/_main.scss */
+/* line 256, sass/layout/_main.scss */
+.profile-page .science-pic {
+  display: inline-block;
+  float: right;
+  margin: 10px;
+  margin-left: 30px;
+  width: 150px;
+  height: auto; }
+/* line 264, sass/layout/_main.scss */
+.profile-page .science-info-wrapper {
+  display: inline-block;
+  overflow: hidden; }
+  /* line 268, sass/layout/_main.scss */
+  .profile-page .science-info-wrapper ul.science-info {
+    padding: 35px 10px 10px; }
+    /* line 270, sass/layout/_main.scss */
+    .profile-page .science-info-wrapper ul.science-info li {
+      padding: 5px;
+      display: table;
+      border-bottom: 1px solid #CCCCCC; }
+/* line 277, sass/layout/_main.scss */
+.profile-page .science-name {
+  padding-bottom: 30px; }
+/* line 280, sass/layout/_main.scss */
+.profile-page .science-name, .profile-page .science-desc {
+  display: block;
+  overflow: hidden;
+  margin: auto; }
+/* line 286, sass/layout/_main.scss */
+.profile-page .exp-item, .profile-page .course-item, .profile-page .pub-item {
+  display: none; }
+
+/* line 291, sass/layout/_main.scss */
 .secondary .widget {
   border: 3px solid #E6E6E6;
   padding: 20px;
@@ -1410,19 +1419,19 @@ body {
   line-height: 230%;
   margin-bottom: 5px;
   margin-top: 10px; }
-/* line 301, sass/layout/_main.scss */
+/* line 305, sass/layout/_main.scss */
 .secondary .widgettitle {
   border-bottom: 1px solid #E6E6E6;
   margin: 0;
   padding-bottom: 10px;
   margin-bottom: 15px;
   color: #253B80; }
-/* line 309, sass/layout/_main.scss */
+/* line 313, sass/layout/_main.scss */
 .secondary i:before {
   padding: 5px;
   vertical-align: middle; }
 
-/* line 315, sass/layout/_main.scss */
+/* line 319, sass/layout/_main.scss */
 .gallery-slideshow-wrapper {
   width: 100%;
   background-color: #CCCCCC;
@@ -1431,43 +1440,43 @@ body {
   padding-left: auto;
   padding-right: auto;
   text-align: center; }
-  /* line 327, sass/layout/_main.scss */
+  /* line 331, sass/layout/_main.scss */
   .gallery-slideshow-wrapper .sp-selected-thumbnail {
     border: 4px solid #000; }
 
-/* line 346, sass/layout/_main.scss */
+/* line 350, sass/layout/_main.scss */
 .has-sub-page .page-sidebar ul.sub-widget, .has-sub-page .page-sidebar ul.related-widget, .has-sub-page .page-sidebar ul.parent-widget {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 5px 6px 3px; }
-  /* line 354, sass/layout/_main.scss */
+  /* line 358, sass/layout/_main.scss */
   .has-sub-page .page-sidebar ul.sub-widget li, .has-sub-page .page-sidebar ul.related-widget li, .has-sub-page .page-sidebar ul.parent-widget li {
     position: relative;
     width: 100%; }
-    /* line 357, sass/layout/_main.scss */
+    /* line 361, sass/layout/_main.scss */
     .has-sub-page .page-sidebar ul.sub-widget li a.related-link, .has-sub-page .page-sidebar ul.sub-widget li a.sub-page-link, .has-sub-page .page-sidebar ul.sub-widget li a.sub-edu-link, .has-sub-page .page-sidebar ul.sub-widget li a.parent-link, .has-sub-page .page-sidebar ul.related-widget li a.related-link, .has-sub-page .page-sidebar ul.related-widget li a.sub-page-link, .has-sub-page .page-sidebar ul.related-widget li a.sub-edu-link, .has-sub-page .page-sidebar ul.related-widget li a.parent-link, .has-sub-page .page-sidebar ul.parent-widget li a.related-link, .has-sub-page .page-sidebar ul.parent-widget li a.sub-page-link, .has-sub-page .page-sidebar ul.parent-widget li a.sub-edu-link, .has-sub-page .page-sidebar ul.parent-widget li a.parent-link {
       -moz-transition: all 0.2s ease-out 0s;
       -o-transition: all 0.2s ease-out 0s;
       -webkit-transition: all 0.2s ease-out;
       -webkit-transition-delay: 0s;
       transition: all 0.2s ease-out 0s; }
-      /* line 362, sass/layout/_main.scss */
+      /* line 366, sass/layout/_main.scss */
       .has-sub-page .page-sidebar ul.sub-widget li a.related-link:before, .has-sub-page .page-sidebar ul.sub-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.sub-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.sub-widget li a.parent-link:before, .has-sub-page .page-sidebar ul.related-widget li a.related-link:before, .has-sub-page .page-sidebar ul.related-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.related-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.related-widget li a.parent-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.related-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.parent-link:before {
         content: "\f0c1";
         vertical-align: middle;
         position: absolute;
         right: 14px;
         top: 12px; }
-    /* line 371, sass/layout/_main.scss */
+    /* line 375, sass/layout/_main.scss */
     .has-sub-page .page-sidebar ul.sub-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.related-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.sub-page-link:before {
       content: "\f15c"; }
-    /* line 374, sass/layout/_main.scss */
+    /* line 378, sass/layout/_main.scss */
     .has-sub-page .page-sidebar ul.sub-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.related-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.sub-edu-link:before {
       content: "\f19d"; }
-    /* line 378, sass/layout/_main.scss */
+    /* line 382, sass/layout/_main.scss */
     .has-sub-page .page-sidebar ul.sub-widget li a.parent-link:before, .has-sub-page .page-sidebar ul.related-widget li a.parent-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.parent-link:before {
       content: "\f101"; }
-  /* line 383, sass/layout/_main.scss */
+  /* line 387, sass/layout/_main.scss */
   .has-sub-page .page-sidebar ul.sub-widget li a, .has-sub-page .page-sidebar ul.sub-widget li span.related-header,
   .has-sub-page .page-sidebar ul.sub-widget li a.sub-header, .has-sub-page .page-sidebar ul.related-widget li a, .has-sub-page .page-sidebar ul.related-widget li span.related-header,
   .has-sub-page .page-sidebar ul.related-widget li a.sub-header, .has-sub-page .page-sidebar ul.parent-widget li a, .has-sub-page .page-sidebar ul.parent-widget li span.related-header,
@@ -1480,7 +1489,7 @@ body {
     display: inline-block;
     padding: 7px 18px 7px 8px;
     margin-bottom: 3px; }
-    /* line 394, sass/layout/_main.scss */
+    /* line 398, sass/layout/_main.scss */
     .has-sub-page .page-sidebar ul.sub-widget li a.current, .has-sub-page .page-sidebar ul.sub-widget li a:hover, .has-sub-page .page-sidebar ul.sub-widget li span.related-header.current, .has-sub-page .page-sidebar ul.sub-widget li span.related-header:hover,
     .has-sub-page .page-sidebar ul.sub-widget li a.sub-header.current,
     .has-sub-page .page-sidebar ul.sub-widget li a.sub-header:hover, .has-sub-page .page-sidebar ul.related-widget li a.current, .has-sub-page .page-sidebar ul.related-widget li a:hover, .has-sub-page .page-sidebar ul.related-widget li span.related-header.current, .has-sub-page .page-sidebar ul.related-widget li span.related-header:hover,
@@ -1490,7 +1499,7 @@ body {
     .has-sub-page .page-sidebar ul.parent-widget li a.sub-header:hover {
       background-color: #5DC2F0;
       color: #fff; }
-  /* line 399, sass/layout/_main.scss */
+  /* line 403, sass/layout/_main.scss */
   .has-sub-page .page-sidebar ul.sub-widget li a.sub-header, .has-sub-page .page-sidebar ul.sub-widget li span.related-header, .has-sub-page .page-sidebar ul.related-widget li a.sub-header, .has-sub-page .page-sidebar ul.related-widget li span.related-header, .has-sub-page .page-sidebar ul.parent-widget li a.sub-header, .has-sub-page .page-sidebar ul.parent-widget li span.related-header {
     border-color: #253B80;
     background: #5a6b9f;
@@ -1511,11 +1520,11 @@ body {
     font-family: "Yekan";
     font-size: 17px;
     color: #fff; }
-  /* line 414, sass/layout/_main.scss */
+  /* line 418, sass/layout/_main.scss */
   .has-sub-page .page-sidebar ul.sub-widget li a.related-link:hover, .has-sub-page .page-sidebar ul.related-widget li a.related-link:hover, .has-sub-page .page-sidebar ul.parent-widget li a.related-link:hover {
     background-color: #253B80;
     color: #fff; }
-  /* line 418, sass/layout/_main.scss */
+  /* line 422, sass/layout/_main.scss */
   .has-sub-page .page-sidebar ul.sub-widget li a.parent-link, .has-sub-page .page-sidebar ul.related-widget li a.parent-link, .has-sub-page .page-sidebar ul.parent-widget li a.parent-link {
     background-color: #253B80;
     color: #fff; }
@@ -1957,7 +1966,35 @@ input#s {
     padding: 15px; }
 
 /* line 117, sass/modules/_tabs.scss */
-.table-container .ui-tabs .ui-tabs-nav li, .table-container .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+.profile-page .ui-tabs-vertical {
+  width: 55em; }
+/* line 118, sass/modules/_tabs.scss */
+.profile-page .ui-tabs-vertical .ui-tabs-nav {
+  padding: .2em .1em .2em .2em;
+  float: left;
+  width: 12em; }
+/* line 119, sass/modules/_tabs.scss */
+.profile-page .ui-tabs-vertical .ui-tabs-nav li {
+  clear: left;
+  width: 100%;
+  border-bottom-width: 1px !important;
+  border-right-width: 0 !important;
+  margin: 0 -1px .2em 0; }
+/* line 120, sass/modules/_tabs.scss */
+.profile-page .ui-tabs-vertical .ui-tabs-nav li a {
+  display: block; }
+/* line 121, sass/modules/_tabs.scss */
+.profile-page .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+  padding-bottom: 0;
+  padding-right: .1em;
+  border-right-width: 1px; }
+/* line 122, sass/modules/_tabs.scss */
+.profile-page .ui-tabs-vertical .ui-tabs-panel {
+  padding: 1em;
+  float: right;
+  width: 40em; }
+/* line 124, sass/modules/_tabs.scss */
+.profile-page .ui-tabs .ui-tabs-nav li, .profile-page .ui-tabs .ui-tabs-nav li.ui-tabs-active {
   float: right;
   margin: 0px 1px;
   -moz-border-radius-topleft: 5px;
@@ -1968,14 +2005,14 @@ input#s {
   border-top-right-radius: 5px;
   padding-left: 6px;
   outline: none; }
-/* line 124, sass/modules/_tabs.scss */
-.table-container .ui-tabs .ui-tabs-nav {
+/* line 131, sass/modules/_tabs.scss */
+.profile-page .ui-tabs .ui-tabs-nav {
   margin: 0;
   padding: 0px 40px; }
-/* line 128, sass/modules/_tabs.scss */
-.table-container .ui-state-default.ui-corner-top,
-.table-container .ui-state-active, .table-container .ui-widget-content .ui-state-active, .table-container .ui-widget-header .ui-state-active,
-.table-container .ui-state-hover, .table-container .ui-widget-content .ui-state-hover, .table-container .ui-widget-header .ui-state-hover {
+/* line 135, sass/modules/_tabs.scss */
+.profile-page .ui-state-default.ui-corner-top,
+.profile-page .ui-state-active, .profile-page .ui-widget-content .ui-state-active, .profile-page .ui-widget-header .ui-state-active,
+.profile-page .ui-state-hover, .profile-page .ui-widget-content .ui-state-hover, .profile-page .ui-widget-header .ui-state-hover {
   border-color: #253B80;
   background: #5A6B9F;
   /* Old browsers */
@@ -1994,38 +2031,38 @@ input#s {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a6b9f', endColorstr='#253b80',GradientType=0 );
   font-family: "Yekan";
   font-size: 17px; }
-/* line 145, sass/modules/_tabs.scss */
-.table-container .ui-tabs-panel.ui-widget-content {
+/* line 152, sass/modules/_tabs.scss */
+.profile-page .ui-tabs-panel.ui-widget-content {
   overflow: hidden;
   font-family: "Yekan";
   font-size: 16px; }
-/* line 150, sass/modules/_tabs.scss */
-.table-container .ui-widget-header {
+/* line 157, sass/modules/_tabs.scss */
+.profile-page .ui-widget-header {
   border: none;
   background: none;
   color: #fff; }
-/* line 156, sass/modules/_tabs.scss */
-.table-container .ui-widget-content {
+/* line 163, sass/modules/_tabs.scss */
+.profile-page .ui-widget-content {
   border: 0px;
   background: none; }
-/* line 161, sass/modules/_tabs.scss */
-.table-container .ui-tabs .ui-tabs-panel {
+/* line 168, sass/modules/_tabs.scss */
+.profile-page .ui-tabs .ui-tabs-panel {
   padding: 0px; }
-/* line 164, sass/modules/_tabs.scss */
-.table-container .ui-state-default a, .table-container .ui-state-default a:link, .table-container .ui-state-default a:visited {
+/* line 171, sass/modules/_tabs.scss */
+.profile-page .ui-state-default a, .profile-page .ui-state-default a:link, .profile-page .ui-state-default a:visited {
   color: #fff;
   text-decoration: none; }
-/* line 168, sass/modules/_tabs.scss */
-.table-container .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor, .table-container .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor, .table-container .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
+/* line 175, sass/modules/_tabs.scss */
+.profile-page .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor, .profile-page .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor, .profile-page .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
   color: #5DC2F0; }
-/* line 171, sass/modules/_tabs.scss */
-.table-container .ui-state-hover, .table-container .ui-state-default a, .table-container .ui-state-default, .table-container .ui-widget-content .ui-state-hover, .table-container .ui-widget-header .ui-state-hover, .table-container .ui-state-focus, .table-container .ui-widget-content .ui-state-focus, .table-container .ui-widget-header .ui-state-focus {
+/* line 178, sass/modules/_tabs.scss */
+.profile-page .ui-state-hover, .profile-page .ui-state-default a, .profile-page .ui-state-default, .profile-page .ui-widget-content .ui-state-hover, .profile-page .ui-widget-header .ui-state-hover, .profile-page .ui-state-focus, .profile-page .ui-widget-content .ui-state-focus, .profile-page .ui-widget-header .ui-state-focus {
   font-weight: normal; }
-/* line 174, sass/modules/_tabs.scss */
-.table-container .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+/* line 181, sass/modules/_tabs.scss */
+.profile-page .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
   padding: 9px 20px; }
-/* line 177, sass/modules/_tabs.scss */
-.table-container .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+/* line 184, sass/modules/_tabs.scss */
+.profile-page .ui-tabs .ui-tabs-nav li.ui-tabs-active {
   margin-bottom: 0px;
   padding-bottom: 0px; }
 

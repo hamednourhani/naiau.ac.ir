@@ -574,6 +574,51 @@ function circular_post_type() {
 	
 }
 
+function course_post_type() { 
+	// creating (registering) the custom type 
+	register_post_type( 'course', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+		// let's now add all the options for this post type
+		array( 'labels' => array(
+			'name' => __( 'course', 'naiau' ), /* This is the Title of the Group */
+			'singular_name' => __( 'course', 'naiau' ), /* This is the individual type */
+			'all_items' => __( 'All courses', 'naiau' ), /* the all items menu item */
+			'add_new' => __( 'Add New', 'naiau' ), /* The add new menu item */
+			'add_new_item' => __( 'Add New course', 'naiau' ), /* Add New Display Title */
+			'edit' => __( 'Edit', 'naiau' ), /* Edit Dialog */
+			'edit_item' => __( 'Edit course', 'naiau' ), /* Edit Display Title */
+			'new_item' => __( 'New course', 'naiau' ), /* New Display Title */
+			'view_item' => __( 'View course', 'naiau' ), /* View Display Title */
+			'search_items' => __( 'Search courses', 'naiau' ), /* Search Custom Type Title */ 
+			'not_found' =>  __( 'Nothing found in the Database.', 'naiau' ), /* This displays if there are no entries yet */ 
+			'not_found_in_trash' => __( 'Nothing found in Trash', 'naiau' ), /* This displays if there is nothing in the trash */
+			'parent_item_colon' => ''
+			), /* end of arrays */
+			'description' => __( 'This is a course', 'naiau' ), /* Custom Type Description */
+			'public' => true,
+			'show_in_nav_menus' => true,
+			'publicly_queryable' => true,
+			'exclude_from_search' => false,
+			'show_ui' => true,
+			'query_var' => true,
+			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
+			'menu_icon' => get_stylesheet_directory_uri() . '/images/notify-icon.png', /* the icon for the custom post type menu */
+			'rewrite'	=> array( 'slug' => 'course', 'with_front' => false ), /* you can specify its url slug */
+			'has_archive' => 'course', /* you can rename the slug here */
+			'capability_type' => array('admin_post','admin_posts','course','courses'),
+			'map_meta_cap'        => true,
+			'hierarchical' => false,
+			/* the next one is important, it tells what's enabled in the post editor */
+			'supports' => array( 'title', 'editor', /*'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'sticky'*/)
+		) /* end of options */
+	); /* end of register post type */
+	
+	/* this adds your post categories to your custom post type */
+	//register_taxonomy_for_object_type( 'category', 'tour' );
+	/* this adds your post tags to your custom post type */
+	//register_taxonomy_for_object_type( 'post_tag', 'tour' );
+	
+}
+
 	// adding the function to the Wordpress init
 	add_action( 'init', 'notify_post_type',10);
 	add_action( 'init', 'download_post_type',10);
@@ -583,6 +628,8 @@ function circular_post_type() {
 	add_action( 'init', 'gallery_post_type',10);
 	add_action( 'init', 'tab_post_type',10);
 	add_action( 'init', 'sub_tab_post_type',10);
+	add_action( 'init', 'course_post_type',10);
+
 	//add_action( 'init', 'management_post_type');
 	//add_action( 'init', 'sub_management_post_type');
 	//add_action( 'init', 'education_post_type');

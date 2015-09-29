@@ -212,6 +212,47 @@ body{
 		margin: 10px auto;
 		display : block;
 	}
+			
+	table.scientific-board{
+		width : 100%;
+
+		tbody{
+			display : table;
+			width: 100%;
+		}
+		th{
+			height : 57px;
+			text-align: center;
+			vertical-align: middle;
+			padding:5px;
+			border : 1px solid $grey2;
+			color : $white;
+			background-color: $navy1;
+			max-width : 40%;
+			font-size : 90%;
+
+
+		}
+		tr{
+			text-align:center;
+			&:nth-of-type(2n){
+				background-color: lighten($grey1,15%);
+			}
+
+		}
+		td{
+			text-align : center;
+			padding:5px;
+			border : 1px solid $grey2;
+			max-width : 40%;
+			font-size : 90%;
+
+		}
+	}
+	
+	
+}
+.profile-page{
 	.science-pic{
 		display :inline-block;
 		float : right;
@@ -242,47 +283,9 @@ body{
 		margin : auto;
 		// padding : 20px 0px;
 	}
-	
-	.science-tabs{
-		
-		table.scientific-board{
-			width : 100%;
-
-			tbody{
-				display : table;
-				width: 100%;
-			}
-			th{
-				height : 57px;
-				text-align: center;
-				vertical-align: middle;
-				padding:5px;
-				border : 1px solid $grey2;
-				color : $white;
-				background-color: $navy1;
-				max-width : 40%;
-				font-size : 90%;
-
-
-			}
-			tr{
-				text-align:center;
-				&:nth-of-type(2n){
-					background-color: lighten($grey1,15%);
-				}
-
-			}
-			td{
-				text-align : center;
-				padding:5px;
-				border : 1px solid $grey2;
-				max-width : 40%;
-				font-size : 90%;
-
-			}
-		}
+	.exp-item,.course-item,.pub-item{
+		display : none;
 	}
-	
 }
 .secondary{
 	.widget{

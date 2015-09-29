@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: naiau 1.0\n"
 "Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
-"POT-Creation-Date: 2015-09-28 14:53:31+00:00\n"
+"POT-Creation-Date: 2015-09-29 15:05:15+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -492,7 +492,7 @@ msgid "Entry Title"
 msgstr ""
 
 #: dist/library/cmb/example-functions.php:433
-#: library/cmb/example-functions.php:433 library/cmb-functions.php:1030
+#: library/cmb/example-functions.php:433 library/cmb-functions.php:1036
 msgid "Description"
 msgstr ""
 
@@ -814,7 +814,6 @@ msgid "Choose a  the sub tab from list "
 msgstr ""
 
 #: dist/library/cmb-functions.php:281 library/cmb-functions.php:560
-#: library/cmb-functions.php:975
 msgid "Section Selection"
 msgstr ""
 
@@ -832,7 +831,6 @@ msgstr ""
 #: library/cmb-functions.php:579 library/cmb-functions.php:614
 #: library/cmb-functions.php:634 library/cmb-functions.php:661
 #: library/cmb-functions.php:681 library/cmb-functions.php:718
-#: library/cmb-functions.php:1323
 msgid "Yes"
 msgstr ""
 
@@ -880,6 +878,7 @@ msgstr ""
 
 #: dist/library/cmb-functions.php:437 dist/library/cmb-functions.php:503
 #: library/cmb-functions.php:756 library/cmb-functions.php:822
+#: library/cmb-functions.php:1152
 msgid "Pages"
 msgstr ""
 
@@ -1043,6 +1042,7 @@ msgstr ""
 #: library/custom-post-type.php:212 library/custom-post-type.php:257
 #: library/custom-post-type.php:308 library/custom-post-type.php:355
 #: library/custom-post-type.php:404 library/custom-post-type.php:448
+#: library/custom-post-type.php:585
 msgid "Add New"
 msgstr ""
 
@@ -1061,7 +1061,7 @@ msgstr ""
 #: library/custom-post-type.php:259 library/custom-post-type.php:310
 #: library/custom-post-type.php:357 library/custom-post-type.php:406
 #: library/custom-post-type.php:450 library/custom-post-type.php:498
-#: library/custom-post-type.php:542
+#: library/custom-post-type.php:542 library/custom-post-type.php:587
 msgid "Edit"
 msgstr ""
 
@@ -1092,6 +1092,7 @@ msgstr ""
 #: library/custom-post-type.php:315 library/custom-post-type.php:362
 #: library/custom-post-type.php:411 library/custom-post-type.php:455
 #: library/custom-post-type.php:503 library/custom-post-type.php:547
+#: library/custom-post-type.php:592
 msgid "Nothing found in the Database."
 msgstr ""
 
@@ -1106,6 +1107,7 @@ msgstr ""
 #: library/custom-post-type.php:316 library/custom-post-type.php:363
 #: library/custom-post-type.php:412 library/custom-post-type.php:456
 #: library/custom-post-type.php:504 library/custom-post-type.php:548
+#: library/custom-post-type.php:593
 msgid "Nothing found in Trash"
 msgstr ""
 
@@ -1411,164 +1413,164 @@ msgstr ""
 msgid "This is a sub education"
 msgstr ""
 
-#: dist/library/custom-post-type.php:506 library/custom-post-type.php:604
+#: dist/library/custom-post-type.php:506 library/custom-post-type.php:651
 msgid "News Categories"
 msgstr ""
 
 #: dist/library/custom-post-type.php:507 library/cmb-functions.php:599
-#: library/custom-post-type.php:605
+#: library/custom-post-type.php:652
 msgid "News Category"
 msgstr ""
 
-#: dist/library/custom-post-type.php:508 library/custom-post-type.php:606
+#: dist/library/custom-post-type.php:508 library/custom-post-type.php:653
 msgid "Search News Categories"
 msgstr ""
 
-#: dist/library/custom-post-type.php:509 library/custom-post-type.php:607
+#: dist/library/custom-post-type.php:509 library/custom-post-type.php:654
 msgid "All News Categories"
 msgstr ""
 
-#: dist/library/custom-post-type.php:510 library/custom-post-type.php:608
+#: dist/library/custom-post-type.php:510 library/custom-post-type.php:655
 msgid "Parent News Category"
 msgstr ""
 
-#: dist/library/custom-post-type.php:511 library/custom-post-type.php:609
+#: dist/library/custom-post-type.php:511 library/custom-post-type.php:656
 msgid "Parent News Category:"
 msgstr ""
 
-#: dist/library/custom-post-type.php:512 library/custom-post-type.php:610
+#: dist/library/custom-post-type.php:512 library/custom-post-type.php:657
 msgid "Edit News Category"
 msgstr ""
 
-#: dist/library/custom-post-type.php:513 library/custom-post-type.php:611
+#: dist/library/custom-post-type.php:513 library/custom-post-type.php:658
 msgid "Update News Category"
 msgstr ""
 
-#: dist/library/custom-post-type.php:514 library/custom-post-type.php:612
+#: dist/library/custom-post-type.php:514 library/custom-post-type.php:659
 msgid "Add New News Category"
 msgstr ""
 
-#: dist/library/custom-post-type.php:515 library/custom-post-type.php:613
+#: dist/library/custom-post-type.php:515 library/custom-post-type.php:660
 msgid "New News Category Name"
 msgstr ""
 
-#: dist/library/custom-post-type.php:528 library/custom-post-type.php:626
+#: dist/library/custom-post-type.php:528 library/custom-post-type.php:673
 msgid "Notify Categories"
 msgstr ""
 
-#: dist/library/custom-post-type.php:529 library/custom-post-type.php:627
+#: dist/library/custom-post-type.php:529 library/custom-post-type.php:674
 msgid "Notify Category"
 msgstr ""
 
-#: dist/library/custom-post-type.php:530 library/custom-post-type.php:628
+#: dist/library/custom-post-type.php:530 library/custom-post-type.php:675
 msgid "Search Notify Categories"
 msgstr ""
 
-#: dist/library/custom-post-type.php:531 library/custom-post-type.php:629
+#: dist/library/custom-post-type.php:531 library/custom-post-type.php:676
 msgid "All Notify Categories"
 msgstr ""
 
-#: dist/library/custom-post-type.php:532 library/custom-post-type.php:630
+#: dist/library/custom-post-type.php:532 library/custom-post-type.php:677
 msgid "Parent Notify Category"
 msgstr ""
 
-#: dist/library/custom-post-type.php:533 library/custom-post-type.php:631
+#: dist/library/custom-post-type.php:533 library/custom-post-type.php:678
 msgid "Parent Notify Category:"
 msgstr ""
 
-#: dist/library/custom-post-type.php:534 library/custom-post-type.php:632
+#: dist/library/custom-post-type.php:534 library/custom-post-type.php:679
 msgid "Edit Notify Category"
 msgstr ""
 
-#: dist/library/custom-post-type.php:535 library/custom-post-type.php:633
+#: dist/library/custom-post-type.php:535 library/custom-post-type.php:680
 msgid "Update Notify Category"
 msgstr ""
 
-#: dist/library/custom-post-type.php:536 library/custom-post-type.php:634
+#: dist/library/custom-post-type.php:536 library/custom-post-type.php:681
 msgid "Add New Notify Category"
 msgstr ""
 
-#: dist/library/custom-post-type.php:537 library/custom-post-type.php:635
+#: dist/library/custom-post-type.php:537 library/custom-post-type.php:682
 msgid "New Notify Category Name"
 msgstr ""
 
-#: dist/library/custom-post-type.php:553 library/custom-post-type.php:651
+#: dist/library/custom-post-type.php:553 library/custom-post-type.php:698
 msgid "News Tags"
 msgstr ""
 
-#: dist/library/custom-post-type.php:554 library/custom-post-type.php:652
+#: dist/library/custom-post-type.php:554 library/custom-post-type.php:699
 msgid "News Tag"
 msgstr ""
 
-#: dist/library/custom-post-type.php:555 library/custom-post-type.php:653
+#: dist/library/custom-post-type.php:555 library/custom-post-type.php:700
 msgid "Search News Tags"
 msgstr ""
 
-#: dist/library/custom-post-type.php:556 library/custom-post-type.php:654
+#: dist/library/custom-post-type.php:556 library/custom-post-type.php:701
 msgid "All News Tags"
 msgstr ""
 
-#: dist/library/custom-post-type.php:557 library/custom-post-type.php:655
+#: dist/library/custom-post-type.php:557 library/custom-post-type.php:702
 msgid "Parent News Tag"
 msgstr ""
 
-#: dist/library/custom-post-type.php:558 library/custom-post-type.php:656
+#: dist/library/custom-post-type.php:558 library/custom-post-type.php:703
 msgid "Parent News Tag:"
 msgstr ""
 
-#: dist/library/custom-post-type.php:559 library/custom-post-type.php:657
+#: dist/library/custom-post-type.php:559 library/custom-post-type.php:704
 msgid "Edit News Tag"
 msgstr ""
 
-#: dist/library/custom-post-type.php:560 library/custom-post-type.php:658
+#: dist/library/custom-post-type.php:560 library/custom-post-type.php:705
 msgid "Update News Tag"
 msgstr ""
 
-#: dist/library/custom-post-type.php:561 library/custom-post-type.php:659
+#: dist/library/custom-post-type.php:561 library/custom-post-type.php:706
 msgid "Add New News Tag"
 msgstr ""
 
-#: dist/library/custom-post-type.php:562 library/custom-post-type.php:660
+#: dist/library/custom-post-type.php:562 library/custom-post-type.php:707
 msgid "New News Tag Name"
 msgstr ""
 
-#: dist/library/custom-post-type.php:607 library/custom-post-type.php:720
+#: dist/library/custom-post-type.php:607 library/custom-post-type.php:767
 msgid "Link Categories"
 msgstr ""
 
-#: dist/library/custom-post-type.php:608 library/custom-post-type.php:721
+#: dist/library/custom-post-type.php:608 library/custom-post-type.php:768
 msgid "Link Category"
 msgstr ""
 
-#: dist/library/custom-post-type.php:609 library/custom-post-type.php:722
+#: dist/library/custom-post-type.php:609 library/custom-post-type.php:769
 msgid "Search Link Categories"
 msgstr ""
 
-#: dist/library/custom-post-type.php:610 library/custom-post-type.php:723
+#: dist/library/custom-post-type.php:610 library/custom-post-type.php:770
 msgid "All Links Categories"
 msgstr ""
 
-#: dist/library/custom-post-type.php:611 library/custom-post-type.php:724
+#: dist/library/custom-post-type.php:611 library/custom-post-type.php:771
 msgid "Parent Link Category"
 msgstr ""
 
-#: dist/library/custom-post-type.php:612 library/custom-post-type.php:725
+#: dist/library/custom-post-type.php:612 library/custom-post-type.php:772
 msgid "Parent Link Category:"
 msgstr ""
 
-#: dist/library/custom-post-type.php:613 library/custom-post-type.php:726
+#: dist/library/custom-post-type.php:613 library/custom-post-type.php:773
 msgid "Edit Link Category"
 msgstr ""
 
-#: dist/library/custom-post-type.php:614 library/custom-post-type.php:727
+#: dist/library/custom-post-type.php:614 library/custom-post-type.php:774
 msgid "Update Link Category"
 msgstr ""
 
-#: dist/library/custom-post-type.php:615 library/custom-post-type.php:728
+#: dist/library/custom-post-type.php:615 library/custom-post-type.php:775
 msgid "Add New Link Category"
 msgstr ""
 
-#: dist/library/custom-post-type.php:616 library/custom-post-type.php:729
+#: dist/library/custom-post-type.php:616 library/custom-post-type.php:776
 msgid "New Link Category Name"
 msgstr ""
 
@@ -1723,7 +1725,7 @@ msgstr ""
 msgid "Scientific Board"
 msgstr ""
 
-#: functions.php:936 functions.php:988 functions.php:1040
+#: functions.php:951 functions.php:1003 functions.php:1055
 msgid "More Items "
 msgstr ""
 
@@ -1875,360 +1877,121 @@ msgstr ""
 msgid "which Link category?"
 msgstr ""
 
-#: library/cmb-functions.php:982
+#: library/cmb-functions.php:972
+msgid "Profile"
+msgstr ""
+
+#: library/cmb-functions.php:979
 msgid "Profile Picture"
 msgstr ""
 
-#: library/cmb-functions.php:983
+#: library/cmb-functions.php:980
 msgid "Upload profile picture or enter the url"
 msgstr ""
 
-#: library/cmb-functions.php:991
+#: library/cmb-functions.php:988 page-templates/scientific-board.php:210
 msgid "Science Degree"
 msgstr ""
 
-#: library/cmb-functions.php:992
+#: library/cmb-functions.php:989
 msgid "enter the science degree "
 msgstr ""
 
-#: library/cmb-functions.php:1001 page-templates/scientific-board.php:87
+#: library/cmb-functions.php:998 page-templates/scientific-board.php:88
+#: page-templates/scientific-board.php:211
 msgid "Educational Group"
 msgstr ""
 
-#: library/cmb-functions.php:1002
+#: library/cmb-functions.php:999
 msgid "select educational group "
 msgstr ""
 
-#: library/cmb-functions.php:1007 page-templates/scientific-board.php:104
-#: page-templates/scientific-board.php:164
+#: library/cmb-functions.php:1004 page-templates/scientific-board.php:105
+#: page-templates/scientific-board.php:185
 msgid "Electronic"
 msgstr ""
 
-#: library/cmb-functions.php:1008 page-templates/scientific-board.php:108
-#: page-templates/scientific-board.php:168
+#: library/cmb-functions.php:1005 page-templates/scientific-board.php:109
+#: page-templates/scientific-board.php:189
 msgid "Mechanic"
 msgstr ""
 
-#: library/cmb-functions.php:1009 page-templates/scientific-board.php:112
-#: page-templates/scientific-board.php:172
+#: library/cmb-functions.php:1006 page-templates/scientific-board.php:113
+#: page-templates/scientific-board.php:193
 msgid "Building"
 msgstr ""
 
-#: library/cmb-functions.php:1010 page-templates/scientific-board.php:116
-#: page-templates/scientific-board.php:176
+#: library/cmb-functions.php:1007 page-templates/scientific-board.php:117
+#: page-templates/scientific-board.php:197
 msgid "Material"
 msgstr ""
 
-#: library/cmb-functions.php:1011 page-templates/scientific-board.php:120
-#: page-templates/scientific-board.php:180
+#: library/cmb-functions.php:1008 page-templates/scientific-board.php:121
+#: page-templates/scientific-board.php:201
 msgid "Computer"
 msgstr ""
 
-#: library/cmb-functions.php:1012 page-templates/scientific-board.php:124
-#: page-templates/scientific-board.php:184
+#: library/cmb-functions.php:1009 page-templates/scientific-board.php:125
+#: page-templates/scientific-board.php:205
 msgid "Public"
 msgstr ""
 
-#: library/cmb-functions.php:1020
+#: library/cmb-functions.php:1017 page-templates/scientific-board.php:212
 msgid "Emails"
 msgstr ""
 
-#: library/cmb-functions.php:1021
+#: library/cmb-functions.php:1018
+msgid "Upload email addresses Photo"
+msgstr ""
+
+#: library/cmb-functions.php:1026 page-templates/scientific-board.php:213
+msgid "Phone"
+msgstr ""
+
+#: library/cmb-functions.php:1027
 msgid ""
 "enter the Email Addresses sepeprate with comma eg. info@gmail.com , "
 "info@yahoo.com "
 msgstr ""
 
-#: library/cmb-functions.php:1031
+#: library/cmb-functions.php:1037 library/cmb-functions.php:1077
+#: library/cmb-functions.php:1087 library/cmb-functions.php:1097
+#: library/cmb-functions.php:1107 library/cmb-functions.php:1117
+#: library/cmb-functions.php:1127 library/cmb-functions.php:1161
+#: library/cmb-functions.php:1171
 msgid "Enter Description"
 msgstr ""
 
-#: library/cmb-functions.php:1059 page-templates/scientific-board.php:208
-msgid "Study Experinces"
+#: library/cmb-functions.php:1076
+msgid "Academic Positions"
 msgstr ""
 
-#: library/cmb-functions.php:1069
-msgid "Layout study experiences"
-msgstr ""
-
-#: library/cmb-functions.php:1071
-msgid "experince {#}"
-msgstr ""
-
-#: library/cmb-functions.php:1072
-msgid "Add Another experince"
-msgstr ""
-
-#: library/cmb-functions.php:1073
-msgid "Remove Experince"
-msgstr ""
-
-#: library/cmb-functions.php:1079 page-templates/scientific-board.php:229
-msgid "Study Degree"
-msgstr ""
-
-#: library/cmb-functions.php:1080
-msgid "enter the study degree "
-msgstr ""
-
-#: library/cmb-functions.php:1087
-msgid "study Course"
-msgstr ""
-
-#: library/cmb-functions.php:1088
-msgid "enter the study course "
+#: library/cmb-functions.php:1086
+msgid "Industrial Experience"
 msgstr ""
 
 #: library/cmb-functions.php:1096
-msgid "Study University"
-msgstr ""
-
-#: library/cmb-functions.php:1097
-msgid "enter the study university "
-msgstr ""
-
-#: library/cmb-functions.php:1105
-msgid "Study year"
-msgstr ""
-
-#: library/cmb-functions.php:1106
-msgid "enter the jalali study year eg. : 1390"
-msgstr ""
-
-#: library/cmb-functions.php:1122
-msgid "Magazine Articles"
-msgstr ""
-
-#: library/cmb-functions.php:1132
-msgid "Layout Magazine Articles"
-msgstr ""
-
-#: library/cmb-functions.php:1134 library/cmb-functions.php:1206
-msgid "article {#}"
-msgstr ""
-
-#: library/cmb-functions.php:1135 library/cmb-functions.php:1207
-msgid "Add Another article"
-msgstr ""
-
-#: library/cmb-functions.php:1136 library/cmb-functions.php:1208
-msgid "Remove article"
-msgstr ""
-
-#: library/cmb-functions.php:1142 library/cmb-functions.php:1214
-#: page-templates/scientific-board.php:253
-#: page-templates/scientific-board.php:277
-msgid "Article Title"
-msgstr ""
-
-#: library/cmb-functions.php:1143 library/cmb-functions.php:1215
-msgid "enter the Article Title "
-msgstr ""
-
-#: library/cmb-functions.php:1150 library/cmb-functions.php:1417
-#: page-templates/scientific-board.php:254
-#: page-templates/scientific-board.php:336
-msgid "Publisher"
-msgstr ""
-
-#: library/cmb-functions.php:1151
-msgid "enter the Publisher Name "
-msgstr ""
-
-#: library/cmb-functions.php:1159 page-templates/scientific-board.php:255
-msgid "magazine degree"
-msgstr ""
-
-#: library/cmb-functions.php:1160
-msgid "enter the magazine degree "
-msgstr ""
-
-#: library/cmb-functions.php:1168 page-templates/scientific-board.php:256
-msgid "Publish Date"
-msgstr ""
-
-#: library/cmb-functions.php:1169
-msgid "enter the publish date "
-msgstr ""
-
-#: library/cmb-functions.php:1177
-msgid "Jalali Publish year"
-msgstr ""
-
-#: library/cmb-functions.php:1178
-msgid "enter the jalali publish year eg. : 1390"
-msgstr ""
-
-#: library/cmb-functions.php:1194
-msgid "Conferences Articles"
-msgstr ""
-
-#: library/cmb-functions.php:1204
-msgid "Layout Conference Articles"
-msgstr ""
-
-#: library/cmb-functions.php:1223 page-templates/scientific-board.php:278
-msgid "Conference Title"
-msgstr ""
-
-#: library/cmb-functions.php:1224
-msgid "enter the Conference Title "
-msgstr ""
-
-#: library/cmb-functions.php:1232 page-templates/scientific-board.php:279
-msgid "Conference Level"
-msgstr ""
-
-#: library/cmb-functions.php:1233
-msgid "enter the Conference Level "
-msgstr ""
-
-#: library/cmb-functions.php:1241 page-templates/scientific-board.php:280
-msgid "Conference Location"
-msgstr ""
-
-#: library/cmb-functions.php:1242
-msgid "enter the Conference Location "
-msgstr ""
-
-#: library/cmb-functions.php:1252 page-templates/scientific-board.php:281
-msgid "Conference Date"
-msgstr ""
-
-#: library/cmb-functions.php:1253
-msgid "enter the Conference date "
-msgstr ""
-
-#: library/cmb-functions.php:1261
-msgid "Conference Jalali Year"
-msgstr ""
-
-#: library/cmb-functions.php:1262
-msgid "enter the jalali Conference year eg. : 1390 "
-msgstr ""
-
-#: library/cmb-functions.php:1278
-msgid "Research Projects"
-msgstr ""
-
-#: library/cmb-functions.php:1288
-msgid "Layout Projects"
-msgstr ""
-
-#: library/cmb-functions.php:1290
-msgid "project {#}"
-msgstr ""
-
-#: library/cmb-functions.php:1291
-msgid "Add Another project"
-msgstr ""
-
-#: library/cmb-functions.php:1292
-msgid "Remove project"
-msgstr ""
-
-#: library/cmb-functions.php:1298 page-templates/scientific-board.php:303
-msgid "Project Title"
-msgstr ""
-
-#: library/cmb-functions.php:1299 library/cmb-functions.php:1391
-msgid "enter the project Title "
-msgstr ""
-
-#: library/cmb-functions.php:1309 page-templates/scientific-board.php:304
-msgid "Approval authority"
-msgstr ""
-
-#: library/cmb-functions.php:1310
-msgid "enter the Approval authority"
-msgstr ""
-
-#: library/cmb-functions.php:1317
-msgid "Naiau project"
-msgstr ""
-
-#: library/cmb-functions.php:1318
-msgid "is naiau approved this project?"
-msgstr ""
-
-#: library/cmb-functions.php:1322
-msgid "No"
-msgstr ""
-
-#: library/cmb-functions.php:1330 page-templates/scientific-board.php:305
-msgid "Project Duration"
-msgstr ""
-
-#: library/cmb-functions.php:1331
-msgid "enter the Project Duration"
-msgstr ""
-
-#: library/cmb-functions.php:1338
-msgid "Project End Jalali Date"
-msgstr ""
-
-#: library/cmb-functions.php:1339
-msgid "enter the Project End Jalali Date eg. : 1390"
-msgstr ""
-
-#: library/cmb-functions.php:1347 page-templates/scientific-board.php:306
-msgid "Project status"
-msgstr ""
-
-#: library/cmb-functions.php:1348
-msgid "select the project status"
-msgstr ""
-
-#: library/cmb-functions.php:1352 page-templates/scientific-board.php:317
-msgid "In Proccess"
-msgstr ""
-
-#: library/cmb-functions.php:1353
-msgid "Cleared"
-msgstr ""
-
-#: library/cmb-functions.php:1370
 msgid "Books"
 msgstr ""
 
-#: library/cmb-functions.php:1380
-msgid "Layout books"
+#: library/cmb-functions.php:1106
+msgid "Journal Papers"
 msgstr ""
 
-#: library/cmb-functions.php:1382
-msgid "Book {#}"
+#: library/cmb-functions.php:1116
+msgid "Conference Papers"
 msgstr ""
 
-#: library/cmb-functions.php:1383
-msgid "Add Another book"
+#: library/cmb-functions.php:1126
+msgid "Comments"
 msgstr ""
 
-#: library/cmb-functions.php:1384
-msgid "Remove book"
+#: library/cmb-functions.php:1160
+msgid "Lecture & reading "
 msgstr ""
 
-#: library/cmb-functions.php:1390
-msgid "book Title"
-msgstr ""
-
-#: library/cmb-functions.php:1401 page-templates/scientific-board.php:334
-msgid "Author"
-msgstr ""
-
-#: library/cmb-functions.php:1402
-msgid "enter the book Author"
-msgstr ""
-
-#: library/cmb-functions.php:1409
-msgid "Translator"
-msgstr ""
-
-#: library/cmb-functions.php:1410
-msgid "enter translator name"
-msgstr ""
-
-#: library/cmb-functions.php:1418
-msgid "enter the Publisher Name"
+#: library/cmb-functions.php:1170
+msgid "Homework & Exame"
 msgstr ""
 
 #: library/custom-post-type.php:494
@@ -2299,83 +2062,115 @@ msgstr ""
 msgid "This is a circular"
 msgstr ""
 
-#: library/custom-post-type.php:673
+#: library/custom-post-type.php:582 library/custom-post-type.php:583
+msgid "course"
+msgstr ""
+
+#: library/custom-post-type.php:584
+msgid "All courses"
+msgstr ""
+
+#: library/custom-post-type.php:586
+msgid "Add New course"
+msgstr ""
+
+#: library/custom-post-type.php:588
+msgid "Edit course"
+msgstr ""
+
+#: library/custom-post-type.php:589
+msgid "New course"
+msgstr ""
+
+#: library/custom-post-type.php:590
+msgid "View course"
+msgstr ""
+
+#: library/custom-post-type.php:591
+msgid "Search courses"
+msgstr ""
+
+#: library/custom-post-type.php:596
+msgid "This is a course"
+msgstr ""
+
+#: library/custom-post-type.php:720
 msgid "download Categories"
 msgstr ""
 
-#: library/custom-post-type.php:674
+#: library/custom-post-type.php:721
 msgid "download Category"
 msgstr ""
 
-#: library/custom-post-type.php:675
+#: library/custom-post-type.php:722
 msgid "Search download Categories"
 msgstr ""
 
-#: library/custom-post-type.php:676
+#: library/custom-post-type.php:723
 msgid "All download Categories"
 msgstr ""
 
-#: library/custom-post-type.php:677
+#: library/custom-post-type.php:724
 msgid "Parent download Category"
 msgstr ""
 
-#: library/custom-post-type.php:678
+#: library/custom-post-type.php:725
 msgid "Parent download Category:"
 msgstr ""
 
-#: library/custom-post-type.php:679
+#: library/custom-post-type.php:726
 msgid "Edit download Category"
 msgstr ""
 
-#: library/custom-post-type.php:680
+#: library/custom-post-type.php:727
 msgid "Update download Category"
 msgstr ""
 
-#: library/custom-post-type.php:681
+#: library/custom-post-type.php:728
 msgid "Add New download Category"
 msgstr ""
 
-#: library/custom-post-type.php:682
+#: library/custom-post-type.php:729
 msgid "New download Category Name"
 msgstr ""
 
-#: library/custom-post-type.php:696
+#: library/custom-post-type.php:743
 msgid "circular Categories"
 msgstr ""
 
-#: library/custom-post-type.php:697
+#: library/custom-post-type.php:744
 msgid "circular Category"
 msgstr ""
 
-#: library/custom-post-type.php:698
+#: library/custom-post-type.php:745
 msgid "Search circular Categories"
 msgstr ""
 
-#: library/custom-post-type.php:699
+#: library/custom-post-type.php:746
 msgid "All circular Categories"
 msgstr ""
 
-#: library/custom-post-type.php:700
+#: library/custom-post-type.php:747
 msgid "Parent circular Category"
 msgstr ""
 
-#: library/custom-post-type.php:701
+#: library/custom-post-type.php:748
 msgid "Parent circular Category:"
 msgstr ""
 
-#: library/custom-post-type.php:702
+#: library/custom-post-type.php:749
 msgid "Edit circular Category"
 msgstr ""
 
-#: library/custom-post-type.php:703
+#: library/custom-post-type.php:750
 msgid "Update circular Category"
 msgstr ""
 
-#: library/custom-post-type.php:704
+#: library/custom-post-type.php:751
 msgid "Add New circular Category"
 msgstr ""
 
-#: library/custom-post-type.php:705
+#: library/custom-post-type.php:752
 msgid "New circular Category Name"
 msgstr ""
 
@@ -2383,81 +2178,58 @@ msgstr ""
 msgid "Responsive Menu"
 msgstr ""
 
-#: page-templates/scientific-board.php:84
-#: page-templates/scientific-board.php:228
-#: page-templates/scientific-board.php:252
-#: page-templates/scientific-board.php:276
-#: page-templates/scientific-board.php:302
-#: page-templates/scientific-board.php:332
+#: page-templates/scientific-board.php:85
 msgid "Row"
 msgstr ""
 
-#: page-templates/scientific-board.php:85
+#: page-templates/scientific-board.php:86
+#: page-templates/scientific-board.php:209
 msgid "Name and Family"
 msgstr ""
 
-#: page-templates/scientific-board.php:86
+#: page-templates/scientific-board.php:87
 msgid "Sience Degree"
 msgstr ""
 
-#: page-templates/scientific-board.php:188
-msgid "Name and Family : "
+#: page-templates/scientific-board.php:160
+msgid "(Home)"
 msgstr ""
 
-#: page-templates/scientific-board.php:189
-msgid "Science Degree : "
+#: page-templates/scientific-board.php:161
+msgid "(Experience)"
 msgstr ""
 
-#: page-templates/scientific-board.php:190
-msgid "Educational Group : "
+#: page-templates/scientific-board.php:162
+msgid "(Academic Positions)"
 msgstr ""
 
-#: page-templates/scientific-board.php:191
-msgid "Emails : "
+#: page-templates/scientific-board.php:163
+msgid "(Industrial Experience )"
 msgstr ""
 
-#: page-templates/scientific-board.php:211
-msgid "Magazines Articles"
+#: page-templates/scientific-board.php:164
+msgid "(Publications)"
 msgstr ""
 
-#: page-templates/scientific-board.php:214
-msgid "Conference Articles"
+#: page-templates/scientific-board.php:165
+msgid "(Books)"
 msgstr ""
 
-#: page-templates/scientific-board.php:217
-msgid "Researchal Projects"
+#: page-templates/scientific-board.php:166
+msgid "Journal Papers)"
 msgstr ""
 
-#: page-templates/scientific-board.php:220
-msgid "Published Books"
+#: page-templates/scientific-board.php:167
+msgid "(Conference Papers)"
 msgstr ""
 
-#: page-templates/scientific-board.php:230
-msgid "Study Course"
+#: page-templates/scientific-board.php:168
+#: page-templates/scientific-board.php:169
+msgid "(Courses)"
 msgstr ""
 
-#: page-templates/scientific-board.php:231
-msgid "Study Uni"
-msgstr ""
-
-#: page-templates/scientific-board.php:232
-msgid "Study Year"
-msgstr ""
-
-#: page-templates/scientific-board.php:319
-msgid "Cleard"
-msgstr ""
-
-#: page-templates/scientific-board.php:333
-msgid "Book Title"
-msgstr ""
-
-#: page-templates/scientific-board.php:335
-msgid "translator"
-msgstr ""
-
-#: page-templates/scientific-board.php:356
-msgid "Small Description"
+#: page-templates/scientific-board.php:170
+msgid "(Comments)"
 msgstr ""
 
 #: single-download.php:75

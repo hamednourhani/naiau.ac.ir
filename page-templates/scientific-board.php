@@ -71,13 +71,14 @@ if($wp_query->query_vars['sb']){
 							</div>
 							<div class="page-main">
 								<section class="layout">
-									<div class="page-content without-sidebar">		
+											
 											
 										
 
 									<?php if(!empty($users) && $single_user_id == ''){ ?>
-										<div class="table-container">
-											<div class="science-tabs">	
+										<div class="page-content without-sidebar">
+											<div class="table-container">
+												
 												<table class="scientific-board">
 													<tbody>
 														<tr>
@@ -147,219 +148,108 @@ if($wp_query->query_vars['sb']){
 														} ?>
 													</tbody>
 												</table>
+											
 											</div>
 										</div>
 									<?php } elseif($single_user_id !== ''){?>
-										<div class="table-container">
-											<div class="science-name">
-												<div class="science-pic">
-													<?php echo '<img src="'. get_usermeta( $single_user_id, $meta_key = '_naiau_user_picture' ) .'" alt="'.$single_user->display_name.'" title="'.$single_user->display_name.'"/>';?>
-												</div>
-													<div class="science-info-wrapper">
-														<ul class="science-info">
-															<?php 
-																$edu_group = get_usermeta( $single_user_id, $meta_key = '_naiau_user_edu_group' );
-																switch($edu_group){
-																	case 'electronic':
-																		$edu_group = __('Electronic','naiau');
-																		break;
-																	
-																	case 'mechanic':
-																		$edu_group = __('Mechanic','naiau');
-																		break;
-																	
-																	case 'building':
-																		$edu_group = __('Building','naiau');
-																		break;
-																	
-																	case 'material':
-																		$edu_group = __('Material','naiau');
-																		break;
-																	
-																	case 'computer':
-																		$edu_group = __('Computer','naiau');
-																		break;
-																	
-																	case 'public':
-																		$edu_group = __('Public','naiau');
-																		break;
-																}
-															?>
-															<li><?php echo '<strong>'.__('Name and Family : ','naiau').'</strong>'.$single_user->display_name;?></li>
-															<li><?php echo '<strong>'.__('Science Degree : ','naiau').'</strong>'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_degree' );?></li>
-															<li><?php echo '<strong>'.__('Educational Group : ','naiau').'</strong>'.$edu_group;?></li>
-															<li><?php echo '<strong>'.__('Emails : ','naiau').'</strong>'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_emails' );?></li>
-
-														</ul>
-													</div>
-											</div>	
-											<?php 
-											 		$exps = get_usermeta( $single_user_id, $meta_key = '_naiau_study_exp' ); 
-											 		$magazines = get_usermeta( $single_user_id, $meta_key = '_naiau_article_art' ); 
-											 		$confs = get_usermeta( $single_user_id, $meta_key = '_naiau_conf_article_art' ); 
-											 		$reses = get_usermeta( $single_user_id, $meta_key = '_naiau_res_projects_res' ); 
-											 		$books = get_usermeta( $single_user_id, $meta_key = '_naiau_books_books' ); 
-											?>
+										<div class="profile-page">
+																			
 											<div id="tabs" class="science-tabs">
 													
 													<ul>
-														<?php 
-														if(!empty($exps)){ ?>
-																<li><a href="#study-exp"><?php echo __('Study Experinces','naiau');?></a></li>
-														<?php }
-														if(!empty($magazines)){ ?>
-																<li><a href="#mag-article"><?php echo __('Magazines Articles','naiau');?></a></li>
-														<?php }
-														if(!empty($confs)){ ?>
-																<li><a href="#conf-article"><?php echo __('Conference Articles','naiau');?></a></li>
-														<?php }
-														if(!empty($reses)){ ?>
-																<li><a href="#res-project"><?php echo __('Researchal Projects','naiau');?></a></li>
-														<?php }
-														if(!empty($books)){ ?>
-																	<li><a href="#study-books"><?php echo __('Published Books','naiau');?></a></li>
-														<?php } ?>
+															<li><a href="#profile"><?php echo 'Home'.__('(Home)','naiau');?></a></li>
+															<li><a id="exp-toggler" href="#"><?php echo 'Experience'.__('(Experience)','naiau');?></a></li>
+															<li class="exp-item"><a href="#academic_positions"><?php echo 'Academic Positions '.__('(Academic Positions)','naiau');?></a></li>
+															<li class="exp-item"><a href="#industrial_experience"><?php echo 'Industrial Experience '.__('(Industrial Experience )','naiau');?></a></li>
+															<li><a id="pub-toggler" href="#"><?php echo 'Publications'.__('(Publications)','naiau');?></a></li>
+															<li class="pub-item"><a href="#books"><?php echo 'Books'.__('(Books)','naiau');?></a></li>
+															<li class="pub-item"><a href="#journal_papers"><?php echo 'Journal Papers'.__('Journal Papers)','naiau');?></a></li>
+															<li class="pub-item"><a href="#conference_papers"><?php echo 'Conference Papers'.__('(Conference Papers)','naiau');?></a></li>
+															<li><a id="course-toggler" href="#"><?php echo 'Courses'.__('(Courses)','naiau');?></a></li>
+															<li class="coourse-item"><a href="#"><?php echo 'Courses'.__('(Courses)','naiau');?></a></li>
+															<li><a href="#comments"><?php echo 'Comments'.__('(Comments)','naiau');?></a></li>
+															
+														
 													</ul>
 													
-													<?php if(!empty($exps)){ ?>
-														<table id="study-exp" class="scientific-board">
-															
-															<tr>
-																<th><?php echo __('Row','naiau'); ?></th>
-																<th><?php echo __('Study Degree','naiau'); ?></th>
-																<th><?php echo __('Study Course','naiau'); ?></th>
-																<th><?php echo __('Study Uni','naiau'); ?></th>
-																<th><?php echo __('Study Year','naiau'); ?></th>
-															</tr>	
-															<?php $counter = 1; 
-																foreach($exps as $exp){ ?>
-																<tr>
-																	<td><?php echo $counter;?></td>
-																	<td><?php echo $exp['study_degree'];?></td>
-																	<td><?php echo $exp['study_course'];?></td>
-																	<td><?php echo $exp['study_uni'];?></td>
-																	<td><?php echo $exp['study_year'];?></td>
-																</tr>
-															<?php  $counter++;
+													<div id="profile" class="science-tab">
+														<div class="science-pic">
+															<?php echo '<img src="'. get_usermeta( $single_user_id, $meta_key = '_naiau_user_picture' ) .'" alt="'.$single_user->display_name.'" title="'.$single_user->display_name.'"/>';?>
+														</div>
+														<div class="science-info-wrapper">
+															<ul class="science-info">
+																<?php 
+																	$edu_group = get_usermeta( $single_user_id, $meta_key = '_naiau_user_edu_group' );
+																	switch($edu_group){
+																		case 'electronic':
+																			$edu_group = __('Electronic','naiau');
+																			break;
+																		
+																		case 'mechanic':
+																			$edu_group = __('Mechanic','naiau');
+																			break;
+																		
+																		case 'building':
+																			$edu_group = __('Building','naiau');
+																			break;
+																		
+																		case 'material':
+																			$edu_group = __('Material','naiau');
+																			break;
+																		
+																		case 'computer':
+																			$edu_group = __('Computer','naiau');
+																			break;
+																		
+																		case 'public':
+																			$edu_group = __('Public','naiau');
+																			break;
+																	}
+																?>
+																<li><?php echo '<strong>'.__('Name and Family','naiau').'(Name) : '.'</strong>'.$single_user->display_name;?></li>
+																<li><?php echo '<strong>'.__('Science Degree','naiau').'(Title) : '.'</strong>'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_degree' );?></li>
+																<li><?php echo '<strong>'.__('Educational Group','naiau').'(Department) : '.'</strong>'.$edu_group;?></li>
+																<li><?php echo '<strong>'.__('Emails','naiau').'(Emails) : '.'</strong><img src="'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_emails' ).'" alt="Emails" />';?></li>
+																<li><?php echo '<strong>'.__('Phone','naiau').'(Phone) : '.'</strong>'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_phone' );?></li>
 
-															} ?>
-														</table>
-													<?php } ?>
-												
-													<?php if(!empty($magazines)){ ?>
-														<table id="mag-article" class="scientific-board">
-															<tr>
-																<th><?php echo __('Row','naiau'); ?></th>
-																<th><?php echo __('Article Title','naiau'); ?></th>
-																<th><?php echo __('Publisher','naiau'); ?></th>
-																<th><?php echo __('magazine degree','naiau'); ?></th>
-																<th><?php echo __('Publish Date','naiau'); ?></th>
-															</tr>
-															<?php $counter = 1; 
-																foreach($magazines as $magazine){ ?>
-																<tr>
-																	<td><?php echo $counter;?></td>
-																	<td><?php echo $magazine['article_title'];?></td>
-																	<td><?php echo $magazine['publisher'];?></td>
-																	<td><?php echo $magazine['mag_degree'];?></td>
-																	<td><?php echo $magazine['publish_date'];?></td>
-																</tr>
-															<?php  $counter++;
+															</ul>
+														</div>
+														<div class="science-desc">
+															<?php echo get_usermeta( $single_user_id, $meta_key = '_naiau_user_desciption' ); ?>
+														</div>	
+													</div>
+													
+													<div id="academic_position" class="science-tab">
+														<?php echo get_usermeta( $single_user_id, $meta_key = '_naiau_science_academic_position' ); ?>
+													</div>
 
-															} ?>
-														</table>
-													<?php } ?>
-												
-													<?php if(!empty($confs)){ ?>
-														<table id="conf-article" class="scientific-board">
-															<tr>
-																<th><?php echo __('Row','naiau'); ?></th>
-																<th><?php echo __('Article Title','naiau'); ?></th>
-																<th><?php echo __('Conference Title','naiau'); ?></th>
-																<th><?php echo __('Conference Level','naiau'); ?></th>
-																<th><?php echo __('Conference Location','naiau'); ?></th>
-																<th><?php echo __('Conference Date','naiau'); ?></th>
-															</tr>
-															<?php $counter = 1; 
-																foreach($confs as $conf){ ?>
-																<tr>
-																	<td><?php echo $counter;?></td>
-																	<td><?php echo $conf['article_title'];?></td>
-																	<td><?php echo $conf['conf_title'];?></td>
-																	<td><?php echo $conf['conf_level'];?></td>
-																	<td><?php echo $conf['Conf_location'];?></td>
-																	<td><?php echo $conf['conference_date'];?></td>
-																</tr>
-															<?php  $counter++;
+													<div id="industrial_experience" class="science-tab">
+														<?php echo get_usermeta( $single_user_id, $meta_key = '_naiau_science_industrial_experience' ); ?>
+													</div>
 
-															} ?>
-														</table>
-													<?php } ?>
-												
-													<?php if(!empty($reses)){ ?>
-														<table id="res-project" class="scientific-board">
-															<tr>
-																<th><?php echo __('Row','naiau'); ?></th>
-																<th><?php echo __('Project Title','naiau'); ?></th>
-																<th><?php echo __('Approval authority','naiau'); ?></th>
-																<th><?php echo __('Project Duration','naiau'); ?></th>
-																<th><?php echo __('Project status','naiau'); ?></th>
-															</tr>
-															<?php $counter = 1; 
-																foreach($reses as $res){ ?>
-																<tr>
-																	<td><?php echo $counter;?></td>
-																	<td><?php echo $res['project_title'];?></td>
-																	<td><?php echo $res['approval_authority'];?></td>
-																	<td><?php echo $res['project_duration'];?></td>
-																	<td>
-																		<?php if($res['project_status'] == 'in_proccess'){
-																			echo __('In Proccess','naiau');
-																		} elseif($res['project_status'] == 'cleared'){
-																			echo __('Cleard','naiau');
-																		}?>
-																	</td>
-																</tr>
-															<?php  $counter++;
+													<div id="books" class="science-tab">
+														<?php echo get_usermeta( $single_user_id, $meta_key = '_naiau_science_books' ); ?>
+													</div>
 
-															} ?>
-														</table>
-													<?php } ?>
-												
-													<?php if(!empty($books)){ ?>
-														<table id="study-books" class="scientific-board">
-															<tr>
-																<th><?php echo __('Row','naiau'); ?></th>
-																<th><?php echo __('Book Title','naiau'); ?></th>
-																<th><?php echo __('Author','naiau'); ?></th>
-																<th><?php echo __('translator','naiau'); ?></th>
-																<th><?php echo __('Publisher','naiau'); ?></th>
-															</tr>
-															<?php $counter = 1; 
-																foreach($books as $book){ ?>
-																<tr>
-																	<td><?php echo $counter;?></td>
-																	<td><?php echo $book['book_title'];?></td>
-																	<td><?php echo $book['author'];?></td>
-																	<td><?php echo $book['translator'];?></td>
-																	<td><?php echo $book['publisher'];?></td>
-																</tr>
-															<?php  $counter++;
+													<div id="journal_papers" class="science-tab">
+														<?php echo get_usermeta( $single_user_id, $meta_key = '_naiau_science_journal_papers' ); ?>
+													</div>
 
-															} ?>
-														</table>
-													<?php } ?>
-												
+													<div id="conference_papers" class="science-tab">
+														<?php echo get_usermeta( $single_user_id, $meta_key = '_naiau_science_conference_papers' ); ?>
+													</div>
+
+													<div id="comments" class="science-tab">
+														<?php echo get_usermeta( $single_user_id, $meta_key = '_naiau_science_academic_comments' ); ?>
+													</div>
+
+																								
 											</div> <!-- #tabs.science-tabs -->
 
-											<div class="science-desc">
-												<h4><?php echo __('Small Description','naiau');?></h4>
-												<?php echo get_usermeta( $single_user_id, $meta_key = '_naiau_user_description' ); ?>
-											</div>
-											<?php the_content(); ?>
+											
 										</div>
 									<?php } ?>
-									</div>
+									
 							</section>
 							</div>
 						</div>
@@ -373,7 +263,7 @@ if($wp_query->query_vars['sb']){
 		</main>
 		<script type="text/javascript" defer>
 	      jQuery('document').ready(function($){
-	          $('#tabs').tabs();
+	          $('#tabs').tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
 	      });
 	    </script>
 

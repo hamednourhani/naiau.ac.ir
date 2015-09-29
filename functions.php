@@ -833,6 +833,21 @@ add_action('admin_init','naiau_add_role_caps',999);
                $role->add_cap( 'delete_published_admin_posts' );
     
     }
+     $role = get_role('scientific_board');
+
+       $role->add_cap( 'read' );
+       $role->add_cap( 'read_course');
+       $role->add_cap( 'read_courses' );
+       $role->add_cap( 'edit_course' );
+       $role->add_cap( 'edit_courses' );
+       
+       $role->add_cap( 'edit_published_courses' );
+       $role->add_cap( 'publish_courses' );
+       
+       $role->add_cap( 'delete_private_courses' );
+       $role->add_cap( 'delete_published_courses' );
+
+
 }
 
 add_action( 'admin_init', 'naiau_remove_menu_pages',999 );
