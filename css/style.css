@@ -734,6 +734,38 @@ blockquote, q {
   blockquote P, q P {
     margin: 0; }
 
+/* line 87, sass/base/_base.scss */
+table {
+  width: 100%; }
+  /* line 90, sass/base/_base.scss */
+  table tbody {
+    display: table;
+    width: 100%; }
+  /* line 94, sass/base/_base.scss */
+  table th {
+    height: 57px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+    border: 1px solid #E6E6E6;
+    color: #fff;
+    background-color: #253B80;
+    max-width: 40%;
+    font-size: 90%; }
+  /* line 107, sass/base/_base.scss */
+  table tr {
+    text-align: center; }
+    /* line 109, sass/base/_base.scss */
+    table tr:nth-of-type(2n) {
+      background-color: #f2f2f2; }
+  /* line 114, sass/base/_base.scss */
+  table td {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #E6E6E6;
+    max-width: 40%;
+    font-size: 90%; }
+
 /* header style */
 /* line 4, sass/layout/_header.scss */
 .site-header, .menu-bar, .top-bar {
@@ -1159,7 +1191,7 @@ body {
   float: right;
   margin-left: 1.53846%;
   display: inline;
-  padding: 15px;
+  padding: 15px 30px;
   padding-top: 20px;
   border: 1px solid #E6E6E6;
   border-top: 6px solid #253B80;
