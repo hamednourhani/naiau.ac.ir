@@ -604,7 +604,7 @@ function course_post_type() {
 			'menu_icon' => get_stylesheet_directory_uri() . '/images/notify-icon.png', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'course', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'course', /* you can rename the slug here */
-			'capability_type' => array('admin_post','admin_posts','course','courses'),
+			'capability_type' => array('science_course','science_courses'),
 			'map_meta_cap'        => true,
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */

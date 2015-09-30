@@ -952,7 +952,7 @@ if($pagenow == 'profile.php' || $pagenow == 'user-edit.php'){
 
 
 	}
-	if (isset($current_role) &&  ($current_role == 'scientific_board' || $current_role == 'administrator') ) {
+	if (isset($current_role) &&  ($current_role == 'si_board' || $current_role == 'administrator') ) {
 			add_action('cmb2_init','naiau_science_profile_metabox');
 			add_action('cmb2_init','naiau_science_extra_info_metabox');
 			
@@ -1033,9 +1033,9 @@ function naiau_science_profile_metabox() {
 	 );
 	
 	$cmb_demo->add_field( array(
-		'name'       => __( 'Description', 'naiau' ),
+		'name'       => __( 'Education', 'naiau' ),
 		'desc'       => __( 'Enter Description', 'naiau' ),
-		'id'         => $prefix . 'description',
+		'id'         => $prefix . 'education',
 		'type' => 'wysiwyg',
 	    'options' => array(
 	        // 'wpautop' => true, // use wpautop?
@@ -1123,6 +1123,16 @@ function naiau_science_extra_info_metabox() {
 	));
 
 	$cmb_demo->add_field( array(
+		'name'       => __( 'Research Projects', 'naiau' ),
+		'desc'       => __( 'Enter Description', 'naiau' ),
+		'id'         => $prefix . 'research_projects',
+		'type' => 'wysiwyg',
+	    'options' => array(
+	 
+	    )
+	));
+
+	$cmb_demo->add_field( array(
 		'name'       => __( 'Comments', 'naiau' ),
 		'desc'       => __( 'Enter Description', 'naiau' ),
 		'id'         => $prefix . 'comments',
@@ -1131,6 +1141,11 @@ function naiau_science_extra_info_metabox() {
 	 
 	    )
 	));
+
+
+	// $author_id = get_current_user_id();
+	// $author = get_userdata( $author_id );
+	// var_dump($author);
 
 	
 
@@ -1162,7 +1177,7 @@ function naiau_courses_metabox() {
 		'id'         => $prefix . 'lecture_reading',
 		'type' => 'wysiwyg',
 	    'options' => array(
-	 
+	 			'wpautop' => true, // use wpautop?
 	    )
 	));
 
@@ -1172,8 +1187,8 @@ function naiau_courses_metabox() {
 		'id'         => $prefix . 'homework_exame',
 		'type' => 'wysiwyg',
 	    'options' => array(
-	 
-	    )
+	 			'wpautop' => true, // use wpautop?
+	 	)
 	));
 
 }

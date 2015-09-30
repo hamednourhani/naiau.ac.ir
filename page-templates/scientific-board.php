@@ -35,7 +35,7 @@ if($wp_query->query_vars['sb']){
 
 	 $args = array(
 		'blog_id'      => $GLOBALS['blog_id'],
-		'role'         => 'scientific_board',
+		'role'         => 'si_board',
 		'meta_key'     => '_naiau_user_edu_group',
 		'meta_value'   => '',
 		'meta_compare' => '',
@@ -54,6 +54,7 @@ if($wp_query->query_vars['sb']){
 	 );
 
 	$users = get_users($args);
+
 
 } ?>
 
@@ -74,7 +75,7 @@ if($wp_query->query_vars['sb']){
 											
 											
 										
-
+									
 									<?php if(!empty($users) && $single_user_id == ''){ ?>
 										<div class="page-content without-sidebar">
 											<div class="table-container">
@@ -157,17 +158,50 @@ if($wp_query->query_vars['sb']){
 											<div id="tabs" class="science-tabs">
 													
 													<ul>
-															<li><a href="#profile"><?php echo 'Home'.__('(Home)','naiau');?></a></li>
-															<li><a id="exp-toggler" href="#"><?php echo 'Experience'.__('(Experience)','naiau');?></a></li>
-															<li class="exp-item"><a href="#academic_positions"><?php echo 'Academic Positions '.__('(Academic Positions)','naiau');?></a></li>
-															<li class="exp-item"><a href="#industrial_experience"><?php echo 'Industrial Experience '.__('(Industrial Experience )','naiau');?></a></li>
-															<li><a id="pub-toggler" href="#"><?php echo 'Publications'.__('(Publications)','naiau');?></a></li>
-															<li class="pub-item"><a href="#books"><?php echo 'Books'.__('(Books)','naiau');?></a></li>
-															<li class="pub-item"><a href="#journal_papers"><?php echo 'Journal Papers'.__('Journal Papers)','naiau');?></a></li>
-															<li class="pub-item"><a href="#conference_papers"><?php echo 'Conference Papers'.__('(Conference Papers)','naiau');?></a></li>
-															<li><a id="course-toggler" href="#"><?php echo 'Courses'.__('(Courses)','naiau');?></a></li>
-															<li class="coourse-item"><a href="#"><?php echo 'Courses'.__('(Courses)','naiau');?></a></li>
-															<li><a href="#comments"><?php echo 'Comments'.__('(Comments)','naiau');?></a></li>
+															<?php  
+																	
+																	echo '<div class="author-pic"><img src="'. get_usermeta( $single_user_id, $meta_key = '_naiau_user_picture' ) .'" alt="'.$single_user->display_name.'" title="'.$single_user->display_name.'"/></div>';
+															?>
+															<li><a href="#profile"><?php echo 'Home '.__('(Home)','naiau');?></a></li>
+															<li id="exp-main" class="has-child"><a ><?php echo 'Experience '.__('(Experience)','naiau');?></a></li>
+																<li class="exp-child child-tab"><a href="#academic_positions"><?php echo 'Academic Positions '.__('(Academic Positions)','naiau');?></a></li>
+																<li class="exp-child child-tab"><a href="#industrial_experience"><?php echo 'Industrial Experience '.__('(Industrial Experience )','naiau');?></a></li>
+															<li id="pub-main" class="has-child"><a ><?php echo 'Publications '.__('(Publications)','naiau');?></a></li>
+																<li class="pub-child child-tab"><a href="#books"><?php echo 'Books '.__('(Books)','naiau');?></a></li>
+																<li class="pub-child child-tab"><a href="#journal_papers"><?php echo 'Journal Papers'.__('Journal Papers)','naiau');?></a></li>
+																<li class="pub-child child-tab"><a href="#conference_papers"><?php echo 'Conference Papers'.__('(Conference Papers)','naiau');?></a></li>
+
+															<li><a href="#research_projects"><?php echo 'Research projects '.__('(Research projects)','naiau');?></a></li>
+															<li id="course-main" class="has-child"><a ><?php echo 'Courses '.__('(Courses)','naiau');?></a></li>
+																<?php 
+																	$args = array(
+																			'posts_per_page'   => -1,
+																			'offset'           => 0,
+																			'category'         => '',
+																			'category_name'    => '',
+																			'orderby'          => 'date',
+																			'order'            => 'DESC',
+																			'include'          => '',
+																			'exclude'          => '',
+																			'meta_key'         => '',
+																			'meta_value'       => '',
+																			'post_type'        => 'course',
+																			'post_mime_type'   => '',
+																			'post_parent'      => '',
+																			'author'	   => $single_user_id,
+																			'post_status'      => 'publish',
+																			'suppress_filters' => true 
+																		);
+																	$courses = get_posts( $args );
+
+																	if(!empty($courses)){
+																		setup_postdata( $courses );
+																		foreach($courses as $course){
+																			echo '<span class="course-child child-tab"><a href="'.get_the_permalink($course->ID).'">'.$course->post_title.'</a></span>';
+																		}
+																	}
+																?>
+															<li><a href="#comments"><?php echo 'Comments '.__('(Comments)','naiau');?></a></li>
 															
 														
 													</ul>
@@ -206,43 +240,103 @@ if($wp_query->query_vars['sb']){
 																			break;
 																	}
 																?>
-																<li><?php echo '<strong>'.__('Name and Family','naiau').'(Name) : '.'</strong>'.$single_user->display_name;?></li>
-																<li><?php echo '<strong>'.__('Science Degree','naiau').'(Title) : '.'</strong>'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_degree' );?></li>
-																<li><?php echo '<strong>'.__('Educational Group','naiau').'(Department) : '.'</strong>'.$edu_group;?></li>
-																<li><?php echo '<strong>'.__('Emails','naiau').'(Emails) : '.'</strong><img src="'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_emails' ).'" alt="Emails" />';?></li>
-																<li><?php echo '<strong>'.__('Phone','naiau').'(Phone) : '.'</strong>'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_phone' );?></li>
+																<li><?php echo '<strong>'.__('Name and Family','naiau').' (Name) : '.'</strong>'.$single_user->display_name;?></li>
+																<li><?php echo '<strong>'.__('Science Degree','naiau').' (Title) : '.'</strong>'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_degree' );?></li>
+																<li><?php echo '<strong>'.__('Educational Group','naiau').' (Department) : '.'</strong>'.$edu_group;?></li>
+																<li><?php echo '<strong>'.__('Emails','naiau').'(Emails) : '.'</strong><img class="science-email-pic" src="'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_emails' ).'" alt="Emails" />';?></li>
+																<li><?php echo '<strong>'.__('Phone','naiau').' (Phone) : '.'</strong>'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_phone' );?></li>
 
 															</ul>
 														</div>
-														<div class="science-desc">
-															<?php echo get_usermeta( $single_user_id, $meta_key = '_naiau_user_desciption' ); ?>
+														<div class="science-education">
+															
+															<?php 
+																$education = get_usermeta( $single_user_id, $meta_key = '_naiau_user_education' ); 
+																if($education !== "" ){
+																	echo '<h3>'.__('Education','naiau').' (Education)</h3>'; 
+																	echo $education; 
+																}
+															?>
 														</div>	
 													</div>
 													
-													<div id="academic_position" class="science-tab">
-														<?php echo get_usermeta( $single_user_id, $meta_key = '_naiau_science_academic_position' ); ?>
-													</div>
+													<?php  
+														$academic_position = get_usermeta( $single_user_id, $meta_key = '_naiau_science_academic_positions' ); 
+														
+														if($academic_position !== "" ){?>
+															<div id="academic_positions" class="science-tab">
+																<?php 
+																	echo '<h3>'.__('Academic Positions','naiau').' (Academic Positions)</h3>';
+																	echo $academic_position;
+																?>
+															</div> 
+														<?php } ?>
 
-													<div id="industrial_experience" class="science-tab">
-														<?php echo get_usermeta( $single_user_id, $meta_key = '_naiau_science_industrial_experience' ); ?>
-													</div>
+													<?php  
+														$industrial_experience = get_usermeta( $single_user_id, $meta_key = '_naiau_science_industrial_experience' ); 
+														if($industrial_experience !== "" ){?>
+															<div id="industrial_experience" class="science-tab">
+																<?php 
+																	echo '<h3>'.__('Industrial Experience','naiau').' (Industrial Experience)</h3>';
+																	echo $industrial_experience;
+																?>
+															</div>
+														<?php } ?>
+													
+													<?php  
+														$books = get_usermeta( $single_user_id, $meta_key = '_naiau_science_books' ); 
+														if($books !== "" ){?>
+															<div id="books" class="science-tab">
+																<?php 
+																	echo '<h3>'.__('Books','naiau').' (Books)</h3>';
+																	echo $books; 
+																?>
+															</div>
+													<?php } ?>
 
-													<div id="books" class="science-tab">
-														<?php echo get_usermeta( $single_user_id, $meta_key = '_naiau_science_books' ); ?>
-													</div>
+													<?php  
+														$journal_papers = get_usermeta( $single_user_id, $meta_key = '_naiau_science_journal_papers' ); 
+														if($journal_papers !== "" ){?>
+															<div id="journal_papers" class="science-tab">
+																<?php 
+																	echo '<h3>'.__('Journal Papers','naiau').' (Journal Papers)</h3>';
+																	echo $journal_papers; 
+																?>
+															</div>
+													<?php } ?>
 
-													<div id="journal_papers" class="science-tab">
-														<?php echo get_usermeta( $single_user_id, $meta_key = '_naiau_science_journal_papers' ); ?>
-													</div>
+													<?php  
+														$conference_papers = get_usermeta( $single_user_id, $meta_key = '_naiau_science_conference_papers' ); 
+														if($conference_papers !== "" ){?>
+															<div id="conference_papers" class="science-tab">
+																<?php 
+																	echo '<h3>'.__('Conference Papers','naiau').' (Conference Papers)</h3>';
+																	echo $conference_papers; 
+																?>
+															</div>
+													<?php } ?>
 
-													<div id="conference_papers" class="science-tab">
-														<?php echo get_usermeta( $single_user_id, $meta_key = '_naiau_science_conference_papers' ); ?>
-													</div>
+													<?php  
+														$research_projects = get_usermeta( $single_user_id, $meta_key = '_naiau_science_research_projects' ); 
+														if($research_projects !== "" ){?>
+															<div id="research_projects" class="science-tab">
+																<?php 
+																	echo '<h3>'.__('Research Projects','naiau').' (Research Projects)</h3>';
+																	echo $research_projects; 
+																?>
+															</div>
+													<?php } ?>
 
-													<div id="comments" class="science-tab">
-														<?php echo get_usermeta( $single_user_id, $meta_key = '_naiau_science_academic_comments' ); ?>
-													</div>
-
+													<?php  
+														$comments = get_usermeta( $single_user_id, $meta_key = '_naiau_science_comments' ); 
+														if($comments !== "" ){?>
+															<div id="comments" class="science-tab">
+																<?php 
+																	echo '<h3>'.__('Comments','naiau').' (Comments)</h3>';
+																	echo $comments; 
+																?>
+															</div>
+													<?php } ?>
 																								
 											</div> <!-- #tabs.science-tabs -->
 
@@ -264,6 +358,16 @@ if($wp_query->query_vars['sb']){
 		<script type="text/javascript" defer>
 	      jQuery('document').ready(function($){
 	          $('#tabs').tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+
+	          $('#exp-main').on('click',function(){
+	          		$('li.exp-child').slideToggle();
+	          });
+	          $('#pub-main').on('click',function(){
+	          		$('li.pub-child').slideToggle();
+	          });
+	          $('#course-main').on('click',function(){
+	          		$('span.course-child').slideToggle();
+	          });
 	      });
 	    </script>
 

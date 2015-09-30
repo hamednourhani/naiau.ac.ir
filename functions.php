@@ -18,6 +18,7 @@ if( !class_exists("CMB2") ){
 }
 require_once( 'library/cmb-functions.php' );
 
+define('SCIENCE_ID','42');
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
  //require_once( 'library/admin.php' );
 
@@ -779,10 +780,15 @@ function naiau_profile_admin_css() {
 add_action( 'admin_enqueue_scripts', 'naiau_profile_admin_css' );
 
 function naiau_add_user_roles(){
-remove_role('sciene_board');
+remove_role('scientific_board');
 remove_role('sciences_board');
+remove_role('sciene_board');
+remove_role('science_board');
+remove_role('s_board');
 
-$role = add_role( 'scientific_board', __(
+
+
+$role = add_role( 'si_board', __(
 'Scientific Board','naiau' ),
 array(
 
@@ -831,21 +837,35 @@ add_action('admin_init','naiau_add_role_caps',999);
                $role->add_cap( 'delete_others_admin_posts' );
                $role->add_cap( 'delete_private_admin_posts' );
                $role->add_cap( 'delete_published_admin_posts' );
+
+               $role->add_cap( 'read' );
+               $role->add_cap( 'read_science_course');
+               $role->add_cap( 'read_science_courses' );
+               $role->add_cap( 'edit_science_course' );
+               $role->add_cap( 'edit_science_courses' );
+               // $role->add_cap( 'edit_others_science_courses' );
+               $role->add_cap( 'edit_published_science_courses' );
+               $role->add_cap( 'publish_science_courses' );
+               $role->add_cap( 'publish_science_course' );
+               // $role->add_cap( 'delete_others_science_courses' );
+               $role->add_cap( 'delete_private_science_courses' );
+               $role->add_cap( 'delete_published_science_courses' );
     
     }
-     $role = get_role('scientific_board');
+     $role = get_role('si_board');
 
        $role->add_cap( 'read' );
-       $role->add_cap( 'read_course');
-       $role->add_cap( 'read_courses' );
-       $role->add_cap( 'edit_course' );
-       $role->add_cap( 'edit_courses' );
-       
-       $role->add_cap( 'edit_published_courses' );
-       $role->add_cap( 'publish_courses' );
-       
-       $role->add_cap( 'delete_private_courses' );
-       $role->add_cap( 'delete_published_courses' );
+       $role->add_cap( 'read_science_course');
+       $role->add_cap( 'read_science_courses' );
+       $role->add_cap( 'edit_science_course' );
+       $role->add_cap( 'edit_science_courses' );
+       // $role->add_cap( 'edit_others_science_courses' );
+       $role->add_cap( 'edit_published_science_courses' );
+       $role->add_cap( 'publish_science_courses' );
+       $role->add_cap( 'publish_science_course' );
+       // $role->add_cap( 'delete_others_science_courses' );
+       $role->add_cap( 'delete_private_science_courses' );
+       $role->add_cap( 'delete_published_science_courses' );
 
 
 }

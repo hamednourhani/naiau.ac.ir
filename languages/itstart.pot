@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: naiau 1.0\n"
 "Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
-"POT-Creation-Date: 2015-09-29 15:05:15+00:00\n"
+"POT-Creation-Date: 2015-09-30 13:50:10+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -72,11 +72,11 @@ msgstr ""
 msgid "All right reserved"
 msgstr ""
 
-#: dist/functions.php:90 functions.php:94
+#: dist/functions.php:90 functions.php:95
 msgid "Slider Size"
 msgstr ""
 
-#: dist/functions.php:91 functions.php:95
+#: dist/functions.php:91 functions.php:96
 msgid "Slider Thumb"
 msgstr ""
 
@@ -88,77 +88,77 @@ msgstr ""
 msgid "300px by 250px"
 msgstr ""
 
-#: dist/functions.php:175 functions.php:182
+#: dist/functions.php:175 functions.php:183
 msgid "Sidebar"
 msgstr ""
 
-#: dist/functions.php:176 functions.php:183
+#: dist/functions.php:176 functions.php:184
 msgid "The first (primary) sidebar."
 msgstr ""
 
-#: dist/functions.php:184 functions.php:191
+#: dist/functions.php:184 functions.php:192
 msgid "Notify Sidebar"
 msgstr ""
 
-#: dist/functions.php:185 functions.php:192
+#: dist/functions.php:185 functions.php:193
 msgid "The Notify sidebar."
 msgstr ""
 
-#: dist/functions.php:240 functions.php:265
+#: dist/functions.php:240 functions.php:266
 msgid "<cite class=\"fn\">%1$s</cite> %2$s"
 msgstr ""
 
-#: dist/functions.php:240 functions.php:265
+#: dist/functions.php:240 functions.php:266
 msgid "(Edit)"
 msgstr ""
 
-#: dist/functions.php:241 functions.php:266
+#: dist/functions.php:241 functions.php:267
 msgid "F jS, Y"
 msgstr ""
 
-#: dist/functions.php:246 functions.php:271
+#: dist/functions.php:246 functions.php:272
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: dist/functions.php:268 functions.php:293
+#: dist/functions.php:268 functions.php:294
 msgid "<i class=\"fa fa-angle-double-right\"></i>"
 msgstr ""
 
-#: dist/functions.php:269 functions.php:294
+#: dist/functions.php:269 functions.php:295
 msgid "<i class=\"fa fa-angle-double-left\"></i>"
 msgstr ""
 
-#: dist/functions.php:327 functions.php:353
+#: dist/functions.php:327 functions.php:354
 msgid "Last Notify Widget"
 msgstr ""
 
-#: dist/functions.php:330 functions.php:356
+#: dist/functions.php:330 functions.php:357
 msgid "Display Last Notifies"
 msgstr ""
 
-#: dist/functions.php:375 dist/functions.php:462 functions.php:401
-#: functions.php:707
+#: dist/functions.php:375 dist/functions.php:462 functions.php:402
+#: functions.php:708
 msgid "New title"
 msgstr ""
 
-#: dist/functions.php:385 dist/functions.php:472 functions.php:411
-#: functions.php:505 functions.php:614 functions.php:717
+#: dist/functions.php:385 dist/functions.php:472 functions.php:412
+#: functions.php:506 functions.php:615 functions.php:718
 msgid "Title:"
 msgstr ""
 
-#: dist/functions.php:389 functions.php:415
+#: dist/functions.php:389 functions.php:416
 msgid "Notify Numbers :"
 msgstr ""
 
-#: dist/functions.php:414 functions.php:659
+#: dist/functions.php:414 functions.php:660
 msgid "Last News Widget"
 msgstr ""
 
-#: dist/functions.php:417 functions.php:662
+#: dist/functions.php:417 functions.php:663
 msgid "Display Last News"
 msgstr ""
 
-#: dist/functions.php:476 functions.php:721
+#: dist/functions.php:476 functions.php:722
 msgid "News Numbers :"
 msgstr ""
 
@@ -166,7 +166,7 @@ msgstr ""
 msgid "Top Menu"
 msgstr ""
 
-#: dist/header.php:71 dist/searchform.php:6 functions.php:757 functions.php:758
+#: dist/header.php:71 dist/searchform.php:6 functions.php:758 functions.php:759
 #: header.php:59 searchform.php:6
 msgid "Search"
 msgstr ""
@@ -492,7 +492,7 @@ msgid "Entry Title"
 msgstr ""
 
 #: dist/library/cmb/example-functions.php:433
-#: library/cmb/example-functions.php:433 library/cmb-functions.php:1036
+#: library/cmb/example-functions.php:433
 msgid "Description"
 msgstr ""
 
@@ -878,7 +878,7 @@ msgstr ""
 
 #: dist/library/cmb-functions.php:437 dist/library/cmb-functions.php:503
 #: library/cmb-functions.php:756 library/cmb-functions.php:822
-#: library/cmb-functions.php:1152
+#: library/cmb-functions.php:1167
 msgid "Pages"
 msgstr ""
 
@@ -1649,83 +1649,83 @@ msgstr ""
 msgid " Farakaranet"
 msgstr ""
 
-#: functions.php:123
+#: functions.php:124
 msgid "1120px by 400px"
 msgstr ""
 
-#: functions.php:124
+#: functions.php:125
 msgid "960px by 500px"
 msgstr ""
 
-#: functions.php:125
+#: functions.php:126
 msgid "100px by 80px"
 msgstr ""
 
-#: functions.php:126
+#: functions.php:127
 msgid "320px by 120px"
 msgstr ""
 
-#: functions.php:200
+#: functions.php:201
 msgid "download Sidebar"
 msgstr ""
 
-#: functions.php:201
+#: functions.php:202
 msgid "The download sidebar."
 msgstr ""
 
-#: functions.php:209
+#: functions.php:210
 msgid "circular Sidebar"
 msgstr ""
 
-#: functions.php:210
+#: functions.php:211
 msgid "The circular sidebar."
 msgstr ""
 
-#: functions.php:439
+#: functions.php:440
 msgid "Last Downloads Widget"
 msgstr ""
 
-#: functions.php:442
+#: functions.php:443
 msgid "Display Last Downloads"
 msgstr ""
 
-#: functions.php:490
+#: functions.php:491
 msgid "Last downloads"
 msgstr ""
 
-#: functions.php:509
+#: functions.php:510
 msgid "downloads Numbers :"
 msgstr ""
 
-#: functions.php:513
+#: functions.php:514
 msgid "download Category :"
 msgstr ""
 
-#: functions.php:548
+#: functions.php:549
 msgid "Last circulars Widget"
 msgstr ""
 
-#: functions.php:551
+#: functions.php:552
 msgid "Display Last circulars"
 msgstr ""
 
-#: functions.php:599
+#: functions.php:600
 msgid "Last circulars"
 msgstr ""
 
-#: functions.php:618
+#: functions.php:619
 msgid "circulars Numbers :"
 msgstr ""
 
-#: functions.php:622
+#: functions.php:623
 msgid "circular Category :"
 msgstr ""
 
-#: functions.php:785
+#: functions.php:791
 msgid "Scientific Board"
 msgstr ""
 
-#: functions.php:951 functions.php:1003 functions.php:1055
+#: functions.php:971 functions.php:1023 functions.php:1075
 msgid "More Items "
 msgstr ""
 
@@ -1889,7 +1889,7 @@ msgstr ""
 msgid "Upload profile picture or enter the url"
 msgstr ""
 
-#: library/cmb-functions.php:988 page-templates/scientific-board.php:210
+#: library/cmb-functions.php:988 page-templates/scientific-board.php:244
 msgid "Science Degree"
 msgstr ""
 
@@ -1897,8 +1897,8 @@ msgstr ""
 msgid "enter the science degree "
 msgstr ""
 
-#: library/cmb-functions.php:998 page-templates/scientific-board.php:88
-#: page-templates/scientific-board.php:211
+#: library/cmb-functions.php:998 page-templates/scientific-board.php:89
+#: page-templates/scientific-board.php:245
 msgid "Educational Group"
 msgstr ""
 
@@ -1906,37 +1906,37 @@ msgstr ""
 msgid "select educational group "
 msgstr ""
 
-#: library/cmb-functions.php:1004 page-templates/scientific-board.php:105
-#: page-templates/scientific-board.php:185
+#: library/cmb-functions.php:1004 page-templates/scientific-board.php:106
+#: page-templates/scientific-board.php:219
 msgid "Electronic"
 msgstr ""
 
-#: library/cmb-functions.php:1005 page-templates/scientific-board.php:109
-#: page-templates/scientific-board.php:189
+#: library/cmb-functions.php:1005 page-templates/scientific-board.php:110
+#: page-templates/scientific-board.php:223
 msgid "Mechanic"
 msgstr ""
 
-#: library/cmb-functions.php:1006 page-templates/scientific-board.php:113
-#: page-templates/scientific-board.php:193
+#: library/cmb-functions.php:1006 page-templates/scientific-board.php:114
+#: page-templates/scientific-board.php:227
 msgid "Building"
 msgstr ""
 
-#: library/cmb-functions.php:1007 page-templates/scientific-board.php:117
-#: page-templates/scientific-board.php:197
+#: library/cmb-functions.php:1007 page-templates/scientific-board.php:118
+#: page-templates/scientific-board.php:231
 msgid "Material"
 msgstr ""
 
-#: library/cmb-functions.php:1008 page-templates/scientific-board.php:121
-#: page-templates/scientific-board.php:201
+#: library/cmb-functions.php:1008 page-templates/scientific-board.php:122
+#: page-templates/scientific-board.php:235
 msgid "Computer"
 msgstr ""
 
-#: library/cmb-functions.php:1009 page-templates/scientific-board.php:125
-#: page-templates/scientific-board.php:205
+#: library/cmb-functions.php:1009 page-templates/scientific-board.php:126
+#: page-templates/scientific-board.php:239
 msgid "Public"
 msgstr ""
 
-#: library/cmb-functions.php:1017 page-templates/scientific-board.php:212
+#: library/cmb-functions.php:1017 page-templates/scientific-board.php:246
 msgid "Emails"
 msgstr ""
 
@@ -1944,7 +1944,7 @@ msgstr ""
 msgid "Upload email addresses Photo"
 msgstr ""
 
-#: library/cmb-functions.php:1026 page-templates/scientific-board.php:213
+#: library/cmb-functions.php:1026 page-templates/scientific-board.php:247
 msgid "Phone"
 msgstr ""
 
@@ -1954,43 +1954,51 @@ msgid ""
 "info@yahoo.com "
 msgstr ""
 
+#: library/cmb-functions.php:1036 page-templates/scientific-board.php:256
+msgid "Education"
+msgstr ""
+
 #: library/cmb-functions.php:1037 library/cmb-functions.php:1077
 #: library/cmb-functions.php:1087 library/cmb-functions.php:1097
 #: library/cmb-functions.php:1107 library/cmb-functions.php:1117
-#: library/cmb-functions.php:1127 library/cmb-functions.php:1161
-#: library/cmb-functions.php:1171
+#: library/cmb-functions.php:1127 library/cmb-functions.php:1137
+#: library/cmb-functions.php:1176 library/cmb-functions.php:1186
 msgid "Enter Description"
 msgstr ""
 
-#: library/cmb-functions.php:1076
+#: library/cmb-functions.php:1076 page-templates/scientific-board.php:269
 msgid "Academic Positions"
 msgstr ""
 
-#: library/cmb-functions.php:1086
+#: library/cmb-functions.php:1086 page-templates/scientific-board.php:280
 msgid "Industrial Experience"
 msgstr ""
 
-#: library/cmb-functions.php:1096
+#: library/cmb-functions.php:1096 page-templates/scientific-board.php:291
 msgid "Books"
 msgstr ""
 
-#: library/cmb-functions.php:1106
+#: library/cmb-functions.php:1106 page-templates/scientific-board.php:302
 msgid "Journal Papers"
 msgstr ""
 
-#: library/cmb-functions.php:1116
+#: library/cmb-functions.php:1116 page-templates/scientific-board.php:313
 msgid "Conference Papers"
 msgstr ""
 
-#: library/cmb-functions.php:1126
+#: library/cmb-functions.php:1126 page-templates/scientific-board.php:324
+msgid "Research Projects"
+msgstr ""
+
+#: library/cmb-functions.php:1136 page-templates/scientific-board.php:335
 msgid "Comments"
 msgstr ""
 
-#: library/cmb-functions.php:1160
+#: library/cmb-functions.php:1175
 msgid "Lecture & reading "
 msgstr ""
 
-#: library/cmb-functions.php:1170
+#: library/cmb-functions.php:1185 single-course.php:93
 msgid "Homework & Exame"
 msgstr ""
 
@@ -2178,58 +2186,73 @@ msgstr ""
 msgid "Responsive Menu"
 msgstr ""
 
-#: page-templates/scientific-board.php:85
+#: page-templates/scientific-board.php:86
 msgid "Row"
 msgstr ""
 
-#: page-templates/scientific-board.php:86
-#: page-templates/scientific-board.php:209
+#: page-templates/scientific-board.php:87
+#: page-templates/scientific-board.php:243
 msgid "Name and Family"
 msgstr ""
 
-#: page-templates/scientific-board.php:87
+#: page-templates/scientific-board.php:88
 msgid "Sience Degree"
 msgstr ""
 
-#: page-templates/scientific-board.php:160
+#: page-templates/scientific-board.php:165 single-course.php:74
 msgid "(Home)"
 msgstr ""
 
-#: page-templates/scientific-board.php:161
+#: page-templates/scientific-board.php:166
 msgid "(Experience)"
 msgstr ""
 
-#: page-templates/scientific-board.php:162
+#: page-templates/scientific-board.php:167
 msgid "(Academic Positions)"
 msgstr ""
 
-#: page-templates/scientific-board.php:163
+#: page-templates/scientific-board.php:168
 msgid "(Industrial Experience )"
 msgstr ""
 
-#: page-templates/scientific-board.php:164
+#: page-templates/scientific-board.php:169
 msgid "(Publications)"
 msgstr ""
 
-#: page-templates/scientific-board.php:165
+#: page-templates/scientific-board.php:170
 msgid "(Books)"
 msgstr ""
 
-#: page-templates/scientific-board.php:166
+#: page-templates/scientific-board.php:171
 msgid "Journal Papers)"
 msgstr ""
 
-#: page-templates/scientific-board.php:167
+#: page-templates/scientific-board.php:172
 msgid "(Conference Papers)"
 msgstr ""
 
-#: page-templates/scientific-board.php:168
-#: page-templates/scientific-board.php:169
+#: page-templates/scientific-board.php:174
+msgid "(Research projects)"
+msgstr ""
+
+#: page-templates/scientific-board.php:175
 msgid "(Courses)"
 msgstr ""
 
-#: page-templates/scientific-board.php:170
+#: page-templates/scientific-board.php:204
 msgid "(Comments)"
+msgstr ""
+
+#: single-course.php:75
+msgid "(Lecture & reading )"
+msgstr ""
+
+#: single-course.php:76
+msgid "(Homework & Exame)"
+msgstr ""
+
+#: single-course.php:86
+msgid "Lecture & reading"
 msgstr ""
 
 #: single-download.php:75
@@ -2257,11 +2280,11 @@ msgid "http://www.itstar.ir"
 msgstr ""
 
 #. Template Name of the plugin/theme
-msgid "Full Width Page"
+msgid "Scientific Board Page"
 msgstr ""
 
 #. Template Name of the plugin/theme
-msgid "Scientific Board Page"
+msgid "Full Width Page"
 msgstr ""
 
 #: dist/library/cmb/includes/CMB2_JS.php:109

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: naiau\n"
 "POT-Creation-Date: 2015-09-20 11:46+0430\n"
-"PO-Revision-Date: 2015-09-28 16:52+0330\n"
+"PO-Revision-Date: 2015-09-30 08:31+0330\n"
 "Last-Translator: \n"
 "Language-Team: iTstar <info@iTstar.ir>\n"
 "Language: fa_IR\n"
@@ -1747,7 +1747,7 @@ msgstr "هیئت علمی"
 
 #: functions.php:936 functions.php:988 functions.php:1040
 msgid "More Items "
-msgstr "آرشیو"
+msgstr "آرشیو  "
 
 #: library/cmb-functions.php:118 library/cmb-functions.php:136
 msgid "Page has Content"

@@ -54,6 +54,7 @@
   direction : ltr;
 }
 .important-links{
+  //@include background(image-url("pattern_19.png"));
   @include box-shadow(0px 1px 9px 2px darken($grey2,25%) inset);
   padding-top : 13px;
   padding-bottom : 0px;
