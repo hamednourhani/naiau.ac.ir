@@ -207,36 +207,37 @@ if($wp_query->query_vars['sb']){
 													</ul>
 													
 													<div id="profile" class="science-tab">
-														<div class="science-pic">
-															<?php echo '<img src="'. get_usermeta( $single_user_id, $meta_key = '_naiau_user_picture' ) .'" alt="'.$single_user->display_name.'" title="'.$single_user->display_name.'"/>';?>
-														</div>
+														
 														<div class="science-info-wrapper">
+															<div class="science-pic">
+																<?php echo '<img src="'. get_usermeta( $single_user_id, $meta_key = '_naiau_user_picture' ) .'" alt="'.$single_user->display_name.'" title="'.$single_user->display_name.'"/>';?>
+															</div>
 															<ul class="science-info">
 																<?php 
 																	$edu_group = get_usermeta( $single_user_id, $meta_key = '_naiau_user_edu_group' );
 																	switch($edu_group){
 																		case 'electronic':
-																			$edu_group = __('Electronic','naiau');
+																			$edu_group = __('Electronic','naiau').' (Electronic)';
 																			break;
 																		
 																		case 'mechanic':
-																			$edu_group = __('Mechanic','naiau');
+																			$edu_group = __('Mechanic','naiau').' (Mechanic)';
 																			break;
 																		
 																		case 'building':
-																			$edu_group = __('Building','naiau');
+																			$edu_group = __('Building','naiau').' (Building)';
 																			break;
 																		
 																		case 'material':
-																			$edu_group = __('Material','naiau');
+																			$edu_group = __('Material','naiau').' (Material)';
 																			break;
 																		
 																		case 'computer':
-																			$edu_group = __('Computer','naiau');
+																			$edu_group = __('Computer','naiau').' (Computer)';
 																			break;
 																		
 																		case 'public':
-																			$edu_group = __('Public','naiau');
+																			$edu_group = __('Public','naiau').' (Public)';
 																			break;
 																	}
 																?>

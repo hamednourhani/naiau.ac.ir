@@ -287,11 +287,13 @@ body{
 		}
 	}
 	.science-info-wrapper{
-		display: inline-block;
+		display:  block;
 		overflow: hidden;
+
 
 		ul.science-info{
 			margin :0px;
+			margin-top: 15px;
 			li{
 				padding : 5px;
 				display : table;
@@ -299,7 +301,9 @@ body{
 			}
 			img.science-email-pic{
 				max-height : 30px;
+				max-width: 300px;
 				vertical-align: middle;
+				margin-right: 10px;
 			}
 			strong{
 				display: inline-block;
