@@ -280,10 +280,12 @@ body{
 		margin : 0px;
 		margin-top : 10px;
 		margin-left : 20px;
-		width : 150px;
-		height: auto;
+
 		img{
 			@include border-radius(5px);
+			height: 200px;
+			max-width: 100%;
+			width : auto;
 		}
 	}
 	.science-info-wrapper{

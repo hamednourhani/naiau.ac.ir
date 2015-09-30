@@ -2,8 +2,8 @@
 /* fonts */
 @font-face {
   font-family: "Yekan";
-  src: url('fonts/Yekan.eot?1443413730');
-  src: url('fonts/Yekan.eot?&1443413730#iefix') format('embedded-opentype'), url('fonts/Yekan.ttf?1443413730') format('truetype'), url('fonts/Yekan.woff?1443413730') format('woff');
+  src: url('fonts/Yekan.eot?1402561813');
+  src: url('fonts/Yekan.eot?&1402561813#iefix') format('embedded-opentype'), url('fonts/Yekan.ttf?1402561509') format('truetype'), url('fonts/Yekan.woff?1402561504') format('woff');
   font-weight: "Yekan.svg"; }
 /* normalize style */
 /* normalize-scss 3.0.2+normalize.3.0.2 | MIT/GPLv2 License | bit.ly/normalize-scss */
@@ -12,7 +12,7 @@
  * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
  * body `font-size` is set using `em` units.
  */
-/* line 106, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
   line-height: 1.5em; }
@@ -618,7 +618,7 @@ p {
   font-feature-settings: "liga", "dlig"; }
 
 /* ------------susy-------- */
-/* line 14, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/language/susyone/_grid.scss */
+/* line 14, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/language/susyone/_grid.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1120,7 +1120,7 @@ blockquote, q {
   padding-right: 1em;
   margin-left: auto;
   margin-right: auto; }
-  /* line 38, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   .layout:after {
     content: "";
     display: table;
@@ -1130,7 +1130,7 @@ blockquote, q {
 body {
   max-width: 1400px;
   margin: auto;
-  background: url('../images/pattern_19.png?1332742980'); }
+  background: url('../images/pattern_19.png?1443641700'); }
 
 /* line 12, sass/layout/_main.scss */
 .body-wrapper {
@@ -1146,7 +1146,7 @@ body {
     background-color: #E6E6E6;
     overflow: hidden;
     text-align: center;
-    background: url('../images/pattern_13.png?1332742980'); }
+    background: url('../images/pattern_13.png?1443641700'); }
     /* line 26, sass/layout/_main.scss */
     .content-area .single-page-title h1 {
       font-size: 140%;
@@ -1397,81 +1397,82 @@ body {
     float: right;
     margin: 0px;
     margin-top: 10px;
-    margin-left: 20px;
-    width: 150px;
-    height: auto; }
-    /* line 285, sass/layout/_main.scss */
+    margin-left: 20px; }
+    /* line 284, sass/layout/_main.scss */
     .profile-page .science-pic img {
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
-      border-radius: 5px; }
-  /* line 289, sass/layout/_main.scss */
+      border-radius: 5px;
+      height: 200px;
+      max-width: 100%;
+      width: auto; }
+  /* line 291, sass/layout/_main.scss */
   .profile-page .science-info-wrapper {
     display: block;
     overflow: hidden; }
-    /* line 294, sass/layout/_main.scss */
+    /* line 296, sass/layout/_main.scss */
     .profile-page .science-info-wrapper ul.science-info {
       margin: 0px;
       margin-top: 15px; }
-      /* line 297, sass/layout/_main.scss */
+      /* line 299, sass/layout/_main.scss */
       .profile-page .science-info-wrapper ul.science-info li {
         padding: 5px;
         display: table;
         border-bottom: 1px solid #CCCCCC; }
-      /* line 302, sass/layout/_main.scss */
+      /* line 304, sass/layout/_main.scss */
       .profile-page .science-info-wrapper ul.science-info img.science-email-pic {
         max-height: 30px;
         max-width: 300px;
         vertical-align: middle;
         margin-right: 10px; }
-      /* line 308, sass/layout/_main.scss */
+      /* line 310, sass/layout/_main.scss */
       .profile-page .science-info-wrapper ul.science-info strong {
         display: inline-block;
         display: inline-flex; }
-  /* line 314, sass/layout/_main.scss */
+  /* line 316, sass/layout/_main.scss */
   .profile-page .science-name {
     padding-bottom: 30px; }
-  /* line 317, sass/layout/_main.scss */
+  /* line 319, sass/layout/_main.scss */
   .profile-page .science-name {
     display: block;
     overflow: hidden;
     margin: auto; }
-  /* line 323, sass/layout/_main.scss */
+  /* line 325, sass/layout/_main.scss */
   .profile-page .science-education {
     border-top: 1px dashed #5A6B9F;
     padding: 10px;
     margin: 10px; }
-  /* line 328, sass/layout/_main.scss */
+  /* line 330, sass/layout/_main.scss */
   .profile-page .author-pic {
     text-align: center;
     color: #5A6B9F; }
-    /* line 330, sass/layout/_main.scss */
+    /* line 332, sass/layout/_main.scss */
     .profile-page .author-pic img {
       max-width: 100%;
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
       border-radius: 5px; }
-  /* line 337, sass/layout/_main.scss */
+  /* line 339, sass/layout/_main.scss */
   .profile-page .author-info {
     width: 100%;
     text-align: center; }
-    /* line 341, sass/layout/_main.scss */
+    /* line 343, sass/layout/_main.scss */
     .profile-page .author-info .author-pic img {
       max-width: 100%;
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
       border-radius: 5px; }
-    /* line 345, sass/layout/_main.scss */
+    /* line 347, sass/layout/_main.scss */
     .profile-page .author-info .author-pic a {
       color: #5A6B9F; }
-    /* line 349, sass/layout/_main.scss */
+    /* line 351, sass/layout/_main.scss */
     .profile-page .author-info .author-name {
       width: 100%;
       display: inline-block;
       text-align: center;
       color: #5A6B9F; }
 
-/* line 359, sass/layout/_main.scss */
+/* line 361, sass/layout/_main.scss */
 .secondary .widget {
   background-color: #fff;
   border: 3px solid #E6E6E6;
@@ -1483,19 +1484,19 @@ body {
   line-height: 230%;
   margin-bottom: 5px;
   margin-top: 10px; }
-/* line 375, sass/layout/_main.scss */
+/* line 377, sass/layout/_main.scss */
 .secondary .widgettitle {
   border-bottom: 1px solid #E6E6E6;
   margin: 0;
   padding-bottom: 10px;
   margin-bottom: 15px;
   color: #253B80; }
-/* line 383, sass/layout/_main.scss */
+/* line 385, sass/layout/_main.scss */
 .secondary i:before {
   padding: 5px;
   vertical-align: middle; }
 
-/* line 389, sass/layout/_main.scss */
+/* line 391, sass/layout/_main.scss */
 .gallery-slideshow-wrapper {
   width: 100%;
   padding-top: 30px;
@@ -1503,43 +1504,43 @@ body {
   padding-left: auto;
   padding-right: auto;
   text-align: center; }
-  /* line 402, sass/layout/_main.scss */
+  /* line 404, sass/layout/_main.scss */
   .gallery-slideshow-wrapper .sp-selected-thumbnail {
     border: 4px solid #000; }
 
-/* line 421, sass/layout/_main.scss */
+/* line 423, sass/layout/_main.scss */
 .has-sub-page .page-sidebar ul.sub-widget, .has-sub-page .page-sidebar ul.related-widget, .has-sub-page .page-sidebar ul.parent-widget {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 5px 6px 3px; }
-  /* line 429, sass/layout/_main.scss */
+  /* line 431, sass/layout/_main.scss */
   .has-sub-page .page-sidebar ul.sub-widget li, .has-sub-page .page-sidebar ul.related-widget li, .has-sub-page .page-sidebar ul.parent-widget li {
     position: relative;
     width: 100%; }
-    /* line 432, sass/layout/_main.scss */
+    /* line 434, sass/layout/_main.scss */
     .has-sub-page .page-sidebar ul.sub-widget li a.related-link, .has-sub-page .page-sidebar ul.sub-widget li a.sub-page-link, .has-sub-page .page-sidebar ul.sub-widget li a.sub-edu-link, .has-sub-page .page-sidebar ul.sub-widget li a.parent-link, .has-sub-page .page-sidebar ul.related-widget li a.related-link, .has-sub-page .page-sidebar ul.related-widget li a.sub-page-link, .has-sub-page .page-sidebar ul.related-widget li a.sub-edu-link, .has-sub-page .page-sidebar ul.related-widget li a.parent-link, .has-sub-page .page-sidebar ul.parent-widget li a.related-link, .has-sub-page .page-sidebar ul.parent-widget li a.sub-page-link, .has-sub-page .page-sidebar ul.parent-widget li a.sub-edu-link, .has-sub-page .page-sidebar ul.parent-widget li a.parent-link {
       -moz-transition: all 0.2s ease-out 0s;
       -o-transition: all 0.2s ease-out 0s;
       -webkit-transition: all 0.2s ease-out;
       -webkit-transition-delay: 0s;
       transition: all 0.2s ease-out 0s; }
-      /* line 437, sass/layout/_main.scss */
+      /* line 439, sass/layout/_main.scss */
       .has-sub-page .page-sidebar ul.sub-widget li a.related-link:before, .has-sub-page .page-sidebar ul.sub-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.sub-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.sub-widget li a.parent-link:before, .has-sub-page .page-sidebar ul.related-widget li a.related-link:before, .has-sub-page .page-sidebar ul.related-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.related-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.related-widget li a.parent-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.related-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.parent-link:before {
         content: "\f0c1";
         vertical-align: middle;
         position: absolute;
         right: 14px;
         top: 12px; }
-    /* line 446, sass/layout/_main.scss */
+    /* line 448, sass/layout/_main.scss */
     .has-sub-page .page-sidebar ul.sub-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.related-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.sub-page-link:before {
       content: "\f15c"; }
-    /* line 449, sass/layout/_main.scss */
+    /* line 451, sass/layout/_main.scss */
     .has-sub-page .page-sidebar ul.sub-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.related-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.sub-edu-link:before {
       content: "\f19d"; }
-    /* line 453, sass/layout/_main.scss */
+    /* line 455, sass/layout/_main.scss */
     .has-sub-page .page-sidebar ul.sub-widget li a.parent-link:before, .has-sub-page .page-sidebar ul.related-widget li a.parent-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.parent-link:before {
       content: "\f101"; }
-  /* line 458, sass/layout/_main.scss */
+  /* line 460, sass/layout/_main.scss */
   .has-sub-page .page-sidebar ul.sub-widget li a, .has-sub-page .page-sidebar ul.sub-widget li span.related-header,
   .has-sub-page .page-sidebar ul.sub-widget li a.sub-header, .has-sub-page .page-sidebar ul.related-widget li a, .has-sub-page .page-sidebar ul.related-widget li span.related-header,
   .has-sub-page .page-sidebar ul.related-widget li a.sub-header, .has-sub-page .page-sidebar ul.parent-widget li a, .has-sub-page .page-sidebar ul.parent-widget li span.related-header,
@@ -1552,7 +1553,7 @@ body {
     display: inline-block;
     padding: 7px 18px 7px 8px;
     margin-bottom: 3px; }
-    /* line 469, sass/layout/_main.scss */
+    /* line 471, sass/layout/_main.scss */
     .has-sub-page .page-sidebar ul.sub-widget li a.current, .has-sub-page .page-sidebar ul.sub-widget li a:hover, .has-sub-page .page-sidebar ul.sub-widget li span.related-header.current, .has-sub-page .page-sidebar ul.sub-widget li span.related-header:hover,
     .has-sub-page .page-sidebar ul.sub-widget li a.sub-header.current,
     .has-sub-page .page-sidebar ul.sub-widget li a.sub-header:hover, .has-sub-page .page-sidebar ul.related-widget li a.current, .has-sub-page .page-sidebar ul.related-widget li a:hover, .has-sub-page .page-sidebar ul.related-widget li span.related-header.current, .has-sub-page .page-sidebar ul.related-widget li span.related-header:hover,
@@ -1562,7 +1563,7 @@ body {
     .has-sub-page .page-sidebar ul.parent-widget li a.sub-header:hover {
       background-color: #5DC2F0;
       color: #fff; }
-  /* line 474, sass/layout/_main.scss */
+  /* line 476, sass/layout/_main.scss */
   .has-sub-page .page-sidebar ul.sub-widget li a.sub-header, .has-sub-page .page-sidebar ul.sub-widget li span.related-header, .has-sub-page .page-sidebar ul.related-widget li a.sub-header, .has-sub-page .page-sidebar ul.related-widget li span.related-header, .has-sub-page .page-sidebar ul.parent-widget li a.sub-header, .has-sub-page .page-sidebar ul.parent-widget li span.related-header {
     border-color: #253B80;
     background: #5a6b9f;
@@ -1583,11 +1584,11 @@ body {
     font-family: "Yekan";
     font-size: 17px;
     color: #fff; }
-  /* line 489, sass/layout/_main.scss */
+  /* line 491, sass/layout/_main.scss */
   .has-sub-page .page-sidebar ul.sub-widget li a.related-link:hover, .has-sub-page .page-sidebar ul.related-widget li a.related-link:hover, .has-sub-page .page-sidebar ul.parent-widget li a.related-link:hover {
     background-color: #253B80;
     color: #fff; }
-  /* line 493, sass/layout/_main.scss */
+  /* line 495, sass/layout/_main.scss */
   .has-sub-page .page-sidebar ul.sub-widget li a.parent-link, .has-sub-page .page-sidebar ul.related-widget li a.parent-link, .has-sub-page .page-sidebar ul.parent-widget li a.parent-link {
     background-color: #253B80;
     color: #fff; }

@@ -103,27 +103,27 @@ if($wp_query->query_vars['sb']){
 																	// var_dump($edu_group);
 																		switch($edu_group){
 																			case 'electronic':
-																				$edu_group = __('Electronic','naiau');
+																				$edu_group = __('Electronic','naiau').' (Electronic)';
 																				break;
 																			
 																			case 'mechanic':
-																				$edu_group = __('Mechanic','naiau');
+																				$edu_group = __('Mechanic','naiau').' (Mechanic)';
 																				break;
 																			
 																			case 'building':
-																				$edu_group = __('Building','naiau');
+																				$edu_group = __('Building','naiau').' (Building)';
 																				break;
 																			
 																			case 'material':
-																				$edu_group = __('Material','naiau');
+																				$edu_group = __('Material','naiau').' (Material)';
 																				break;
 																			
 																			case 'computer':
-																				$edu_group = __('Computer','naiau');
+																				$edu_group = __('Computer','naiau').' (Computer)';
 																				break;
 																			
 																			case 'public':
-																				$edu_group = __('Public','naiau');
+																				$edu_group = __('Public','naiau').' (Public)';
 																				break;
 																		}
 																	// $current_group = ($edu_group == $prev_group)?('~'):$edu_group; 
@@ -139,7 +139,7 @@ if($wp_query->query_vars['sb']){
 																	}
 																?>
 																																
-																<td><a href="<?php echo $sb_url;?>"><?php echo $user->first_name.' '.$user->last_name; ?></a></td>
+																<td><a href="<?php echo $sb_url;?>"><?php echo $user->display_name; ?></a></td>
 																<td><?php echo get_usermeta( $user->ID, $meta_key = '_naiau_user_degree' );?></td>
 																<td><?php echo $edu_group; ?></td>
 															
