@@ -1421,50 +1421,54 @@ body {
       .profile-page .science-info-wrapper ul.science-info img.science-email-pic {
         max-height: 30px;
         vertical-align: middle; }
-  /* line 306, sass/layout/_main.scss */
+      /* line 304, sass/layout/_main.scss */
+      .profile-page .science-info-wrapper ul.science-info strong {
+        display: inline-block;
+        display: inline-flex; }
+  /* line 310, sass/layout/_main.scss */
   .profile-page .science-name {
     padding-bottom: 30px; }
-  /* line 309, sass/layout/_main.scss */
+  /* line 313, sass/layout/_main.scss */
   .profile-page .science-name {
     display: block;
     overflow: hidden;
     margin: auto; }
-  /* line 315, sass/layout/_main.scss */
+  /* line 319, sass/layout/_main.scss */
   .profile-page .science-education {
     border-top: 1px dashed #5A6B9F;
     padding: 10px;
     margin: 10px; }
-  /* line 320, sass/layout/_main.scss */
+  /* line 324, sass/layout/_main.scss */
   .profile-page .author-pic {
     text-align: center;
     color: #5A6B9F; }
-    /* line 322, sass/layout/_main.scss */
+    /* line 326, sass/layout/_main.scss */
     .profile-page .author-pic img {
       max-width: 100%;
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
       border-radius: 5px; }
-  /* line 329, sass/layout/_main.scss */
+  /* line 333, sass/layout/_main.scss */
   .profile-page .author-info {
     width: 100%;
     text-align: center; }
-    /* line 333, sass/layout/_main.scss */
+    /* line 337, sass/layout/_main.scss */
     .profile-page .author-info .author-pic img {
       max-width: 100%;
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
       border-radius: 5px; }
-    /* line 337, sass/layout/_main.scss */
+    /* line 341, sass/layout/_main.scss */
     .profile-page .author-info .author-pic a {
       color: #5A6B9F; }
-    /* line 341, sass/layout/_main.scss */
+    /* line 345, sass/layout/_main.scss */
     .profile-page .author-info .author-name {
       width: 100%;
       display: inline-block;
       text-align: center;
       color: #5A6B9F; }
 
-/* line 351, sass/layout/_main.scss */
+/* line 355, sass/layout/_main.scss */
 .secondary .widget {
   background-color: #fff;
   border: 3px solid #E6E6E6;
@@ -1476,19 +1480,19 @@ body {
   line-height: 230%;
   margin-bottom: 5px;
   margin-top: 10px; }
-/* line 367, sass/layout/_main.scss */
+/* line 371, sass/layout/_main.scss */
 .secondary .widgettitle {
   border-bottom: 1px solid #E6E6E6;
   margin: 0;
   padding-bottom: 10px;
   margin-bottom: 15px;
   color: #253B80; }
-/* line 375, sass/layout/_main.scss */
+/* line 379, sass/layout/_main.scss */
 .secondary i:before {
   padding: 5px;
   vertical-align: middle; }
 
-/* line 381, sass/layout/_main.scss */
+/* line 385, sass/layout/_main.scss */
 .gallery-slideshow-wrapper {
   width: 100%;
   padding-top: 30px;
@@ -1496,43 +1500,43 @@ body {
   padding-left: auto;
   padding-right: auto;
   text-align: center; }
-  /* line 394, sass/layout/_main.scss */
+  /* line 398, sass/layout/_main.scss */
   .gallery-slideshow-wrapper .sp-selected-thumbnail {
     border: 4px solid #000; }
 
-/* line 413, sass/layout/_main.scss */
+/* line 417, sass/layout/_main.scss */
 .has-sub-page .page-sidebar ul.sub-widget, .has-sub-page .page-sidebar ul.related-widget, .has-sub-page .page-sidebar ul.parent-widget {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 5px 6px 3px; }
-  /* line 421, sass/layout/_main.scss */
+  /* line 425, sass/layout/_main.scss */
   .has-sub-page .page-sidebar ul.sub-widget li, .has-sub-page .page-sidebar ul.related-widget li, .has-sub-page .page-sidebar ul.parent-widget li {
     position: relative;
     width: 100%; }
-    /* line 424, sass/layout/_main.scss */
+    /* line 428, sass/layout/_main.scss */
     .has-sub-page .page-sidebar ul.sub-widget li a.related-link, .has-sub-page .page-sidebar ul.sub-widget li a.sub-page-link, .has-sub-page .page-sidebar ul.sub-widget li a.sub-edu-link, .has-sub-page .page-sidebar ul.sub-widget li a.parent-link, .has-sub-page .page-sidebar ul.related-widget li a.related-link, .has-sub-page .page-sidebar ul.related-widget li a.sub-page-link, .has-sub-page .page-sidebar ul.related-widget li a.sub-edu-link, .has-sub-page .page-sidebar ul.related-widget li a.parent-link, .has-sub-page .page-sidebar ul.parent-widget li a.related-link, .has-sub-page .page-sidebar ul.parent-widget li a.sub-page-link, .has-sub-page .page-sidebar ul.parent-widget li a.sub-edu-link, .has-sub-page .page-sidebar ul.parent-widget li a.parent-link {
       -moz-transition: all 0.2s ease-out 0s;
       -o-transition: all 0.2s ease-out 0s;
       -webkit-transition: all 0.2s ease-out;
       -webkit-transition-delay: 0s;
       transition: all 0.2s ease-out 0s; }
-      /* line 429, sass/layout/_main.scss */
+      /* line 433, sass/layout/_main.scss */
       .has-sub-page .page-sidebar ul.sub-widget li a.related-link:before, .has-sub-page .page-sidebar ul.sub-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.sub-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.sub-widget li a.parent-link:before, .has-sub-page .page-sidebar ul.related-widget li a.related-link:before, .has-sub-page .page-sidebar ul.related-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.related-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.related-widget li a.parent-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.related-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.parent-link:before {
         content: "\f0c1";
         vertical-align: middle;
         position: absolute;
         right: 14px;
         top: 12px; }
-    /* line 438, sass/layout/_main.scss */
+    /* line 442, sass/layout/_main.scss */
     .has-sub-page .page-sidebar ul.sub-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.related-widget li a.sub-page-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.sub-page-link:before {
       content: "\f15c"; }
-    /* line 441, sass/layout/_main.scss */
+    /* line 445, sass/layout/_main.scss */
     .has-sub-page .page-sidebar ul.sub-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.related-widget li a.sub-edu-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.sub-edu-link:before {
       content: "\f19d"; }
-    /* line 445, sass/layout/_main.scss */
+    /* line 449, sass/layout/_main.scss */
     .has-sub-page .page-sidebar ul.sub-widget li a.parent-link:before, .has-sub-page .page-sidebar ul.related-widget li a.parent-link:before, .has-sub-page .page-sidebar ul.parent-widget li a.parent-link:before {
       content: "\f101"; }
-  /* line 450, sass/layout/_main.scss */
+  /* line 454, sass/layout/_main.scss */
   .has-sub-page .page-sidebar ul.sub-widget li a, .has-sub-page .page-sidebar ul.sub-widget li span.related-header,
   .has-sub-page .page-sidebar ul.sub-widget li a.sub-header, .has-sub-page .page-sidebar ul.related-widget li a, .has-sub-page .page-sidebar ul.related-widget li span.related-header,
   .has-sub-page .page-sidebar ul.related-widget li a.sub-header, .has-sub-page .page-sidebar ul.parent-widget li a, .has-sub-page .page-sidebar ul.parent-widget li span.related-header,
@@ -1545,7 +1549,7 @@ body {
     display: inline-block;
     padding: 7px 18px 7px 8px;
     margin-bottom: 3px; }
-    /* line 461, sass/layout/_main.scss */
+    /* line 465, sass/layout/_main.scss */
     .has-sub-page .page-sidebar ul.sub-widget li a.current, .has-sub-page .page-sidebar ul.sub-widget li a:hover, .has-sub-page .page-sidebar ul.sub-widget li span.related-header.current, .has-sub-page .page-sidebar ul.sub-widget li span.related-header:hover,
     .has-sub-page .page-sidebar ul.sub-widget li a.sub-header.current,
     .has-sub-page .page-sidebar ul.sub-widget li a.sub-header:hover, .has-sub-page .page-sidebar ul.related-widget li a.current, .has-sub-page .page-sidebar ul.related-widget li a:hover, .has-sub-page .page-sidebar ul.related-widget li span.related-header.current, .has-sub-page .page-sidebar ul.related-widget li span.related-header:hover,
@@ -1555,7 +1559,7 @@ body {
     .has-sub-page .page-sidebar ul.parent-widget li a.sub-header:hover {
       background-color: #5DC2F0;
       color: #fff; }
-  /* line 466, sass/layout/_main.scss */
+  /* line 470, sass/layout/_main.scss */
   .has-sub-page .page-sidebar ul.sub-widget li a.sub-header, .has-sub-page .page-sidebar ul.sub-widget li span.related-header, .has-sub-page .page-sidebar ul.related-widget li a.sub-header, .has-sub-page .page-sidebar ul.related-widget li span.related-header, .has-sub-page .page-sidebar ul.parent-widget li a.sub-header, .has-sub-page .page-sidebar ul.parent-widget li span.related-header {
     border-color: #253B80;
     background: #5a6b9f;
@@ -1576,11 +1580,11 @@ body {
     font-family: "Yekan";
     font-size: 17px;
     color: #fff; }
-  /* line 481, sass/layout/_main.scss */
+  /* line 485, sass/layout/_main.scss */
   .has-sub-page .page-sidebar ul.sub-widget li a.related-link:hover, .has-sub-page .page-sidebar ul.related-widget li a.related-link:hover, .has-sub-page .page-sidebar ul.parent-widget li a.related-link:hover {
     background-color: #253B80;
     color: #fff; }
-  /* line 485, sass/layout/_main.scss */
+  /* line 489, sass/layout/_main.scss */
   .has-sub-page .page-sidebar ul.sub-widget li a.parent-link, .has-sub-page .page-sidebar ul.related-widget li a.parent-link, .has-sub-page .page-sidebar ul.parent-widget li a.parent-link {
     background-color: #253B80;
     color: #fff; }

@@ -168,7 +168,7 @@ if($wp_query->query_vars['sb']){
 																<li class="exp-child child-tab"><a href="#industrial_experience"><?php echo 'Industrial Experience '.__('(Industrial Experience )','naiau');?></a></li>
 															<li id="pub-main" class="has-child"><a ><?php echo 'Publications '.__('(Publications)','naiau');?></a></li>
 																<li class="pub-child child-tab"><a href="#books"><?php echo 'Books '.__('(Books)','naiau');?></a></li>
-																<li class="pub-child child-tab"><a href="#journal_papers"><?php echo 'Journal Papers'.__('Journal Papers)','naiau');?></a></li>
+																<li class="pub-child child-tab"><a href="#journal_papers"><?php echo 'Journal Papers'.__('(Journal Papers)','naiau');?></a></li>
 																<li class="pub-child child-tab"><a href="#conference_papers"><?php echo 'Conference Papers'.__('(Conference Papers)','naiau');?></a></li>
 
 															<li><a href="#research_projects"><?php echo 'Research projects '.__('(Research projects)','naiau');?></a></li>
@@ -240,11 +240,11 @@ if($wp_query->query_vars['sb']){
 																			break;
 																	}
 																?>
-																<li><?php echo '<strong>'.__('Name and Family','naiau').' (Name) : '.'</strong>'.$single_user->display_name;?></li>
-																<li><?php echo '<strong>'.__('Science Degree','naiau').' (Title) : '.'</strong>'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_degree' );?></li>
-																<li><?php echo '<strong>'.__('Educational Group','naiau').' (Department) : '.'</strong>'.$edu_group;?></li>
-																<li><?php echo '<strong>'.__('Emails','naiau').'(Emails) : '.'</strong><img class="science-email-pic" src="'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_emails' ).'" alt="Emails" />';?></li>
-																<li><?php echo '<strong>'.__('Phone','naiau').' (Phone) : '.'</strong>'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_phone' );?></li>
+																<li><?php echo '<strong>'.__('Name and Family','naiau').' (Name) :   '.'</strong>'.$single_user->display_name;?></li>
+																<li><?php echo '<strong>'.__('Science Degree','naiau').' (Title) :  '.'</strong>'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_degree' );?></li>
+																<li><?php echo '<strong>'.__('Educational Group','naiau').' (Department) :  '.'</strong>'.$edu_group;?></li>
+																<li><?php echo '<strong>'.__('Emails','naiau').'(Emails) :  '.'</strong><img class="science-email-pic" src="'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_emails' ).'" alt="Emails" />';?></li>
+																<li><?php echo '<strong>'.__('Phone','naiau').' (Phone)  :  '.'</strong>'.get_usermeta( $single_user_id, $meta_key = '_naiau_user_phone' );?></li>
 
 															</ul>
 														</div>

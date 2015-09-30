@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: naiau\n"
-"POT-Creation-Date: 2015-09-20 11:46+0430\n"
-"PO-Revision-Date: 2015-09-30 08:31+0330\n"
+"POT-Creation-Date: 2015-09-30 17:33+0330\n"
+"PO-Revision-Date: 2015-09-30 17:35+0330\n"
 "Last-Translator: \n"
 "Language-Team: iTstar <info@iTstar.ir>\n"
 "Language: fa_IR\n"
@@ -81,11 +81,11 @@ msgid "All right reserved"
 msgstr ""
 "تمامی حقوق این سایت برای دانشگاه آزاد اسلامی واحد نظرآباد محفوظ می باشد."
 
-#: dist/functions.php:90 functions.php:94
+#: dist/functions.php:90 functions.php:95
 msgid "Slider Size"
 msgstr "سایز اسلایدشو"
 
-#: dist/functions.php:91 functions.php:95
+#: dist/functions.php:91 functions.php:96
 msgid "Slider Thumb"
 msgstr "سایز بندانگشتی اسلایدشو"
 
@@ -97,78 +97,78 @@ msgstr ""
 msgid "300px by 250px"
 msgstr ""
 
-#: dist/functions.php:175 functions.php:182
+#: dist/functions.php:175 functions.php:183
 msgid "Sidebar"
 msgstr "ستون کناری"
 
-#: dist/functions.php:176 functions.php:183
+#: dist/functions.php:176 functions.php:184
 msgid "The first (primary) sidebar."
 msgstr "ستون کناری اصلی"
 
-#: dist/functions.php:184 functions.php:191
+#: dist/functions.php:184 functions.php:192
 msgid "Notify Sidebar"
 msgstr "ستون کناری اطلاعیه ها"
 
-#: dist/functions.php:185 functions.php:192
+#: dist/functions.php:185 functions.php:193
 msgid "The Notify sidebar."
 msgstr "ستون کناری صفحه اطلاعیه ها"
 
-#: dist/functions.php:240 functions.php:265
+#: dist/functions.php:240 functions.php:266
 #, php-format
 msgid "<cite class=\"fn\">%1$s</cite> %2$s"
 msgstr ""
 
-#: dist/functions.php:240 functions.php:265
+#: dist/functions.php:240 functions.php:266
 msgid "(Edit)"
 msgstr "(ویرایش)"
 
-#: dist/functions.php:241 functions.php:266
+#: dist/functions.php:241 functions.php:267
 msgid "F jS, Y"
 msgstr ""
 
-#: dist/functions.php:246 functions.php:271
+#: dist/functions.php:246 functions.php:272
 msgid "Your comment is awaiting moderation."
 msgstr "دیدگاه شما در دست بررسی است"
 
-#: dist/functions.php:268 functions.php:293
+#: dist/functions.php:268 functions.php:294
 msgid "<i class=\"fa fa-angle-double-right\"></i>"
 msgstr ""
 
-#: dist/functions.php:269 functions.php:294
+#: dist/functions.php:269 functions.php:295
 msgid "<i class=\"fa fa-angle-double-left\"></i>"
 msgstr ""
 
-#: dist/functions.php:327 functions.php:353
+#: dist/functions.php:327 functions.php:354
 msgid "Last Notify Widget"
 msgstr "ابزارک آخرین اطلاعیه ها"
 
-#: dist/functions.php:330 functions.php:356
+#: dist/functions.php:330 functions.php:357
 msgid "Display Last Notifies"
 msgstr "نمایش آخرین اطلاعیه ها"
 
-#: dist/functions.php:375 dist/functions.php:462 functions.php:401
-#: functions.php:707
+#: dist/functions.php:375 dist/functions.php:462 functions.php:402
+#: functions.php:708
 msgid "New title"
 msgstr "عنوان جدید"
 
-#: dist/functions.php:385 dist/functions.php:472 functions.php:411
-#: functions.php:505 functions.php:614 functions.php:717
+#: dist/functions.php:385 dist/functions.php:472 functions.php:412
+#: functions.php:506 functions.php:615 functions.php:718
 msgid "Title:"
 msgstr "عنوان :"
 
-#: dist/functions.php:389 functions.php:415
+#: dist/functions.php:389 functions.php:416
 msgid "Notify Numbers :"
 msgstr "تعداد اطلاعیه ها :"
 
-#: dist/functions.php:414 functions.php:659
+#: dist/functions.php:414 functions.php:660
 msgid "Last News Widget"
 msgstr "ابزارک آخرین اخبار"
 
-#: dist/functions.php:417 functions.php:662
+#: dist/functions.php:417 functions.php:663
 msgid "Display Last News"
 msgstr "نمایش آخرین اخبار"
 
-#: dist/functions.php:476 functions.php:721
+#: dist/functions.php:476 functions.php:722
 msgid "News Numbers :"
 msgstr "تعداد خبرها : "
 
@@ -176,7 +176,7 @@ msgstr "تعداد خبرها : "
 msgid "Top Menu"
 msgstr "منوی نوار بالا"
 
-#: dist/header.php:71 dist/searchform.php:6 functions.php:757 functions.php:758
+#: dist/header.php:71 dist/searchform.php:6 functions.php:758 functions.php:759
 #: header.php:59 searchform.php:6
 msgid "Search"
 msgstr "جستجو"
@@ -268,7 +268,6 @@ msgid "Choose a  the sub tab from list "
 msgstr "یک زیر تب را به عنوان محتوای این تب انتخاب نمایید"
 
 #: dist/library/cmb-functions.php:281 library/cmb-functions.php:560
-#: library/cmb-functions.php:975
 msgid "Section Selection"
 msgstr "انتخاب صفحه سازها"
 
@@ -286,7 +285,6 @@ msgstr "نمایش اسلایدشو اخبار"
 #: library/cmb-functions.php:579 library/cmb-functions.php:614
 #: library/cmb-functions.php:634 library/cmb-functions.php:661
 #: library/cmb-functions.php:681 library/cmb-functions.php:718
-#: library/cmb-functions.php:1323
 msgid "Yes"
 msgstr "بله"
 
@@ -334,6 +332,7 @@ msgstr "سایت های مرتبط نمایش داده شود"
 
 #: dist/library/cmb-functions.php:437 dist/library/cmb-functions.php:503
 #: library/cmb-functions.php:756 library/cmb-functions.php:822
+#: library/cmb-functions.php:1167
 msgid "Pages"
 msgstr "صفحات"
 
@@ -689,7 +688,7 @@ msgstr ""
 msgid "Entry Title"
 msgstr ""
 
-#: dist/library/cmb/example-functions.php:433 library/cmb-functions.php:1030
+#: dist/library/cmb/example-functions.php:433
 #: library/cmb/example-functions.php:433
 msgid "Description"
 msgstr ""
@@ -1061,6 +1060,7 @@ msgstr "همه خبرها"
 #: library/custom-post-type.php:212 library/custom-post-type.php:257
 #: library/custom-post-type.php:308 library/custom-post-type.php:355
 #: library/custom-post-type.php:404 library/custom-post-type.php:448
+#: library/custom-post-type.php:585
 msgid "Add New"
 msgstr "افزودن جدید"
 
@@ -1079,7 +1079,7 @@ msgstr "افزودن خبر جدید"
 #: library/custom-post-type.php:259 library/custom-post-type.php:310
 #: library/custom-post-type.php:357 library/custom-post-type.php:406
 #: library/custom-post-type.php:450 library/custom-post-type.php:498
-#: library/custom-post-type.php:542
+#: library/custom-post-type.php:542 library/custom-post-type.php:587
 msgid "Edit"
 msgstr "ویرایش"
 
@@ -1110,6 +1110,7 @@ msgstr "جستجوی خبر"
 #: library/custom-post-type.php:315 library/custom-post-type.php:362
 #: library/custom-post-type.php:411 library/custom-post-type.php:455
 #: library/custom-post-type.php:503 library/custom-post-type.php:547
+#: library/custom-post-type.php:592
 msgid "Nothing found in the Database."
 msgstr "هیچ موردی در پایگاه داده موجود نمی باشد"
 
@@ -1124,6 +1125,7 @@ msgstr "هیچ موردی در پایگاه داده موجود نمی باشد"
 #: library/custom-post-type.php:316 library/custom-post-type.php:363
 #: library/custom-post-type.php:412 library/custom-post-type.php:456
 #: library/custom-post-type.php:504 library/custom-post-type.php:548
+#: library/custom-post-type.php:593
 msgid "Nothing found in Trash"
 msgstr "هیچ موردی در زباله دان موجود نمی باشد"
 
@@ -1429,164 +1431,164 @@ msgstr "جستجوی زیر صفحه ها"
 msgid "This is a sub education"
 msgstr "این یک زیر صفحه گروه است"
 
-#: dist/library/custom-post-type.php:506 library/custom-post-type.php:604
+#: dist/library/custom-post-type.php:506 library/custom-post-type.php:651
 msgid "News Categories"
 msgstr "دسته بندی های خبر"
 
 #: dist/library/custom-post-type.php:507 library/cmb-functions.php:599
-#: library/custom-post-type.php:605
+#: library/custom-post-type.php:652
 msgid "News Category"
 msgstr "دسته بندی خبر"
 
-#: dist/library/custom-post-type.php:508 library/custom-post-type.php:606
+#: dist/library/custom-post-type.php:508 library/custom-post-type.php:653
 msgid "Search News Categories"
 msgstr "جستجوی دسته بندی های خبر"
 
-#: dist/library/custom-post-type.php:509 library/custom-post-type.php:607
+#: dist/library/custom-post-type.php:509 library/custom-post-type.php:654
 msgid "All News Categories"
 msgstr "همه دسته بندی های خبر"
 
-#: dist/library/custom-post-type.php:510 library/custom-post-type.php:608
+#: dist/library/custom-post-type.php:510 library/custom-post-type.php:655
 msgid "Parent News Category"
 msgstr "مادر دسته بندی خبر"
 
-#: dist/library/custom-post-type.php:511 library/custom-post-type.php:609
+#: dist/library/custom-post-type.php:511 library/custom-post-type.php:656
 msgid "Parent News Category:"
 msgstr "مادر دسته بندی خبر:"
 
-#: dist/library/custom-post-type.php:512 library/custom-post-type.php:610
+#: dist/library/custom-post-type.php:512 library/custom-post-type.php:657
 msgid "Edit News Category"
 msgstr "ویرایش دسته بندی خبر"
 
-#: dist/library/custom-post-type.php:513 library/custom-post-type.php:611
+#: dist/library/custom-post-type.php:513 library/custom-post-type.php:658
 msgid "Update News Category"
 msgstr "بروز رسانی دسته بندی خبر"
 
-#: dist/library/custom-post-type.php:514 library/custom-post-type.php:612
+#: dist/library/custom-post-type.php:514 library/custom-post-type.php:659
 msgid "Add New News Category"
 msgstr "افزودن دسته بندی خبر جدید"
 
-#: dist/library/custom-post-type.php:515 library/custom-post-type.php:613
+#: dist/library/custom-post-type.php:515 library/custom-post-type.php:660
 msgid "New News Category Name"
 msgstr "نام دسته بندی خبر جدید"
 
-#: dist/library/custom-post-type.php:528 library/custom-post-type.php:626
+#: dist/library/custom-post-type.php:528 library/custom-post-type.php:673
 msgid "Notify Categories"
 msgstr "دسته بندی های اطلاعیه ها"
 
-#: dist/library/custom-post-type.php:529 library/custom-post-type.php:627
+#: dist/library/custom-post-type.php:529 library/custom-post-type.php:674
 msgid "Notify Category"
 msgstr "دسته بندی اطلاعیه"
 
-#: dist/library/custom-post-type.php:530 library/custom-post-type.php:628
+#: dist/library/custom-post-type.php:530 library/custom-post-type.php:675
 msgid "Search Notify Categories"
 msgstr "جستجوی دسته بندی اطلاعیه"
 
-#: dist/library/custom-post-type.php:531 library/custom-post-type.php:629
+#: dist/library/custom-post-type.php:531 library/custom-post-type.php:676
 msgid "All Notify Categories"
 msgstr "همه دسته بندی اطلاعیه ها"
 
-#: dist/library/custom-post-type.php:532 library/custom-post-type.php:630
+#: dist/library/custom-post-type.php:532 library/custom-post-type.php:677
 msgid "Parent Notify Category"
 msgstr "دسته بندی اطلاعیه مادر"
 
-#: dist/library/custom-post-type.php:533 library/custom-post-type.php:631
+#: dist/library/custom-post-type.php:533 library/custom-post-type.php:678
 msgid "Parent Notify Category:"
 msgstr "دسته بندی اطلاعیه مادر :"
 
-#: dist/library/custom-post-type.php:534 library/custom-post-type.php:632
+#: dist/library/custom-post-type.php:534 library/custom-post-type.php:679
 msgid "Edit Notify Category"
 msgstr "ویرایش دسته بندی اطلاعیه"
 
-#: dist/library/custom-post-type.php:535 library/custom-post-type.php:633
+#: dist/library/custom-post-type.php:535 library/custom-post-type.php:680
 msgid "Update Notify Category"
 msgstr "بروز رسانی دسته بندی اطلاعیه"
 
-#: dist/library/custom-post-type.php:536 library/custom-post-type.php:634
+#: dist/library/custom-post-type.php:536 library/custom-post-type.php:681
 msgid "Add New Notify Category"
 msgstr "دسته بندی اطلاعیه جدید"
 
-#: dist/library/custom-post-type.php:537 library/custom-post-type.php:635
+#: dist/library/custom-post-type.php:537 library/custom-post-type.php:682
 msgid "New Notify Category Name"
 msgstr "نام دسته بندی اطلاعیه جدید"
 
-#: dist/library/custom-post-type.php:553 library/custom-post-type.php:651
+#: dist/library/custom-post-type.php:553 library/custom-post-type.php:698
 msgid "News Tags"
 msgstr "برچسب های خبر"
 
-#: dist/library/custom-post-type.php:554 library/custom-post-type.php:652
+#: dist/library/custom-post-type.php:554 library/custom-post-type.php:699
 msgid "News Tag"
 msgstr "برچسب خبر"
 
-#: dist/library/custom-post-type.php:555 library/custom-post-type.php:653
+#: dist/library/custom-post-type.php:555 library/custom-post-type.php:700
 msgid "Search News Tags"
 msgstr "جستجوی برچسب های خبر"
 
-#: dist/library/custom-post-type.php:556 library/custom-post-type.php:654
+#: dist/library/custom-post-type.php:556 library/custom-post-type.php:701
 msgid "All News Tags"
 msgstr "همه برچسب های خبر"
 
-#: dist/library/custom-post-type.php:557 library/custom-post-type.php:655
+#: dist/library/custom-post-type.php:557 library/custom-post-type.php:702
 msgid "Parent News Tag"
 msgstr "برچسب مادر خبر"
 
-#: dist/library/custom-post-type.php:558 library/custom-post-type.php:656
+#: dist/library/custom-post-type.php:558 library/custom-post-type.php:703
 msgid "Parent News Tag:"
 msgstr "برچسب مادر خبر:"
 
-#: dist/library/custom-post-type.php:559 library/custom-post-type.php:657
+#: dist/library/custom-post-type.php:559 library/custom-post-type.php:704
 msgid "Edit News Tag"
 msgstr "ویرایش برچسب خبر"
 
-#: dist/library/custom-post-type.php:560 library/custom-post-type.php:658
+#: dist/library/custom-post-type.php:560 library/custom-post-type.php:705
 msgid "Update News Tag"
 msgstr "بروز رسانی برچسب خبر"
 
-#: dist/library/custom-post-type.php:561 library/custom-post-type.php:659
+#: dist/library/custom-post-type.php:561 library/custom-post-type.php:706
 msgid "Add New News Tag"
 msgstr "افزودن برچسب خبر جدید"
 
-#: dist/library/custom-post-type.php:562 library/custom-post-type.php:660
+#: dist/library/custom-post-type.php:562 library/custom-post-type.php:707
 msgid "New News Tag Name"
 msgstr "نام برچسب جدید خبر"
 
-#: dist/library/custom-post-type.php:607 library/custom-post-type.php:720
+#: dist/library/custom-post-type.php:607 library/custom-post-type.php:767
 msgid "Link Categories"
 msgstr "دسته بندی های لینک"
 
-#: dist/library/custom-post-type.php:608 library/custom-post-type.php:721
+#: dist/library/custom-post-type.php:608 library/custom-post-type.php:768
 msgid "Link Category"
 msgstr "دسته بندی لینک"
 
-#: dist/library/custom-post-type.php:609 library/custom-post-type.php:722
+#: dist/library/custom-post-type.php:609 library/custom-post-type.php:769
 msgid "Search Link Categories"
 msgstr "جستجوی دسته بندی های لینک"
 
-#: dist/library/custom-post-type.php:610 library/custom-post-type.php:723
+#: dist/library/custom-post-type.php:610 library/custom-post-type.php:770
 msgid "All Links Categories"
 msgstr "همه دسته بندی های لینک"
 
-#: dist/library/custom-post-type.php:611 library/custom-post-type.php:724
+#: dist/library/custom-post-type.php:611 library/custom-post-type.php:771
 msgid "Parent Link Category"
 msgstr "دسته بندی لینک مادر"
 
-#: dist/library/custom-post-type.php:612 library/custom-post-type.php:725
+#: dist/library/custom-post-type.php:612 library/custom-post-type.php:772
 msgid "Parent Link Category:"
 msgstr "دسته بندی لینک مادر"
 
-#: dist/library/custom-post-type.php:613 library/custom-post-type.php:726
+#: dist/library/custom-post-type.php:613 library/custom-post-type.php:773
 msgid "Edit Link Category"
 msgstr "ویرایش دسته بندی لینک"
 
-#: dist/library/custom-post-type.php:614 library/custom-post-type.php:727
+#: dist/library/custom-post-type.php:614 library/custom-post-type.php:774
 msgid "Update Link Category"
 msgstr "بروز رسانی دسته بندی لینک"
 
-#: dist/library/custom-post-type.php:615 library/custom-post-type.php:728
+#: dist/library/custom-post-type.php:615 library/custom-post-type.php:775
 msgid "Add New Link Category"
 msgstr "افزودن دسته بندی لینک جدید"
 
-#: dist/library/custom-post-type.php:616 library/custom-post-type.php:729
+#: dist/library/custom-post-type.php:616 library/custom-post-type.php:776
 msgid "New Link Category Name"
 msgstr "نام دسته بندی لینک جدید"
 
@@ -1669,83 +1671,83 @@ msgstr "طراحی شده توسط "
 msgid " Farakaranet"
 msgstr " فراکارانت"
 
-#: functions.php:123
+#: functions.php:124
 msgid "1120px by 400px"
 msgstr ""
 
-#: functions.php:124
+#: functions.php:125
 msgid "960px by 500px"
 msgstr ""
 
-#: functions.php:125
+#: functions.php:126
 msgid "100px by 80px"
 msgstr ""
 
-#: functions.php:126
+#: functions.php:127
 msgid "320px by 120px"
 msgstr ""
 
-#: functions.php:200
+#: functions.php:201
 msgid "download Sidebar"
 msgstr "ستون کناری دانلودها"
 
-#: functions.php:201
+#: functions.php:202
 msgid "The download sidebar."
 msgstr "ستون کناری برای صفحه دانلودها"
 
-#: functions.php:209
+#: functions.php:210
 msgid "circular Sidebar"
 msgstr "ستون کناری بخش نامه ها"
 
-#: functions.php:210
+#: functions.php:211
 msgid "The circular sidebar."
 msgstr "ستون کناری برای صفحه بخش نامه ها"
 
-#: functions.php:439
+#: functions.php:440
 msgid "Last Downloads Widget"
 msgstr "ابزارک آخرین دانلودها"
 
-#: functions.php:442
+#: functions.php:443
 msgid "Display Last Downloads"
 msgstr "نمایش آخرین فایل های دانلود"
 
-#: functions.php:490
+#: functions.php:491
 msgid "Last downloads"
 msgstr "آخرین دانلودها"
 
-#: functions.php:509
+#: functions.php:510
 msgid "downloads Numbers :"
 msgstr "تعداد عنواین :"
 
-#: functions.php:513
+#: functions.php:514
 msgid "download Category :"
 msgstr "دسته بندی دانلودها"
 
-#: functions.php:548
+#: functions.php:549
 msgid "Last circulars Widget"
 msgstr "آخرین بخش نامه ها"
 
-#: functions.php:551
+#: functions.php:552
 msgid "Display Last circulars"
 msgstr "نمایش آخرین بخش نامه ها"
 
-#: functions.php:599
+#: functions.php:600
 msgid "Last circulars"
 msgstr "آخرین بخش نامه ها"
 
-#: functions.php:618
+#: functions.php:619
 msgid "circulars Numbers :"
 msgstr "تعداد بخش نامه ها : "
 
-#: functions.php:622
+#: functions.php:623
 msgid "circular Category :"
 msgstr "دسته بندی بخش نامه ها :"
 
-#: functions.php:786
+#: functions.php:792
 msgid "Scientific Board"
 msgstr "هیئت علمی"
 
-#: functions.php:936 functions.php:988 functions.php:1040
+#: functions.php:971 functions.php:1023 functions.php:1075
 msgid "More Items "
 msgstr "آرشیو  "
 
@@ -1897,356 +1899,130 @@ msgstr "دسته بندی لینک ها"
 msgid "which Link category?"
 msgstr "کدام دسته بندی لینک؟"
 
-#: library/cmb-functions.php:982
+#: library/cmb-functions.php:972
+msgid "Profile"
+msgstr ""
+
+#: library/cmb-functions.php:979
 msgid "Profile Picture"
 msgstr "تصویر پروفایل"
 
-#: library/cmb-functions.php:983
+#: library/cmb-functions.php:980
 msgid "Upload profile picture or enter the url"
 msgstr "تصویر پروفایل را وارد نمایید یا آدرس تصویر را درج نمایید"
 
-#: library/cmb-functions.php:991
+#: library/cmb-functions.php:988 page-templates/scientific-board.php:244
 msgid "Science Degree"
 msgstr "مرتبه علمی"
 
-#: library/cmb-functions.php:992
+#: library/cmb-functions.php:989
 msgid "enter the science degree "
 msgstr "مرتبه علمی را وارد نمایید"
 
-#: library/cmb-functions.php:1001 page-templates/scientific-board.php:86
+#: library/cmb-functions.php:998 page-templates/scientific-board.php:89
+#: page-templates/scientific-board.php:245
 msgid "Educational Group"
 msgstr "گروه آموزشی"
 
-#: library/cmb-functions.php:1002
+#: library/cmb-functions.php:999
 msgid "select educational group "
 msgstr "گروه آموزشی را انتخاب نمایید"
 
-#: library/cmb-functions.php:1007 page-templates/scientific-board.php:126
+#: library/cmb-functions.php:1004 page-templates/scientific-board.php:106
+#: page-templates/scientific-board.php:219
 msgid "Electronic"
 msgstr "گروه برق"
 
-#: library/cmb-functions.php:1008 page-templates/scientific-board.php:130
+#: library/cmb-functions.php:1005 page-templates/scientific-board.php:110
+#: page-templates/scientific-board.php:223
 msgid "Mechanic"
 msgstr "گروه مکانیک"
 
-#: library/cmb-functions.php:1009 page-templates/scientific-board.php:134
+#: library/cmb-functions.php:1006 page-templates/scientific-board.php:114
+#: page-templates/scientific-board.php:227
 msgid "Building"
 msgstr "گروه ساختمان"
 
-#: library/cmb-functions.php:1010 page-templates/scientific-board.php:138
+#: library/cmb-functions.php:1007 page-templates/scientific-board.php:118
+#: page-templates/scientific-board.php:231
 msgid "Material"
 msgstr "گروه مواد"
 
-#: library/cmb-functions.php:1011 page-templates/scientific-board.php:142
+#: library/cmb-functions.php:1008 page-templates/scientific-board.php:122
+#: page-templates/scientific-board.php:235
 msgid "Computer"
 msgstr "گروه کامپیوتر"
 
-#: library/cmb-functions.php:1012 page-templates/scientific-board.php:146
+#: library/cmb-functions.php:1009 page-templates/scientific-board.php:126
+#: page-templates/scientific-board.php:239
 msgid "Public"
 msgstr "گروه عمومی"
 
-#: library/cmb-functions.php:1020
+#: library/cmb-functions.php:1017 page-templates/scientific-board.php:246
 msgid "Emails"
 msgstr "ایمیل ها"
 
-#: library/cmb-functions.php:1021
+#: library/cmb-functions.php:1018
+msgid "Upload email addresses Photo"
+msgstr "تصویر آدرس ایمیل ها را بارگذاری نمایید حداکثر ارتفاع تصویر 30 پیکسل"
+
+#: library/cmb-functions.php:1026 page-templates/scientific-board.php:247
+msgid "Phone"
+msgstr "تلفن"
+
+#: library/cmb-functions.php:1027
 msgid ""
 "enter the Email Addresses sepeprate with comma eg. info@gmail.com , "
 "info@yahoo.com "
 msgstr "آدرس های ایمیل را وارد نمایید . آدرس ها با کاما از هم جدا شوند "
 
-#: library/cmb-functions.php:1031
+#: library/cmb-functions.php:1036 page-templates/scientific-board.php:256
+msgid "Education"
+msgstr "تجربه"
+
+#: library/cmb-functions.php:1037 library/cmb-functions.php:1077
+#: library/cmb-functions.php:1087 library/cmb-functions.php:1097
+#: library/cmb-functions.php:1107 library/cmb-functions.php:1117
+#: library/cmb-functions.php:1127 library/cmb-functions.php:1137
+#: library/cmb-functions.php:1176 library/cmb-functions.php:1186
 msgid "Enter Description"
 msgstr "توضیحات مختصر را در این بخش وارد نمایید"
 
-#: library/cmb-functions.php:1059 page-templates/scientific-board.php:161
-msgid "Study Experinces"
-msgstr "سوابق تحصیلی"
+#: library/cmb-functions.php:1076 page-templates/scientific-board.php:269
+msgid "Academic Positions"
+msgstr "سمت ها"
 
-#: library/cmb-functions.php:1069
-msgid "Layout study experiences"
-msgstr "چیدمان سوابق تحصیلی"
+#: library/cmb-functions.php:1086 page-templates/scientific-board.php:280
+msgid "Industrial Experience"
+msgstr "فعالیت های صنعتی"
 
-#: library/cmb-functions.php:1071
-msgid "experince {#}"
-msgstr "دوره {#}"
-
-#: library/cmb-functions.php:1072
-msgid "Add Another experince"
-msgstr "افزودن دوره جدید"
-
-#: library/cmb-functions.php:1073
-msgid "Remove Experince"
-msgstr "حذف دوره"
-
-#: library/cmb-functions.php:1079 page-templates/scientific-board.php:164
-msgid "Study Degree"
-msgstr "مقطع تحصیلی"
-
-#: library/cmb-functions.php:1080
-msgid "enter the study degree "
-msgstr "مقطع تحصیلی را وارد نمایید .کاردانی، کارشناسی، کارشناسی ارشد ...."
-
-#: library/cmb-functions.php:1087
-msgid "study Course"
-msgstr "نام رشته"
-
-#: library/cmb-functions.php:1088
-msgid "enter the study course "
-msgstr ""
-"نام رشته را وارد نمایید. مثال : برق - اکترونیک، کامپیوتر-نرم افزار و ...."
-
-#: library/cmb-functions.php:1096
-msgid "Study University"
-msgstr "دانشگاه محل تحصیل"
-
-#: library/cmb-functions.php:1097
-msgid "enter the study university "
-msgstr "دانشگاه محل تحصیل را وارد نمایید"
-
-#: library/cmb-functions.php:1105
-msgid "Study year"
-msgstr "سال اتمام دوره"
-
-#: library/cmb-functions.php:1106
-msgid "enter the jalali study year eg. : 1390"
-msgstr "لطفا سال  اتمام دوره تحصیلی را به تاریخ شمسی وارد نمایید مثال : 1390"
-
-#: library/cmb-functions.php:1122
-msgid "Magazine Articles"
-msgstr "مقالات"
-
-#: library/cmb-functions.php:1132
-msgid "Layout Magazine Articles"
-msgstr "چیدمان مقالات"
-
-#: library/cmb-functions.php:1134 library/cmb-functions.php:1206
-msgid "article {#}"
-msgstr "مقاله {#}"
-
-#: library/cmb-functions.php:1135 library/cmb-functions.php:1207
-msgid "Add Another article"
-msgstr "افزودن مقاله جدید"
-
-#: library/cmb-functions.php:1136 library/cmb-functions.php:1208
-msgid "Remove article"
-msgstr "حذف مقاله"
-
-#: library/cmb-functions.php:1142 library/cmb-functions.php:1214
-#: page-templates/scientific-board.php:192
-#: page-templates/scientific-board.php:220
-msgid "Article Title"
-msgstr "عنوان مقاله"
-
-#: library/cmb-functions.php:1143 library/cmb-functions.php:1215
-msgid "enter the Article Title "
-msgstr "عنوان مقاله را وارد نمایید"
-
-#: library/cmb-functions.php:1150 library/cmb-functions.php:1417
-#: page-templates/scientific-board.php:193
-#: page-templates/scientific-board.php:285
-msgid "Publisher"
-msgstr "ناشر"
-
-#: library/cmb-functions.php:1151
-msgid "enter the Publisher Name "
-msgstr "نام ناشر را وارد نمایید"
-
-#: library/cmb-functions.php:1159 page-templates/scientific-board.php:194
-msgid "magazine degree"
-msgstr "رتبه مجله "
-
-#: library/cmb-functions.php:1160
-msgid "enter the magazine degree "
-msgstr "رتبه مجله را وارد نمایید مثال : ISI"
-
-#: library/cmb-functions.php:1168 page-templates/scientific-board.php:195
-msgid "Publish Date"
-msgstr "تاریخ انتشار"
-
-#: library/cmb-functions.php:1169
-msgid "enter the publish date "
-msgstr "تاریخ انتشار را وارد نمایید"
-
-#: library/cmb-functions.php:1177
-msgid "Jalali Publish year"
-msgstr "تاریخ شمسی انتشار مقاله"
-
-#: library/cmb-functions.php:1178
-msgid "enter the jalali publish year eg. : 1390"
-msgstr "تاریخ شمسی انتشار مقاله را وارد نمایید"
-
-#: library/cmb-functions.php:1194
-msgid "Conferences Articles"
-msgstr "کنفرانس ها"
-
-#: library/cmb-functions.php:1204
-msgid "Layout Conference Articles"
-msgstr "چیدمان کنفرانس ها"
-
-#: library/cmb-functions.php:1223 page-templates/scientific-board.php:221
-msgid "Conference Title"
-msgstr "عنوان کنفرانس (مقاله ارائه شده)"
-
-#: library/cmb-functions.php:1224
-msgid "enter the Conference Title "
-msgstr "عنوان کنفرانس (مقاله ارائه شده ) را وارد نمایید"
-
-#: library/cmb-functions.php:1232 page-templates/scientific-board.php:222
-msgid "Conference Level"
-msgstr "سطح برگزاری"
-
-#: library/cmb-functions.php:1233
-msgid "enter the Conference Level "
-msgstr "سطح برگزاری کنفرانس را وارد نمایید"
-
-#: library/cmb-functions.php:1241 page-templates/scientific-board.php:223
-msgid "Conference Location"
-msgstr "مکان برگزاری کنفرانس"
-
-#: library/cmb-functions.php:1242
-msgid "enter the Conference Location "
-msgstr "مکان برگزاری کنفرانس را وارد نمایید . مثال :  تهران ، هند ...."
-
-#: library/cmb-functions.php:1252 page-templates/scientific-board.php:224
-msgid "Conference Date"
-msgstr "تاریخ کنفرانس"
-
-#: library/cmb-functions.php:1253
-msgid "enter the Conference date "
-msgstr "تاریخ کنفرانس را وارد نمایید"
-
-#: library/cmb-functions.php:1261
-msgid "Conference Jalali Year"
-msgstr "سال شمسی برگزاری کنفرانس"
-
-#: library/cmb-functions.php:1262
-msgid "enter the jalali Conference year eg. : 1390 "
-msgstr "سال شمسی برگزاری کنفرانس را وارد نمایید مثال : 1387"
-
-#: library/cmb-functions.php:1278
-msgid "Research Projects"
-msgstr "طرح های پژوهشی"
-
-#: library/cmb-functions.php:1288
-msgid "Layout Projects"
-msgstr "چیدمان طرح ها"
-
-#: library/cmb-functions.php:1290
-msgid "project {#}"
-msgstr "طرح پژوهشی {#}"
-
-#: library/cmb-functions.php:1291
-msgid "Add Another project"
-msgstr "افزودن طرح پژوهشی جدید"
-
-#: library/cmb-functions.php:1292
-msgid "Remove project"
-msgstr "حذف طرح پژوهشی"
-
-#: library/cmb-functions.php:1298 page-templates/scientific-board.php:249
-msgid "Project Title"
-msgstr "عنوان طرح"
-
-#: library/cmb-functions.php:1299 library/cmb-functions.php:1391
-msgid "enter the project Title "
-msgstr "عنوان طرح پژوهشی را وارد نمایید"
-
-#: library/cmb-functions.php:1309 page-templates/scientific-board.php:250
-msgid "Approval authority"
-msgstr "مرجع تصویب"
-
-#: library/cmb-functions.php:1310
-msgid "enter the Approval authority"
-msgstr "نام مرجع تصویب طرح را وارد نمایید"
-
-#: library/cmb-functions.php:1317
-msgid "Naiau project"
-msgstr "پروژه های نظر آباد"
-
-#: library/cmb-functions.php:1318
-msgid "is naiau approved this project?"
-msgstr "آیا پروژه مورد نظر به سفارش دانشگاه آزاد واحد نظر آباد صورت گرفته است؟"
-
-#: library/cmb-functions.php:1322
-msgid "No"
-msgstr "خیر"
-
-#: library/cmb-functions.php:1330 page-templates/scientific-board.php:251
-msgid "Project Duration"
-msgstr "مدت طرح"
-
-#: library/cmb-functions.php:1331
-msgid "enter the Project Duration"
-msgstr "مدت طرح را وارد نمایید"
-
-#: library/cmb-functions.php:1338
-msgid "Project End Jalali Date"
-msgstr "تاریخ (سال) شمسی اتمام طرح"
-
-#: library/cmb-functions.php:1339
-msgid "enter the Project End Jalali Date eg. : 1390"
-msgstr "تاریخ (فقط سال ) شمسی اتمام طرح پژوهشی را وارد نمایید مثال : 1390"
-
-#: library/cmb-functions.php:1347 page-templates/scientific-board.php:252
-msgid "Project status"
-msgstr "وضعیت طرح"
-
-#: library/cmb-functions.php:1348
-msgid "select the project status"
-msgstr "وضعیت طرح را انتخاب نمایید"
-
-#: library/cmb-functions.php:1352 page-templates/scientific-board.php:263
-msgid "In Proccess"
-msgstr "در حال انجام"
-
-#: library/cmb-functions.php:1353
-msgid "Cleared"
-msgstr "تسویه شده"
-
-#: library/cmb-functions.php:1370
+#: library/cmb-functions.php:1096 page-templates/scientific-board.php:291
 msgid "Books"
 msgstr "کتاب ها"
 
-#: library/cmb-functions.php:1380
-msgid "Layout books"
-msgstr "چیدمان کتاب ها"
+#: library/cmb-functions.php:1106 page-templates/scientific-board.php:302
+msgid "Journal Papers"
+msgstr "مقاله های چاپ شده در مجله ها"
 
-#: library/cmb-functions.php:1382
-msgid "Book {#}"
-msgstr "کتاب  {#}"
+#: library/cmb-functions.php:1116 page-templates/scientific-board.php:313
+msgid "Conference Papers"
+msgstr "مقاله های ارائه شده در کنفرانس ها"
 
-#: library/cmb-functions.php:1383
-msgid "Add Another book"
-msgstr "افزودن کتاب جدید"
+#: library/cmb-functions.php:1126 page-templates/scientific-board.php:324
+msgid "Research Projects"
+msgstr "طرح های پژوهشی"
 
-#: library/cmb-functions.php:1384
-msgid "Remove book"
-msgstr "حذف کتاب"
+#: library/cmb-functions.php:1136 page-templates/scientific-board.php:335
+msgid "Comments"
+msgstr "توضیحات"
 
-#: library/cmb-functions.php:1390
-msgid "book Title"
-msgstr "عنوان کتاب"
+#: library/cmb-functions.php:1175
+msgid "Lecture & reading "
+msgstr ""
 
-#: library/cmb-functions.php:1401 page-templates/scientific-board.php:283
-msgid "Author"
-msgstr "نویسنده"
-
-#: library/cmb-functions.php:1402
-msgid "enter the book Author"
-msgstr "نام نویسنده کتاب را وارد نمایید"
-
-#: library/cmb-functions.php:1409
-msgid "Translator"
-msgstr "مترجم"
-
-#: library/cmb-functions.php:1410
-msgid "enter translator name"
-msgstr "نام مترجم را وارد نمایید"
-
-#: library/cmb-functions.php:1418
-msgid "enter the Publisher Name"
-msgstr "نام ناشر را وارد نمایید"
+#: library/cmb-functions.php:1185 single-course.php:93
+msgid "Homework & Exame"
+msgstr ""
 
 #: library/custom-post-type.php:494
 msgid "download"
@@ -2316,83 +2092,115 @@ msgstr "جستجوی بخش نامه ها"
 msgid "This is a circular"
 msgstr "این یک بخش نامه است"
 
-#: library/custom-post-type.php:673
+#: library/custom-post-type.php:582 library/custom-post-type.php:583
+msgid "course"
+msgstr "واحد درسی"
+
+#: library/custom-post-type.php:584
+msgid "All courses"
+msgstr "همه واحدهای درسی"
+
+#: library/custom-post-type.php:586
+msgid "Add New course"
+msgstr "افزودن واحد درسی جدید"
+
+#: library/custom-post-type.php:588
+msgid "Edit course"
+msgstr "ویرایش واحد درسی"
+
+#: library/custom-post-type.php:589
+msgid "New course"
+msgstr "واحد درسی جدید"
+
+#: library/custom-post-type.php:590
+msgid "View course"
+msgstr "نمایش واحد درسی"
+
+#: library/custom-post-type.php:591
+msgid "Search courses"
+msgstr "جستجوی واحد های درسی"
+
+#: library/custom-post-type.php:596
+msgid "This is a course"
+msgstr "این یک واحد درسی است"
+
+#: library/custom-post-type.php:720
 msgid "download Categories"
 msgstr "دسته بندی دانلود ها"
 
-#: library/custom-post-type.php:674
+#: library/custom-post-type.php:721
 msgid "download Category"
 msgstr "دسته بندی دانلود"
 
-#: library/custom-post-type.php:675
+#: library/custom-post-type.php:722
 msgid "Search download Categories"
 msgstr "جستجوی دسته بندی دانلود"
 
-#: library/custom-post-type.php:676
+#: library/custom-post-type.php:723
 msgid "All download Categories"
 msgstr "همه دسته بندی های دانلود"
 
-#: library/custom-post-type.php:677
+#: library/custom-post-type.php:724
 msgid "Parent download Category"
 msgstr "دسته بندی مادر دانلود"
 
-#: library/custom-post-type.php:678
+#: library/custom-post-type.php:725
 msgid "Parent download Category:"
 msgstr "دسته بندی مادر دانلود : "
 
-#: library/custom-post-type.php:679
+#: library/custom-post-type.php:726
 msgid "Edit download Category"
 msgstr "ویرایش دسته بندی دانلود"
 
-#: library/custom-post-type.php:680
+#: library/custom-post-type.php:727
 msgid "Update download Category"
 msgstr "بروز رسانی دسته بندی دانلود"
 
-#: library/custom-post-type.php:681
+#: library/custom-post-type.php:728
 msgid "Add New download Category"
 msgstr "افزودن دسته بندی دانلود جدید"
 
-#: library/custom-post-type.php:682
+#: library/custom-post-type.php:729
 msgid "New download Category Name"
 msgstr "نام دسته بندی دانلود جدید"
 
-#: library/custom-post-type.php:696
+#: library/custom-post-type.php:743
 msgid "circular Categories"
 msgstr "دسته بندی های بخش نامه"
 
-#: library/custom-post-type.php:697
+#: library/custom-post-type.php:744
 msgid "circular Category"
 msgstr "دسته بندی بخش نامه"
 
-#: library/custom-post-type.php:698
+#: library/custom-post-type.php:745
 msgid "Search circular Categories"
 msgstr "جستجوی دسته بندی بخش نامه ها"
 
-#: library/custom-post-type.php:699
+#: library/custom-post-type.php:746
 msgid "All circular Categories"
 msgstr "همه دسته بندی های بخش نامه"
 
-#: library/custom-post-type.php:700
+#: library/custom-post-type.php:747
 msgid "Parent circular Category"
 msgstr "دسته بندی مادر بخش نامه"
 
-#: library/custom-post-type.php:701
+#: library/custom-post-type.php:748
 msgid "Parent circular Category:"
 msgstr "دسته بندی مادر بخش نامه :"
 
-#: library/custom-post-type.php:702
+#: library/custom-post-type.php:749
 msgid "Edit circular Category"
 msgstr "ویرای دسته بندی بخش نامه"
 
-#: library/custom-post-type.php:703
+#: library/custom-post-type.php:750
 msgid "Update circular Category"
 msgstr "بروز رسانی دسته بندی بخش نامه"
 
-#: library/custom-post-type.php:704
+#: library/custom-post-type.php:751
 msgid "Add New circular Category"
 msgstr "افزودن دسته بندی جدید بخش نامه"
 
-#: library/custom-post-type.php:705
+#: library/custom-post-type.php:752
 msgid "New circular Category Name"
 msgstr "نام دسته بندی بخش نامه جدید"
 
@@ -2400,86 +2208,333 @@ msgstr "نام دسته بندی بخش نامه جدید"
 msgid "Responsive Menu"
 msgstr "فهرست واکنشگرا (موبایل)"
 
-#: page-templates/scientific-board.php:83
-#: page-templates/scientific-board.php:163
-#: page-templates/scientific-board.php:191
-#: page-templates/scientific-board.php:219
-#: page-templates/scientific-board.php:248
-#: page-templates/scientific-board.php:281
+#: page-templates/scientific-board.php:86
 msgid "Row"
 msgstr "ردیف"
 
-#: page-templates/scientific-board.php:84
+#: page-templates/scientific-board.php:87
+#: page-templates/scientific-board.php:243
 msgid "Name and Family"
 msgstr "نام و نام خانوادگی"
 
-#: page-templates/scientific-board.php:85
+#: page-templates/scientific-board.php:88
 msgid "Sience Degree"
 msgstr "مرتبه علمی"
 
-#: page-templates/scientific-board.php:149
-msgid "Name and Family : "
-msgstr "نام و نام خانوادگی :"
-
-#: page-templates/scientific-board.php:150
-msgid "Science Degree : "
-msgstr "مرتبه عملی : "
-
-#: page-templates/scientific-board.php:151
-msgid "Educational Group : "
-msgstr "گروه آموزشی : "
-
-#: page-templates/scientific-board.php:152
-msgid "Emails : "
-msgstr "ایمیل ها : "
-
-#: page-templates/scientific-board.php:165
-msgid "Study Course"
-msgstr "رشته تحصیلی"
+#: page-templates/scientific-board.php:165 single-course.php:74
+msgid "(Home)"
+msgstr "(پروفایل)"
 
 #: page-templates/scientific-board.php:166
-msgid "Study Uni"
-msgstr "دانشگاه"
+msgid "(Experience)"
+msgstr "(تجربه)"
 
 #: page-templates/scientific-board.php:167
-msgid "Study Year"
-msgstr "سال"
+msgid "(Academic Positions)"
+msgstr "(سمت ها)"
 
-#: page-templates/scientific-board.php:189
-msgid "Magazines Articles"
-msgstr "مقالات"
+#: page-templates/scientific-board.php:168
+msgid "(Industrial Experience )"
+msgstr "(فعالیت های صنعتی)"
 
-#: page-templates/scientific-board.php:217
-msgid "Conference Articles"
-msgstr "کنفرانس ها"
+#: page-templates/scientific-board.php:169
+msgid "(Publications)"
+msgstr "(انتشارات)"
 
-#: page-templates/scientific-board.php:246
-msgid "Researchal Projects"
-msgstr "طرح های پژوهشی"
+#: page-templates/scientific-board.php:170
+msgid "(Books)"
+msgstr "(کتاب ها)"
 
-#: page-templates/scientific-board.php:265
-msgid "Cleard"
-msgstr "تسویه شده"
+#: page-templates/scientific-board.php:171
+msgid "(Journal Papers)"
+msgstr "(مقاله های چاپ شده در مجله ها)"
 
-#: page-templates/scientific-board.php:279
-msgid "Published Books"
-msgstr "کتاب ها"
+#: page-templates/scientific-board.php:172
+msgid "(Conference Papers)"
+msgstr "(مقالات ارائه شده در کنفرانس ها)"
 
-#: page-templates/scientific-board.php:282
-msgid "Book Title"
-msgstr "عنوان کتاب"
+#: page-templates/scientific-board.php:174
+msgid "(Research projects)"
+msgstr "(طرح های پژوهشی)"
 
-#: page-templates/scientific-board.php:284
-msgid "translator"
-msgstr "مترجم"
+#: page-templates/scientific-board.php:175
+msgid "(Courses)"
+msgstr "(واحدهای درسی)"
 
-#: page-templates/scientific-board.php:303
-msgid "Small Description"
-msgstr "توضیحات مختصر"
+#: page-templates/scientific-board.php:204
+msgid "(Comments)"
+msgstr "(توضیحات)"
+
+#: single-course.php:75
+msgid "(Lecture & reading )"
+msgstr ""
+
+#: single-course.php:76
+msgid "(Homework & Exame)"
+msgstr ""
+
+#: single-course.php:86
+msgid "Lecture & reading"
+msgstr ""
 
 #: single-download.php:75
 msgid "Download Link : "
 msgstr "لینک دانلود : "
+
+#~ msgid "Study Experinces"
+#~ msgstr "سوابق تحصیلی"
+
+#~ msgid "Layout study experiences"
+#~ msgstr "چیدمان سوابق تحصیلی"
+
+#~ msgid "experince {#}"
+#~ msgstr "دوره {#}"
+
+#~ msgid "Add Another experince"
+#~ msgstr "افزودن دوره جدید"
+
+#~ msgid "Remove Experince"
+#~ msgstr "حذف دوره"
+
+#~ msgid "Study Degree"
+#~ msgstr "مقطع تحصیلی"
+
+#~ msgid "enter the study degree "
+#~ msgstr "مقطع تحصیلی را وارد نمایید .کاردانی، کارشناسی، کارشناسی ارشد ...."
+
+#~ msgid "study Course"
+#~ msgstr "نام رشته"
+
+#~ msgid "enter the study course "
+#~ msgstr ""
+#~ "نام رشته را وارد نمایید. مثال : برق - اکترونیک، کامپیوتر-نرم افزار و ...."
+
+#~ msgid "Study University"
+#~ msgstr "دانشگاه محل تحصیل"
+
+#~ msgid "enter the study university "
+#~ msgstr "دانشگاه محل تحصیل را وارد نمایید"
+
+#~ msgid "Study year"
+#~ msgstr "سال اتمام دوره"
+
+#~ msgid "enter the jalali study year eg. : 1390"
+#~ msgstr ""
+#~ "لطفا سال  اتمام دوره تحصیلی را به تاریخ شمسی وارد نمایید مثال : 1390"
+
+#~ msgid "Magazine Articles"
+#~ msgstr "مقالات"
+
+#~ msgid "Layout Magazine Articles"
+#~ msgstr "چیدمان مقالات"
+
+#~ msgid "article {#}"
+#~ msgstr "مقاله {#}"
+
+#~ msgid "Add Another article"
+#~ msgstr "افزودن مقاله جدید"
+
+#~ msgid "Remove article"
+#~ msgstr "حذف مقاله"
+
+#~ msgid "Article Title"
+#~ msgstr "عنوان مقاله"
+
+#~ msgid "enter the Article Title "
+#~ msgstr "عنوان مقاله را وارد نمایید"
+
+#~ msgid "Publisher"
+#~ msgstr "ناشر"
+
+#~ msgid "enter the Publisher Name "
+#~ msgstr "نام ناشر را وارد نمایید"
+
+#~ msgid "magazine degree"
+#~ msgstr "رتبه مجله "
+
+#~ msgid "enter the magazine degree "
+#~ msgstr "رتبه مجله را وارد نمایید مثال : ISI"
+
+#~ msgid "Publish Date"
+#~ msgstr "تاریخ انتشار"
+
+#~ msgid "enter the publish date "
+#~ msgstr "تاریخ انتشار را وارد نمایید"
+
+#~ msgid "Jalali Publish year"
+#~ msgstr "تاریخ شمسی انتشار مقاله"
+
+#~ msgid "enter the jalali publish year eg. : 1390"
+#~ msgstr "تاریخ شمسی انتشار مقاله را وارد نمایید"
+
+#~ msgid "Conferences Articles"
+#~ msgstr "کنفرانس ها"
+
+#~ msgid "Layout Conference Articles"
+#~ msgstr "چیدمان کنفرانس ها"
+
+#~ msgid "Conference Title"
+#~ msgstr "عنوان کنفرانس (مقاله ارائه شده)"
+
+#~ msgid "enter the Conference Title "
+#~ msgstr "عنوان کنفرانس (مقاله ارائه شده ) را وارد نمایید"
+
+#~ msgid "Conference Level"
+#~ msgstr "سطح برگزاری"
+
+#~ msgid "enter the Conference Level "
+#~ msgstr "سطح برگزاری کنفرانس را وارد نمایید"
+
+#~ msgid "Conference Location"
+#~ msgstr "مکان برگزاری کنفرانس"
+
+#~ msgid "enter the Conference Location "
+#~ msgstr "مکان برگزاری کنفرانس را وارد نمایید . مثال :  تهران ، هند ...."
+
+#~ msgid "Conference Date"
+#~ msgstr "تاریخ کنفرانس"
+
+#~ msgid "enter the Conference date "
+#~ msgstr "تاریخ کنفرانس را وارد نمایید"
+
+#~ msgid "Conference Jalali Year"
+#~ msgstr "سال شمسی برگزاری کنفرانس"
+
+#~ msgid "enter the jalali Conference year eg. : 1390 "
+#~ msgstr "سال شمسی برگزاری کنفرانس را وارد نمایید مثال : 1387"
+
+#~ msgid "Layout Projects"
+#~ msgstr "چیدمان طرح ها"
+
+#~ msgid "project {#}"
+#~ msgstr "طرح پژوهشی {#}"
+
+#~ msgid "Add Another project"
+#~ msgstr "افزودن طرح پژوهشی جدید"
+
+#~ msgid "Remove project"
+#~ msgstr "حذف طرح پژوهشی"
+
+#~ msgid "Project Title"
+#~ msgstr "عنوان طرح"
+
+#~ msgid "enter the project Title "
+#~ msgstr "عنوان طرح پژوهشی را وارد نمایید"
+
+#~ msgid "Approval authority"
+#~ msgstr "مرجع تصویب"
+
+#~ msgid "enter the Approval authority"
+#~ msgstr "نام مرجع تصویب طرح را وارد نمایید"
+
+#~ msgid "Naiau project"
+#~ msgstr "پروژه های نظر آباد"
+
+#~ msgid "is naiau approved this project?"
+#~ msgstr ""
+#~ "آیا پروژه مورد نظر به سفارش دانشگاه آزاد واحد نظر آباد صورت گرفته است؟"
+
+#~ msgid "No"
+#~ msgstr "خیر"
+
+#~ msgid "Project Duration"
+#~ msgstr "مدت طرح"
+
+#~ msgid "enter the Project Duration"
+#~ msgstr "مدت طرح را وارد نمایید"
+
+#~ msgid "Project End Jalali Date"
+#~ msgstr "تاریخ (سال) شمسی اتمام طرح"
+
+#~ msgid "enter the Project End Jalali Date eg. : 1390"
+#~ msgstr "تاریخ (فقط سال ) شمسی اتمام طرح پژوهشی را وارد نمایید مثال : 1390"
+
+#~ msgid "Project status"
+#~ msgstr "وضعیت طرح"
+
+#~ msgid "select the project status"
+#~ msgstr "وضعیت طرح را انتخاب نمایید"
+
+#~ msgid "In Proccess"
+#~ msgstr "در حال انجام"
+
+#~ msgid "Cleared"
+#~ msgstr "تسویه شده"
+
+#~ msgid "Layout books"
+#~ msgstr "چیدمان کتاب ها"
+
+#~ msgid "Book {#}"
+#~ msgstr "کتاب  {#}"
+
+#~ msgid "Add Another book"
+#~ msgstr "افزودن کتاب جدید"
+
+#~ msgid "Remove book"
+#~ msgstr "حذف کتاب"
+
+#~ msgid "book Title"
+#~ msgstr "عنوان کتاب"
+
+#~ msgid "Author"
+#~ msgstr "نویسنده"
+
+#~ msgid "enter the book Author"
+#~ msgstr "نام نویسنده کتاب را وارد نمایید"
+
+#~ msgid "Translator"
+#~ msgstr "مترجم"
+
+#~ msgid "enter translator name"
+#~ msgstr "نام مترجم را وارد نمایید"
+
+#~ msgid "enter the Publisher Name"
+#~ msgstr "نام ناشر را وارد نمایید"
+
+#~ msgid "Name and Family : "
+#~ msgstr "نام و نام خانوادگی :"
+
+#~ msgid "Science Degree : "
+#~ msgstr "مرتبه عملی : "
+
+#~ msgid "Educational Group : "
+#~ msgstr "گروه آموزشی : "
+
+#~ msgid "Emails : "
+#~ msgstr "ایمیل ها : "
+
+#~ msgid "Study Course"
+#~ msgstr "رشته تحصیلی"
+
+#~ msgid "Study Uni"
+#~ msgstr "دانشگاه"
+
+#~ msgid "Study Year"
+#~ msgstr "سال"
+
+#~ msgid "Magazines Articles"
+#~ msgstr "مقالات"
+
+#~ msgid "Conference Articles"
+#~ msgstr "کنفرانس ها"
+
+#~ msgid "Researchal Projects"
+#~ msgstr "طرح های پژوهشی"
+
+#~ msgid "Cleard"
+#~ msgstr "تسویه شده"
+
+#~ msgid "Published Books"
+#~ msgstr "کتاب ها"
+
+#~ msgid "Book Title"
+#~ msgstr "عنوان کتاب"
+
+#~ msgid "translator"
+#~ msgstr "مترجم"
+
+#~ msgid "Small Description"
+#~ msgstr "توضیحات مختصر"
 
 #~ msgid "Notify {#}"
 #~ msgstr "اطلاعیه  {#}"
