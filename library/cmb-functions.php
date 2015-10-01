@@ -500,7 +500,7 @@ function naiau_register_tab_maker_metabox() {
 	
 	$sub_tabs = get_posts(array(
 			'post_type' => 'sub_tab',
-			// 'posts_per_page' => -1,
+			'posts_per_page' => -1,
 			)
 	);
 	
