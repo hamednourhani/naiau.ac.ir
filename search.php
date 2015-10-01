@@ -57,7 +57,9 @@
 														
 													
 												<?php } ?>
-												
+												<nav class="pagination">
+													<?php naiau_pagination(); ?>
+												</nav>	
 											</div>
 											<div class="page-sidebar">
 												<?php get_sidebar(); ?>

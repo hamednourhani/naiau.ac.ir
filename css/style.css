@@ -2,8 +2,8 @@
 /* fonts */
 @font-face {
   font-family: "Yekan";
-  src: url('fonts/Yekan.eot?1402561813');
-  src: url('fonts/Yekan.eot?&1402561813#iefix') format('embedded-opentype'), url('fonts/Yekan.ttf?1402561509') format('truetype'), url('fonts/Yekan.woff?1402561504') format('woff');
+  src: url('fonts/Yekan.eot?1443413730');
+  src: url('fonts/Yekan.eot?&1443413730#iefix') format('embedded-opentype'), url('fonts/Yekan.ttf?1443413730') format('truetype'), url('fonts/Yekan.woff?1443413730') format('woff');
   font-weight: "Yekan.svg"; }
 /* normalize style */
 /* normalize-scss 3.0.2+normalize.3.0.2 | MIT/GPLv2 License | bit.ly/normalize-scss */
@@ -12,7 +12,7 @@
  * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
  * body `font-size` is set using `em` units.
  */
-/* line 106, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
   line-height: 1.5em; }
@@ -618,7 +618,7 @@ p {
   font-feature-settings: "liga", "dlig"; }
 
 /* ------------susy-------- */
-/* line 14, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/language/susyone/_grid.scss */
+/* line 14, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/language/susyone/_grid.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1152,7 +1152,7 @@ table {
   padding-right: 1em;
   margin-left: auto;
   margin-right: auto; }
-  /* line 38, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   .layout:after {
     content: "";
     display: table;
@@ -1162,7 +1162,7 @@ table {
 body {
   max-width: 1400px;
   margin: auto;
-  background: url('../images/pattern_19.png?1443641700'); }
+  background: url('../images/pattern_19.png?1332742980'); }
 
 /* line 12, sass/layout/_main.scss */
 .body-wrapper {
@@ -1178,7 +1178,7 @@ body {
     background-color: #E6E6E6;
     overflow: hidden;
     text-align: center;
-    background: url('../images/pattern_13.png?1443641700'); }
+    background: url('../images/pattern_13.png?1332742980'); }
     /* line 26, sass/layout/_main.scss */
     .content-area .single-page-title h1 {
       font-size: 140%;
@@ -1580,7 +1580,7 @@ body {
     font-size: 90%;
     text-align: center;
     width: 100%;
-    border: 3px solid #d9d9d9;
+    border: 3px solid silver;
     background-color: #E6E6E6;
     display: inline-block;
     padding: 7px 18px 7px 8px;
