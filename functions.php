@@ -18,7 +18,13 @@ if( !class_exists("CMB2") ){
 }
 require_once( 'library/cmb-functions.php' );
 
-define('SCIENCE_ID','42');
+
+// Science borad pag ID
+define('SCIENCE_ID','362');
+
+
+
+
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
  //require_once( 'library/admin.php' );
 
