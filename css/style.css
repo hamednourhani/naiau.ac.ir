@@ -1998,7 +1998,7 @@ input#s {
     font-size: 16px; }
   /* line 47, sass/modules/_tabs.scss */
   .notify-tabs-wrap .ui-state-default a, .notify-tabs-wrap .ui-state-default a:link, .notify-tabs-wrap .ui-state-default a:visited {
-    color: #CCCCCC; }
+    color: #fff; }
   /* line 50, sass/modules/_tabs.scss */
   .notify-tabs-wrap .ui-state-active a, .notify-tabs-wrap .ui-state-active a:link, .notify-tabs-wrap .ui-state-active a:visited,
   .notify-tabs-wrap .ui-state-hover a, .notify-tabs-wrap .ui-state-hover a:link, .notify-tabs-wrap .ui-state-hover a:visited {

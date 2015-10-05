@@ -39,9 +39,9 @@ if($show_related == true){
 					  			<div class="thumb-wrapper">
 					  				<?php echo $thumb; ?>
 					  			</div>
-					  			<span>
+					  			<!-- <span>
 					  				<?php echo $related_link->post_title; ?>
-					  			</span>
+					  			</span> -->
 					  		</a>
 					  </div>
 		<?php } ?>
