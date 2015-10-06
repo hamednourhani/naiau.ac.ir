@@ -187,6 +187,15 @@ body{
 
 			}
 		}
+		.sb-photo img{
+			padding: 10px;
+			@include border-radius(10px);
+			background-color: $grey1;   			
+		}
+		.sb-name{
+			text-align : center;
+			width : 100%;
+		}
 		
 	}
 	.page-sidebar{
