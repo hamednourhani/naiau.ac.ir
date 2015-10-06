@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: naiau\n"
-"POT-Creation-Date: 2015-09-30 17:33+0330\n"
-"PO-Revision-Date: 2015-09-30 17:35+0330\n"
+"POT-Creation-Date: 2015-10-06 11:59+0330\n"
+"PO-Revision-Date: 2015-10-06 12:00+0330\n"
 "Last-Translator: \n"
 "Language-Team: iTstar <info@iTstar.ir>\n"
 "Language: fa_IR\n"
@@ -81,11 +81,11 @@ msgid "All right reserved"
 msgstr ""
 "تمامی حقوق این سایت برای دانشگاه آزاد اسلامی واحد نظرآباد محفوظ می باشد."
 
-#: dist/functions.php:90 functions.php:95
+#: dist/functions.php:90 functions.php:101
 msgid "Slider Size"
 msgstr "سایز اسلایدشو"
 
-#: dist/functions.php:91 functions.php:96
+#: dist/functions.php:91 functions.php:102
 msgid "Slider Thumb"
 msgstr "سایز بندانگشتی اسلایدشو"
 
@@ -97,78 +97,78 @@ msgstr ""
 msgid "300px by 250px"
 msgstr ""
 
-#: dist/functions.php:175 functions.php:183
+#: dist/functions.php:175 functions.php:189
 msgid "Sidebar"
 msgstr "ستون کناری"
 
-#: dist/functions.php:176 functions.php:184
+#: dist/functions.php:176 functions.php:190
 msgid "The first (primary) sidebar."
 msgstr "ستون کناری اصلی"
 
-#: dist/functions.php:184 functions.php:192
+#: dist/functions.php:184 functions.php:198
 msgid "Notify Sidebar"
 msgstr "ستون کناری اطلاعیه ها"
 
-#: dist/functions.php:185 functions.php:193
+#: dist/functions.php:185 functions.php:199
 msgid "The Notify sidebar."
 msgstr "ستون کناری صفحه اطلاعیه ها"
 
-#: dist/functions.php:240 functions.php:266
+#: dist/functions.php:240 functions.php:272
 #, php-format
 msgid "<cite class=\"fn\">%1$s</cite> %2$s"
 msgstr ""
 
-#: dist/functions.php:240 functions.php:266
+#: dist/functions.php:240 functions.php:272
 msgid "(Edit)"
 msgstr "(ویرایش)"
 
-#: dist/functions.php:241 functions.php:267
+#: dist/functions.php:241 functions.php:273
 msgid "F jS, Y"
 msgstr ""
 
-#: dist/functions.php:246 functions.php:272
+#: dist/functions.php:246 functions.php:278
 msgid "Your comment is awaiting moderation."
 msgstr "دیدگاه شما در دست بررسی است"
 
-#: dist/functions.php:268 functions.php:294
+#: dist/functions.php:268 functions.php:300
 msgid "<i class=\"fa fa-angle-double-right\"></i>"
 msgstr ""
 
-#: dist/functions.php:269 functions.php:295
+#: dist/functions.php:269 functions.php:301
 msgid "<i class=\"fa fa-angle-double-left\"></i>"
 msgstr ""
 
-#: dist/functions.php:327 functions.php:354
+#: dist/functions.php:327 functions.php:360
 msgid "Last Notify Widget"
 msgstr "ابزارک آخرین اطلاعیه ها"
 
-#: dist/functions.php:330 functions.php:357
+#: dist/functions.php:330 functions.php:363
 msgid "Display Last Notifies"
 msgstr "نمایش آخرین اطلاعیه ها"
 
-#: dist/functions.php:375 dist/functions.php:462 functions.php:402
-#: functions.php:708
+#: dist/functions.php:375 dist/functions.php:462 functions.php:408
+#: functions.php:714
 msgid "New title"
 msgstr "عنوان جدید"
 
-#: dist/functions.php:385 dist/functions.php:472 functions.php:412
-#: functions.php:506 functions.php:615 functions.php:718
+#: dist/functions.php:385 dist/functions.php:472 functions.php:418
+#: functions.php:512 functions.php:621 functions.php:724
 msgid "Title:"
 msgstr "عنوان :"
 
-#: dist/functions.php:389 functions.php:416
+#: dist/functions.php:389 functions.php:422
 msgid "Notify Numbers :"
 msgstr "تعداد اطلاعیه ها :"
 
-#: dist/functions.php:414 functions.php:660
+#: dist/functions.php:414 functions.php:666
 msgid "Last News Widget"
 msgstr "ابزارک آخرین اخبار"
 
-#: dist/functions.php:417 functions.php:663
+#: dist/functions.php:417 functions.php:669
 msgid "Display Last News"
 msgstr "نمایش آخرین اخبار"
 
-#: dist/functions.php:476 functions.php:722
+#: dist/functions.php:476 functions.php:728
 msgid "News Numbers :"
 msgstr "تعداد خبرها : "
 
@@ -176,7 +176,7 @@ msgstr "تعداد خبرها : "
 msgid "Top Menu"
 msgstr "منوی نوار بالا"
 
-#: dist/header.php:71 dist/searchform.php:6 functions.php:758 functions.php:759
+#: dist/header.php:71 dist/searchform.php:6 functions.php:764 functions.php:765
 #: header.php:59 searchform.php:6
 msgid "Search"
 msgstr "جستجو"
@@ -332,7 +332,7 @@ msgstr "سایت های مرتبط نمایش داده شود"
 
 #: dist/library/cmb-functions.php:437 dist/library/cmb-functions.php:503
 #: library/cmb-functions.php:756 library/cmb-functions.php:822
-#: library/cmb-functions.php:1167
+#: library/cmb-functions.php:1168
 msgid "Pages"
 msgstr "صفحات"
 
@@ -1671,83 +1671,83 @@ msgstr "طراحی شده توسط "
 msgid " Farakaranet"
 msgstr " فراکارانت"
 
-#: functions.php:124
+#: functions.php:130
 msgid "1120px by 400px"
 msgstr ""
 
-#: functions.php:125
+#: functions.php:131
 msgid "960px by 500px"
 msgstr ""
 
-#: functions.php:126
+#: functions.php:132
 msgid "100px by 80px"
 msgstr ""
 
-#: functions.php:127
+#: functions.php:133
 msgid "320px by 120px"
 msgstr ""
 
-#: functions.php:201
+#: functions.php:207
 msgid "download Sidebar"
 msgstr "ستون کناری دانلودها"
 
-#: functions.php:202
+#: functions.php:208
 msgid "The download sidebar."
 msgstr "ستون کناری برای صفحه دانلودها"
 
-#: functions.php:210
+#: functions.php:216
 msgid "circular Sidebar"
 msgstr "ستون کناری بخش نامه ها"
 
-#: functions.php:211
+#: functions.php:217
 msgid "The circular sidebar."
 msgstr "ستون کناری برای صفحه بخش نامه ها"
 
-#: functions.php:440
+#: functions.php:446
 msgid "Last Downloads Widget"
 msgstr "ابزارک آخرین دانلودها"
 
-#: functions.php:443
+#: functions.php:449
 msgid "Display Last Downloads"
 msgstr "نمایش آخرین فایل های دانلود"
 
-#: functions.php:491
+#: functions.php:497
 msgid "Last downloads"
 msgstr "آخرین دانلودها"
 
-#: functions.php:510
+#: functions.php:516
 msgid "downloads Numbers :"
 msgstr "تعداد عنواین :"
 
-#: functions.php:514
+#: functions.php:520
 msgid "download Category :"
 msgstr "دسته بندی دانلودها"
 
-#: functions.php:549
+#: functions.php:555
 msgid "Last circulars Widget"
 msgstr "آخرین بخش نامه ها"
 
-#: functions.php:552
+#: functions.php:558
 msgid "Display Last circulars"
 msgstr "نمایش آخرین بخش نامه ها"
 
-#: functions.php:600
+#: functions.php:606
 msgid "Last circulars"
 msgstr "آخرین بخش نامه ها"
 
-#: functions.php:619
+#: functions.php:625
 msgid "circulars Numbers :"
 msgstr "تعداد بخش نامه ها : "
 
-#: functions.php:623
+#: functions.php:629
 msgid "circular Category :"
 msgstr "دسته بندی بخش نامه ها :"
 
-#: functions.php:792
+#: functions.php:798
 msgid "Scientific Board"
 msgstr "هیئت علمی"
 
-#: functions.php:971 functions.php:1023 functions.php:1075
+#: functions.php:977 functions.php:1029 functions.php:1081
 msgid "More Items "
 msgstr "آرشیو  "
 
@@ -1911,7 +1911,7 @@ msgstr "تصویر پروفایل"
 msgid "Upload profile picture or enter the url"
 msgstr "تصویر پروفایل را وارد نمایید یا آدرس تصویر را درج نمایید"
 
-#: library/cmb-functions.php:988 page-templates/scientific-board.php:244
+#: library/cmb-functions.php:988 page-templates/scientific-board.php:253
 msgid "Science Degree"
 msgstr "مرتبه علمی"
 
@@ -1920,7 +1920,7 @@ msgid "enter the science degree "
 msgstr "مرتبه علمی را وارد نمایید"
 
 #: library/cmb-functions.php:998 page-templates/scientific-board.php:89
-#: page-templates/scientific-board.php:245
+#: page-templates/scientific-board.php:254
 msgid "Educational Group"
 msgstr "گروه آموزشی"
 
@@ -1929,98 +1929,103 @@ msgid "select educational group "
 msgstr "گروه آموزشی را انتخاب نمایید"
 
 #: library/cmb-functions.php:1004 page-templates/scientific-board.php:106
-#: page-templates/scientific-board.php:219
+#: page-templates/scientific-board.php:224
 msgid "Electronic"
 msgstr "گروه برق"
 
 #: library/cmb-functions.php:1005 page-templates/scientific-board.php:110
-#: page-templates/scientific-board.php:223
+#: page-templates/scientific-board.php:228
 msgid "Mechanic"
 msgstr "گروه مکانیک"
 
 #: library/cmb-functions.php:1006 page-templates/scientific-board.php:114
-#: page-templates/scientific-board.php:227
+#: page-templates/scientific-board.php:232
 msgid "Building"
 msgstr "گروه ساختمان"
 
 #: library/cmb-functions.php:1007 page-templates/scientific-board.php:118
-#: page-templates/scientific-board.php:231
+#: page-templates/scientific-board.php:236
 msgid "Material"
 msgstr "گروه مواد"
 
 #: library/cmb-functions.php:1008 page-templates/scientific-board.php:122
-#: page-templates/scientific-board.php:235
+#: page-templates/scientific-board.php:240
 msgid "Computer"
 msgstr "گروه کامپیوتر"
 
-#: library/cmb-functions.php:1009 page-templates/scientific-board.php:126
-#: page-templates/scientific-board.php:239
+#: library/cmb-functions.php:1009 page-templates/scientific-board.php:130
+#: page-templates/scientific-board.php:248
+msgid "Accounting"
+msgstr "حسابداری"
+
+#: library/cmb-functions.php:1010 page-templates/scientific-board.php:126
+#: page-templates/scientific-board.php:244
 msgid "Public"
 msgstr "گروه عمومی"
 
-#: library/cmb-functions.php:1017 page-templates/scientific-board.php:246
+#: library/cmb-functions.php:1018 page-templates/scientific-board.php:255
 msgid "Emails"
 msgstr "ایمیل ها"
 
-#: library/cmb-functions.php:1018
+#: library/cmb-functions.php:1019
 msgid "Upload email addresses Photo"
 msgstr "تصویر آدرس ایمیل ها را بارگذاری نمایید حداکثر ارتفاع تصویر 30 پیکسل"
 
-#: library/cmb-functions.php:1026 page-templates/scientific-board.php:247
+#: library/cmb-functions.php:1027 page-templates/scientific-board.php:256
 msgid "Phone"
 msgstr "تلفن"
 
-#: library/cmb-functions.php:1027
+#: library/cmb-functions.php:1028
 msgid ""
 "enter the Email Addresses sepeprate with comma eg. info@gmail.com , "
 "info@yahoo.com "
 msgstr "آدرس های ایمیل را وارد نمایید . آدرس ها با کاما از هم جدا شوند "
 
-#: library/cmb-functions.php:1036 page-templates/scientific-board.php:256
+#: library/cmb-functions.php:1037 page-templates/scientific-board.php:265
 msgid "Education"
 msgstr "تجربه"
 
-#: library/cmb-functions.php:1037 library/cmb-functions.php:1077
-#: library/cmb-functions.php:1087 library/cmb-functions.php:1097
-#: library/cmb-functions.php:1107 library/cmb-functions.php:1117
-#: library/cmb-functions.php:1127 library/cmb-functions.php:1137
-#: library/cmb-functions.php:1176 library/cmb-functions.php:1186
+#: library/cmb-functions.php:1038 library/cmb-functions.php:1078
+#: library/cmb-functions.php:1088 library/cmb-functions.php:1098
+#: library/cmb-functions.php:1108 library/cmb-functions.php:1118
+#: library/cmb-functions.php:1128 library/cmb-functions.php:1138
+#: library/cmb-functions.php:1177 library/cmb-functions.php:1187
 msgid "Enter Description"
 msgstr "توضیحات مختصر را در این بخش وارد نمایید"
 
-#: library/cmb-functions.php:1076 page-templates/scientific-board.php:269
+#: library/cmb-functions.php:1077 page-templates/scientific-board.php:278
 msgid "Academic Positions"
 msgstr "سمت ها"
 
-#: library/cmb-functions.php:1086 page-templates/scientific-board.php:280
+#: library/cmb-functions.php:1087 page-templates/scientific-board.php:289
 msgid "Industrial Experience"
 msgstr "فعالیت های صنعتی"
 
-#: library/cmb-functions.php:1096 page-templates/scientific-board.php:291
+#: library/cmb-functions.php:1097 page-templates/scientific-board.php:300
 msgid "Books"
 msgstr "کتاب ها"
 
-#: library/cmb-functions.php:1106 page-templates/scientific-board.php:302
+#: library/cmb-functions.php:1107 page-templates/scientific-board.php:311
 msgid "Journal Papers"
 msgstr "مقاله های چاپ شده در مجله ها"
 
-#: library/cmb-functions.php:1116 page-templates/scientific-board.php:313
+#: library/cmb-functions.php:1117 page-templates/scientific-board.php:322
 msgid "Conference Papers"
 msgstr "مقاله های ارائه شده در کنفرانس ها"
 
-#: library/cmb-functions.php:1126 page-templates/scientific-board.php:324
+#: library/cmb-functions.php:1127 page-templates/scientific-board.php:333
 msgid "Research Projects"
 msgstr "طرح های پژوهشی"
 
-#: library/cmb-functions.php:1136 page-templates/scientific-board.php:335
+#: library/cmb-functions.php:1137 page-templates/scientific-board.php:344
 msgid "Comments"
 msgstr "توضیحات"
 
-#: library/cmb-functions.php:1175
+#: library/cmb-functions.php:1176
 msgid "Lecture & reading "
 msgstr ""
 
-#: library/cmb-functions.php:1185 single-course.php:93
+#: library/cmb-functions.php:1186 single-course.php:93
 msgid "Homework & Exame"
 msgstr ""
 
@@ -2213,7 +2218,7 @@ msgid "Row"
 msgstr "ردیف"
 
 #: page-templates/scientific-board.php:87
-#: page-templates/scientific-board.php:243
+#: page-templates/scientific-board.php:252
 msgid "Name and Family"
 msgstr "نام و نام خانوادگی"
 
@@ -2221,47 +2226,47 @@ msgstr "نام و نام خانوادگی"
 msgid "Sience Degree"
 msgstr "مرتبه علمی"
 
-#: page-templates/scientific-board.php:165 single-course.php:74
+#: page-templates/scientific-board.php:169 single-course.php:74
 msgid "(Home)"
 msgstr "(پروفایل)"
 
-#: page-templates/scientific-board.php:166
+#: page-templates/scientific-board.php:170
 msgid "(Experience)"
 msgstr "(تجربه)"
 
-#: page-templates/scientific-board.php:167
+#: page-templates/scientific-board.php:171
 msgid "(Academic Positions)"
 msgstr "(سمت ها)"
 
-#: page-templates/scientific-board.php:168
+#: page-templates/scientific-board.php:172
 msgid "(Industrial Experience )"
 msgstr "(فعالیت های صنعتی)"
 
-#: page-templates/scientific-board.php:169
+#: page-templates/scientific-board.php:173
 msgid "(Publications)"
 msgstr "(انتشارات)"
 
-#: page-templates/scientific-board.php:170
+#: page-templates/scientific-board.php:174
 msgid "(Books)"
 msgstr "(کتاب ها)"
 
-#: page-templates/scientific-board.php:171
+#: page-templates/scientific-board.php:175
 msgid "(Journal Papers)"
 msgstr "(مقاله های چاپ شده در مجله ها)"
 
-#: page-templates/scientific-board.php:172
+#: page-templates/scientific-board.php:176
 msgid "(Conference Papers)"
 msgstr "(مقالات ارائه شده در کنفرانس ها)"
 
-#: page-templates/scientific-board.php:174
+#: page-templates/scientific-board.php:178
 msgid "(Research projects)"
 msgstr "(طرح های پژوهشی)"
 
-#: page-templates/scientific-board.php:175
+#: page-templates/scientific-board.php:179
 msgid "(Courses)"
 msgstr "(واحدهای درسی)"
 
-#: page-templates/scientific-board.php:204
+#: page-templates/scientific-board.php:208
 msgid "(Comments)"
 msgstr "(توضیحات)"
 

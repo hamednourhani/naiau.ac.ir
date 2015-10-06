@@ -1006,6 +1006,7 @@ function naiau_science_profile_metabox() {
 								'building' => __('Building','naiau'),
 								'material' => __('Material','naiau'),
 								'computer' => __('Computer','naiau'),
+								'accounting' => __('Accounting','naiau'),
 								'public' => __('Public','naiau'),
 			),
 		

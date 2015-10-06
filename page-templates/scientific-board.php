@@ -125,6 +125,10 @@ if($wp_query->query_vars['sb']){
 																			case 'public':
 																				$edu_group = __('Public','naiau').' (Public)';
 																				break;
+
+																			case 'accounting':
+																				$edu_group = __('Accounting','naiau').' (Accounting)';
+																				break;
 																		}
 																	// $current_group = ($edu_group == $prev_group)?('~'):$edu_group; 
 																	// $prev_group = $current_group;
@@ -238,6 +242,10 @@ if($wp_query->query_vars['sb']){
 																		
 																		case 'public':
 																			$edu_group = __('Public','naiau').' (Public)';
+																			break;
+
+																		case 'accounting':
+																			$edu_group = __('Accounting','naiau').' (Accounting)';
 																			break;
 																	}
 																?>
