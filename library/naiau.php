@@ -174,9 +174,9 @@ function naiau_scripts_and_styles() {
 		wp_enqueue_style( 'jquery-ui-css' );
 		wp_enqueue_style( 'naiau-stylesheet' );
 		wp_enqueue_style( 'naiau-ie-only' );
-		wp_enqueue_style( 'ie-stylesheet' );
+		//wp_enqueue_style( 'ie-stylesheet' );
 
-		$wp_styles->add_data( 'naiau-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+		//$wp_styles->add_data( 'naiau-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 		$wp_styles->add_data( 'ie-stylesheet', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
 		/*
