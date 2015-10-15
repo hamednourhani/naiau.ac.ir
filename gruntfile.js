@@ -9,6 +9,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-curl');
     grunt.loadNpmTasks('grunt-phpdocumentor');
+    grunt.loadNpmTasks('grunt-postcss');
+
+
     grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		
@@ -94,6 +97,17 @@ module.exports = function(grunt) {
 		    }//dev
 		},//compass
 
+		postcss: {
+	        options: {
+	            processors: [
+	                require('oldie')({ /* options */ })
+	            ]
+	        },
+	        dist: {
+	            src: 'css/temp/*.css'
+	        }
+	    },
+
 		copy: {
 		     
 	      css: {
@@ -162,8 +176,12 @@ module.exports = function(grunt) {
     		},//html
     		sass : {
     			files : ['css/sass/**/*.scss'],
-    			tasks : ['compass:dev','compass:dist','copy:css','clean']
+    			tasks : ['compass:dev','compass:dist','copy:css','postcss:dist']
     		},
+    		// postcss : {
+    		// 	files : ['css/*.css'],
+    		// 	tasks : ['postcss:dist']
+    		// },
     		php : {
     			files : ['*.php','**/*.php'],
     			tasks : ['makepot']
