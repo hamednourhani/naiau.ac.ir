@@ -140,6 +140,7 @@ function naiau_scripts_and_styles() {
 		wp_register_style( 'slider-pro-css', get_stylesheet_directory_uri() . '/css/slider-pro.min.css', array(), '', 'all' );
 		wp_register_style( 'font-awesome', get_stylesheet_directory_uri() . '/css/font-awesome.min.css', array(), '', 'all' );
 		wp_register_style( 'jquery-ui-css', get_stylesheet_directory_uri() . '/css/jquery-ui.min.css', array(), '', 'all' );
+		wp_register_style( 'ie-stylesheet', get_stylesheet_directory_uri() . '/css/temp/style.css', array(), '', 'all' );
 		wp_register_style( 'naiau-stylesheet', get_stylesheet_directory_uri() . '/css/style.css', array(), '', 'all' );
 
 		// ie-only style sheet
@@ -173,8 +174,10 @@ function naiau_scripts_and_styles() {
 		wp_enqueue_style( 'jquery-ui-css' );
 		wp_enqueue_style( 'naiau-stylesheet' );
 		wp_enqueue_style( 'naiau-ie-only' );
+		wp_enqueue_style( 'ie-stylesheet' );
 
 		$wp_styles->add_data( 'naiau-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+		$wp_styles->add_data( 'ie-stylesheet', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
 		/*
 		I recommend using a plugin to call jQuery
