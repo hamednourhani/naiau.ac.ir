@@ -1,6 +1,6 @@
  /* -----------menu-bar---------------------*/
 .menu-bar ul.main-nav li a{
-	width : 120%;
+	width : 120px;
 	display: inline-block;
 	/*overflow: hidden;*/
 
