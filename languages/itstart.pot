@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: naiau 1.0\n"
 "Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
-"POT-Creation-Date: 2015-10-15 12:07:34+00:00\n"
+"POT-Creation-Date: 2015-10-16 05:28:44+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -162,17 +162,17 @@ msgstr ""
 msgid "News Numbers :"
 msgstr ""
 
-#: dist/header.php:58 header.php:67
+#: dist/header.php:58 header.php:69
 msgid "Top Menu"
 msgstr ""
 
 #: dist/header.php:71 dist/searchform.php:6 functions.php:764 functions.php:765
-#: header.php:59 searchform.php:6
+#: header.php:61 searchform.php:6
 msgid "Search"
 msgstr ""
 
-#: dist/header.php:100 dist/library/naiau.php:240 header.php:112 header.php:132
-#: library/naiau.php:262
+#: dist/header.php:100 dist/library/naiau.php:240 header.php:114 header.php:134
+#: library/naiau.php:266
 msgid "The Main Menu"
 msgstr ""
 
@@ -1578,19 +1578,19 @@ msgstr ""
 msgid "Page %s"
 msgstr ""
 
-#: dist/library/naiau.php:241 library/naiau.php:263
+#: dist/library/naiau.php:241 library/naiau.php:267
 msgid "Top Bar Menu"
 msgstr ""
 
-#: dist/library/naiau.php:272 library/naiau.php:295
+#: dist/library/naiau.php:272 library/naiau.php:299
 msgid "No Related Posts Yet!"
 msgstr ""
 
-#: dist/library/naiau.php:317 library/naiau.php:340
+#: dist/library/naiau.php:317 library/naiau.php:344
 msgid "Read "
 msgstr ""
 
-#: dist/library/naiau.php:317 library/naiau.php:340
+#: dist/library/naiau.php:317 library/naiau.php:344
 msgid "Read more &raquo;"
 msgstr ""
 
@@ -2187,7 +2187,7 @@ msgstr ""
 msgid "New circular Category Name"
 msgstr ""
 
-#: library/naiau.php:264
+#: library/naiau.php:268
 msgid "Responsive Menu"
 msgstr ""
 

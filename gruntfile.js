@@ -94,17 +94,24 @@ module.exports = function(grunt) {
 		           config : 'config.rb'
 		          
 		        }
+		    },//dev
+		    ie: {
+		        options: {
+		           //banner: '/*! <%= pkg.name %> <%= pkg.version %> style.css <%= grunt.template.today("yyyy-mm-dd h:MM:ss TT") %> */\n',
+		           config : 'ie-config.rb'
+		          
+		        }
 		    }//dev
 		},//compass
 
 		postcss: {
 	        options: {
 	            processors: [
-	                require('oldie')({ /* options */ })
+	                require('oldie')({/*options*/})
 	            ]
 	        },
 	        dist: {
-	            src: 'css/temp/*.css'
+	            src: 'css/ie/*.css'
 	        }
 	    },
 
@@ -176,7 +183,7 @@ module.exports = function(grunt) {
     		},//html
     		sass : {
     			files : ['css/sass/**/*.scss'],
-    			tasks : ['compass:dev','compass:dist','copy:css','postcss:dist']
+    			tasks : ['compass:dev','compass:dist','compass:ie','postcss:dist','copy:css','clean']
     		},
     		// postcss : {
     		// 	files : ['css/*.css'],

@@ -1,0 +1,10 @@
+ /* -----------menu-bar---------------------*/
+.menu-bar ul.main-nav li a{
+	width : 120%;
+	display: inline-block;
+	/*overflow: hidden;*/
+
+}
+.menu-bar ul.main-nav li.menu-item-has-children > a:after {
+      left :auto;
+      right : 20%; }
