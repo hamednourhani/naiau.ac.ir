@@ -159,11 +159,11 @@ function naiau_scripts_and_styles() {
 		wp_register_script( 'firebug-lite', 'https://getfirebug.com/firebug-lite.js', array(), '', true );
 		// wp_register_script( 'mouseWheel', get_stylesheet_directory_uri() . '/js/lib/jquery.mousewheel.js', array( 'jquery' ), '', true );
 		// wp_register_script( 'jScrollPane', get_stylesheet_directory_uri() . '/js/lib/jquery.jscrollpane.min.js', array( 'jquery' ,'mouseWheel'), '', true );
-		// wp_register_script( 'respond-js', get_stylesheet_directory_uri() . '/js/lib/respond.js', array(), '', false );
-		// wp_register_script( 'pie', get_stylesheet_directory_uri() . '/js/lib/PIE.js', array('jquery'), '', false );
-		// wp_register_script( 'flexie', get_stylesheet_directory_uri() . '/js/lib/flexie.js', array('jquery'), '', false );
-		// wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/js/lib/selectivizr-min.js', array(), '', false );
-		// wp_register_script( 'cssfx', get_stylesheet_directory_uri() . '/js/lib/cssfx.js', array(), '', false );
+		wp_register_script( 'respond-js', get_stylesheet_directory_uri() . '/js/lib/respond.js', array(), '', false );
+		wp_register_script( 'pie', get_stylesheet_directory_uri() . '/js/lib/PIE.js', array('jquery'), '', false );
+		wp_register_script( 'flexie', get_stylesheet_directory_uri() . '/js/lib/flexie.js', array('jquery'), '', false );
+		wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/js/lib/selectivizr-min.js', array(), '', false );
+		wp_register_script( 'cssfx', get_stylesheet_directory_uri() . '/js/lib/cssfx.js', array(), '', false );
 
 		wp_register_script( 'naiau-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery' ), '', true );
 		
@@ -199,9 +199,9 @@ function naiau_scripts_and_styles() {
 			// if IE<=8
 			wp_enqueue_script( 'firebug-lite' );
 			// wp_enqueue_script( 'respond-js' );
-			// wp_enqueue_script( 'pie' );
-			// wp_enqueue_script( 'flexie' );
-			// wp_enqueue_script( 'selectivizr' );
+			 wp_enqueue_script( 'pie' );
+			wp_enqueue_script( 'flexie' );
+			  wp_enqueue_script( 'selectivizr' );
 			// wp_enqueue_script( 'cssfx' );
 		}
 		
