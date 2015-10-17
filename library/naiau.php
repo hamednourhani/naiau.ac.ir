@@ -174,13 +174,23 @@ function naiau_scripts_and_styles() {
 		wp_enqueue_style( 'slider-pro-css' );
 		wp_enqueue_style('font-awesome' );
 		wp_enqueue_style( 'jquery-ui-css' );
-		wp_enqueue_style( 'naiau-stylesheet' );
 		
-		// ie
-		wp_enqueue_style( 'ie-compatible' );
-		wp_enqueue_style( 'naiau-ie-only' );
-		$wp_styles->add_data( 'naiau-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
-		$wp_styles->add_data( 'ie-compatible', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+		
+		if(preg_match('/(?i)msie [5-8]/',$_SERVER['HTTP_USER_AGENT'])){
+			// if IE<=8
+			wp_enqueue_style( 'ie-compatible' );
+			wp_enqueue_style( 'naiau-ie-only' );
+			//wp_enqueue_script( 'firebug-lite' );
+			// wp_enqueue_script( 'respond-js' );
+			 wp_enqueue_script( 'pie' );
+			wp_enqueue_script( 'flexie' );
+			  wp_enqueue_script( 'selectivizr' );
+			// wp_enqueue_script( 'cssfx' );
+			wp_enqueue_script( 'naiau-js' );
+		}else {
+			wp_enqueue_style( 'naiau-stylesheet' );
+		}
+		
 
 		/*
 		I recommend using a plugin to call jQuery
@@ -193,17 +203,9 @@ function naiau_scripts_and_styles() {
 		wp_enqueue_script( 'slider-pro-js' );
 		// wp_enqueue_script( 'mousewheel' );
 		// wp_enqueue_script( 'jScrollPane' );
-		wp_enqueue_script( 'naiau-js' );
+		
 
-		if(preg_match('/(?i)msie [5-8]/',$_SERVER['HTTP_USER_AGENT'])){
-			// if IE<=8
-			wp_enqueue_script( 'firebug-lite' );
-			// wp_enqueue_script( 'respond-js' );
-			 wp_enqueue_script( 'pie' );
-			wp_enqueue_script( 'flexie' );
-			  wp_enqueue_script( 'selectivizr' );
-			// wp_enqueue_script( 'cssfx' );
-		}
+		
 		
 
 		// tage for taxonomy image url
