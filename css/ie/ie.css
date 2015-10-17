@@ -3,7 +3,12 @@
 	width : 120px;
 	display: inline-block;
 	/*overflow: hidden;*/
-
+}
+.menu-bar ul.main-nav li.medium-menu-size a{
+	width : 80px;
+}
+.menu-bar ul.main-nav li.small-text-size a{
+	font-size : 70%;
 }
 .menu-bar ul.main-nav li.menu-item-has-children > a:after {
       left :auto;
