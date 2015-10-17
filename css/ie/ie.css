@@ -8,3 +8,6 @@
 .menu-bar ul.main-nav li.menu-item-has-children > a:after {
       left :auto;
       right : 20%; }
+.menu-bar .top-bar ul.top-nav li{
+	width : 100px;
+}
