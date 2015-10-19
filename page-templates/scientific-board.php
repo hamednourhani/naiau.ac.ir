@@ -103,31 +103,31 @@ if($wp_query->query_vars['sb']){
 																	// var_dump($edu_group);
 																		switch($edu_group){
 																			case 'electronic':
-																				$edu_group = __('Electronic','naiau').' (Electronic)';
+																				$edu_group = __('Electronic Engineering','naiau').'<small>'.' (Electronic Engineering)'.'</small>';
 																				break;
 																			
 																			case 'mechanic':
-																				$edu_group = __('Mechanic','naiau').' (Mechanic)';
+																				$edu_group = __('Mechanic Engineering','naiau').'<small>'.' (Mechanic Engineering)'.'</small>';
 																				break;
 																			
-																			case 'building':
-																				$edu_group = __('Building','naiau').' (Building)';
+																			case 'civil':
+																				$edu_group = __('Civil Engineering','naiau').'<small>'.' (Civil Engineering)'.'</small>';
 																				break;
 																			
 																			case 'material':
-																				$edu_group = __('Material','naiau').' (Material)';
+																				$edu_group = __('Material Engineering','naiau').'<small>'.' (Material Engineering)'.'</small>';
 																				break;
 																			
 																			case 'computer':
-																				$edu_group = __('Computer','naiau').' (Computer)';
+																				$edu_group = __('Computer Engineering','naiau').'<small>'.' (Computer Engineering)'.'</small>';
 																				break;
 																			
 																			case 'public':
-																				$edu_group = __('Public','naiau').' (Public)';
+																				$edu_group = __('Public','naiau').'<small>'.' (Public)'.'</small>';
 																				break;
 
 																			case 'accounting':
-																				$edu_group = __('Accounting','naiau').' (Accounting)';
+																				$edu_group = __('Accounting','naiau').'<small>'.' (Accounting)'.'</small>';
 																				break;
 																		}
 																	// $current_group = ($edu_group == $prev_group)?('~'):$edu_group; 
@@ -221,31 +221,31 @@ if($wp_query->query_vars['sb']){
 																	$edu_group = get_usermeta( $single_user_id, $meta_key = '_naiau_user_edu_group' );
 																	switch($edu_group){
 																		case 'electronic':
-																			$edu_group = __('Electronic','naiau').' (Electronic)';
+																			$edu_group = __('Electronic Engineering','naiau').'<small>'.' (Electronic Engineering)'.'</small>';
 																			break;
 																		
 																		case 'mechanic':
-																			$edu_group = __('Mechanic','naiau').' (Mechanic)';
+																			$edu_group = __('Mechanic Engineering','naiau').'<small>'.' (Mechanic Engineering)'.'</small>';
 																			break;
 																		
-																		case 'building':
-																			$edu_group = __('Building','naiau').' (Building)';
+																		case 'civil':
+																			$edu_group = __('civil Engineering','naiau').'<small>'.' (Civil Engineering)'.'</small>';
 																			break;
 																		
 																		case 'material':
-																			$edu_group = __('Material','naiau').' (Material)';
+																			$edu_group = __('Material Engineering','naiau').'<small>'.' (Material Engineering)'.'</small>';
 																			break;
 																		
 																		case 'computer':
-																			$edu_group = __('Computer','naiau').' (Computer)';
+																			$edu_group = __('Computer Engineering','naiau').'<small>'.' (Computer Engineering)'.'</small>';
 																			break;
 																		
 																		case 'public':
-																			$edu_group = __('Public','naiau').' (Public)';
+																			$edu_group = __('Public','naiau').'<small>'.' (Public)'.'</small>';
 																			break;
 
 																		case 'accounting':
-																			$edu_group = __('Accounting','naiau').' (Accounting)';
+																			$edu_group = __('Accounting','naiau').'<small>'.' (Accounting)'.'</small>';
 																			break;
 																	}
 																?>
@@ -341,7 +341,7 @@ if($wp_query->query_vars['sb']){
 														if($comments !== "" ){?>
 															<div id="comments" class="science-tab">
 																<?php 
-																	echo '<h3>'.__('Comments','naiau').' (Comments)</h3>';
+																	echo '<h3>'.__('Comments','naiau').' (More Details)</h3>';
 																	echo $comments; 
 																?>
 															</div>

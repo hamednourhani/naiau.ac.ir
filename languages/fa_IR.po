@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: naiau\n"
-"POT-Creation-Date: 2015-10-06 11:59+0330\n"
-"PO-Revision-Date: 2015-10-06 12:00+0330\n"
+"POT-Creation-Date: 2015-10-19 15:11+0330\n"
+"PO-Revision-Date: 2015-10-19 15:31+0330\n"
 "Last-Translator: \n"
 "Language-Team: iTstar <info@iTstar.ir>\n"
 "Language: fa_IR\n"
@@ -172,17 +172,17 @@ msgstr "نمایش آخرین اخبار"
 msgid "News Numbers :"
 msgstr "تعداد خبرها : "
 
-#: dist/header.php:58 header.php:67
+#: dist/header.php:58 header.php:69
 msgid "Top Menu"
 msgstr "منوی نوار بالا"
 
 #: dist/header.php:71 dist/searchform.php:6 functions.php:764 functions.php:765
-#: header.php:59 searchform.php:6
+#: header.php:61 searchform.php:6
 msgid "Search"
 msgstr "جستجو"
 
-#: dist/header.php:100 dist/library/naiau.php:240 header.php:112 header.php:132
-#: library/naiau.php:244
+#: dist/header.php:100 dist/library/naiau.php:240 header.php:114 header.php:134
+#: library/naiau.php:270
 msgid "The Main Menu"
 msgstr "منوی اصلی"
 
@@ -1597,19 +1597,19 @@ msgstr "نام دسته بندی لینک جدید"
 msgid "Page %s"
 msgstr "صفحه %s"
 
-#: dist/library/naiau.php:241 library/naiau.php:245
+#: dist/library/naiau.php:241 library/naiau.php:271
 msgid "Top Bar Menu"
 msgstr "منوی نوار بالا"
 
-#: dist/library/naiau.php:272 library/naiau.php:277
+#: dist/library/naiau.php:272 library/naiau.php:303
 msgid "No Related Posts Yet!"
 msgstr "مطلب مرتبطی وجود ندارد"
 
-#: dist/library/naiau.php:317 library/naiau.php:322
+#: dist/library/naiau.php:317 library/naiau.php:348
 msgid "Read "
 msgstr "ادامه"
 
-#: dist/library/naiau.php:317 library/naiau.php:322
+#: dist/library/naiau.php:317 library/naiau.php:348
 msgid "Read more &raquo;"
 msgstr "ادامه مطلب"
 
@@ -1930,28 +1930,27 @@ msgstr "گروه آموزشی را انتخاب نمایید"
 
 #: library/cmb-functions.php:1004 page-templates/scientific-board.php:106
 #: page-templates/scientific-board.php:224
-msgid "Electronic"
-msgstr "گروه برق"
+msgid "Electronic Engineering"
+msgstr "مهندسی برق"
 
 #: library/cmb-functions.php:1005 page-templates/scientific-board.php:110
 #: page-templates/scientific-board.php:228
-msgid "Mechanic"
-msgstr "گروه مکانیک"
+msgid "Mechanic Engineering"
+msgstr "مهندسی مکانیک"
 
-#: library/cmb-functions.php:1006 page-templates/scientific-board.php:114
-#: page-templates/scientific-board.php:232
-msgid "Building"
-msgstr "گروه ساختمان"
+#: library/cmb-functions.php:1006 page-templates/scientific-board.php:232
+msgid "civil Engineering"
+msgstr "مهندسی عمران"
 
 #: library/cmb-functions.php:1007 page-templates/scientific-board.php:118
 #: page-templates/scientific-board.php:236
-msgid "Material"
-msgstr "گروه مواد"
+msgid "Material Engineering"
+msgstr "مهندسی مواد"
 
 #: library/cmb-functions.php:1008 page-templates/scientific-board.php:122
 #: page-templates/scientific-board.php:240
-msgid "Computer"
-msgstr "گروه کامپیوتر"
+msgid "Computer Engineering"
+msgstr "مهندسی کامپیوتر"
 
 #: library/cmb-functions.php:1009 page-templates/scientific-board.php:130
 #: page-templates/scientific-board.php:248
@@ -1983,7 +1982,7 @@ msgstr "آدرس های ایمیل را وارد نمایید . آدرس ها ب
 
 #: library/cmb-functions.php:1037 page-templates/scientific-board.php:265
 msgid "Education"
-msgstr "تجربه"
+msgstr "تحصیلات"
 
 #: library/cmb-functions.php:1038 library/cmb-functions.php:1078
 #: library/cmb-functions.php:1088 library/cmb-functions.php:1098
@@ -2017,17 +2016,17 @@ msgstr "مقاله های ارائه شده در کنفرانس ها"
 msgid "Research Projects"
 msgstr "طرح های پژوهشی"
 
-#: library/cmb-functions.php:1137 page-templates/scientific-board.php:344
-msgid "Comments"
+#: library/cmb-functions.php:1137
+msgid "More Details"
 msgstr "توضیحات"
 
 #: library/cmb-functions.php:1176
 msgid "Lecture & reading "
-msgstr ""
+msgstr "جزوات و اسلایدها"
 
-#: library/cmb-functions.php:1186 single-course.php:93
+#: library/cmb-functions.php:1186 single-course.php:94
 msgid "Homework & Exame"
-msgstr ""
+msgstr "تمرین و نمونه سوالات"
 
 #: library/custom-post-type.php:494
 msgid "download"
@@ -2209,7 +2208,7 @@ msgstr "افزودن دسته بندی جدید بخش نامه"
 msgid "New circular Category Name"
 msgstr "نام دسته بندی بخش نامه جدید"
 
-#: library/naiau.php:246
+#: library/naiau.php:272
 msgid "Responsive Menu"
 msgstr "فهرست واکنشگرا (موبایل)"
 
@@ -2226,13 +2225,17 @@ msgstr "نام و نام خانوادگی"
 msgid "Sience Degree"
 msgstr "مرتبه علمی"
 
-#: page-templates/scientific-board.php:169 single-course.php:74
+#: page-templates/scientific-board.php:114
+msgid "Civil Engineering"
+msgstr "مهندسی عمران"
+
+#: page-templates/scientific-board.php:169
 msgid "(Home)"
 msgstr "(پروفایل)"
 
 #: page-templates/scientific-board.php:170
 msgid "(Experience)"
-msgstr "(تجربه)"
+msgstr "(تحصیلات)"
 
 #: page-templates/scientific-board.php:171
 msgid "(Academic Positions)"
@@ -2270,21 +2273,48 @@ msgstr "(واحدهای درسی)"
 msgid "(Comments)"
 msgstr "(توضیحات)"
 
+#: page-templates/scientific-board.php:344
+msgid "Comments"
+msgstr "توضیحات"
+
+#: single-course.php:74
+msgid "(Course)"
+msgstr "(معرفی درس)"
+
 #: single-course.php:75
 msgid "(Lecture & reading )"
-msgstr ""
+msgstr "(جزوات و اسلایدها)"
 
 #: single-course.php:76
 msgid "(Homework & Exame)"
-msgstr ""
+msgstr "(تمرین و نمونه سوالات)"
 
-#: single-course.php:86
+#: single-course.php:77
+msgid "Back to Scinece"
+msgstr "بازگشت به صفحه استاد"
+
+#: single-course.php:87
 msgid "Lecture & reading"
-msgstr ""
+msgstr "تمرین و نمونه سوالات"
 
 #: single-download.php:75
 msgid "Download Link : "
 msgstr "لینک دانلود : "
+
+#~ msgid "Electronic"
+#~ msgstr "گروه برق"
+
+#~ msgid "Mechanic"
+#~ msgstr "گروه مکانیک"
+
+#~ msgid "Building"
+#~ msgstr "گروه ساختمان"
+
+#~ msgid "Material"
+#~ msgstr "گروه مواد"
+
+#~ msgid "Computer"
+#~ msgstr "گروه کامپیوتر"
 
 #~ msgid "Study Experinces"
 #~ msgstr "سوابق تحصیلی"

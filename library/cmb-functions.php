@@ -1001,11 +1001,11 @@ function naiau_science_profile_metabox() {
 		'type'       => 'select',
 		'options'    => array(
 
-								'electronic' => __('Electronic','naiau'),
-								'mechanic' => __('Mechanic','naiau'),
-								'building' => __('Building','naiau'),
-								'material' => __('Material','naiau'),
-								'computer' => __('Computer','naiau'),
+								'electronic' => __('Electronic Engineering','naiau'),
+								'mechanic' => __('Mechanic Engineering','naiau'),
+								'civil' => __('civil Engineering','naiau'),
+								'material' => __('Material Engineering','naiau'),
+								'computer' => __('Computer Engineering','naiau'),
 								'accounting' => __('Accounting','naiau'),
 								'public' => __('Public','naiau'),
 			),
@@ -1134,7 +1134,7 @@ function naiau_science_extra_info_metabox() {
 	));
 
 	$cmb_demo->add_field( array(
-		'name'       => __( 'Comments', 'naiau' ),
+		'name'       => __( 'More Details', 'naiau' ),
 		'desc'       => __( 'Enter Description', 'naiau' ),
 		'id'         => $prefix . 'comments',
 		'type' => 'wysiwyg',

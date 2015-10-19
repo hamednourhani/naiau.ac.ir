@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: naiau 1.0\n"
 "Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
-"POT-Creation-Date: 2015-10-16 05:28:44+00:00\n"
+"POT-Creation-Date: 2015-10-19 11:57:12+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -172,7 +172,7 @@ msgid "Search"
 msgstr ""
 
 #: dist/header.php:100 dist/library/naiau.php:240 header.php:114 header.php:134
-#: library/naiau.php:266
+#: library/naiau.php:270
 msgid "The Main Menu"
 msgstr ""
 
@@ -1578,19 +1578,19 @@ msgstr ""
 msgid "Page %s"
 msgstr ""
 
-#: dist/library/naiau.php:241 library/naiau.php:267
+#: dist/library/naiau.php:241 library/naiau.php:271
 msgid "Top Bar Menu"
 msgstr ""
 
-#: dist/library/naiau.php:272 library/naiau.php:299
+#: dist/library/naiau.php:272 library/naiau.php:303
 msgid "No Related Posts Yet!"
 msgstr ""
 
-#: dist/library/naiau.php:317 library/naiau.php:344
+#: dist/library/naiau.php:317 library/naiau.php:348
 msgid "Read "
 msgstr ""
 
-#: dist/library/naiau.php:317 library/naiau.php:344
+#: dist/library/naiau.php:317 library/naiau.php:348
 msgid "Read more &raquo;"
 msgstr ""
 
@@ -1908,27 +1908,26 @@ msgstr ""
 
 #: library/cmb-functions.php:1004 page-templates/scientific-board.php:106
 #: page-templates/scientific-board.php:224
-msgid "Electronic"
+msgid "Electronic Engineering"
 msgstr ""
 
 #: library/cmb-functions.php:1005 page-templates/scientific-board.php:110
 #: page-templates/scientific-board.php:228
-msgid "Mechanic"
+msgid "Mechanic Engineering"
 msgstr ""
 
-#: library/cmb-functions.php:1006 page-templates/scientific-board.php:114
-#: page-templates/scientific-board.php:232
-msgid "Building"
+#: library/cmb-functions.php:1006 page-templates/scientific-board.php:232
+msgid "civil Engineering"
 msgstr ""
 
 #: library/cmb-functions.php:1007 page-templates/scientific-board.php:118
 #: page-templates/scientific-board.php:236
-msgid "Material"
+msgid "Material Engineering"
 msgstr ""
 
 #: library/cmb-functions.php:1008 page-templates/scientific-board.php:122
 #: page-templates/scientific-board.php:240
-msgid "Computer"
+msgid "Computer Engineering"
 msgstr ""
 
 #: library/cmb-functions.php:1009 page-templates/scientific-board.php:130
@@ -1995,15 +1994,15 @@ msgstr ""
 msgid "Research Projects"
 msgstr ""
 
-#: library/cmb-functions.php:1137 page-templates/scientific-board.php:344
-msgid "Comments"
+#: library/cmb-functions.php:1137
+msgid "More Details"
 msgstr ""
 
 #: library/cmb-functions.php:1176
 msgid "Lecture & reading "
 msgstr ""
 
-#: library/cmb-functions.php:1186 single-course.php:93
+#: library/cmb-functions.php:1186 single-course.php:94
 msgid "Homework & Exame"
 msgstr ""
 
@@ -2187,7 +2186,7 @@ msgstr ""
 msgid "New circular Category Name"
 msgstr ""
 
-#: library/naiau.php:268
+#: library/naiau.php:272
 msgid "Responsive Menu"
 msgstr ""
 
@@ -2204,7 +2203,11 @@ msgstr ""
 msgid "Sience Degree"
 msgstr ""
 
-#: page-templates/scientific-board.php:169 single-course.php:74
+#: page-templates/scientific-board.php:114
+msgid "Civil Engineering"
+msgstr ""
+
+#: page-templates/scientific-board.php:169
 msgid "(Home)"
 msgstr ""
 
@@ -2248,6 +2251,14 @@ msgstr ""
 msgid "(Comments)"
 msgstr ""
 
+#: page-templates/scientific-board.php:344
+msgid "Comments"
+msgstr ""
+
+#: single-course.php:74
+msgid "(Course)"
+msgstr ""
+
 #: single-course.php:75
 msgid "(Lecture & reading )"
 msgstr ""
@@ -2256,7 +2267,11 @@ msgstr ""
 msgid "(Homework & Exame)"
 msgstr ""
 
-#: single-course.php:86
+#: single-course.php:77
+msgid "Back to Scinece"
+msgstr ""
+
+#: single-course.php:87
 msgid "Lecture & reading"
 msgstr ""
 
