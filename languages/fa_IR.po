@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: naiau\n"
 "POT-Creation-Date: 2015-10-19 15:11+0330\n"
-"PO-Revision-Date: 2015-10-19 15:31+0330\n"
+"PO-Revision-Date: 2015-10-19 17:19+0330\n"
 "Last-Translator: \n"
 "Language-Team: iTstar <info@iTstar.ir>\n"
 "Language: fa_IR\n"
@@ -2295,7 +2295,7 @@ msgstr "بازگشت به صفحه استاد"
 
 #: single-course.php:87
 msgid "Lecture & reading"
-msgstr "تمرین و نمونه سوالات"
+msgstr "جزوات و اسلایدها"
 
 #: single-download.php:75
 msgid "Download Link : "

@@ -205,7 +205,7 @@ if($wp_query->query_vars['sb']){
 																		}
 																	}
 																?>
-															<li><a href="#comments"><?php echo 'Comments '.__('(Comments)','naiau');?></a></li>
+															<li><a href="#comments"><?php echo 'More Details '.__('(Comments)','naiau');?></a></li>
 															
 														
 													</ul>
