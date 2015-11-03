@@ -167,7 +167,7 @@ if($wp_query->query_vars['sb']){
 																	echo '<div class="author-pic"><img src="'. get_usermeta( $single_user_id, $meta_key = '_naiau_user_picture' ) .'" alt="'.$single_user->display_name.'" title="'.$single_user->display_name.'"/></div>';
 															?>
 															<li><a href="#profile"><?php echo 'Home '.__('(Home)','naiau');?></a></li>
-															<li id="exp-main" class="has-child"><a ><?php echo 'Experience '.__('(Experience)','naiau');?></a></li>
+															<li id="exp-main" class="has-child"><a ><?php echo 'Experience '.__('(Experiences)','naiau');?></a></li>
 																<li class="exp-child child-tab"><a href="#academic_positions"><?php echo 'Academic Positions '.__('(Academic Positions)','naiau');?></a></li>
 																<li class="exp-child child-tab"><a href="#industrial_experience"><?php echo 'Industrial Experience '.__('(Industrial Experience )','naiau');?></a></li>
 															<li id="pub-main" class="has-child"><a ><?php echo 'Publications '.__('(Publications)','naiau');?></a></li>

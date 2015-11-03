@@ -73,7 +73,7 @@
 
 															<li><a href="#home"><?php echo 'Course '.__('(Course)','naiau');?></a></li>
 															<li><a href="#lecture_reading "><?php echo 'Lecture & reading  '.__('(Lecture & reading )','naiau');?></a></li>
-															<li><a href="#homework_exame"><?php echo 'Homework & Exame '.__('(Homework & Exame)','naiau');?></a></li>
+															<li><a href="#homework_exame"><?php echo 'Homework & Exam '.__('(Homework & Exame)','naiau');?></a></li>
 															<span class="science-back-button"><a href="<?php echo $sb_url; ?>"><i class="fa fa-angle-double-right"></i><?php echo __('Back to Scinece','naiau');?></a></span>
 													
 													</ul>

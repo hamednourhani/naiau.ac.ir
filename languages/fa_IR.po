@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: naiau\n"
-"POT-Creation-Date: 2015-10-19 15:11+0330\n"
-"PO-Revision-Date: 2015-10-19 17:19+0330\n"
+"POT-Creation-Date: 2015-11-03 13:06+0330\n"
+"PO-Revision-Date: 2015-11-03 13:06+0330\n"
 "Last-Translator: \n"
 "Language-Team: iTstar <info@iTstar.ir>\n"
 "Language: fa_IR\n"
@@ -2234,8 +2234,8 @@ msgid "(Home)"
 msgstr "(پروفایل)"
 
 #: page-templates/scientific-board.php:170
-msgid "(Experience)"
-msgstr "(تحصیلات)"
+msgid "(Experiences)"
+msgstr "(تجربه)"
 
 #: page-templates/scientific-board.php:171
 msgid "(Academic Positions)"
@@ -2300,6 +2300,9 @@ msgstr "جزوات و اسلایدها"
 #: single-download.php:75
 msgid "Download Link : "
 msgstr "لینک دانلود : "
+
+#~ msgid "(Experience)"
+#~ msgstr "(تحصیلات)"
 
 #~ msgid "Electronic"
 #~ msgstr "گروه برق"
