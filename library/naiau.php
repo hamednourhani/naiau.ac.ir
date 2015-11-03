@@ -191,7 +191,7 @@ function naiau_scripts_and_styles() {
 			wp_enqueue_script( 'flexie' );
 			  wp_enqueue_script( 'selectivizr' );
 			// wp_enqueue_script( 'cssfx' );
-			wp_enqueue_script( 'naiau-js' );
+			
 		}
 
 		/*
@@ -205,6 +205,7 @@ function naiau_scripts_and_styles() {
 		wp_enqueue_script( 'slider-pro-js' );
 		// wp_enqueue_script( 'mousewheel' );
 		// wp_enqueue_script( 'jScrollPane' );
+		wp_enqueue_script( 'naiau-js' );
 		
 
 		

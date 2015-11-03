@@ -11,7 +11,6 @@ jQuery('document').ready(function($){
 		var menu_height = $(window).height();
 		responsive_container.css('height',menu_height).addClass('show-menu');
 		
-
 		close_button.click(function(event){
 			//event.stopPropagination();
 			responsive_container.removeClass('show-menu');

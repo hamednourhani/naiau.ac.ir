@@ -133,7 +133,7 @@
 				    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
 				    					         'menu' => __( 'The Main Menu', 'naiau' ),  // nav name
 				    					         'menu_class' => 'nav responsive-nav cf',               // adding custom nav class
-				    					         'theme_location' => 'responsive-nav',                 // where it's located in the theme
+				    					         'theme_location' => 'responsive-menu',                 // where it's located in the theme
 				    					         'before' => '',                                 // before the menu
 				        			               'after' => '',                                  // after the menu
 				        			               'link_before' => '',                            // before each link

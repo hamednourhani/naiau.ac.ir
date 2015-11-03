@@ -1092,42 +1092,43 @@ table {
       padding: 2px 5px 0px;
       border: 1px solid #fff;
       font-size: 110%;
-      float: left; }
-      /* line 307, ../sass/layout/_header.scss */
+      float: left;
+      margin-left: 20px; }
+      /* line 308, ../sass/layout/_header.scss */
       .menu-bar .responsive-menu a.close-responsive:hover {
         cursor: pointer; }
-    /* line 311, ../sass/layout/_header.scss */
+    /* line 312, ../sass/layout/_header.scss */
     .menu-bar .responsive-menu ul.responsive-nav {
       margin-top: 30px;
-      padding: 20px;
+      padding: 20px 20px 70px 20px;
       font-size: 90%; }
-      /* line 316, ../sass/layout/_header.scss */
+      /* line 317, ../sass/layout/_header.scss */
       .menu-bar .responsive-menu ul.responsive-nav > li {
         padding-bottom: 10px;
         margin-bottom: 10px;
         border-bottom: 1px solid #5A6B9F; }
-      /* line 324, ../sass/layout/_header.scss */
+      /* line 325, ../sass/layout/_header.scss */
       .menu-bar .responsive-menu ul.responsive-nav li a {
         color: #fff;
         line-height: 130%; }
-        /* line 328, ../sass/layout/_header.scss */
+        /* line 329, ../sass/layout/_header.scss */
         .menu-bar .responsive-menu ul.responsive-nav li a:hover {
           color: #5DC2F0; }
-      /* line 333, ../sass/layout/_header.scss */
+      /* line 334, ../sass/layout/_header.scss */
       .menu-bar .responsive-menu ul.responsive-nav ul.sub-menu {
         margin-right: 30px; }
-        /* line 335, ../sass/layout/_header.scss */
+        /* line 336, ../sass/layout/_header.scss */
         .menu-bar .responsive-menu ul.responsive-nav ul.sub-menu a {
           position: relative;
           color: #E6E6E6; }
-          /* line 338, ../sass/layout/_header.scss */
+          /* line 339, ../sass/layout/_header.scss */
           .menu-bar .responsive-menu ul.responsive-nav ul.sub-menu a:before {
             content: "\f177";
             position: absolute;
             right: -20px;
             top: 6px;
             color: #5A6B9F; }
-          /* line 347, ../sass/layout/_header.scss */
+          /* line 348, ../sass/layout/_header.scss */
           .menu-bar .responsive-menu ul.responsive-nav ul.sub-menu a:hover {
             color: #5DC2F0; }
 
